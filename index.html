@@ -1,27 +1,136 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
   <title>Pressed and Burned Creations</title>
+
+  <meta name="description"
+        content="Pressed and Burned Creations -
+        Stickers, Decals, and Custom Designs.">
+
   <style>
-    body {
-      background-color: #181818;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 60px 20px;
+
+    /* GENERAL WEBSITE SETTINGS */
+
+    * {
+      box-sizing: border-box;
     }
-    h1 { color: #e8a34b; }
-    p { font-size: 18px; }
+
+    html {
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background-color: #000000;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    /* MAIN HEADER LOGO */
+
+    .site-header {
+      width: 100%;
+      background-color: #000000;
+      text-align: center;
+      padding: 15px 10px;
+    }
+
+    .main-logo {
+      display: block;
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+
+    /* MAIN PAGE BACKGROUND */
+
+    .homepage {
+      width: 100%;
+      min-height: 100vh;
+
+      background-color: #000000;
+
+      background-image:
+        url("Pressed%20and%20burned%20background%20logo.png");
+
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    /* ACCESSIBILITY */
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* MOBILE ADJUSTMENTS */
+
+    @media screen and (max-width: 768px) {
+
+      .site-header {
+        padding: 10px 5px;
+      }
+
+      .main-logo {
+        width: 100%;
+        height: auto;
+      }
+
+      .homepage {
+        min-height: 80vh;
+        background-size: contain;
+        background-position: center top;
+      }
+
+    }
+
   </style>
 </head>
+
 <body>
-  <h1>Pressed and Burned Creations</h1>
-  <h2>Welcome to Our Website!</h2>
-  <p>Creative projects, unique designs,
-     and one-of-a-kind creations.</p>
-  <p>Our website is coming soon!</p>
+
+  <!-- WEBSITE INTRODUCTION HEADER -->
+
+  <header class="site-header">
+
+    <img
+      class="main-logo"
+      src="Pressed%20and%20burned%20logo.png"
+      alt="Pressed and Burned Creations -
+           Stickers, Decals, and Custom Designs">
+
+  </header>
+
+  <!-- MAIN HOMEPAGE -->
+
+  <main class="homepage">
+
+    <h1 class="visually-hidden">
+      Pressed and Burned Creations
+    </h1>
+
+  </main>
+
 </body>
 </html>
