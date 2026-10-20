@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>About Us | Pressed and Burned Creations</title>
+
+  <style>
+
+    /* GENERAL SETTINGS */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: #050505;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #050505;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      isolation: isolate;
+    }
+
+    /* FIXED BACKGROUND - 100% OPACITY */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+
+      background-image:
+        url("Pressed%20and%20burned%20background%20logo.png");
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      opacity: 1;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* MAIN HEADER */
+
+    header {
+      position: relative;
+      z-index: 1;
+
+      background: rgba(0, 0, 0, 0.72);
+      text-align: center;
+      padding: 15px;
+    }
+
+    .main-logo {
+      display: block;
+      width: 100%;
+      max-width: 1100px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    /* COMING SOON MESSAGE */
+
+    main {
+      position: relative;
+      z-index: 1;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      min-height: 65vh;
+      padding: 30px 20px;
+    }
+
+    .message-box {
+      background: rgba(0, 0, 0, 0.82);
+
+      border: 2px solid #ff9000;
+      border-radius: 16px;
+
+      padding: 45px 35px;
+      text-align: center;
+
+      box-shadow:
+        0 0 25px rgba(255, 140, 0, 0.25);
+    }
+
+    h1 {
+      color: #ffb347;
+      font-size: clamp(26px, 5vw, 44px);
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    /* MOBILE DISPLAY */
+
+    @media (max-width: 768px) {
+
+      header {
+        padding: 10px 5px;
+      }
+
+      main {
+        min-height: 60vh;
+      }
+
+      .message-box {
+        padding: 30px 20px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- BUSINESS LOGO -->
+
+  <header>
+    <a href="index.html"
+       aria-label="Return to homepage">
+
+      <img
+        class="main-logo"
+        src="Pressed%20and%20burned%20logo.png"
+        alt="Pressed and Burned Creations">
+
+    </a>
+  </header>
+
+  <!-- ABOUT US MESSAGE -->
+
+  <main>
+
+    <div class="message-box">
+
+      <h1>
+        Stay tuned! Bio coming soon!
+      </h1>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
