@@ -2,627 +2,701 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <title>Pressed and Burned Creations</title>
-
-  <meta name="description"
-        content="Pressed and Burned Creations - Stickers, Decals, and Custom Designs. Stickers with an Attitude.">
-
-  <style>
-
-    /* GENERAL WEBSITE SETTINGS */
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      background-color: #050505;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background-color: #050505;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      isolation: isolate;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ===================================
-       FIXED BACKGROUND LOGO
-       70% OPACITY
-       USED THROUGHOUT THE WEBSITE
-       =================================== */
-
-    body::before {
-      content: "";
-
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-      width: 100%;
-      height: 100%;
-
-      background-image:
-        url("Pressed%20and%20burned%20background%20logo.png");
-
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: contain;
-
-      opacity: 0.70;
-
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* ALL CONTENT SCROLLS ABOVE THE LOGO */
-
-    body > header,
-    body > nav,
-    body > main,
-    body > footer {
-      position: relative;
-      z-index: 1;
-    }
-
-    /* MAIN HEADER */
-
-    .main-header {
-      background: rgba(0, 0, 0, 0.72);
-      text-align: center;
-      padding: 15px;
-    }
-
-    .main-logo {
-      width: 100%;
-      max-width: 1100px;
-      height: auto;
-      margin: 0 auto;
-    }
-
-    /* NAVIGATION */
-
-    nav {
-      background: rgba(0, 0, 0, 0.85);
-      border-top: 1px solid #c96c00;
-      border-bottom: 2px solid #ff9000;
-
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
-
-      padding: 18px;
-    }
-
-    nav a {
-      color: #ffffff;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    nav a:hover,
-    nav a:focus-visible {
-      color: #ffac39;
-    }
-
-    /* INTRODUCTION */
-
-    .intro {
-      min-height: 65vh;
-      padding: 80px 20px;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      text-align: center;
-      background: transparent;
-    }
-
-    .intro-content {
-      width: 100%;
-      max-width: 850px;
-
-      background: rgba(0, 0, 0, 0.76);
-      border: 1px solid rgba(255, 140, 0, 0.45);
-      border-radius: 18px;
-
-      padding: 45px 30px;
-
-      box-shadow:
-        0 0 35px rgba(0, 0, 0, 0.4);
-    }
-
-    .intro h1 {
-      font-size: 42px;
-      color: #ffa12a;
-      text-transform: uppercase;
-      margin: 0 0 15px;
-    }
-
-    .intro p {
-      font-size: 20px;
-      max-width: 750px;
-      margin: 0 auto 30px;
-      color: #eeeeee;
-    }
-
-    /* BUTTONS */
-
-    .button {
-      display: inline-block;
-
-      background: linear-gradient(
-        135deg, #ffcc55, #ff8000
-      );
 
-      color: #111111;
-      padding: 15px 28px;
-      margin: 8px;
+<meta charset="UTF-8">
 
-      border-radius: 8px;
-      font-weight: bold;
-
-      transition:
-        transform 0.2s,
-        filter 0.2s;
-    }
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    .button:hover {
-      filter: brightness(1.15);
-      transform: translateY(-2px);
-    }
+<title>Pressed and Burned Creations</title>
 
-    .outline {
-      background: rgba(0, 0, 0, 0.6);
-      color: #ffb347;
-      border: 2px solid #ff8c00;
-    }
+<meta name="description"
+content="Pressed and Burned Creations - Stickers, Decals, and Custom Designs. Stickers with an Attitude.">
+
+<style>
 
-    /* SECTION LAYOUT */
+/* =========================================
+   GENERAL WEBSITE SETTINGS
+========================================= */
 
-    section {
-      padding: 75px 20px;
-      background: rgba(0, 0, 0, 0.18);
-    }
+* {
+  box-sizing: border-box;
+}
 
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      text-align: center;
-      color: #ffad35;
-      font-size: 36px;
-      margin: 0 auto 20px;
-      max-width: max-content;
-
-      background: rgba(0, 0, 0, 0.78);
-      padding: 10px 25px;
-      border-radius: 10px;
-    }
-
-    .section-description {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 35px;
-
-      font-size: 18px;
-      color: #eeeeee;
-
-      background: rgba(0, 0, 0, 0.78);
-      padding: 16px 22px;
-      border-radius: 10px;
-    }
+html {
+  scroll-behavior: smooth;
+  background: #050505;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #050505;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  isolation: isolate;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================================
+   PERMANENT FIXED BACKGROUND
+   P&B CREATIONS LOGO
+   100% OPACITY
+========================================= */
+
+body::before {
+  content: "";
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image:
+    url("Pressed%20and%20burned%20background%20logo.png");
 
-    /* STICKER SHOWCASE */
-
-    .showcase {
-      background: rgba(0, 0, 0, 0.22);
-    }
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
 
-    .showcase img {
-      width: 100%;
-      border: 2px solid #d97706;
-      border-radius: 15px;
+  /* 100% VISIBLE - NO FADE */
 
-      box-shadow:
-        0 0 25px rgba(255, 140, 0, 0.2);
-    }
+  opacity: 1;
 
-    /* SERVICES */
+  /* IMAGE STAYS BEHIND ALL CONTENT */
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* =========================================
+   CONTENT SCROLLS OVER BACKGROUND
+========================================= */
+
+body > header,
+body > nav,
+body > main,
+body > footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   MAIN HEADER
+========================================= */
+
+.main-header {
+  background: rgba(0, 0, 0, 0.72);
+  text-align: center;
+  padding: 15px;
+}
+
+.main-logo {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* =========================================
+   NAVIGATION BAR
+========================================= */
+
+nav {
+  background: rgba(0, 0, 0, 0.85);
+
+  border-top: 1px solid #c96c00;
+  border-bottom: 2px solid #ff9000;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 25px;
+  padding: 18px;
+}
+
+nav a {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: #ffac39;
+}
+
+/* =========================================
+   HOMEPAGE INTRODUCTION
+========================================= */
+
+.intro {
+  min-height: 65vh;
+  padding: 80px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  background: transparent;
+}
+
+.intro-content {
+  width: 100%;
+  max-width: 850px;
+
+  background: rgba(0, 0, 0, 0.76);
+
+  border: 1px solid rgba(255, 140, 0, 0.45);
+  border-radius: 18px;
+
+  padding: 45px 30px;
+
+  box-shadow:
+    0 0 35px rgba(0, 0, 0, 0.4);
+}
+
+.intro h1 {
+  font-size: 42px;
+  color: #ffa12a;
+  text-transform: uppercase;
+  margin: 0 0 15px;
+}
+
+.intro p {
+  font-size: 20px;
+  max-width: 750px;
+  margin: 0 auto 30px;
+  color: #eeeeee;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.button {
+  display: inline-block;
+
+  background: linear-gradient(
+    135deg,
+    #ffcc55,
+    #ff8000
+  );
+
+  color: #111111;
+
+  padding: 15px 28px;
+  margin: 8px;
+
+  border-radius: 8px;
+  font-weight: bold;
 
-    .services {
-      background: rgba(0, 0, 0, 0.12);
-    }
+  transition:
+    transform 0.2s,
+    filter 0.2s;
+}
 
-    .service-grid {
-      display: grid;
+.button:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+}
+
+.outline {
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffb347;
+  border: 2px solid #ff8c00;
+}
 
-      grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
 
-      gap: 25px;
-    }
+section {
+  padding: 75px 20px;
+  background: rgba(0, 0, 0, 0.18);
+}
 
-    .service-card {
-      padding: 35px 25px;
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-      background: rgba(10, 10, 10, 0.85);
+h2 {
+  text-align: center;
+  color: #ffad35;
+  font-size: 36px;
 
-      border: 1px solid #bc6500;
-      border-radius: 14px;
+  margin: 0 auto 20px;
+  max-width: max-content;
 
-      text-align: center;
-    }
+  background: rgba(0, 0, 0, 0.78);
 
-    .service-card h3 {
-      color: #ffb347;
-      margin-top: 0;
-    }
+  padding: 10px 25px;
+  border-radius: 10px;
+}
 
-    .service-card p {
-      color: #eeeeee;
-    }
+.section-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 35px;
 
-    /* ABOUT SECTION */
+  font-size: 18px;
+  color: #eeeeee;
 
-    .about {
-      background: rgba(0, 0, 0, 0.18);
-      text-align: center;
-    }
+  background: rgba(0, 0, 0, 0.78);
 
-    .about-content {
-      max-width: 850px;
-      margin: 0 auto;
-
-      background: rgba(0, 0, 0, 0.82);
-      border: 1px solid rgba(255, 140, 0, 0.35);
-      border-radius: 16px;
+  padding: 16px 22px;
+  border-radius: 10px;
+}
 
-      padding: 35px;
-    }
+/* =========================================
+   STICKER SHOWCASE
+========================================= */
+
+.showcase {
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.showcase img {
+  width: 100%;
+
+  border: 2px solid #d97706;
+  border-radius: 15px;
 
-    .about-content p {
-      max-width: 800px;
-      margin: 0 auto 20px;
-      font-size: 18px;
-      color: #eeeeee;
-    }
+  box-shadow:
+    0 0 25px rgba(255, 140, 0, 0.2);
+}
 
-    /* CONTACT SECTION */
+/* =========================================
+   SERVICES
+========================================= */
 
-    .contact {
-      background: rgba(0, 0, 0, 0.18);
-      text-align: center;
-    }
+.services {
+  background: rgba(0, 0, 0, 0.12);
+}
 
-    .business-card {
-      max-width: 950px;
-      margin: 0 auto 30px;
-    }
+.service-grid {
+  display: grid;
 
-    .business-card img {
-      width: 100%;
-      border-radius: 12px;
-      border: 2px solid #c9750b;
-    }
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
 
-    /* FOOTER */
+  gap: 25px;
+}
 
-    footer {
-      padding: 30px 15px;
-      text-align: center;
+.service-card {
+  padding: 35px 25px;
 
-      background: rgba(0, 0, 0, 0.85);
-      border-top: 2px solid #ff8c00;
+  background: rgba(10, 10, 10, 0.85);
 
-      color: #cccccc;
-    }
+  border: 1px solid #bc6500;
+  border-radius: 14px;
 
-    /* MOBILE DISPLAY */
+  text-align: center;
+}
 
-    @media (max-width: 768px) {
+.service-card h3 {
+  color: #ffb347;
+  margin-top: 0;
+}
 
-      body::before {
-        background-position: center center;
-        background-size: contain;
-        opacity: 0.70;
-      }
+.service-card p {
+  color: #eeeeee;
+}
 
-      .main-header {
-        padding: 10px 5px;
-      }
+/* =========================================
+   ABOUT SECTION
+========================================= */
 
-      nav {
-        gap: 12px 18px;
-      }
+.about {
+  background: rgba(0, 0, 0, 0.18);
+  text-align: center;
+}
 
-      nav a {
-        font-size: 13px;
-      }
+.about-content {
+  max-width: 850px;
+  margin: 0 auto;
 
-      .intro {
-        min-height: 55vh;
-        padding: 60px 15px;
-      }
+  background: rgba(0, 0, 0, 0.82);
 
-      .intro-content {
-        padding: 30px 18px;
-      }
+  border: 1px solid rgba(255, 140, 0, 0.35);
+  border-radius: 16px;
 
-      .intro h1 {
-        font-size: 30px;
-      }
+  padding: 35px;
+}
 
-      .intro p {
-        font-size: 16px;
-      }
+.about-content p {
+  max-width: 800px;
+  margin: 0 auto 20px;
 
-      h2 {
-        font-size: 28px;
-      }
+  font-size: 18px;
+  color: #eeeeee;
+}
 
-      .service-grid {
-        grid-template-columns: 1fr;
-      }
+/* =========================================
+   CONTACT SECTION
+========================================= */
 
-      section {
-        padding: 50px 15px;
-      }
+.contact {
+  background: rgba(0, 0, 0, 0.18);
+  text-align: center;
+}
 
-      .about-content {
-        padding: 25px 18px;
-      }
-    }
+.business-card {
+  max-width: 950px;
+  margin: 0 auto 30px;
+}
 
-  </style>
+.business-card img {
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid #c9750b;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  padding: 30px 15px;
+
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.85);
+
+  border-top: 2px solid #ff8c00;
+
+  color: #cccccc;
+}
+
+/* =========================================
+   MOBILE AND TABLET DISPLAY
+========================================= */
+
+@media (max-width: 768px) {
+
+  body::before {
+    background-position: center center;
+    background-size: contain;
+
+    /* STILL 100% VISIBLE */
+
+    opacity: 1;
+  }
+
+  .main-header {
+    padding: 10px 5px;
+  }
+
+  nav {
+    gap: 12px 18px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .intro {
+    min-height: 55vh;
+    padding: 60px 15px;
+  }
+
+  .intro-content {
+    padding: 30px 18px;
+  }
+
+  .intro h1 {
+    font-size: 30px;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 50px 15px;
+  }
+
+  .about-content {
+    padding: 25px 18px;
+  }
+
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- MAIN BUSINESS LOGO -->
+<!-- ======================================
+     MAIN BUSINESS HEADER
+====================================== -->
 
-  <header class="main-header" id="home">
+<header class="main-header" id="home">
+
+  <img
+    src="Pressed%20and%20burned%20logo.png"
+    alt="Pressed and Burned Creations"
+    class="main-logo">
+
+</header>
+
+<!-- ======================================
+     NAVIGATION
+====================================== -->
+
+<nav aria-label="Main navigation">
+
+  <a href="#home">Home</a>
+
+  <a href="#showcase">Showcase</a>
+
+  <a href="#services">Services</a>
+
+  <a href="#about">About Us</a>
+
+  <a href="#contact">Contact</a>
+
+</nav>
+
+<main>
+
+<!-- ======================================
+     INTRODUCTION
+====================================== -->
+
+<div class="intro">
+
+  <div class="intro-content">
+
+    <h1>Stickers With an Attitude</h1>
+
+    <p>
+      Your Style. Your Sticker.
+      Your Statement.
+
+      Bold custom stickers, decals,
+      and creative designs made
+      to stand out.
+    </p>
+
+    <a href="#showcase" class="button">
+      View Our Work
+    </a>
+
+    <a href="#contact" class="button outline">
+      Contact Miles
+    </a>
+
+  </div>
+
+</div>
+
+<!-- ======================================
+     FEATURED STICKERS
+====================================== -->
+
+<section class="showcase" id="showcase">
+
+  <div class="container">
+
+    <h2>Featured Creations</h2>
+
+    <p class="section-description">
+      From bold truck and motorcycle
+      designs to custom decals and
+      stickers with personality,
+      we create artwork that
+      makes a statement.
+    </p>
 
     <img
-      src="Pressed%20and%20burned%20logo.png"
-      alt="Pressed and Burned Creations"
-      class="main-logo">
+      src="Sticker%20merch%201.png"
+      alt="Pressed and Burned Creations sticker showcase"
+      loading="lazy">
 
-  </header>
+  </div>
 
-  <!-- NAVIGATION -->
+</section>
 
-  <nav aria-label="Main navigation">
+<!-- ======================================
+     SERVICES
+====================================== -->
 
-    <a href="#home">Home</a>
-    <a href="#showcase">Showcase</a>
-    <a href="#services">Services</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact</a>
+<section class="services" id="services">
 
-  </nav>
+  <div class="container">
 
-  <main>
+    <h2>What We Create</h2>
 
-    <!-- INTRODUCTION -->
+    <p class="section-description">
+      Custom designs with personality,
+      style, and attitude.
+    </p>
 
-    <div class="intro">
+    <div class="service-grid">
 
-      <div class="intro-content">
+      <div class="service-card">
 
-        <h1>Stickers With an Attitude</h1>
+        <h3>Custom Stickers</h3>
 
         <p>
-          Your Style. Your Sticker.
-          Your Statement.
-          Bold custom stickers, decals,
-          and creative designs
-          made to stand out.
+          Unique stickers designed
+          to express your personality,
+          hobbies, and interests.
         </p>
 
-        <a href="#showcase" class="button">
-          View Our Work
-        </a>
+      </div>
 
-        <a href="#contact"
-           class="button outline">
-          Contact Miles
-        </a>
+      <div class="service-card">
+
+        <h3>Custom Decals</h3>
+
+        <p>
+          Eye-catching decals for
+          vehicles, windows, equipment,
+          and more.
+        </p>
+
+      </div>
+
+      <div class="service-card">
+
+        <h3>Creative Designs</h3>
+
+        <p>
+          Custom artwork that
+          brings your ideas to life
+          with a bold visual style.
+        </p>
 
       </div>
 
     </div>
 
-    <!-- STICKER SHOWCASE -->
+  </div>
 
-    <section class="showcase" id="showcase">
+</section>
 
-      <div class="container">
+<!-- ======================================
+     ABOUT US
+====================================== -->
 
-        <h2>Featured Creations</h2>
+<section class="about" id="about">
 
-        <p class="section-description">
-          From bold truck and motorcycle
-          designs to custom decals and
-          stickers with personality,
-          we create artwork that
-          makes a statement.
-        </p>
+  <div class="container">
 
-        <img
-          src="Sticker%20merch%201.png"
-          alt="Pressed and Burned Creations sticker showcase"
-          loading="lazy">
+    <h2>About Pressed and Burned</h2>
 
-      </div>
+    <div class="about-content">
 
-    </section>
+      <p>
+        At Pressed and Burned Creations,
+        we believe great designs
+        should be anything but ordinary.
+      </p>
 
-    <!-- SERVICES -->
+      <p>
+        We specialize in bold graphics,
+        custom stickers, decals,
+        and creative designs
+        that help you stand out.
+      </p>
 
-    <section class="services" id="services">
+      <p>
+        Make a Statement.
+        Stick It Anywhere.
+      </p>
 
-      <div class="container">
+    </div>
 
-        <h2>What We Create</h2>
+  </div>
 
-        <p class="section-description">
-          Custom designs with personality,
-          style, and attitude.
-        </p>
+</section>
 
-        <div class="service-grid">
+<!-- ======================================
+     CONTACT INFORMATION
+====================================== -->
 
-          <div class="service-card">
+<section class="contact" id="contact">
 
-            <h3>Custom Stickers</h3>
+  <div class="container">
 
-            <p>
-              Unique stickers designed
-              to express your personality,
-              hobbies, and interests.
-            </p>
+    <h2>Contact Us</h2>
 
-          </div>
+    <p class="section-description">
+      Have an idea for a custom sticker
+      or decal?
 
-          <div class="service-card">
-
-            <h3>Custom Decals</h3>
-
-            <p>
-              Eye-catching decals for
-              vehicles, windows, equipment,
-              and more.
-            </p>
-
-          </div>
-
-          <div class="service-card">
-
-            <h3>Creative Designs</h3>
-
-            <p>
-              Custom artwork that
-              brings your ideas to life
-              with a bold visual style.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- ABOUT US -->
-
-    <section class="about" id="about">
-
-      <div class="container">
-
-        <h2>About Pressed and Burned</h2>
-
-        <div class="about-content">
-
-          <p>
-            At Pressed and Burned Creations,
-            we believe great designs
-            should be anything but ordinary.
-          </p>
-
-          <p>
-            We specialize in bold graphics,
-            custom stickers, decals,
-            and creative designs
-            that help you stand out.
-          </p>
-
-          <p>
-            Make a Statement.
-            Stick It Anywhere.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- CONTACT & BUSINESS CARD -->
-
-    <section class="contact" id="contact">
-
-      <div class="container">
-
-        <h2>Contact Us</h2>
-
-        <p class="section-description">
-          Have an idea for a custom sticker
-          or decal? Get in touch with Miles
-          to discuss your project.
-        </p>
-
-        <div class="business-card">
-
-          <img
-            src="Pressed%20and%20burned%20logo%20and%20business%20card%20ifo.png"
-            alt="Pressed and Burned Creations business card and contact details"
-            loading="lazy">
-
-        </div>
-
-        <a
-          href="mailto:miles@pressedandburnedcreations.com"
-          class="button">
-          Email Miles
-        </a>
-
-      </div>
-
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <p>
-      &copy; 2026 Pressed and Burned Creations.
-      All Rights Reserved.
+      Get in touch with Miles
+      to discuss your project.
     </p>
 
-    <p>Stickers With an Attitude.</p>
+    <div class="business-card">
 
-  </footer>
+      <img
+        src="Pressed%20and%20burned%20logo%20and%20business%20card%20ifo.png"
+        alt="Pressed and Burned Creations business card and contact information"
+        loading="lazy">
+
+    </div>
+
+    <a
+      href="mailto:miles@pressedandburnedcreations.com"
+      class="button">
+      Email Miles
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- ======================================
+     FOOTER
+====================================== -->
+
+<footer>
+
+  <p>
+    &copy; 2026 Pressed and Burned Creations.
+    All Rights Reserved.
+  </p>
+
+  <p>Stickers With an Attitude.</p>
+
+</footer>
 
 </body>
 </html>
+
 
