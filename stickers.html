@@ -4,17 +4,20 @@
 
 <head>
 <meta charset="UTF-8">
+
 <meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+      content="width=device-width, initial-scale=1.0">
 
 <title>Shop Stickers | Pressed and Burned Creations</title>
 
 <meta name="description"
-content="Explore original stickers and decals from Pressed and Burned Creations.">
+      content="Explore original stickers and decals from Pressed and Burned Creations.">
 
 <style>
 
-/* GENERAL SETTINGS */
+/* =========================================
+   GENERAL WEBSITE SETTINGS
+========================================= */
 
 * {
   box-sizing: border-box;
@@ -22,22 +25,23 @@ content="Explore original stickers and decals from Pressed and Burned Creations.
 
 html {
   scroll-behavior: smooth;
+  background: #050505;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
   background: #050505;
-  color: white;
-  font-family: Arial, sans-serif;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   isolation: isolate;
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
 a {
@@ -45,26 +49,36 @@ a {
   text-decoration: none;
 }
 
-/* PERMANENT FIXED BACKGROUND */
+/* =========================================
+   PERMANENT FIXED BACKGROUND
+   100% OPACITY - SAME AS HOMEPAGE
+========================================= */
 
 body::before {
   content: "";
+
   position: fixed;
   inset: 0;
+
+  width: 100%;
+  height: 100%;
 
   background-image:
     url("Pressed%20and%20burned%20background%20logo.png");
 
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
 
   opacity: 1;
+
   pointer-events: none;
   z-index: 0;
 }
 
-/* CONTENT ABOVE BACKGROUND */
+/* =========================================
+   ALL CONTENT SCROLLS OVER BACKGROUND
+========================================= */
 
 body > header,
 body > nav,
@@ -74,10 +88,12 @@ body > footer {
   z-index: 1;
 }
 
-/* MAIN LOGO */
+/* =========================================
+   MAIN BUSINESS HEADER
+========================================= */
 
 header {
-  background: rgba(0,0,0,0.72);
+  background: rgba(0, 0, 0, 0.72);
   text-align: center;
   padding: 15px;
 }
@@ -85,57 +101,98 @@ header {
 .header-logo {
   width: 100%;
   max-width: 1100px;
-  margin: auto;
+  height: auto;
+  margin: 0 auto;
 }
 
-/* NAVIGATION */
+/* =========================================
+   NAVIGATION BAR
+========================================= */
 
 nav {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 15px 30px;
 
-  background: rgba(0,0,0,0.85);
+  gap: 15px 30px;
   padding: 18px;
+
+  background: rgba(0, 0, 0, 0.85);
 
   border-top: 1px solid #c96c00;
   border-bottom: 2px solid #ff9000;
 }
 
 nav a {
+  font-size: 16px;
   font-weight: bold;
+  color: #ffffff;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus-visible {
   color: #ffae35;
 }
 
-/* SHOP INTRODUCTION */
+/* HIGHLIGHT CURRENT SHOP PAGE */
+
+nav .shop-nav {
+  background: linear-gradient(
+    135deg,
+    #ffcc55,
+    #ff8000
+  );
+
+  color: #111111;
+
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid #ffb347;
+}
+
+nav .shop-nav:hover {
+  color: #111111;
+  filter: brightness(1.15);
+}
+
+/* =========================================
+   SHOP INTRODUCTION
+========================================= */
 
 .shop-intro {
   max-width: 950px;
   margin: 75px auto;
   padding: 40px 25px;
+
   text-align: center;
 
-  background: rgba(0,0,0,0.78);
+  background: rgba(0, 0, 0, 0.78);
+
   border: 1px solid #d97706;
   border-radius: 18px;
+
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.4);
 }
 
 h1 {
   color: #ffae35;
-  font-size: clamp(32px,5vw,50px);
+
+  font-size: clamp(32px, 5vw, 50px);
   text-transform: uppercase;
+
   margin: 0 0 15px;
 }
 
 .shop-intro p {
   font-size: 18px;
+  color: #eeeeee;
 }
 
-/* SHOP SECTIONS */
+/* =========================================
+   SHOP SECTIONS
+========================================= */
 
 .shop-section {
   max-width: 1200px;
@@ -143,48 +200,99 @@ h1 {
   padding: 20px;
 }
 
+/* =========================================
+   SECTION HEADING BOXES
+   MATCHES HOMEPAGE STYLE
+========================================= */
+
 h2 {
-  text-align: center;
-  color: #ffae35;
+  display: block;
+
+  width: fit-content;
+  max-width: 100%;
+
+  margin: 0 auto 25px;
+
+  padding: 12px 25px;
+
+  background: rgba(0, 0, 0, 0.78);
+
+  color: #ffad35;
+
   font-size: 32px;
-  margin-bottom: 25px;
+  text-align: center;
+
+  border-radius: 10px;
+
+  text-shadow:
+    1px 2px 4px rgba(0, 0, 0, 0.9);
 }
+
+/* =========================================
+   DESCRIPTION BOXES
+========================================= */
 
 .section-text {
-  background: rgba(0,0,0,0.80);
+  background: rgba(0, 0, 0, 0.80);
+
   text-align: center;
-  padding: 20px;
+
+  padding: 20px 25px;
+
   border-radius: 12px;
+
   max-width: 800px;
   margin: 0 auto 30px;
+
+  color: #eeeeee;
+  font-size: 18px;
 }
 
-/* FEATURED IMAGE */
+.section-text p {
+  margin: 0;
+}
+
+/* =========================================
+   FEATURED STICKER IMAGE
+========================================= */
 
 .featured-image {
   width: 100%;
+
   border: 2px solid #ff9000;
   border-radius: 15px;
+
   overflow: hidden;
+
+  box-shadow:
+    0 0 25px rgba(255, 140, 0, 0.2);
 }
 
 .featured-image img {
   width: 100%;
+  height: auto;
 }
 
-/* PRODUCT CATEGORIES */
+/* =========================================
+   PRODUCT AVAILABILITY CARDS
+========================================= */
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
   gap: 25px;
   margin-top: 35px;
 }
 
 .category-card {
-  background: rgba(0,0,0,0.88);
+  background: rgba(0, 0, 0, 0.88);
+
   border: 1px solid #bb6500;
   border-radius: 15px;
+
   padding: 35px 25px;
   text-align: center;
 }
@@ -192,53 +300,118 @@ h2 {
 .category-card h3 {
   color: #ffae35;
   font-size: 24px;
+  margin-top: 0;
 }
 
 .category-card p {
   color: #eeeeee;
+  font-size: 17px;
 }
 
-/* BUTTONS */
+/* =========================================
+   BUTTONS
+========================================= */
 
 .button {
   display: inline-block;
+
   background: linear-gradient(
-    135deg,#ffcc55,#ff8000
+    135deg,
+    #ffcc55,
+    #ff8000
   );
-  color: #111;
+
+  color: #111111;
+
   border-radius: 8px;
+
   padding: 14px 25px;
+
   font-weight: bold;
+
   margin: 10px;
+
+  transition:
+    transform 0.2s,
+    filter 0.2s;
 }
 
-.button:hover {
+.button:hover,
+.button:focus-visible {
   filter: brightness(1.15);
+  transform: translateY(-2px);
 }
 
-/* CATALOG PREPARATION */
+/* =========================================
+   FUTURE PRODUCT CATALOG
+========================================= */
 
 .catalog-message {
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
+
   border: 1px solid #c9750b;
   border-radius: 16px;
+
   padding: 40px 25px;
+
   text-align: center;
 }
 
-/* FOOTER */
+.catalog-message h3 {
+  color: #ffb347;
+  font-size: 25px;
+  margin-top: 0;
+}
+
+.catalog-message p {
+  color: #eeeeee;
+  font-size: 17px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
   text-align: center;
-  background: rgba(0,0,0,0.90);
+
+  background: rgba(0, 0, 0, 0.90);
+
   border-top: 2px solid #ff9000;
+
   padding: 30px 15px;
+
   color: #cccccc;
 }
 
-/* MOBILE DISPLAY */
+/* =========================================
+   MOBILE AND TABLET DISPLAY
+========================================= */
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
+
+  body::before {
+    background-position: center center;
+    background-size: contain;
+    opacity: 1;
+  }
+
+  header {
+    padding: 10px 5px;
+  }
+
+  nav {
+    gap: 12px 18px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  nav .shop-nav {
+    padding: 9px 15px;
+  }
+
   .category-grid {
     grid-template-columns: 1fr;
   }
@@ -255,7 +428,22 @@ footer {
 
   h2 {
     font-size: 27px;
+    padding: 12px 18px;
   }
+
+  .section-text {
+    font-size: 16px;
+    padding: 18px;
+  }
+
+  .category-card {
+    padding: 25px 18px;
+  }
+
+  .catalog-message {
+    padding: 30px 18px;
+  }
+
 }
 
 </style>
@@ -263,28 +451,54 @@ footer {
 
 <body>
 
-<!-- BUSINESS LOGO -->
+<!-- ======================================
+     MAIN BUSINESS HEADER
+====================================== -->
 
 <header>
+
   <img
     class="header-logo"
     src="Pressed%20and%20burned%20logo.png"
     alt="Pressed and Burned Creations">
+
 </header>
 
-<!-- NAVIGATION -->
+<!-- ======================================
+     NAVIGATION
+====================================== -->
 
 <nav aria-label="Main navigation">
-  <a href="index.html">Home</a>
-  <a href="stickers.html">Shop Stickers</a>
-  <a href="index.html#services">Services</a>
-  <a href="index.html#about">About Us</a>
-  <a href="index.html#contact">Contact</a>
+
+  <a href="index.html">
+    Home
+  </a>
+
+  <a href="stickers.html"
+     class="shop-nav"
+     aria-current="page">
+    Shop Stickers
+  </a>
+
+  <a href="index.html#services">
+    Services
+  </a>
+
+  <a href="index.html#about">
+    About Us
+  </a>
+
+  <a href="index.html#contact">
+    Contact
+  </a>
+
 </nav>
 
 <main>
 
-<!-- SHOP INTRODUCTION -->
+<!-- ======================================
+     SHOP INTRODUCTION
+====================================== -->
 
 <div class="shop-intro">
 
@@ -295,40 +509,54 @@ footer {
   </p>
 
   <p>
-    Explore bold designs, creative artwork,
-    and unique stickers made to stand out.
+    Explore bold designs,
+    creative artwork,
+    and unique stickers
+    made to stand out.
   </p>
 
   <p>
-    Your Style. Your Sticker.
+    Your Style.
+    Your Sticker.
     Your Statement.
   </p>
 
 </div>
 
-<!-- FEATURED DESIGNS -->
+<!-- ======================================
+     FEATURED STICKER DESIGNS
+====================================== -->
 
 <section class="shop-section">
 
   <h2>Explore Our Designs</h2>
 
   <div class="section-text">
+
     <p>
       Here's a preview of our creative
-      sticker designs. Individual products
-      and prices will be added soon.
+      sticker designs.
+
+      Individual products and prices
+      will be added soon.
     </p>
+
   </div>
 
   <div class="featured-image">
+
     <img
       src="Sticker%20merch%201.png"
-      alt="Pressed and Burned Creations sticker designs">
+      alt="Pressed and Burned Creations sticker designs"
+      loading="lazy">
+
   </div>
 
 </section>
 
-<!-- PRODUCT AVAILABILITY -->
+<!-- ======================================
+     PRODUCT AVAILABILITY
+====================================== -->
 
 <section class="shop-section">
 
@@ -336,21 +564,27 @@ footer {
 
   <div class="category-grid">
 
+    <!-- READY TO SHIP -->
+
     <div class="category-card">
 
       <h3>Ready to Ship</h3>
 
       <p>
-        Our most popular stickers will
-        be available from printed inventory.
+        Our most popular stickers
+        will be available
+        from printed inventory.
       </p>
 
       <p>
         These designs will be marked
-        Ready to Ship when available.
+        Ready to Ship
+        when available.
       </p>
 
     </div>
+
+    <!-- MADE TO ORDER -->
 
     <div class="category-card">
 
@@ -364,7 +598,8 @@ footer {
 
       <p>
         Planned production time:
-        3–5 business days before shipping.
+        3–5 business days
+        before shipping.
       </p>
 
     </div>
@@ -373,7 +608,9 @@ footer {
 
 </section>
 
-<!-- FUTURE PRODUCT CATALOG -->
+<!-- ======================================
+     FUTURE STICKER CATALOG
+====================================== -->
 
 <section class="shop-section">
 
@@ -384,16 +621,19 @@ footer {
     <h3>More Designs Coming Soon!</h3>
 
     <p>
-      We're preparing individual sticker
-      listings with photos, sizes,
+      We're preparing individual
+      sticker listings with
+      photos, sizes,
       descriptions, and prices.
     </p>
 
     <p>
-      Check back as we add new creations.
+      Check back as we
+      add new creations.
     </p>
 
-    <a class="button" href="index.html">
+    <a class="button"
+       href="index.html">
       Return to Homepage
     </a>
 
@@ -403,14 +643,21 @@ footer {
 
 </main>
 
+<!-- ======================================
+     FOOTER
+====================================== -->
+
 <footer>
 
   <p>
-    &copy; 2026 Pressed and Burned Creations.
+    &copy; 2026
+    Pressed and Burned Creations.
     All Rights Reserved.
   </p>
 
-  <p>Stickers With an Attitude.</p>
+  <p>
+    Stickers With an Attitude.
+  </p>
 
 </footer>
 
