@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Shop Stickers | Pressed and Burned Creations</title>
+
+<meta name="description"
+content="Explore original stickers and decals from Pressed and Burned Creations.">
+
+<style>
+
+/* GENERAL SETTINGS */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #050505;
+  color: white;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  isolation: isolate;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* PERMANENT FIXED BACKGROUND */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image:
+    url("Pressed%20and%20burned%20background%20logo.png");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  opacity: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* CONTENT ABOVE BACKGROUND */
+
+body > header,
+body > nav,
+body > main,
+body > footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* MAIN LOGO */
+
+header {
+  background: rgba(0,0,0,0.72);
+  text-align: center;
+  padding: 15px;
+}
+
+.header-logo {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px 30px;
+
+  background: rgba(0,0,0,0.85);
+  padding: 18px;
+
+  border-top: 1px solid #c96c00;
+  border-bottom: 2px solid #ff9000;
+}
+
+nav a {
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffae35;
+}
+
+/* SHOP INTRODUCTION */
+
+.shop-intro {
+  max-width: 950px;
+  margin: 75px auto;
+  padding: 40px 25px;
+  text-align: center;
+
+  background: rgba(0,0,0,0.78);
+  border: 1px solid #d97706;
+  border-radius: 18px;
+}
+
+h1 {
+  color: #ffae35;
+  font-size: clamp(32px,5vw,50px);
+  text-transform: uppercase;
+  margin: 0 0 15px;
+}
+
+.shop-intro p {
+  font-size: 18px;
+}
+
+/* SHOP SECTIONS */
+
+.shop-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #ffae35;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.section-text {
+  background: rgba(0,0,0,0.80);
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+/* FEATURED IMAGE */
+
+.featured-image {
+  width: 100%;
+  border: 2px solid #ff9000;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.featured-image img {
+  width: 100%;
+}
+
+/* PRODUCT CATEGORIES */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.category-card {
+  background: rgba(0,0,0,0.88);
+  border: 1px solid #bb6500;
+  border-radius: 15px;
+  padding: 35px 25px;
+  text-align: center;
+}
+
+.category-card h3 {
+  color: #ffae35;
+  font-size: 24px;
+}
+
+.category-card p {
+  color: #eeeeee;
+}
+
+/* BUTTONS */
+
+.button {
+  display: inline-block;
+  background: linear-gradient(
+    135deg,#ffcc55,#ff8000
+  );
+  color: #111;
+  border-radius: 8px;
+  padding: 14px 25px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.button:hover {
+  filter: brightness(1.15);
+}
+
+/* CATALOG PREPARATION */
+
+.catalog-message {
+  background: rgba(0,0,0,0.85);
+  border: 1px solid #c9750b;
+  border-radius: 16px;
+  padding: 40px 25px;
+  text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  background: rgba(0,0,0,0.90);
+  border-top: 2px solid #ff9000;
+  padding: 30px 15px;
+  color: #cccccc;
+}
+
+/* MOBILE DISPLAY */
+
+@media(max-width:768px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-intro {
+    margin: 35px 15px;
+    padding: 25px 18px;
+  }
+
+  .shop-section {
+    margin: 35px auto;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BUSINESS LOGO -->
+
+<header>
+  <img
+    class="header-logo"
+    src="Pressed%20and%20burned%20logo.png"
+    alt="Pressed and Burned Creations">
+</header>
+
+<!-- NAVIGATION -->
+
+<nav aria-label="Main navigation">
+  <a href="index.html">Home</a>
+  <a href="stickers.html">Shop Stickers</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#about">About Us</a>
+  <a href="index.html#contact">Contact</a>
+</nav>
+
+<main>
+
+<!-- SHOP INTRODUCTION -->
+
+<div class="shop-intro">
+
+  <h1>Shop Stickers</h1>
+
+  <p>
+    Stickers With an Attitude!
+  </p>
+
+  <p>
+    Explore bold designs, creative artwork,
+    and unique stickers made to stand out.
+  </p>
+
+  <p>
+    Your Style. Your Sticker.
+    Your Statement.
+  </p>
+
+</div>
+
+<!-- FEATURED DESIGNS -->
+
+<section class="shop-section">
+
+  <h2>Explore Our Designs</h2>
+
+  <div class="section-text">
+    <p>
+      Here's a preview of our creative
+      sticker designs. Individual products
+      and prices will be added soon.
+    </p>
+  </div>
+
+  <div class="featured-image">
+    <img
+      src="Sticker%20merch%201.png"
+      alt="Pressed and Burned Creations sticker designs">
+  </div>
+
+</section>
+
+<!-- PRODUCT AVAILABILITY -->
+
+<section class="shop-section">
+
+  <h2>How Our Stickers Are Available</h2>
+
+  <div class="category-grid">
+
+    <div class="category-card">
+
+      <h3>Ready to Ship</h3>
+
+      <p>
+        Our most popular stickers will
+        be available from printed inventory.
+      </p>
+
+      <p>
+        These designs will be marked
+        Ready to Ship when available.
+      </p>
+
+    </div>
+
+    <div class="category-card">
+
+      <h3>Made to Order</h3>
+
+      <p>
+        Choose from our digital designs
+        and we'll produce your stickers
+        after ordering.
+      </p>
+
+      <p>
+        Planned production time:
+        3–5 business days before shipping.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FUTURE PRODUCT CATALOG -->
+
+<section class="shop-section">
+
+  <h2>Our Sticker Collection</h2>
+
+  <div class="catalog-message">
+
+    <h3>More Designs Coming Soon!</h3>
+
+    <p>
+      We're preparing individual sticker
+      listings with photos, sizes,
+      descriptions, and prices.
+    </p>
+
+    <p>
+      Check back as we add new creations.
+    </p>
+
+    <a class="button" href="index.html">
+      Return to Homepage
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+
+  <p>
+    &copy; 2026 Pressed and Burned Creations.
+    All Rights Reserved.
+  </p>
+
+  <p>Stickers With an Attitude.</p>
+
+</footer>
+
+</body>
+</html>
