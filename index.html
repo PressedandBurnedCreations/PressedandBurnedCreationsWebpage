@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
+<head>
 <meta charset="UTF-8">
+
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
@@ -14,9 +15,7 @@ content="Pressed and Burned Creations - Stickers, Decals, and Custom Designs. St
 
 <style>
 
-/* =========================================
-   GENERAL WEBSITE SETTINGS
-========================================= */
+/* GENERAL WEBSITE SETTINGS */
 
 * {
   box-sizing: border-box;
@@ -48,17 +47,12 @@ a {
   color: inherit;
 }
 
-/* =========================================
-   PERMANENT FIXED BACKGROUND
-   ORIGINAL P&B CREATIONS LOGO
-   100% OPACITY
-========================================= */
+/* FIXED CENTERED BACKGROUND - 100% OPACITY */
 
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-
   width: 100%;
   height: 100%;
 
@@ -70,14 +64,11 @@ body::before {
   background-size: contain;
 
   opacity: 1;
-
   pointer-events: none;
   z-index: 0;
 }
 
-/* =========================================
-   CONTENT SCROLLS OVER BACKGROUND
-========================================= */
+/* KEEP CONTENT ABOVE BACKGROUND */
 
 body > header,
 body > nav,
@@ -87,12 +78,10 @@ body > footer {
   z-index: 1;
 }
 
-/* =========================================
-   MAIN HEADER
-========================================= */
+/* MAIN HEADER */
 
 .main-header {
-  background: rgba(0, 0, 0, 0.72);
+  background: rgba(0,0,0,0.72);
   text-align: center;
   padding: 15px;
 }
@@ -100,44 +89,38 @@ body > footer {
 .main-logo {
   width: 100%;
   max-width: 1100px;
-  height: auto;
   margin: 0 auto;
 }
 
-/* =========================================
-   NAVIGATION BAR
-========================================= */
+/* NAVIGATION */
 
 nav {
-  background: rgba(0, 0, 0, 0.85);
-
-  border-top: 1px solid #c96c00;
-  border-bottom: 2px solid #ff9000;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
-  gap: 20px;
+  gap: 15px 22px;
   padding: 18px;
+
+  background: rgba(0,0,0,0.85);
+  border-top: 1px solid #c96c00;
+  border-bottom: 2px solid #ff9000;
 }
 
 nav a {
-  color: #ffffff;
+  color: white;
   font-size: 16px;
   font-weight: bold;
   transition: color 0.2s;
 }
 
-nav a:hover,
-nav a:focus-visible {
+nav a:hover {
   color: #ffac39;
 }
 
-/* HIGHLIGHTED SHOP NAVIGATION BUTTON */
+/* SHOP NAVIGATION BUTTON */
 
-nav .shop-nav {
+.shop-nav {
   background: linear-gradient(
     135deg, #ffcc55, #ff8000
   );
@@ -145,22 +128,23 @@ nav .shop-nav {
   color: #111111;
   padding: 10px 20px;
   border-radius: 8px;
-  border: 1px solid #ffb347;
-
-  transition:
-    transform 0.2s,
-    filter 0.2s;
 }
 
 nav .shop-nav:hover {
   color: #111111;
   filter: brightness(1.15);
-  transform: translateY(-2px);
 }
 
-/* =========================================
-   HOMEPAGE INTRODUCTION
-========================================= */
+/* ABOUT US NAVIGATION BUTTON */
+
+.about-nav {
+  border: 2px solid #ff9000;
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.65);
+}
+
+/* INTRODUCTION */
 
 .intro {
   min-height: 65vh;
@@ -178,15 +162,12 @@ nav .shop-nav:hover {
   width: 100%;
   max-width: 850px;
 
-  background: rgba(0, 0, 0, 0.76);
-
-  border: 1px solid rgba(255, 140, 0, 0.45);
+  background: rgba(0,0,0,0.76);
+  border: 1px solid rgba(255,140,0,0.45);
   border-radius: 18px;
 
   padding: 45px 30px;
-
-  box-shadow:
-    0 0 35px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 35px rgba(0,0,0,0.4);
 }
 
 .intro h1 {
@@ -203,24 +184,18 @@ nav .shop-nav:hover {
   color: #eeeeee;
 }
 
-/* =========================================
-   BUTTONS
-========================================= */
+/* BUTTONS */
 
 .button {
   display: inline-block;
-
-  background: linear-gradient(
-    135deg,
-    #ffcc55,
-    #ff8000
-  );
-
-  color: #111111;
-
   padding: 15px 28px;
   margin: 8px;
 
+  background: linear-gradient(
+    135deg, #ffcc55, #ff8000
+  );
+
+  color: #111111;
   border-radius: 8px;
   font-weight: bold;
 
@@ -229,19 +204,18 @@ nav .shop-nav:hover {
     filter 0.2s;
 }
 
-.button:hover,
-.button:focus-visible {
+.button:hover {
   filter: brightness(1.15);
   transform: translateY(-2px);
 }
 
 .outline {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.65);
   color: #ffb347;
   border: 2px solid #ff8c00;
 }
 
-/* MAIN SHOP STICKERS BUTTON */
+/* MAIN SHOP BUTTON */
 
 .shop-button {
   display: inline-block;
@@ -251,40 +225,29 @@ nav .shop-nav:hover {
   );
 
   color: #080808;
+  border: 2px solid #ffcc55;
+  border-radius: 10px;
 
   padding: 18px 38px;
   margin: 10px;
 
-  border-radius: 10px;
-  border: 2px solid #ffcc55;
-
   font-size: 20px;
   font-weight: 900;
-  letter-spacing: 1px;
 
-  box-shadow:
-    0 0 22px rgba(255, 140, 0, 0.35);
+  box-shadow: 0 0 22px rgba(255,140,0,0.35);
 
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+  transition: transform 0.2s;
 }
 
-.shop-button:hover,
-.shop-button:focus-visible {
+.shop-button:hover {
   transform: translateY(-3px);
-
-  box-shadow:
-    0 0 35px rgba(255, 140, 0, 0.65);
 }
 
-/* =========================================
-   GENERAL SECTIONS
-========================================= */
+/* GENERAL SECTIONS */
 
 section {
   padding: 75px 20px;
-  background: rgba(0, 0, 0, 0.18);
+  background: rgba(0,0,0,0.18);
 }
 
 .container {
@@ -298,11 +261,11 @@ h2 {
   color: #ffad35;
   font-size: 36px;
 
+  width: fit-content;
+  max-width: 100%;
   margin: 0 auto 20px;
-  max-width: max-content;
 
-  background: rgba(0, 0, 0, 0.78);
-
+  background: rgba(0,0,0,0.78);
   padding: 10px 25px;
   border-radius: 10px;
 }
@@ -315,68 +278,56 @@ h2 {
   font-size: 18px;
   color: #eeeeee;
 
-  background: rgba(0, 0, 0, 0.78);
-
+  background: rgba(0,0,0,0.78);
   padding: 16px 22px;
   border-radius: 10px;
 }
 
-/* =========================================
-   STICKER SHOWCASE
-========================================= */
+/* STICKER SHOWCASE */
 
 .showcase {
-  background: rgba(0, 0, 0, 0.22);
+  background: rgba(0,0,0,0.22);
 }
 
 .showcase img {
   width: 100%;
-
   border: 2px solid #d97706;
   border-radius: 15px;
 
-  box-shadow:
-    0 0 25px rgba(255, 140, 0, 0.2);
+  box-shadow: 0 0 25px rgba(255,140,0,0.2);
 }
 
 .shop-prompt {
   text-align: center;
   margin-top: 35px;
-
   padding: 25px;
 
-  background: rgba(0, 0, 0, 0.78);
+  background: rgba(0,0,0,0.78);
   border-radius: 15px;
 }
 
 .shop-prompt h3 {
   color: #ffb347;
   font-size: 25px;
-  margin-top: 0;
 }
 
-/* =========================================
-   SERVICES
-========================================= */
+/* SERVICES */
 
 .services {
-  background: rgba(0, 0, 0, 0.12);
+  background: rgba(0,0,0,0.12);
 }
 
 .service-grid {
   display: grid;
-
   grid-template-columns:
     repeat(3, minmax(0, 1fr));
-
   gap: 25px;
 }
 
 .service-card {
   padding: 35px 25px;
 
-  background: rgba(10, 10, 10, 0.85);
-
+  background: rgba(10,10,10,0.85);
   border: 1px solid #bc6500;
   border-radius: 14px;
 
@@ -392,12 +343,10 @@ h2 {
   color: #eeeeee;
 }
 
-/* =========================================
-   ABOUT SECTION
-========================================= */
+/* ABOUT SECTION */
 
 .about {
-  background: rgba(0, 0, 0, 0.18);
+  background: rgba(0,0,0,0.18);
   text-align: center;
 }
 
@@ -405,9 +354,8 @@ h2 {
   max-width: 850px;
   margin: 0 auto;
 
-  background: rgba(0, 0, 0, 0.82);
-
-  border: 1px solid rgba(255, 140, 0, 0.35);
+  background: rgba(0,0,0,0.82);
+  border: 1px solid rgba(255,140,0,0.35);
   border-radius: 16px;
 
   padding: 35px;
@@ -421,12 +369,10 @@ h2 {
   color: #eeeeee;
 }
 
-/* =========================================
-   CONTACT SECTION
-========================================= */
+/* CONTACT */
 
 .contact {
-  background: rgba(0, 0, 0, 0.18);
+  background: rgba(0,0,0,0.18);
   text-align: center;
 }
 
@@ -441,30 +387,23 @@ h2 {
   border: 2px solid #c9750b;
 }
 
-/* =========================================
-   FOOTER
-========================================= */
+/* FOOTER */
 
 footer {
-  padding: 30px 15px;
-
   text-align: center;
-
-  background: rgba(0, 0, 0, 0.85);
-
+  background: rgba(0,0,0,0.85);
   border-top: 2px solid #ff8c00;
 
+  padding: 30px 15px;
   color: #cccccc;
 }
 
-/* =========================================
-   MOBILE AND TABLET DISPLAY
-========================================= */
+/* MOBILE AND TABLET */
 
 @media (max-width: 768px) {
 
   body::before {
-    background-position: center center;
+    background-position: center;
     background-size: contain;
     opacity: 1;
   }
@@ -481,7 +420,8 @@ footer {
     font-size: 13px;
   }
 
-  nav .shop-nav {
+  .shop-nav,
+  .about-nav {
     padding: 9px 15px;
   }
 
@@ -530,9 +470,7 @@ footer {
 
 <body>
 
-<!-- ======================================
-     MAIN BUSINESS HEADER
-====================================== -->
+<!-- MAIN BUSINESS HEADER -->
 
 <header class="main-header" id="home">
 
@@ -543,9 +481,7 @@ footer {
 
 </header>
 
-<!-- ======================================
-     NAVIGATION
-====================================== -->
+<!-- NAVIGATION -->
 
 <nav aria-label="Main navigation">
 
@@ -559,7 +495,11 @@ footer {
 
   <a href="#services">Services</a>
 
-  <a href="#about">About Us</a>
+  <!-- NEW ABOUT US PAGE LINK -->
+
+  <a href="about-us.html" class="about-nav">
+    ABOUT US
+  </a>
 
   <a href="#contact">Contact</a>
 
@@ -567,9 +507,7 @@ footer {
 
 <main>
 
-<!-- ======================================
-     INTRODUCTION
-====================================== -->
+<!-- INTRODUCTION -->
 
 <div class="intro">
 
@@ -586,13 +524,15 @@ footer {
       to stand out.
     </p>
 
-    <!-- NEW MAIN SHOP BUTTON -->
-
     <a href="stickers.html" class="shop-button">
       SHOP STICKERS
     </a>
 
     <div>
+
+      <a href="about-us.html" class="button">
+        ABOUT US
+      </a>
 
       <a href="#showcase" class="button outline">
         View Our Work
@@ -608,9 +548,7 @@ footer {
 
 </div>
 
-<!-- ======================================
-     FEATURED STICKERS
-====================================== -->
+<!-- FEATURED STICKERS -->
 
 <section class="showcase" id="showcase">
 
@@ -631,8 +569,6 @@ footer {
       alt="Pressed and Burned Creations sticker showcase"
       loading="lazy">
 
-    <!-- SECOND SHOP BUTTON BELOW SHOWCASE -->
-
     <div class="shop-prompt">
 
       <h3>Find Your Next Favorite Sticker!</h3>
@@ -652,9 +588,7 @@ footer {
 
 </section>
 
-<!-- ======================================
-     SERVICES
-====================================== -->
+<!-- SERVICES -->
 
 <section class="services" id="services">
 
@@ -711,9 +645,7 @@ footer {
 
 </section>
 
-<!-- ======================================
-     ABOUT US
-====================================== -->
+<!-- ABOUT PREVIEW ON HOMEPAGE -->
 
 <section class="about" id="about">
 
@@ -741,15 +673,17 @@ footer {
         Stick It Anywhere.
       </p>
 
+      <a href="about-us.html" class="button">
+        Visit Our About Us Page
+      </a>
+
     </div>
 
   </div>
 
 </section>
 
-<!-- ======================================
-     CONTACT INFORMATION
-====================================== -->
+<!-- CONTACT INFORMATION -->
 
 <section class="contact" id="contact">
 
@@ -786,9 +720,7 @@ footer {
 
 </main>
 
-<!-- ======================================
-     FOOTER
-====================================== -->
+<!-- FOOTER -->
 
 <footer>
 
