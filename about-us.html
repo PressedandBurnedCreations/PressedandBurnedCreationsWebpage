@@ -3,155 +3,579 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
 
-  <title>About Us | Pressed and Burned Creations</title>
+<meta charset="UTF-8">
 
-  <style>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    /* GENERAL SETTINGS */
+<title>Our Story | Pressed and Burned Creations</title>
 
-    * {
-      box-sizing: border-box;
-    }
+<meta name="description"
+      content="Discover the family story behind Pressed and Burned Creations, from our beginnings in 2019 to our passion for custom stickers and creative products.">
 
-    html {
-      background: #050505;
-    }
+<!-- CUSTOM FONTS -->
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: #050505;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      isolation: isolate;
-    }
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
 
-    /* FIXED BACKGROUND - 100% OPACITY */
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
+<link
+  href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Exo+2:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,600&display=swap"
+  rel="stylesheet">
 
-      background-image:
-        url("Pressed%20and%20burned%20background%20logo.png");
+<style>
 
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
+/* =====================================
+   GENERAL WEBSITE SETTINGS
+===================================== */
 
-      opacity: 1;
-      pointer-events: none;
-      z-index: 0;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    /* MAIN HEADER */
+html {
+  scroll-behavior: smooth;
+  background: #050505;
+}
 
-    header {
-      position: relative;
-      z-index: 1;
+body {
+  margin: 0;
+  min-height: 100vh;
 
-      background: rgba(0, 0, 0, 0.72);
-      text-align: center;
-      padding: 15px;
-    }
+  background: #050505;
+  color: #ffffff;
 
-    .main-logo {
-      display: block;
-      width: 100%;
-      max-width: 1100px;
-      height: auto;
-      margin: 0 auto;
-    }
+  font-family: 'Exo 2', Arial, sans-serif;
+  line-height: 1.8;
 
-    /* COMING SOON MESSAGE */
+  isolation: isolate;
+}
 
-    main {
-      position: relative;
-      z-index: 1;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-      min-height: 65vh;
-      padding: 30px 20px;
-    }
+/* =====================================
+   ORIGINAL FIXED BACKGROUND
+   100% OPACITY
+===================================== */
 
-    .message-box {
-      background: rgba(0, 0, 0, 0.82);
+body::before {
+  content: "";
 
-      border: 2px solid #ff9000;
-      border-radius: 16px;
+  position: fixed;
+  inset: 0;
 
-      padding: 45px 35px;
-      text-align: center;
+  background-image:
+    url("Pressed%20and%20burned%20background%20logo.png");
 
-      box-shadow:
-        0 0 25px rgba(255, 140, 0, 0.25);
-    }
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
 
-    h1 {
-      color: #ffb347;
-      font-size: clamp(26px, 5vw, 44px);
-      margin: 0;
-      line-height: 1.4;
-    }
+  opacity: 1;
 
-    /* MOBILE DISPLAY */
+  pointer-events: none;
+  z-index: 0;
+}
 
-    @media (max-width: 768px) {
+/* KEEP CONTENT ABOVE BACKGROUND */
 
-      header {
-        padding: 10px 5px;
-      }
+body > header,
+body > main,
+body > footer {
+  position: relative;
+  z-index: 1;
+}
 
-      main {
-        min-height: 60vh;
-      }
+/* =====================================
+   MAIN BUSINESS HEADER
+===================================== */
 
-      .message-box {
-        padding: 30px 20px;
-      }
+.main-header {
+  background: rgba(0, 0, 0, 0.72);
 
-    }
+  padding: 15px;
+  text-align: center;
+}
 
-  </style>
+.main-logo {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+main {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+  padding: 65px 22px 90px;
+}
+
+/* =====================================
+   DECORATIVE PAGE HEADING
+===================================== */
+
+.page-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.heading-box {
+  display: inline-block;
+
+  max-width: 100%;
+  padding: 25px 45px;
+
+  background: rgba(0, 0, 0, 0.88);
+
+  border: 1px solid #d97706;
+  border-radius: 14px;
+
+  box-shadow:
+    0 0 25px rgba(255, 140, 0, 0.18);
+}
+
+h1 {
+  margin: 0;
+
+  font-family:
+    'Cinzel Decorative',
+    Georgia,
+    serif;
+
+  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 900;
+
+  letter-spacing: 2px;
+  line-height: 1.4;
+
+  color: #ffb347;
+
+  text-shadow:
+    2px 2px 5px #000000,
+    0 0 15px rgba(255, 140, 0, 0.25);
+}
+
+/* DECORATIVE GOLD LINE */
+
+.heading-line {
+  width: 150px;
+  max-width: 80%;
+  height: 3px;
+
+  margin: 20px auto 0;
+
+  background: linear-gradient(
+    90deg,
+    #ff6200,
+    #ffd36a,
+    #ff6200
+  );
+
+  border-radius: 5px;
+}
+
+/* =====================================
+   BIOGRAPHY CONTAINER
+===================================== */
+
+.bio-container {
+  background: rgba(0, 0, 0, 0.88);
+
+  border:
+    1px solid rgba(255, 151, 28, 0.65);
+
+  border-radius: 18px;
+
+  padding: 50px 60px;
+
+  box-shadow:
+    0 0 35px rgba(0, 0, 0, 0.50);
+}
+
+/* =====================================
+   EXO 2 BIOGRAPHY LETTERING
+===================================== */
+
+.bio-text {
+  max-width: 800px;
+  margin: 0 auto;
+
+  font-family:
+    'Exo 2',
+    Arial,
+    sans-serif;
+
+  font-size: 19px;
+  font-weight: 500;
+
+  line-height: 1.9;
+  letter-spacing: 0.2px;
+
+  color: #f7f7f7;
+
+  overflow-wrap: break-word;
+
+  text-shadow:
+    1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* PARAGRAPH SPACING */
+
+.bio-text p {
+  margin: 0 0 32px;
+}
+
+.bio-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* =====================================
+   DECORATIVE FIRST LETTER
+===================================== */
+
+.bio-text p:first-child::first-letter {
+  float: left;
+
+  font-family:
+    'Cinzel Decorative',
+    Georgia,
+    serif;
+
+  font-size: 3em;
+  font-weight: 900;
+
+  color: #ffb347;
+
+  line-height: 0.95;
+
+  padding: 6px 12px 0 0;
+
+  text-shadow:
+    2px 2px 5px #000000;
+}
+
+/* =====================================
+   CLOSING PARAGRAPH
+===================================== */
+
+.closing-paragraph {
+  border-top:
+    1px solid rgba(255, 163, 46, 0.45);
+
+  padding-top: 30px;
+
+  color: #ffffff;
+}
+
+/* =====================================
+   FAMILY SIGNATURE
+===================================== */
+
+.signature {
+  margin-top: 40px;
+  text-align: center;
+
+  font-family:
+    'Cormorant Garamond',
+    Georgia,
+    serif;
+
+  font-style: italic;
+  font-weight: 600;
+  font-size: 34px;
+
+  color: #ffb347;
+
+  text-shadow:
+    1px 2px 4px #000000;
+}
+
+/* =====================================
+   RETURN HOME BUTTON
+===================================== */
+
+.button-area {
+  margin-top: 45px;
+  text-align: center;
+}
+
+.home-button {
+  display: inline-block;
+
+  padding: 15px 30px;
+
+  background: linear-gradient(
+    135deg,
+    #ffcc55,
+    #ff8000
+  );
+
+  color: #111111;
+
+  font-family:
+    'Exo 2',
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  border: 1px solid #ffb347;
+  border-radius: 9px;
+
+  transition:
+    transform 0.2s,
+    filter 0.2s;
+}
+
+.home-button:hover,
+.home-button:focus-visible {
+  transform: translateY(-2px);
+  filter: brightness(1.15);
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+  padding: 30px 15px;
+
+  background: rgba(0, 0, 0, 0.90);
+
+  border-top: 2px solid #ff9000;
+
+  color: #cccccc;
+  text-align: center;
+
+  font-size: 14px;
+}
+
+/* =====================================
+   MOBILE AND TABLET DISPLAY
+===================================== */
+
+@media (max-width: 768px) {
+
+  body::before {
+    background-position: center center;
+    background-size: contain;
+    opacity: 1;
+  }
+
+  .main-header {
+    padding: 10px 5px;
+  }
+
+  main {
+    padding: 35px 15px 60px;
+  }
+
+  .heading-box {
+    padding: 22px 25px;
+  }
+
+  h1 {
+    font-size: 32px;
+    letter-spacing: 1px;
+  }
+
+  .bio-container {
+    padding: 30px 23px;
+  }
+
+  .bio-text {
+    font-size: 17px;
+    line-height: 1.85;
+    letter-spacing: 0;
+  }
+
+  .bio-text p {
+    margin-bottom: 27px;
+  }
+
+  .bio-text p:first-child::first-letter {
+    font-size: 2.5em;
+    padding-right: 8px;
+  }
+
+  .signature {
+    font-size: 29px;
+  }
+
+}
+
+@media (max-width: 380px) {
+
+  .bio-container {
+    padding: 25px 17px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .bio-text {
+    font-size: 16px;
+  }
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-  <!-- BUSINESS LOGO -->
+<!-- =====================================
+     BUSINESS LOGO
+===================================== -->
 
-  <header>
-    <a href="index.html"
-       aria-label="Return to homepage">
+<header class="main-header">
 
-      <img
-        class="main-logo"
-        src="Pressed%20and%20burned%20logo.png"
-        alt="Pressed and Burned Creations">
+  <a href="index.html"
+     aria-label="Return to homepage">
 
-    </a>
-  </header>
+    <img
+      class="main-logo"
+      src="Pressed%20and%20burned%20logo.png"
+      alt="Pressed and Burned Creations">
 
-  <!-- ABOUT US MESSAGE -->
+  </a>
 
-  <main>
+</header>
 
-    <div class="message-box">
+<main>
 
-      <h1>
-        Stay tuned! Bio coming soon!
-      </h1>
+<!-- =====================================
+     OUR STORY HEADING
+===================================== -->
+
+  <div class="page-heading">
+
+    <div class="heading-box">
+
+      <h1>Our Story</h1>
+
+      <div class="heading-line"></div>
 
     </div>
 
-  </main>
+  </div>
+
+<!-- =====================================
+     FINALIZED FAMILY BIOGRAPHY
+===================================== -->
+
+  <article class="bio-container">
+
+    <div class="bio-text">
+
+      <p>
+        Our story began in 2019 when we
+        purchased a direct-to-garment printer
+        to make T-shirts for our motorcycle
+        riding club. What started as shirts
+        for our members soon grew into making
+        them for other customers—and sparked
+        the idea for something bigger.
+      </p>
+
+      <p>
+        With Miles's background in drawing
+        and about twenty years of experience
+        in designing and tattooing, we
+        continued finding new ways to bring
+        artwork to life. We added a sticker
+        printer, followed by sublimation
+        equipment and laser engravers.
+      </p>
+
+      <p>
+        Along the way, we attended apparel
+        and printing shows, learned new
+        software, and developed our skills
+        one project at a time.
+      </p>
+
+      <p>
+        As our business grows, we're proud
+        to share this journey with our
+        daughter and grandchildren.
+        Building something together as a
+        family makes this next chapter
+        especially meaningful to us.
+      </p>
+
+      <p class="closing-paragraph">
+        We're starting with bold, custom
+        stickers, with more printed,
+        pressed, and engraved products
+        to come. From our family to yours,
+        we look forward to helping you
+        bring your ideas to life.
+      </p>
+
+    </div>
+
+    <!-- FAMILY SIGNATURE -->
+
+    <div class="signature">
+      — Miles &amp; Patty
+    </div>
+
+  </article>
+
+<!-- =====================================
+     RETURN HOME BUTTON
+===================================== -->
+
+  <div class="button-area">
+
+    <a href="index.html"
+       class="home-button">
+
+      RETURN TO HOMEPAGE
+
+    </a>
+
+  </div>
+
+</main>
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer>
+
+  <p>
+    &copy; 2026 Pressed and Burned Creations.
+    All Rights Reserved.
+  </p>
+
+  <p>Stickers With an Attitude.</p>
+
+</footer>
 
 </body>
 </html>
