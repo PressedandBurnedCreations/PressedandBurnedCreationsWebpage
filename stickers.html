@@ -3,17 +3,18 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 
 <meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+content="width=device-width, initial-scale=1.0">
 
 <title>Shop Stickers | Pressed and Burned Creations</title>
 
 <meta name="description"
-      content="Explore original stickers and decals from Pressed and Burned Creations.">
+content="Explore bold, original sticker designs from Pressed and Burned Creations. Stickers With an Attitude!">
 
-<!-- P&B CUSTOM FAVICON -->
+<!-- CUSTOM P&B FAVICON -->
 
 <link rel="icon"
       type="image/png"
@@ -21,9 +22,9 @@
 
 <style>
 
-/* =========================================
+/* ==========================================
    GENERAL WEBSITE SETTINGS
-========================================= */
+========================================== */
 
 * {
   box-sizing: border-box;
@@ -37,10 +38,13 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+
   background: #050505;
   color: #ffffff;
+
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+
   isolation: isolate;
 }
 
@@ -55,19 +59,16 @@ a {
   text-decoration: none;
 }
 
-/* =========================================
-   PERMANENT FIXED BACKGROUND
-   100% OPACITY - SAME AS HOMEPAGE
-========================================= */
+/* ==========================================
+   ORIGINAL FIXED BACKGROUND
+   100% OPACITY
+========================================== */
 
 body::before {
   content: "";
 
   position: fixed;
   inset: 0;
-
-  width: 100%;
-  height: 100%;
 
   background-image:
     url("Pressed%20and%20burned%20background%20logo.png");
@@ -82,9 +83,7 @@ body::before {
   z-index: 0;
 }
 
-/* =========================================
-   CONTENT SCROLLS OVER BACKGROUND
-========================================= */
+/* KEEP CONTENT ABOVE BACKGROUND */
 
 body > header,
 body > nav,
@@ -94,26 +93,25 @@ body > footer {
   z-index: 1;
 }
 
-/* =========================================
+/* ==========================================
    MAIN BUSINESS HEADER
-========================================= */
+========================================== */
 
-header {
+.main-header {
   background: rgba(0, 0, 0, 0.72);
   text-align: center;
   padding: 15px;
 }
 
-.header-logo {
+.main-logo {
   width: 100%;
   max-width: 1100px;
-  height: auto;
   margin: 0 auto;
 }
 
-/* =========================================
+/* ==========================================
    NAVIGATION BAR
-========================================= */
+========================================== */
 
 nav {
   display: flex;
@@ -121,7 +119,7 @@ nav {
   align-items: center;
   flex-wrap: wrap;
 
-  gap: 15px 30px;
+  gap: 15px 22px;
   padding: 18px;
 
   background: rgba(0, 0, 0, 0.85);
@@ -131,17 +129,19 @@ nav {
 }
 
 nav a {
+  color: #ffffff;
   font-size: 16px;
   font-weight: bold;
-  color: #ffffff;
+
+  transition: color 0.2s;
 }
 
 nav a:hover,
 nav a:focus-visible {
-  color: #ffae35;
+  color: #ffb347;
 }
 
-/* HIGHLIGHT CURRENT SHOP PAGE */
+/* SHOP STICKERS NAVIGATION BUTTON */
 
 nav .shop-nav {
   background: linear-gradient(
@@ -153,40 +153,45 @@ nav .shop-nav {
   color: #111111;
 
   padding: 10px 20px;
-  border-radius: 8px;
+
   border: 1px solid #ffb347;
+  border-radius: 8px;
 }
 
-nav .shop-nav:hover {
+nav .shop-nav:hover,
+nav .shop-nav:focus-visible {
   color: #111111;
   filter: brightness(1.15);
 }
 
-/* =========================================
+/* ==========================================
    SHOP INTRODUCTION
-========================================= */
+========================================== */
 
 .shop-intro {
   max-width: 950px;
-  margin: 75px auto;
-  padding: 40px 25px;
 
-  text-align: center;
+  margin: 70px auto;
+  padding: 45px 30px;
 
-  background: rgba(0, 0, 0, 0.78);
+  background: rgba(0, 0, 0, 0.82);
 
   border: 1px solid #d97706;
   border-radius: 18px;
+
+  text-align: center;
 
   box-shadow:
     0 0 30px rgba(0, 0, 0, 0.4);
 }
 
 h1 {
+  margin: 0 0 15px;
+
   color: #ffae35;
+
   font-size: clamp(32px, 5vw, 50px);
   text-transform: uppercase;
-  margin: 0 0 15px;
 }
 
 .shop-intro p {
@@ -194,24 +199,20 @@ h1 {
   color: #eeeeee;
 }
 
-/* =========================================
-   SHOP SECTIONS
-========================================= */
+/* ==========================================
+   GENERAL SHOP SECTIONS
+========================================== */
 
 .shop-section {
-  max-width: 1200px;
+  max-width: 1250px;
+
   margin: 60px auto;
   padding: 20px;
 }
 
-/* =========================================
-   SECTION HEADING BOXES
-   MATCHES HOMEPAGE STYLE
-========================================= */
+/* HEADING BOXES MATCH HOMEPAGE */
 
 h2 {
-  display: block;
-
   width: fit-content;
   max-width: 100%;
 
@@ -219,7 +220,7 @@ h2 {
 
   padding: 12px 25px;
 
-  background: rgba(0, 0, 0, 0.78);
+  background: rgba(0, 0, 0, 0.82);
 
   color: #ffad35;
 
@@ -232,21 +233,19 @@ h2 {
     1px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
-/* =========================================
-   DESCRIPTION BOXES
-========================================= */
+/* DESCRIPTION BOXES */
 
 .section-text {
-  background: rgba(0, 0, 0, 0.80);
-
-  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 35px;
 
   padding: 20px 25px;
 
+  background: rgba(0, 0, 0, 0.82);
+
   border-radius: 12px;
 
-  max-width: 800px;
-  margin: 0 auto 30px;
+  text-align: center;
 
   color: #eeeeee;
   font-size: 18px;
@@ -256,9 +255,9 @@ h2 {
   margin: 0;
 }
 
-/* =========================================
-   FEATURED STICKER IMAGE
-========================================= */
+/* ==========================================
+   FEATURED STICKER COLLAGE
+========================================== */
 
 .featured-image {
   width: 100%;
@@ -277,9 +276,145 @@ h2 {
   height: auto;
 }
 
-/* =========================================
-   PRODUCT AVAILABILITY CARDS
-========================================= */
+/* ==========================================
+   SIX-STICKER PRODUCT GALLERY
+========================================== */
+
+/* THREE COLUMNS ON DESKTOP */
+
+.sticker-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+  margin-top: 35px;
+}
+
+/* INDIVIDUAL PRODUCT CARDS */
+
+.sticker-card {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: rgba(0, 0, 0, 0.90);
+
+  border: 2px solid #b96b14;
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.45);
+
+  transition:
+    transform 0.25s,
+    border-color 0.25s,
+    box-shadow 0.25s;
+}
+
+.sticker-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #ffae35;
+
+  box-shadow:
+    0 8px 30px rgba(255, 140, 0, 0.20);
+}
+
+/* IMAGE DISPLAY AREAS */
+
+.sticker-image {
+  width: 100%;
+  height: 270px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px;
+
+  background: rgba(12, 12, 12, 0.92);
+
+  border-bottom:
+    1px solid rgba(255, 165, 40, 0.3);
+}
+
+/* STICKERS DISPLAYED WITHOUT CROPPING */
+
+.sticker-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+/* PRODUCT INFORMATION */
+
+.sticker-info {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 22px 18px 25px;
+
+  text-align: center;
+}
+
+.sticker-info h3 {
+  margin: 0 0 12px;
+
+  color: #ffb347;
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+.sticker-info p {
+  margin: 0 0 18px;
+
+  color: #dddddd;
+  font-size: 15px;
+}
+
+/* PRODUCT VIEW BUTTON */
+
+.view-button {
+  display: inline-block;
+
+  margin-top: auto;
+
+  background: rgba(0, 0, 0, 0.70);
+
+  color: #ffb347;
+
+  border: 2px solid #ff9000;
+  border-radius: 8px;
+
+  padding: 10px 20px;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.view-button:hover,
+.view-button:focus-visible {
+  background: #ff9900;
+  color: #111111;
+}
+
+/* ==========================================
+   PRODUCT AVAILABILITY INFORMATION
+========================================== */
 
 .category-grid {
   display: grid;
@@ -298,6 +433,7 @@ h2 {
   border-radius: 15px;
 
   padding: 35px 25px;
+
   text-align: center;
 }
 
@@ -312,9 +448,35 @@ h2 {
   font-size: 17px;
 }
 
-/* =========================================
-   BUTTONS
-========================================= */
+/* ==========================================
+   SHOP INFORMATION MESSAGE
+========================================== */
+
+.shop-message {
+  background: rgba(0, 0, 0, 0.86);
+
+  border: 1px solid #c9750b;
+  border-radius: 16px;
+
+  padding: 35px 25px;
+
+  text-align: center;
+}
+
+.shop-message h3 {
+  color: #ffb347;
+  font-size: 25px;
+  margin-top: 0;
+}
+
+.shop-message p {
+  color: #eeeeee;
+  font-size: 17px;
+}
+
+/* ==========================================
+   GENERAL BUTTONS
+========================================== */
 
 .button {
   display: inline-block;
@@ -346,35 +508,9 @@ h2 {
   transform: translateY(-2px);
 }
 
-/* =========================================
-   FUTURE PRODUCT CATALOG
-========================================= */
-
-.catalog-message {
-  background: rgba(0, 0, 0, 0.85);
-
-  border: 1px solid #c9750b;
-  border-radius: 16px;
-
-  padding: 40px 25px;
-
-  text-align: center;
-}
-
-.catalog-message h3 {
-  color: #ffb347;
-  font-size: 25px;
-  margin-top: 0;
-}
-
-.catalog-message p {
-  color: #eeeeee;
-  font-size: 17px;
-}
-
-/* =========================================
+/* ==========================================
    FOOTER
-========================================= */
+========================================== */
 
 footer {
   text-align: center;
@@ -388,24 +524,37 @@ footer {
   color: #cccccc;
 }
 
-/* =========================================
-   MOBILE AND TABLET DISPLAY
-========================================= */
+/* ==========================================
+   TABLET DISPLAY
+========================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+
+  .sticker-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+/* ==========================================
+   MOBILE DISPLAY
+========================================== */
+
+@media (max-width: 650px) {
 
   body::before {
-    background-position: center center;
+    background-position: center;
     background-size: contain;
     opacity: 1;
   }
 
-  header {
+  .main-header {
     padding: 10px 5px;
   }
 
   nav {
-    gap: 12px 18px;
+    gap: 12px 15px;
   }
 
   nav a {
@@ -416,13 +565,13 @@ footer {
     padding: 9px 15px;
   }
 
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
-
   .shop-intro {
     margin: 35px 15px;
-    padding: 25px 18px;
+    padding: 28px 18px;
+  }
+
+  .shop-intro p {
+    font-size: 16px;
   }
 
   .shop-section {
@@ -440,12 +589,45 @@ footer {
     padding: 18px;
   }
 
+  /* ONE PRODUCT PER ROW ON PHONES */
+
+  .sticker-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .sticker-image {
+    height: 280px;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
   .category-card {
     padding: 25px 18px;
   }
 
-  .catalog-message {
+  .shop-message {
     padding: 30px 18px;
+  }
+
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .sticker-card,
+  .view-button,
+  .button {
+    transition: none;
   }
 
 }
@@ -455,22 +637,27 @@ footer {
 
 <body>
 
-<!-- ======================================
+<!-- ==========================================
      MAIN BUSINESS HEADER
-====================================== -->
+========================================== -->
 
-<header>
+<header class="main-header">
 
-  <img
-    class="header-logo"
-    src="Pressed%20and%20burned%20logo.png"
-    alt="Pressed and Burned Creations">
+  <a href="index.html"
+     aria-label="Return to homepage">
+
+    <img
+      class="main-logo"
+      src="Pressed%20and%20burned%20logo.png"
+      alt="Pressed and Burned Creations">
+
+  </a>
 
 </header>
 
-<!-- ======================================
+<!-- ==========================================
      NAVIGATION
-====================================== -->
+========================================== -->
 
 <nav aria-label="Main navigation">
 
@@ -481,7 +668,11 @@ footer {
   <a href="stickers.html"
      class="shop-nav"
      aria-current="page">
-    Shop Stickers
+    SHOP STICKERS
+  </a>
+
+  <a href="showcase.html">
+    Showcase
   </a>
 
   <a href="index.html#services">
@@ -500,9 +691,9 @@ footer {
 
 <main>
 
-<!-- ======================================
+<!-- ==========================================
      SHOP INTRODUCTION
-====================================== -->
+========================================== -->
 
 <div class="shop-intro">
 
@@ -527,9 +718,9 @@ footer {
 
 </div>
 
-<!-- ======================================
-     FEATURED STICKER DESIGNS
-====================================== -->
+<!-- ==========================================
+     FEATURED STICKER COLLAGE
+========================================== -->
 
 <section class="shop-section">
 
@@ -538,11 +729,11 @@ footer {
   <div class="section-text">
 
     <p>
-      Here's a preview of our creative
-      sticker designs.
-
-      Individual products and prices
-      will be added soon.
+      Take a look at our collection
+      of creative sticker designs.
+      From humor to attitude,
+      we've got something
+      to make a statement!
     </p>
 
   </div>
@@ -551,16 +742,301 @@ footer {
 
     <img
       src="Sticker%20merch%201.png"
-      alt="Pressed and Burned Creations sticker designs"
+      alt="Pressed and Burned Creations sticker showcase"
       loading="lazy">
 
   </div>
 
 </section>
 
-<!-- ======================================
-     PRODUCT AVAILABILITY
-====================================== -->
+<!-- ==========================================
+     SIX INDIVIDUAL STICKER DESIGNS
+========================================== -->
+
+<section class="shop-section"
+         id="sticker-collection">
+
+  <h2>Our Sticker Collection</h2>
+
+  <div class="section-text">
+
+    <p>
+      Check out our first six sticker designs!
+      Click View Full Design to take a
+      closer look at any sticker.
+      Sizes, pricing, and ordering
+      information will be added soon.
+    </p>
+
+  </div>
+
+  <div class="sticker-grid">
+
+    <!-- ==================================
+         STICKER 1 - I'M THE VIBRATOR
+    ================================== -->
+
+    <article class="sticker-card">
+
+      <a
+        href="Im_The_Vibrator.png"
+        target="_blank"
+        rel="noopener"
+        class="sticker-image"
+        aria-label="View I'm the Vibrator sticker">
+
+        <img
+          src="Im_The_Vibrator.png"
+          alt="I'm the Vibrator purple character sticker"
+          loading="lazy">
+
+      </a>
+
+      <div class="sticker-info">
+
+        <h3>I'm the Vibrator</h3>
+
+        <p>
+          A bold, cheeky design
+          with plenty of personality.
+        </p>
+
+        <a
+          href="Im_The_Vibrator.png"
+          target="_blank"
+          rel="noopener"
+          class="view-button">
+
+          VIEW FULL DESIGN
+
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- ==================================
+         STICKER 2 - LEFT LANE DRIVERS
+    ================================== -->
+
+    <article class="sticker-card">
+
+      <a
+        href="left_lane_drivers.png"
+        target="_blank"
+        rel="noopener"
+        class="sticker-image"
+        aria-label="View Left Lane Drivers sticker">
+
+        <img
+          src="left_lane_drivers.png"
+          alt="Left Lane Drivers road-themed sticker"
+          loading="lazy">
+
+      </a>
+
+      <div class="sticker-info">
+
+        <h3>Left Lane Drivers</h3>
+
+        <p>
+          A highway-inspired design
+          for drivers with an attitude.
+        </p>
+
+        <a
+          href="left_lane_drivers.png"
+          target="_blank"
+          rel="noopener"
+          class="view-button">
+
+          VIEW FULL DESIGN
+
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- ==================================
+         STICKER 3 - OH GREAT SUBARU
+    ================================== -->
+
+    <article class="sticker-card">
+
+      <a
+        href="Oh-great-subaru.png"
+        target="_blank"
+        rel="noopener"
+        class="sticker-image"
+        aria-label="View Oh Great Another Subaru sticker">
+
+        <img
+          src="Oh-great-subaru.png"
+          alt="Oh Great Another Subaru car sticker"
+          loading="lazy">
+
+      </a>
+
+      <div class="sticker-info">
+
+        <h3>Oh Great... Another Subaru</h3>
+
+        <p>
+          A humorous road-themed design
+          featuring a blue SUV.
+        </p>
+
+        <a
+          href="Oh-great-subaru.png"
+          target="_blank"
+          rel="noopener"
+          class="view-button">
+
+          VIEW FULL DESIGN
+
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- ==================================
+         STICKER 4 - PATIENCE
+    ================================== -->
+
+    <article class="sticker-card">
+
+      <a
+        href="Patience-Skull.png"
+        target="_blank"
+        rel="noopener"
+        class="sticker-image"
+        aria-label="View Patience sticker">
+
+        <img
+          src="Patience-Skull.png"
+          alt="Patience skull and gauge sticker"
+          loading="lazy">
+
+      </a>
+
+      <div class="sticker-info">
+
+        <h3>Patience — Walk It Off</h3>
+
+        <p>
+          A skull-themed design
+          with a sarcastic edge.
+        </p>
+
+        <a
+          href="Patience-Skull.png"
+          target="_blank"
+          rel="noopener"
+          class="view-button">
+
+          VIEW FULL DESIGN
+
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- ==================================
+         STICKER 5 - TWO CENTS
+    ================================== -->
+
+    <article class="sticker-card">
+
+      <a
+        href="Two_Cents.png"
+        target="_blank"
+        rel="noopener"
+        class="sticker-image"
+        aria-label="View Two Cents sticker">
+
+        <img
+          src="Two_Cents.png"
+          alt="Two Cents humorous penny sticker"
+          loading="lazy">
+
+      </a>
+
+      <div class="sticker-info">
+
+        <h3>Two Cents</h3>
+
+        <p>
+          A funny, outspoken design
+          about unsolicited opinions.
+        </p>
+
+        <a
+          href="Two_Cents.png"
+          target="_blank"
+          rel="noopener"
+          class="view-button">
+
+          VIEW FULL DESIGN
+
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- ==================================
+         STICKER 6 - SHITS & GIGGLES
+    ================================== -->
+
+    <article class="sticker-card">
+
+      <a
+        href="shits_and_giggles.png"
+        target="_blank"
+        rel="noopener"
+        class="sticker-image"
+        aria-label="View Shits and Giggles sticker">
+
+        <img
+          src="shits_and_giggles.png"
+          alt="Shits and Giggles humorous sticker"
+          loading="lazy">
+
+      </a>
+
+      <div class="sticker-info">
+
+        <h3>Shits &amp; Giggles</h3>
+
+        <p>
+          A playful, irreverent design
+          packed with personality.
+        </p>
+
+        <a
+          href="shits_and_giggles.png"
+          target="_blank"
+          rel="noopener"
+          class="view-button">
+
+          VIEW FULL DESIGN
+
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+<!-- ==========================================
+     STICKER AVAILABILITY INFORMATION
+========================================== -->
 
 <section class="shop-section">
 
@@ -612,33 +1088,34 @@ footer {
 
 </section>
 
-<!-- ======================================
-     FUTURE STICKER CATALOG
-====================================== -->
+<!-- ==========================================
+     MORE DESIGNS INFORMATION
+========================================== -->
 
 <section class="shop-section">
 
-  <h2>Our Sticker Collection</h2>
+  <h2>More Creations Coming Soon</h2>
 
-  <div class="catalog-message">
+  <div class="shop-message">
 
-    <h3>More Designs Coming Soon!</h3>
+    <h3>We're Just Getting Started!</h3>
 
     <p>
-      We're preparing individual
-      sticker listings with
-      photos, sizes,
-      descriptions, and prices.
+      We're preparing more sticker designs
+      along with individual product sizes,
+      pricing, and ordering options.
     </p>
 
     <p>
-      Check back as we
-      add new creations.
+      Check back as we continue
+      expanding our collection!
     </p>
 
-    <a class="button"
-       href="index.html">
-      Return to Homepage
+    <a href="index.html"
+       class="button">
+
+      RETURN TO HOMEPAGE
+
     </a>
 
   </div>
@@ -647,9 +1124,9 @@ footer {
 
 </main>
 
-<!-- ======================================
+<!-- ==========================================
      FOOTER
-====================================== -->
+========================================== -->
 
 <footer>
 
