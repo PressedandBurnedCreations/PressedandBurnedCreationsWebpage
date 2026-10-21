@@ -1,28 +1,24 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Shop Stickers | Pressed and Burned Creations</title>
 
 <meta name="description"
-content="Explore bold, original sticker designs from Pressed and Burned Creations. Stickers With an Attitude!">
+content="Shop bold custom sticker designs from Pressed and Burned Creations. Stickers With an Attitude!">
 
-<!-- CUSTOM P&B FAVICON -->
-
+<!-- ORIGINAL P&B FAVICON -->
 <link rel="icon" type="image/png" href="favicon.png">
 
 <style>
 
-/* ==========================================
-   GENERAL WEBSITE SETTINGS
-========================================== */
+/* ===================================
+   GENERAL SETTINGS
+=================================== */
 
 * {
   box-sizing: border-box;
@@ -58,13 +54,20 @@ a {
   text-decoration: none;
 }
 
-/* ==========================================
-   ORIGINAL FIXED BACKGROUND
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #ffd477;
+  outline-offset: 4px;
+}
+
+/* ===================================
+   ORIGINAL FIXED ORNATE BACKGROUND
    100% OPACITY
-========================================== */
+=================================== */
 
 body::before {
   content: "";
+
   position: fixed;
   inset: 0;
 
@@ -76,12 +79,9 @@ body::before {
   background-size: contain;
 
   opacity: 1;
-
   pointer-events: none;
   z-index: 0;
 }
-
-/* KEEP CONTENT ABOVE BACKGROUND */
 
 body > header,
 body > nav,
@@ -91,12 +91,12 @@ body > footer {
   z-index: 1;
 }
 
-/* ==========================================
-   MAIN BUSINESS HEADER
-========================================== */
+/* ===================================
+   HEADER
+=================================== */
 
 .main-header {
-  background: rgba(0, 0, 0, 0.72);
+  background: rgba(0,0,0,0.72);
   text-align: center;
   padding: 15px;
 }
@@ -107,21 +107,20 @@ body > footer {
   margin: 0 auto;
 }
 
-/* ==========================================
-   NAVIGATION BAR
-========================================== */
+/* ===================================
+   NAVIGATION
+=================================== */
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 
   gap: 15px 22px;
   padding: 18px;
 
-  background: rgba(0, 0, 0, 0.85);
-
+  background: rgba(0,0,0,0.85);
   border-top: 1px solid #c96c00;
   border-bottom: 2px solid #ff9000;
 }
@@ -130,15 +129,13 @@ nav a {
   color: #ffffff;
   font-size: 16px;
   font-weight: bold;
+  text-align: center;
   transition: color 0.2s;
 }
 
-nav a:hover,
-nav a:focus-visible {
+nav a:hover {
   color: #ffb347;
 }
-
-/* SHOP STICKERS NAVIGATION BUTTON */
 
 nav .shop-nav {
   background: linear-gradient(
@@ -154,38 +151,35 @@ nav .shop-nav {
   border-radius: 8px;
 }
 
-nav .shop-nav:hover,
-nav .shop-nav:focus-visible {
+nav .shop-nav:hover {
   color: #111111;
   filter: brightness(1.15);
 }
 
-/* ==========================================
-   SHOP INTRODUCTION
-========================================== */
+/* ===================================
+   INTRODUCTION
+=================================== */
 
 .shop-intro {
   max-width: 950px;
   margin: 70px auto;
   padding: 45px 30px;
 
-  background: rgba(0, 0, 0, 0.82);
-
+  background: rgba(0,0,0,0.82);
   border: 1px solid #d97706;
   border-radius: 18px;
 
   text-align: center;
 
   box-shadow:
-    0 0 30px rgba(0, 0, 0, 0.4);
+    0 0 30px rgba(0,0,0,0.4);
 }
 
 h1 {
-  margin: 0 0 15px;
   color: #ffae35;
-
-  font-size: clamp(32px, 5vw, 50px);
+  font-size: clamp(32px,5vw,50px);
   text-transform: uppercase;
+  margin: 0 0 15px;
 }
 
 .shop-intro p {
@@ -193,9 +187,9 @@ h1 {
   color: #eeeeee;
 }
 
-/* ==========================================
+/* ===================================
    GENERAL SHOP SECTIONS
-========================================== */
+=================================== */
 
 .shop-section {
   max-width: 1250px;
@@ -203,38 +197,30 @@ h1 {
   padding: 20px;
 }
 
-/* HEADING BOXES MATCH HOMEPAGE */
-
 h2 {
   width: fit-content;
   max-width: 100%;
+
   margin: 0 auto 25px;
   padding: 12px 25px;
 
-  background: rgba(0, 0, 0, 0.82);
-
+  background: rgba(0,0,0,0.82);
   color: #ffad35;
 
   font-size: 32px;
   text-align: center;
   border-radius: 10px;
-
-  text-shadow:
-    1px 2px 4px rgba(0, 0, 0, 0.9);
 }
-
-/* DESCRIPTION BOXES */
 
 .section-text {
   max-width: 850px;
   margin: 0 auto 35px;
   padding: 20px 25px;
 
-  background: rgba(0, 0, 0, 0.82);
+  background: rgba(0,0,0,0.82);
   border-radius: 12px;
 
   text-align: center;
-
   color: #eeeeee;
   font-size: 18px;
 }
@@ -243,9 +229,9 @@ h2 {
   margin: 0;
 }
 
-/* ==========================================
+/* ===================================
    FEATURED STICKER COLLAGE
-========================================== */
+=================================== */
 
 .featured-image {
   width: 100%;
@@ -256,7 +242,7 @@ h2 {
   overflow: hidden;
 
   box-shadow:
-    0 0 25px rgba(255, 140, 0, 0.2);
+    0 0 25px rgba(255,140,0,0.2);
 }
 
 .featured-image img {
@@ -264,21 +250,21 @@ h2 {
   height: auto;
 }
 
-/* ==========================================
-   SIX-STICKER PRODUCT GALLERY
-========================================== */
+/* ===================================
+   PRODUCT GRID
+=================================== */
 
 .sticker-grid {
   display: grid;
 
   grid-template-columns:
-    repeat(3, minmax(0, 1fr));
+    repeat(3,minmax(0,1fr));
 
   gap: 25px;
   margin-top: 35px;
 }
 
-/* INDIVIDUAL STICKER CARDS */
+/* INDIVIDUAL PRODUCT CARDS */
 
 .sticker-card {
   min-width: 0;
@@ -286,7 +272,7 @@ h2 {
   display: flex;
   flex-direction: column;
 
-  background: rgba(0, 0, 0, 0.90);
+  background: rgba(0,0,0,0.90);
 
   border: 2px solid #b96b14;
   border-radius: 16px;
@@ -294,7 +280,7 @@ h2 {
   overflow: hidden;
 
   box-shadow:
-    0 5px 20px rgba(0, 0, 0, 0.45);
+    0 5px 20px rgba(0,0,0,0.45);
 
   transition:
     transform 0.25s,
@@ -304,29 +290,32 @@ h2 {
 
 .sticker-card:hover {
   transform: translateY(-5px);
+
   border-color: #ffae35;
 
   box-shadow:
-    0 8px 30px rgba(255, 140, 0, 0.20);
+    0 8px 30px rgba(255,140,0,0.20);
 }
 
-/* STICKER IMAGE DISPLAY */
+/* IMAGE AREA */
 
 .sticker-image {
   width: 100%;
   height: 270px;
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
   padding: 15px;
 
-  background: rgba(12, 12, 12, 0.92);
+  background: rgba(12,12,12,0.92);
 
   border-bottom:
-    1px solid rgba(255, 165, 40, 0.3);
+    1px solid rgba(255,165,40,0.3);
 }
+
+/* KEEP ORIGINAL IMAGE PROPORTIONS */
 
 .sticker-image img {
   width: 100%;
@@ -336,7 +325,7 @@ h2 {
   object-position: center;
 }
 
-/* PRODUCT INFORMATION */
+/* PRODUCT DETAILS */
 
 .sticker-info {
   flex: 1;
@@ -346,6 +335,7 @@ h2 {
   align-items: center;
 
   padding: 22px 18px 25px;
+
   text-align: center;
 }
 
@@ -353,7 +343,6 @@ h2 {
   margin: 0 0 12px;
 
   color: #ffb347;
-
   font-size: 21px;
   line-height: 1.4;
 }
@@ -365,13 +354,13 @@ h2 {
   font-size: 15px;
 }
 
-/* FULL DESIGN BUTTON */
+/* VIEW FULL DESIGN BUTTON */
 
 .view-button {
   display: inline-block;
   margin-top: auto;
 
-  background: rgba(0, 0, 0, 0.70);
+  background: rgba(0,0,0,0.70);
   color: #ffb347;
 
   border: 2px solid #ff9000;
@@ -387,33 +376,39 @@ h2 {
     color 0.2s;
 }
 
-.view-button:hover,
-.view-button:focus-visible {
+.view-button:hover {
   background: #ff9900;
   color: #111111;
 }
 
-/* ==========================================
-   PRODUCT AVAILABILITY INFORMATION
-========================================== */
+/* CENTER SEVENTH STICKER ON DESKTOP */
+
+.sticker-card:last-child {
+  grid-column: 2;
+}
+
+/* ===================================
+   AVAILABILITY SECTION
+=================================== */
 
 .category-grid {
   display: grid;
 
   grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+    repeat(2,minmax(0,1fr));
 
   gap: 25px;
   margin-top: 35px;
 }
 
 .category-card {
-  background: rgba(0, 0, 0, 0.88);
+  background: rgba(0,0,0,0.88);
 
   border: 1px solid #bb6500;
   border-radius: 15px;
 
   padding: 35px 25px;
+
   text-align: center;
 }
 
@@ -428,12 +423,12 @@ h2 {
   font-size: 17px;
 }
 
-/* ==========================================
-   ADDITIONAL SHOP INFORMATION
-========================================== */
+/* ===================================
+   MORE CREATIONS
+=================================== */
 
 .shop-message {
-  background: rgba(0, 0, 0, 0.86);
+  background: rgba(0,0,0,0.86);
 
   border: 1px solid #c9750b;
   border-radius: 16px;
@@ -452,8 +447,6 @@ h2 {
   color: #eeeeee;
   font-size: 17px;
 }
-
-/* GENERAL BUTTON */
 
 .button {
   display: inline-block;
@@ -477,44 +470,32 @@ h2 {
     filter 0.2s;
 }
 
-.button:hover,
-.button:focus-visible {
-  filter: brightness(1.15);
+.button:hover {
   transform: translateY(-2px);
+  filter: brightness(1.15);
 }
 
-/* ==========================================
+/* ===================================
    FOOTER
-========================================== */
+=================================== */
 
 footer {
   text-align: center;
 
-  background: rgba(0, 0, 0, 0.90);
-
+  background: rgba(0,0,0,0.90);
   border-top: 2px solid #ff9000;
 
   padding: 30px 15px;
   color: #cccccc;
 }
 
-/* ==========================================
-   NEW ATTITUDE WARNING POPUP
-========================================== */
-
-/*
-  This popup appears automatically
-  when visitors first enter the
-  sticker shop during a tab session.
-
-  JavaScript remembers when they
-  click CONTINUE TO SHOP.
-*/
+/* ===================================
+   ATTITUDE WARNING POPUP
+=================================== */
 
 .attitude-overlay {
   position: fixed;
   inset: 0;
-
   z-index: 9999;
 
   display: flex;
@@ -523,54 +504,43 @@ footer {
 
   padding: 20px;
 
-  background: rgba(0, 0, 0, 0.88);
+  background: rgba(0,0,0,0.88);
 
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
 
-/* KEEP POPUP HIDDEN AFTER DISMISSAL */
-
 .attitude-overlay[hidden] {
   display: none;
 }
 
-/* MAIN POPUP BOX */
-
 .attitude-popup {
   width: 100%;
   max-width: 560px;
-
   max-height: 90vh;
+
   overflow-y: auto;
 
-  background: rgba(8, 8, 8, 0.97);
+  background: rgba(8,8,8,0.97);
 
   border: 2px solid #e78a19;
   border-radius: 20px;
 
   padding: 40px 35px;
-
   text-align: center;
 
   box-shadow:
-    0 0 35px rgba(255, 126, 0, 0.25),
-    0 15px 50px rgba(0, 0, 0, 0.75);
+    0 0 35px rgba(255,126,0,0.25),
+    0 15px 50px rgba(0,0,0,0.75);
 }
-
-/* DECORATIVE FLAMES */
 
 .attitude-flames {
   font-size: 37px;
   margin-bottom: 12px;
-  line-height: 1.3;
 }
-
-/* POPUP HEADING */
 
 .attitude-popup h2 {
   width: auto;
-
   margin: 0 auto 20px;
   padding: 0;
 
@@ -578,21 +548,14 @@ footer {
 
   color: #ffb347;
 
-  font-size: clamp(25px, 5vw, 35px);
+  font-size: clamp(25px,5vw,35px);
   line-height: 1.3;
-
-  text-shadow:
-    0 0 12px rgba(255, 140, 0, 0.25);
 }
-
-/* WARNING MESSAGE */
 
 .attitude-popup p {
   color: #f3f3f3;
-
   font-size: 18px;
   line-height: 1.75;
-
   margin: 0 auto 18px;
 }
 
@@ -600,8 +563,6 @@ footer {
   font-weight: bold;
   margin-bottom: 28px;
 }
-
-/* CONTINUE TO SHOP BUTTON */
 
 .attitude-continue {
   display: inline-block;
@@ -634,55 +595,74 @@ footer {
     filter 0.2s;
 }
 
-.attitude-continue:hover,
-.attitude-continue:focus-visible {
+.attitude-continue:hover {
   transform: translateY(-2px);
   filter: brightness(1.15);
 }
 
-/* ==========================================
-   TABLET DISPLAY
-========================================== */
+/* ===================================
+   TABLET RESPONSIVE LAYOUT
+=================================== */
 
 @media (max-width: 1000px) {
 
   .sticker-grid {
     grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+      repeat(2,minmax(0,1fr));
+  }
+
+  .sticker-card:last-child {
+    grid-column: 1 / -1;
+    width: min(100%,400px);
+    justify-self: center;
   }
 
 }
 
-/* ==========================================
-   MOBILE DISPLAY
-========================================== */
+/* ===================================
+   MOBILE RESPONSIVE LAYOUT
+=================================== */
 
 @media (max-width: 650px) {
 
-  body::before {
-    background-position: center;
-    background-size: contain;
-    opacity: 1;
-  }
-
   .main-header {
-    padding: 10px 5px;
+    padding: 10px 12px;
   }
 
   nav {
-    gap: 12px 15px;
+    display: grid;
+
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+
+    gap: 9px;
+    padding: 12px;
   }
 
   nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 43px;
+
+    padding: 9px 5px;
+
     font-size: 13px;
+    line-height: 1.2;
   }
 
   nav .shop-nav {
-    padding: 9px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 9px 5px;
+    font-size: 13px;
   }
 
   .shop-intro {
-    margin: 35px 15px;
+    margin: 30px 13px;
     padding: 28px 18px;
   }
 
@@ -691,27 +671,34 @@ footer {
   }
 
   .shop-section {
-    margin: 35px auto;
+    margin: 30px auto;
     padding: 15px;
   }
 
   h2 {
-    font-size: 27px;
-    padding: 12px 18px;
+    font-size: 26px;
+    padding: 12px 17px;
   }
 
   .section-text {
     font-size: 16px;
-    padding: 18px;
+    padding: 17px;
   }
+
+  /* ONE STICKER PER MOBILE ROW */
 
   .sticker-grid {
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 20px;
+  }
+
+  .sticker-card:last-child {
+    grid-column: auto;
+    width: 100%;
   }
 
   .sticker-image {
-    height: 280px;
+    height: 270px;
   }
 
   .category-grid {
@@ -723,10 +710,8 @@ footer {
   }
 
   .shop-message {
-    padding: 30px 18px;
+    padding: 28px 18px;
   }
-
-  /* MOBILE WARNING POPUP */
 
   .attitude-popup {
     padding: 30px 20px;
@@ -752,9 +737,9 @@ footer {
 
 }
 
-/* ==========================================
+/* ===================================
    REDUCED MOTION
-========================================== */
+=================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -763,8 +748,8 @@ footer {
   }
 
   .sticker-card,
-  .view-button,
   .button,
+  .view-button,
   .attitude-continue {
     transition: none;
   }
@@ -776,9 +761,9 @@ footer {
 
 <body>
 
-<!-- ==========================================
-     MAIN BUSINESS HEADER
-========================================== -->
+<!-- ===================================
+   BUSINESS HEADER
+=================================== -->
 
 <header class="main-header">
 
@@ -794,9 +779,9 @@ footer {
 
 </header>
 
-<!-- ==========================================
-     NAVIGATION
-========================================== -->
+<!-- ===================================
+   NAVIGATION
+=================================== -->
 
 <nav aria-label="Main navigation">
 
@@ -830,9 +815,9 @@ footer {
 
 <main>
 
-<!-- ==========================================
-     SHOP INTRODUCTION
-========================================== -->
+<!-- ===================================
+   SHOP INTRODUCTION
+=================================== -->
 
 <div class="shop-intro">
 
@@ -843,23 +828,19 @@ footer {
   </p>
 
   <p>
-    Explore bold designs,
-    creative artwork,
-    and unique stickers
-    made to stand out.
+    Explore bold designs, creative artwork,
+    and unique stickers made to stand out.
   </p>
 
   <p>
-    Your Style.
-    Your Sticker.
-    Your Statement.
+    Your Style. Your Sticker. Your Statement.
   </p>
 
 </div>
 
-<!-- ==========================================
-     FEATURED STICKER COLLAGE
-========================================== -->
+<!-- ===================================
+   FEATURED STICKER COLLAGE
+=================================== -->
 
 <section class="shop-section">
 
@@ -888,9 +869,9 @@ footer {
 
 </section>
 
-<!-- ==========================================
-     SIX INDIVIDUAL STICKER DESIGNS
-========================================== -->
+<!-- ===================================
+   SEVEN STICKER COLLECTION
+=================================== -->
 
 <section class="shop-section"
          id="sticker-collection">
@@ -900,10 +881,11 @@ footer {
   <div class="section-text">
 
     <p>
-      Check out our first six sticker designs!
-      Click View Full Design to take a
-      closer look at any sticker.
-      Sizes, pricing, and ordering
+      Explore our growing collection
+      of original sticker designs!
+      Select View Full Design for
+      a closer look at any sticker.
+      Sizes, prices, and ordering
       information will be added soon.
     </p>
 
@@ -911,7 +893,10 @@ footer {
 
   <div class="sticker-grid">
 
-    <!-- STICKER 1 - I'M THE VIBRATOR -->
+    <!-- =============================
+         STICKER 1
+         I'M THE VIBRATOR
+    ============================= -->
 
     <article class="sticker-card">
 
@@ -924,7 +909,7 @@ footer {
 
         <img
           src="Im_The_Vibrator.png"
-          alt="I'm the Vibrator purple character sticker"
+          alt="I'm the Vibrator purple cartoon sticker"
           loading="lazy">
 
       </a>
@@ -943,16 +928,17 @@ footer {
           target="_blank"
           rel="noopener"
           class="view-button">
-
           VIEW FULL DESIGN
-
         </a>
 
       </div>
 
     </article>
 
-    <!-- STICKER 2 - LEFT LANE DRIVERS -->
+    <!-- =============================
+         STICKER 2
+         LEFT LANE DRIVERS
+    ============================= -->
 
     <article class="sticker-card">
 
@@ -965,7 +951,7 @@ footer {
 
         <img
           src="left_lane_drivers.png"
-          alt="Left Lane Drivers road-themed sticker"
+          alt="Left Lane Drivers highway-themed sticker"
           loading="lazy">
 
       </a>
@@ -984,16 +970,17 @@ footer {
           target="_blank"
           rel="noopener"
           class="view-button">
-
           VIEW FULL DESIGN
-
         </a>
 
       </div>
 
     </article>
 
-    <!-- STICKER 3 - OH GREAT SUBARU -->
+    <!-- =============================
+         STICKER 3
+         OH GREAT SUBARU
+    ============================= -->
 
     <article class="sticker-card">
 
@@ -1006,7 +993,7 @@ footer {
 
         <img
           src="Oh-great-subaru.png"
-          alt="Oh Great Another Subaru car sticker"
+          alt="Oh Great Another Subaru blue SUV sticker"
           loading="lazy">
 
       </a>
@@ -1025,16 +1012,17 @@ footer {
           target="_blank"
           rel="noopener"
           class="view-button">
-
           VIEW FULL DESIGN
-
         </a>
 
       </div>
 
     </article>
 
-    <!-- STICKER 4 - PATIENCE -->
+    <!-- =============================
+         STICKER 4
+         PATIENCE
+    ============================= -->
 
     <article class="sticker-card">
 
@@ -1066,16 +1054,17 @@ footer {
           target="_blank"
           rel="noopener"
           class="view-button">
-
           VIEW FULL DESIGN
-
         </a>
 
       </div>
 
     </article>
 
-    <!-- STICKER 5 - TWO CENTS -->
+    <!-- =============================
+         STICKER 5
+         TWO CENTS
+    ============================= -->
 
     <article class="sticker-card">
 
@@ -1098,8 +1087,8 @@ footer {
         <h3>Two Cents</h3>
 
         <p>
-          A funny, outspoken design
-          about unsolicited opinions.
+          A humorous sticker about
+          unsolicited opinions.
         </p>
 
         <a
@@ -1107,16 +1096,17 @@ footer {
           target="_blank"
           rel="noopener"
           class="view-button">
-
           VIEW FULL DESIGN
-
         </a>
 
       </div>
 
     </article>
 
-    <!-- STICKER 6 - SHITS & GIGGLES -->
+    <!-- =============================
+         STICKER 6
+         SHITS & GIGGLES
+    ============================= -->
 
     <article class="sticker-card">
 
@@ -1148,9 +1138,50 @@ footer {
           target="_blank"
           rel="noopener"
           class="view-button">
-
           VIEW FULL DESIGN
+        </a>
 
+      </div>
+
+    </article>
+
+    <!-- =============================
+         STICKER 7
+         IN GOD WE TRUST
+    ============================= -->
+
+    <article class="sticker-card">
+
+      <a
+        href="In_God_We_Trust-sticker.png"
+        target="_blank"
+        rel="noopener"
+        class="sticker-image"
+        aria-label="View In God We Trust sticker">
+
+        <img
+          src="In_God_We_Trust-sticker.png"
+          alt="In God We Trust gold and blue lightning sticker"
+          loading="lazy">
+
+      </a>
+
+      <div class="sticker-info">
+
+        <h3>In God We Trust</h3>
+
+        <p>
+          A powerful gold-and-blue design
+          featuring dramatic lightning
+          and a classic statement of faith.
+        </p>
+
+        <a
+          href="In_God_We_Trust-sticker.png"
+          target="_blank"
+          rel="noopener"
+          class="view-button">
+          VIEW FULL DESIGN
         </a>
 
       </div>
@@ -1161,9 +1192,9 @@ footer {
 
 </section>
 
-<!-- ==========================================
-     STICKER AVAILABILITY INFORMATION
-========================================== -->
+<!-- ===================================
+   STICKER AVAILABILITY INFORMATION
+=================================== -->
 
 <section class="shop-section">
 
@@ -1183,8 +1214,7 @@ footer {
 
       <p>
         These designs will be marked
-        Ready to Ship
-        when available.
+        Ready to Ship when available.
       </p>
 
     </div>
@@ -1211,9 +1241,9 @@ footer {
 
 </section>
 
-<!-- ==========================================
-     MORE CREATIONS
-========================================== -->
+<!-- ===================================
+   MORE CREATIONS
+=================================== -->
 
 <section class="shop-section">
 
@@ -1224,8 +1254,9 @@ footer {
     <h3>We're Just Getting Started!</h3>
 
     <p>
-      We're preparing more sticker designs
-      along with individual product sizes,
+      We're preparing even more
+      sticker designs, along with
+      individual product sizes,
       pricing, and ordering options.
     </p>
 
@@ -1236,9 +1267,7 @@ footer {
 
     <a href="index.html"
        class="button">
-
       RETURN TO HOMEPAGE
-
     </a>
 
   </div>
@@ -1247,9 +1276,9 @@ footer {
 
 </main>
 
-<!-- ==========================================
-     FOOTER
-========================================== -->
+<!-- ===================================
+   FOOTER
+=================================== -->
 
 <footer>
 
@@ -1259,15 +1288,13 @@ footer {
     All Rights Reserved.
   </p>
 
-  <p>
-    Stickers With an Attitude.
-  </p>
+  <p>Stickers With an Attitude.</p>
 
 </footer>
 
-<!-- ==========================================
-     NEW ATTITUDE WARNING POPUP
-========================================== -->
+<!-- ===================================
+   ATTITUDE WARNING POPUP
+=================================== -->
 
 <div
   class="attitude-overlay"
@@ -1314,21 +1341,13 @@ footer {
 
 </div>
 
-<!-- ==========================================
-     ONCE-PER-SESSION POPUP SCRIPT
-========================================== -->
+<!-- ===================================
+   SHOW POPUP ONCE PER TAB SESSION
+=================================== -->
 
 <script>
 
 (function () {
-
-  /*
-    Store acknowledgement for this
-    browser tab's current session.
-
-    The notice returns when a new
-    tab session is started.
-  */
 
   const storageKey =
     "pb-attitude-notice-seen-v1";
@@ -1341,10 +1360,7 @@ footer {
 
   let alreadySeen = false;
 
-  /*
-    Check if this visitor has
-    dismissed the message.
-  */
+  /* CHECK PREVIOUS ACKNOWLEDGEMENT */
 
   try {
 
@@ -1352,11 +1368,6 @@ footer {
       sessionStorage.getItem(storageKey) === "yes";
 
   } catch (error) {
-
-    /*
-      If browser storage is unavailable,
-      show the message on every visit.
-    */
 
     alreadySeen = false;
 
@@ -1366,19 +1377,13 @@ footer {
     return;
   }
 
-  /*
-    Display the warning before
-    allowing normal page interaction.
-  */
+  /* SHOW POPUP */
 
   warning.hidden = false;
 
   document.body.classList.add("notice-open");
 
-  /*
-    Temporarily disable interaction
-    with the page behind the popup.
-  */
+  /* DISABLE PAGE BEHIND POPUP */
 
   const pageSections = [
     document.querySelector("body > header"),
@@ -1393,62 +1398,60 @@ footer {
 
   continueButton.focus();
 
-  /*
-    Keep keyboard focus on the
-    Continue button while open.
-  */
+  /* KEEP KEYBOARD FOCUS IN POPUP */
 
-  warning.addEventListener("keydown", function (event) {
+  warning.addEventListener(
+    "keydown",
+    function (event) {
 
-    if (event.key === "Tab") {
+      if (event.key === "Tab") {
 
-      event.preventDefault();
-      continueButton.focus();
+        event.preventDefault();
+        continueButton.focus();
 
-    }
-
-  });
-
-  /*
-    Visitor acknowledges message.
-  */
-
-  continueButton.addEventListener("click", function () {
-
-    try {
-
-      sessionStorage.setItem(storageKey, "yes");
-
-    } catch (error) {
-
-      /*
-        The page still works if
-        storage is unavailable.
-      */
+      }
 
     }
+  );
 
-    warning.hidden = true;
+  /* CONTINUE TO SHOP */
 
-    document.body.classList.remove("notice-open");
+  continueButton.addEventListener(
+    "click",
+    function () {
 
-    pageSections.forEach(function (section) {
-      section.inert = false;
-    });
+      try {
 
-    /*
-      Move keyboard focus to
-      the shop navigation link.
-    */
+        sessionStorage.setItem(
+          storageKey,
+          "yes"
+        );
 
-    const shopLink =
-      document.querySelector("nav .shop-nav");
+      } catch (error) {
 
-    if (shopLink) {
-      shopLink.focus();
+        /* SITE STILL WORKS */
+
+      }
+
+      warning.hidden = true;
+
+      document.body.classList.remove(
+        "notice-open"
+      );
+
+      pageSections.forEach(function (section) {
+        section.inert = false;
+      });
+
+      const shopLink =
+        document.querySelector("nav .shop-nav");
+
+      if (shopLink) {
+        shopLink.focus();
+      }
+
     }
-
-  });
+  );
 
 })();
 
