@@ -6,12 +6,12 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+      content="width=device-width, initial-scale=1.0">
 
 <title>Pressed and Burned Creations</title>
 
 <meta name="description"
-content="Pressed and Burned Creations - Stickers, Decals, and Custom Designs. Stickers with an Attitude.">
+      content="Pressed and Burned Creations - Stickers, Decals, and Custom Designs. Stickers with an Attitude.">
 
 <!-- P&B CUSTOM FAVICON -->
 
@@ -21,9 +21,9 @@ content="Pressed and Burned Creations - Stickers, Decals, and Custom Designs. St
 
 <style>
 
-/* ====================================
+/* ======================================
    GENERAL WEBSITE SETTINGS
-==================================== */
+====================================== */
 
 * {
   box-sizing: border-box;
@@ -58,15 +58,73 @@ a {
   color: inherit;
 }
 
-/* ====================================
-   FIXED CENTERED BACKGROUND
-   100% OPACITY
-==================================== */
+/* ======================================
+   NEW ANIMATED FIRE BACKGROUND
+====================================== */
 
-body::before {
-  content: "";
+/*
+   The video remains fixed behind
+   the entire website.
 
+   It plays silently and repeats
+   continuously.
+
+   The original P&B artwork sits
+   above the video.
+*/
+
+.background-scene {
   position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+
+  overflow: hidden;
+
+  background: #050505;
+
+  pointer-events: none;
+
+  isolation: isolate;
+}
+
+/* REAL FIRE VIDEO */
+
+.fire-video {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center bottom;
+
+  z-index: 0;
+
+  filter:
+    brightness(0.70)
+    saturate(1.15);
+}
+
+/* ======================================
+   ORIGINAL P&B BACKGROUND ARTWORK
+====================================== */
+
+/*
+   Screen blending allows fire
+   to show through the dark portions
+   of the original background image.
+
+   The artwork remains at
+   100% CSS opacity.
+*/
+
+.background-art {
+  position: absolute;
   inset: 0;
 
   width: 100%;
@@ -79,13 +137,18 @@ body::before {
   background-repeat: no-repeat;
   background-size: contain;
 
+  mix-blend-mode: screen;
+
   opacity: 1;
 
+  z-index: 1;
+
   pointer-events: none;
-  z-index: 0;
 }
 
-/* KEEP CONTENT ABOVE BACKGROUND */
+/* ======================================
+   WEBSITE CONTENT ABOVE BACKGROUNDS
+====================================== */
 
 body > header,
 body > nav,
@@ -95,12 +158,13 @@ body > footer {
   z-index: 1;
 }
 
-/* ====================================
+/* ======================================
    MAIN HEADER
-==================================== */
+====================================== */
 
 .main-header {
   background: rgba(0,0,0,0.72);
+
   text-align: center;
   padding: 15px;
 }
@@ -108,17 +172,21 @@ body > footer {
 .main-logo {
   width: 100%;
   max-width: 1100px;
+
+  height: auto;
   margin: 0 auto;
 }
 
-/* ====================================
+/* ======================================
    NAVIGATION BAR
-==================================== */
+====================================== */
 
 nav {
   display: flex;
+
   justify-content: center;
   align-items: center;
+
   flex-wrap: wrap;
 
   gap: 15px 22px;
@@ -132,6 +200,7 @@ nav {
 
 nav a {
   color: #ffffff;
+
   font-size: 16px;
   font-weight: bold;
 
@@ -145,7 +214,7 @@ nav a:focus-visible {
   color: #ffac39;
 }
 
-/* SHOP STICKERS NAV BUTTON */
+/* SHOP STICKERS NAVIGATION BUTTON */
 
 .shop-nav {
   background: linear-gradient(
@@ -168,7 +237,7 @@ nav .shop-nav:focus-visible {
   filter: brightness(1.15);
 }
 
-/* SHOWCASE AND ABOUT NAV BUTTONS */
+/* SHOWCASE AND ABOUT US BUTTONS */
 
 .showcase-nav,
 .about-nav {
@@ -182,15 +251,16 @@ nav .shop-nav:focus-visible {
   padding: 8px 18px;
 }
 
-/* ====================================
+/* ======================================
    HOMEPAGE INTRODUCTION
-==================================== */
+====================================== */
 
 .intro {
   min-height: 65vh;
   padding: 80px 20px;
 
   display: flex;
+
   justify-content: center;
   align-items: center;
 
@@ -202,9 +272,11 @@ nav .shop-nav:focus-visible {
   width: 100%;
   max-width: 850px;
 
-  background: rgba(0,0,0,0.76);
+  background: rgba(0,0,0,0.78);
 
-  border: 1px solid rgba(255,140,0,0.45);
+  border:
+    1px solid rgba(255,140,0,0.45);
+
   border-radius: 18px;
 
   padding: 45px 30px;
@@ -230,9 +302,9 @@ nav .shop-nav:focus-visible {
   color: #eeeeee;
 }
 
-/* ====================================
+/* ======================================
    GENERAL BUTTONS
-==================================== */
+====================================== */
 
 .button {
   display: inline-block;
@@ -262,18 +334,19 @@ nav .shop-nav:focus-visible {
   transform: translateY(-2px);
 }
 
-/* DARK OUTLINED BUTTON */
+/* DARK OUTLINED BUTTONS */
 
 .outline {
   background: rgba(0,0,0,0.65);
 
   color: #ffb347;
+
   border: 2px solid #ff8c00;
 }
 
-/* ====================================
+/* ======================================
    MAIN SHOP STICKERS BUTTON
-==================================== */
+====================================== */
 
 .shop-button {
   display: inline-block;
@@ -312,24 +385,27 @@ nav .shop-nav:focus-visible {
     0 0 35px rgba(255,140,0,0.6);
 }
 
-/* ====================================
-   GENERAL SECTIONS
-==================================== */
+/* ======================================
+   GENERAL CONTENT SECTIONS
+====================================== */
 
 section {
   padding: 75px 20px;
+
   background: rgba(0,0,0,0.18);
 }
 
 .container {
   width: 100%;
   max-width: 1200px;
+
   margin: 0 auto;
 }
 
 h2 {
   text-align: center;
   color: #ffad35;
+
   font-size: 36px;
 
   width: fit-content;
@@ -358,9 +434,9 @@ h2 {
   border-radius: 10px;
 }
 
-/* ====================================
+/* ======================================
    FEATURED CREATIONS
-==================================== */
+====================================== */
 
 .showcase {
   background: rgba(0,0,0,0.22);
@@ -383,6 +459,7 @@ h2 {
   padding: 25px;
 
   background: rgba(0,0,0,0.78);
+
   border-radius: 15px;
 }
 
@@ -391,9 +468,9 @@ h2 {
   font-size: 25px;
 }
 
-/* ====================================
+/* ======================================
    SERVICES
-==================================== */
+====================================== */
 
 .services {
   background: rgba(0,0,0,0.12);
@@ -403,7 +480,7 @@ h2 {
   display: grid;
 
   grid-template-columns:
-    repeat(3, minmax(0, 1fr));
+    repeat(3, minmax(0,1fr));
 
   gap: 25px;
 }
@@ -428,12 +505,13 @@ h2 {
   color: #eeeeee;
 }
 
-/* ====================================
+/* ======================================
    ABOUT SECTION
-==================================== */
+====================================== */
 
 .about {
   background: rgba(0,0,0,0.18);
+
   text-align: center;
 }
 
@@ -443,7 +521,9 @@ h2 {
 
   background: rgba(0,0,0,0.82);
 
-  border: 1px solid rgba(255,140,0,0.35);
+  border:
+    1px solid rgba(255,140,0,0.35);
+
   border-radius: 16px;
 
   padding: 35px;
@@ -457,12 +537,13 @@ h2 {
   color: #eeeeee;
 }
 
-/* ====================================
+/* ======================================
    CONTACT SECTION
-==================================== */
+====================================== */
 
 .contact {
   background: rgba(0,0,0,0.18);
+
   text-align: center;
 }
 
@@ -478,9 +559,9 @@ h2 {
   border: 2px solid #c9750b;
 }
 
-/* ====================================
+/* ======================================
    FOOTER
-==================================== */
+====================================== */
 
 footer {
   text-align: center;
@@ -493,14 +574,18 @@ footer {
   color: #cccccc;
 }
 
-/* ====================================
+/* ======================================
    MOBILE AND TABLET
-==================================== */
+====================================== */
 
 @media (max-width: 768px) {
 
-  body::before {
-    background-position: center;
+  .fire-video {
+    object-position: center bottom;
+  }
+
+  .background-art {
+    background-position: center center;
     background-size: contain;
     opacity: 1;
   }
@@ -563,14 +648,69 @@ footer {
 
 }
 
+/* ======================================
+   REDUCED MOTION ACCESSIBILITY
+====================================== */
+
+/*
+   Visitors who have requested
+   reduced motion will see the
+   static P&B background instead.
+*/
+
+@media (prefers-reduced-motion: reduce) {
+
+  .fire-video {
+    display: none;
+  }
+
+  .background-art {
+    mix-blend-mode: normal;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- ====================================
-     MAIN HEADER
-==================================== -->
+<!-- ======================================
+     NEW FIXED FIRE AND LOGO BACKGROUND
+====================================== -->
+
+<div class="background-scene"
+     aria-hidden="true">
+
+  <!-- REAL FIRE VIDEO -->
+
+  <video
+    class="fire-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata">
+
+    <source
+      src="pressed-and-burned-fire-loop-5s.mp4"
+      type="video/mp4">
+
+  </video>
+
+  <!-- ORIGINAL ORNATE P&B ARTWORK -->
+
+  <div class="background-art"></div>
+
+</div>
+
+<!-- ======================================
+     MAIN BUSINESS HEADER
+====================================== -->
 
 <header class="main-header" id="home">
 
@@ -581,9 +721,9 @@ footer {
 
 </header>
 
-<!-- ====================================
+<!-- ======================================
      NAVIGATION
-==================================== -->
+====================================== -->
 
 <nav aria-label="Main navigation">
 
@@ -591,11 +731,13 @@ footer {
     Home
   </a>
 
-  <a href="stickers.html" class="shop-nav">
+  <a href="stickers.html"
+     class="shop-nav">
     SHOP STICKERS
   </a>
 
-  <a href="showcase.html" class="showcase-nav">
+  <a href="showcase.html"
+     class="showcase-nav">
     SHOWCASE
   </a>
 
@@ -603,7 +745,8 @@ footer {
     Services
   </a>
 
-  <a href="about-us.html" class="about-nav">
+  <a href="about-us.html"
+     class="about-nav">
     ABOUT US
   </a>
 
@@ -615,9 +758,9 @@ footer {
 
 <main>
 
-<!-- ====================================
-     INTRODUCTION
-==================================== -->
+<!-- ======================================
+     HOMEPAGE INTRODUCTION
+====================================== -->
 
 <div class="intro">
 
@@ -634,21 +777,25 @@ footer {
       to stand out.
     </p>
 
-    <a href="stickers.html" class="shop-button">
+    <a href="stickers.html"
+       class="shop-button">
       SHOP STICKERS
     </a>
 
     <div>
 
-      <a href="about-us.html" class="button outline">
+      <a href="about-us.html"
+         class="button outline">
         ABOUT US
       </a>
 
-      <a href="showcase.html" class="button outline">
+      <a href="showcase.html"
+         class="button outline">
         View Our Work
       </a>
 
-      <a href="#contact" class="button outline">
+      <a href="#contact"
+         class="button outline">
         Contact Miles
       </a>
 
@@ -658,9 +805,9 @@ footer {
 
 </div>
 
-<!-- ====================================
+<!-- ======================================
      FEATURED CREATIONS
-==================================== -->
+====================================== -->
 
 <section class="showcase" id="showcase">
 
@@ -691,7 +838,8 @@ footer {
         and custom projects.
       </p>
 
-      <a href="showcase.html" class="button outline">
+      <a href="showcase.html"
+         class="button outline">
         VIEW SHOWCASE
       </a>
 
@@ -699,7 +847,8 @@ footer {
         Looking for stickers you can order?
       </p>
 
-      <a href="stickers.html" class="shop-button">
+      <a href="stickers.html"
+         class="shop-button">
         BROWSE STICKERS
       </a>
 
@@ -709,9 +858,9 @@ footer {
 
 </section>
 
-<!-- ====================================
+<!-- ======================================
      SERVICES
-==================================== -->
+====================================== -->
 
 <section class="services" id="services">
 
@@ -768,9 +917,9 @@ footer {
 
 </section>
 
-<!-- ====================================
+<!-- ======================================
      ABOUT SECTION
-==================================== -->
+====================================== -->
 
 <section class="about" id="about">
 
@@ -798,7 +947,8 @@ footer {
         Stick It Anywhere.
       </p>
 
-      <a href="about-us.html" class="button outline">
+      <a href="about-us.html"
+         class="button outline">
         Visit Our About Us Page
       </a>
 
@@ -808,9 +958,9 @@ footer {
 
 </section>
 
-<!-- ====================================
+<!-- ======================================
      CONTACT SECTION
-==================================== -->
+====================================== -->
 
 <section class="contact" id="contact">
 
@@ -849,9 +999,9 @@ footer {
 
 </main>
 
-<!-- ====================================
+<!-- ======================================
      FOOTER
-==================================== -->
+====================================== -->
 
 <footer>
 
