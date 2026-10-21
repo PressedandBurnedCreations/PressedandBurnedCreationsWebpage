@@ -16,9 +16,7 @@ content="Explore bold, original sticker designs from Pressed and Burned Creation
 
 <!-- CUSTOM P&B FAVICON -->
 
-<link rel="icon"
-      type="image/png"
-      href="favicon.png">
+<link rel="icon" type="image/png" href="favicon.png">
 
 <style>
 
@@ -38,14 +36,15 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-
   background: #050505;
   color: #ffffff;
-
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-
   isolation: isolate;
+}
+
+body.notice-open {
+  overflow: hidden;
 }
 
 img {
@@ -66,7 +65,6 @@ a {
 
 body::before {
   content: "";
-
   position: fixed;
   inset: 0;
 
@@ -132,7 +130,6 @@ nav a {
   color: #ffffff;
   font-size: 16px;
   font-weight: bold;
-
   transition: color 0.2s;
 }
 
@@ -151,7 +148,6 @@ nav .shop-nav {
   );
 
   color: #111111;
-
   padding: 10px 20px;
 
   border: 1px solid #ffb347;
@@ -170,7 +166,6 @@ nav .shop-nav:focus-visible {
 
 .shop-intro {
   max-width: 950px;
-
   margin: 70px auto;
   padding: 45px 30px;
 
@@ -187,7 +182,6 @@ nav .shop-nav:focus-visible {
 
 h1 {
   margin: 0 0 15px;
-
   color: #ffae35;
 
   font-size: clamp(32px, 5vw, 50px);
@@ -205,7 +199,6 @@ h1 {
 
 .shop-section {
   max-width: 1250px;
-
   margin: 60px auto;
   padding: 20px;
 }
@@ -215,9 +208,7 @@ h1 {
 h2 {
   width: fit-content;
   max-width: 100%;
-
   margin: 0 auto 25px;
-
   padding: 12px 25px;
 
   background: rgba(0, 0, 0, 0.82);
@@ -226,7 +217,6 @@ h2 {
 
   font-size: 32px;
   text-align: center;
-
   border-radius: 10px;
 
   text-shadow:
@@ -238,11 +228,9 @@ h2 {
 .section-text {
   max-width: 850px;
   margin: 0 auto 35px;
-
   padding: 20px 25px;
 
   background: rgba(0, 0, 0, 0.82);
-
   border-radius: 12px;
 
   text-align: center;
@@ -280,8 +268,6 @@ h2 {
    SIX-STICKER PRODUCT GALLERY
 ========================================== */
 
-/* THREE COLUMNS ON DESKTOP */
-
 .sticker-grid {
   display: grid;
 
@@ -292,7 +278,7 @@ h2 {
   margin-top: 35px;
 }
 
-/* INDIVIDUAL PRODUCT CARDS */
+/* INDIVIDUAL STICKER CARDS */
 
 .sticker-card {
   min-width: 0;
@@ -318,14 +304,13 @@ h2 {
 
 .sticker-card:hover {
   transform: translateY(-5px);
-
   border-color: #ffae35;
 
   box-shadow:
     0 8px 30px rgba(255, 140, 0, 0.20);
 }
 
-/* IMAGE DISPLAY AREAS */
+/* STICKER IMAGE DISPLAY */
 
 .sticker-image {
   width: 100%;
@@ -342,8 +327,6 @@ h2 {
   border-bottom:
     1px solid rgba(255, 165, 40, 0.3);
 }
-
-/* STICKERS DISPLAYED WITHOUT CROPPING */
 
 .sticker-image img {
   width: 100%;
@@ -363,7 +346,6 @@ h2 {
   align-items: center;
 
   padding: 22px 18px 25px;
-
   text-align: center;
 }
 
@@ -371,6 +353,7 @@ h2 {
   margin: 0 0 12px;
 
   color: #ffb347;
+
   font-size: 21px;
   line-height: 1.4;
 }
@@ -382,15 +365,13 @@ h2 {
   font-size: 15px;
 }
 
-/* PRODUCT VIEW BUTTON */
+/* FULL DESIGN BUTTON */
 
 .view-button {
   display: inline-block;
-
   margin-top: auto;
 
   background: rgba(0, 0, 0, 0.70);
-
   color: #ffb347;
 
   border: 2px solid #ff9000;
@@ -433,7 +414,6 @@ h2 {
   border-radius: 15px;
 
   padding: 35px 25px;
-
   text-align: center;
 }
 
@@ -449,7 +429,7 @@ h2 {
 }
 
 /* ==========================================
-   SHOP INFORMATION MESSAGE
+   ADDITIONAL SHOP INFORMATION
 ========================================== */
 
 .shop-message {
@@ -459,7 +439,6 @@ h2 {
   border-radius: 16px;
 
   padding: 35px 25px;
-
   text-align: center;
 }
 
@@ -474,9 +453,7 @@ h2 {
   font-size: 17px;
 }
 
-/* ==========================================
-   GENERAL BUTTONS
-========================================== */
+/* GENERAL BUTTON */
 
 .button {
   display: inline-block;
@@ -490,11 +467,9 @@ h2 {
   color: #111111;
 
   border-radius: 8px;
-
   padding: 14px 25px;
 
   font-weight: bold;
-
   margin: 10px;
 
   transition:
@@ -520,8 +495,149 @@ footer {
   border-top: 2px solid #ff9000;
 
   padding: 30px 15px;
-
   color: #cccccc;
+}
+
+/* ==========================================
+   NEW ATTITUDE WARNING POPUP
+========================================== */
+
+/*
+  This popup appears automatically
+  when visitors first enter the
+  sticker shop during a tab session.
+
+  JavaScript remembers when they
+  click CONTINUE TO SHOP.
+*/
+
+.attitude-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.88);
+
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+/* KEEP POPUP HIDDEN AFTER DISMISSAL */
+
+.attitude-overlay[hidden] {
+  display: none;
+}
+
+/* MAIN POPUP BOX */
+
+.attitude-popup {
+  width: 100%;
+  max-width: 560px;
+
+  max-height: 90vh;
+  overflow-y: auto;
+
+  background: rgba(8, 8, 8, 0.97);
+
+  border: 2px solid #e78a19;
+  border-radius: 20px;
+
+  padding: 40px 35px;
+
+  text-align: center;
+
+  box-shadow:
+    0 0 35px rgba(255, 126, 0, 0.25),
+    0 15px 50px rgba(0, 0, 0, 0.75);
+}
+
+/* DECORATIVE FLAMES */
+
+.attitude-flames {
+  font-size: 37px;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+/* POPUP HEADING */
+
+.attitude-popup h2 {
+  width: auto;
+
+  margin: 0 auto 20px;
+  padding: 0;
+
+  background: transparent;
+
+  color: #ffb347;
+
+  font-size: clamp(25px, 5vw, 35px);
+  line-height: 1.3;
+
+  text-shadow:
+    0 0 12px rgba(255, 140, 0, 0.25);
+}
+
+/* WARNING MESSAGE */
+
+.attitude-popup p {
+  color: #f3f3f3;
+
+  font-size: 18px;
+  line-height: 1.75;
+
+  margin: 0 auto 18px;
+}
+
+.attitude-popup .notice-final {
+  font-weight: bold;
+  margin-bottom: 28px;
+}
+
+/* CONTINUE TO SHOP BUTTON */
+
+.attitude-continue {
+  display: inline-block;
+
+  width: 100%;
+  max-width: 300px;
+
+  padding: 16px 24px;
+
+  border: 2px solid #ffcb60;
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #ffcc55,
+    #ff9200,
+    #ff7000
+  );
+
+  color: #111111;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s,
+    filter 0.2s;
+}
+
+.attitude-continue:hover,
+.attitude-continue:focus-visible {
+  transform: translateY(-2px);
+  filter: brightness(1.15);
 }
 
 /* ==========================================
@@ -589,8 +705,6 @@ footer {
     padding: 18px;
   }
 
-  /* ONE PRODUCT PER ROW ON PHONES */
-
   .sticker-grid {
     grid-template-columns: 1fr;
     gap: 22px;
@@ -612,6 +726,30 @@ footer {
     padding: 30px 18px;
   }
 
+  /* MOBILE WARNING POPUP */
+
+  .attitude-popup {
+    padding: 30px 20px;
+    border-radius: 15px;
+  }
+
+  .attitude-flames {
+    font-size: 30px;
+  }
+
+  .attitude-popup h2 {
+    font-size: 26px;
+  }
+
+  .attitude-popup p {
+    font-size: 16px;
+  }
+
+  .attitude-continue {
+    font-size: 16px;
+    padding: 15px 20px;
+  }
+
 }
 
 /* ==========================================
@@ -626,7 +764,8 @@ footer {
 
   .sticker-card,
   .view-button,
-  .button {
+  .button,
+  .attitude-continue {
     transition: none;
   }
 
@@ -772,9 +911,7 @@ footer {
 
   <div class="sticker-grid">
 
-    <!-- ==================================
-         STICKER 1 - I'M THE VIBRATOR
-    ================================== -->
+    <!-- STICKER 1 - I'M THE VIBRATOR -->
 
     <article class="sticker-card">
 
@@ -815,9 +952,7 @@ footer {
 
     </article>
 
-    <!-- ==================================
-         STICKER 2 - LEFT LANE DRIVERS
-    ================================== -->
+    <!-- STICKER 2 - LEFT LANE DRIVERS -->
 
     <article class="sticker-card">
 
@@ -858,9 +993,7 @@ footer {
 
     </article>
 
-    <!-- ==================================
-         STICKER 3 - OH GREAT SUBARU
-    ================================== -->
+    <!-- STICKER 3 - OH GREAT SUBARU -->
 
     <article class="sticker-card">
 
@@ -901,9 +1034,7 @@ footer {
 
     </article>
 
-    <!-- ==================================
-         STICKER 4 - PATIENCE
-    ================================== -->
+    <!-- STICKER 4 - PATIENCE -->
 
     <article class="sticker-card">
 
@@ -944,9 +1075,7 @@ footer {
 
     </article>
 
-    <!-- ==================================
-         STICKER 5 - TWO CENTS
-    ================================== -->
+    <!-- STICKER 5 - TWO CENTS -->
 
     <article class="sticker-card">
 
@@ -987,9 +1116,7 @@ footer {
 
     </article>
 
-    <!-- ==================================
-         STICKER 6 - SHITS & GIGGLES
-    ================================== -->
+    <!-- STICKER 6 - SHITS & GIGGLES -->
 
     <article class="sticker-card">
 
@@ -1044,8 +1171,6 @@ footer {
 
   <div class="category-grid">
 
-    <!-- READY TO SHIP -->
-
     <div class="category-card">
 
       <h3>Ready to Ship</h3>
@@ -1063,8 +1188,6 @@ footer {
       </p>
 
     </div>
-
-    <!-- MADE TO ORDER -->
 
     <div class="category-card">
 
@@ -1089,7 +1212,7 @@ footer {
 </section>
 
 <!-- ==========================================
-     MORE DESIGNS INFORMATION
+     MORE CREATIONS
 ========================================== -->
 
 <section class="shop-section">
@@ -1141,6 +1264,195 @@ footer {
   </p>
 
 </footer>
+
+<!-- ==========================================
+     NEW ATTITUDE WARNING POPUP
+========================================== -->
+
+<div
+  class="attitude-overlay"
+  id="attitude-warning"
+  hidden>
+
+  <div
+    class="attitude-popup"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="attitude-title"
+    aria-describedby="attitude-description">
+
+    <div class="attitude-flames"
+         aria-hidden="true">
+      🔥 🔥 🔥
+    </div>
+
+    <h2 id="attitude-title">
+      A Little Attitude Ahead!
+    </h2>
+
+    <p id="attitude-description">
+      Some of our sticker designs
+      contain mature humor,
+      suggestive themes,
+      and strong language.
+    </p>
+
+    <p class="notice-final">
+      Viewer discretion is advised.
+    </p>
+
+    <button
+      class="attitude-continue"
+      id="attitude-continue"
+      type="button">
+
+      CONTINUE TO SHOP
+
+    </button>
+
+  </div>
+
+</div>
+
+<!-- ==========================================
+     ONCE-PER-SESSION POPUP SCRIPT
+========================================== -->
+
+<script>
+
+(function () {
+
+  /*
+    Store acknowledgement for this
+    browser tab's current session.
+
+    The notice returns when a new
+    tab session is started.
+  */
+
+  const storageKey =
+    "pb-attitude-notice-seen-v1";
+
+  const warning =
+    document.getElementById("attitude-warning");
+
+  const continueButton =
+    document.getElementById("attitude-continue");
+
+  let alreadySeen = false;
+
+  /*
+    Check if this visitor has
+    dismissed the message.
+  */
+
+  try {
+
+    alreadySeen =
+      sessionStorage.getItem(storageKey) === "yes";
+
+  } catch (error) {
+
+    /*
+      If browser storage is unavailable,
+      show the message on every visit.
+    */
+
+    alreadySeen = false;
+
+  }
+
+  if (alreadySeen) {
+    return;
+  }
+
+  /*
+    Display the warning before
+    allowing normal page interaction.
+  */
+
+  warning.hidden = false;
+
+  document.body.classList.add("notice-open");
+
+  /*
+    Temporarily disable interaction
+    with the page behind the popup.
+  */
+
+  const pageSections = [
+    document.querySelector("body > header"),
+    document.querySelector("body > nav"),
+    document.querySelector("body > main"),
+    document.querySelector("body > footer")
+  ].filter(Boolean);
+
+  pageSections.forEach(function (section) {
+    section.inert = true;
+  });
+
+  continueButton.focus();
+
+  /*
+    Keep keyboard focus on the
+    Continue button while open.
+  */
+
+  warning.addEventListener("keydown", function (event) {
+
+    if (event.key === "Tab") {
+
+      event.preventDefault();
+      continueButton.focus();
+
+    }
+
+  });
+
+  /*
+    Visitor acknowledges message.
+  */
+
+  continueButton.addEventListener("click", function () {
+
+    try {
+
+      sessionStorage.setItem(storageKey, "yes");
+
+    } catch (error) {
+
+      /*
+        The page still works if
+        storage is unavailable.
+      */
+
+    }
+
+    warning.hidden = true;
+
+    document.body.classList.remove("notice-open");
+
+    pageSections.forEach(function (section) {
+      section.inert = false;
+    });
+
+    /*
+      Move keyboard focus to
+      the shop navigation link.
+    */
+
+    const shopLink =
+      document.querySelector("nav .shop-nav");
+
+    if (shopLink) {
+      shopLink.focus();
+    }
+
+  });
+
+})();
+
+</script>
 
 </body>
 </html>
