@@ -1,29 +1,21 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Pressed and Burned Creations</title>
 
 <meta name="description"
-      content="Pressed and Burned Creations - Stickers, Decals, and Custom Designs. Stickers with an Attitude.">
+content="Pressed and Burned Creations - Stickers, Decals, and Custom Designs. Stickers with an Attitude.">
 
 <!-- P&B CUSTOM FAVICON -->
-
-<link rel="icon"
-      type="image/png"
-      href="favicon.png">
+<link rel="icon" type="image/png" href="favicon.png">
 
 <style>
 
-/* ======================================
-   GENERAL WEBSITE SETTINGS
-====================================== */
+/* GENERAL SETTINGS */
 
 * {
   box-sizing: border-box;
@@ -37,13 +29,10 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-
   background: #050505;
   color: #ffffff;
-
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-
   isolation: isolate;
 }
 
@@ -58,51 +47,27 @@ a {
   color: inherit;
 }
 
-/* ======================================
-   NEW ANIMATED FIRE BACKGROUND
-====================================== */
-
-/*
-   The video remains fixed behind
-   the entire website.
-
-   It plays silently and repeats
-   continuously.
-
-   The original P&B artwork sits
-   above the video.
-*/
+/* FIXED FIRE BACKGROUND */
 
 .background-scene {
   position: fixed;
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   z-index: 0;
-
   overflow: hidden;
-
   background: #050505;
-
   pointer-events: none;
-
   isolation: isolate;
 }
-
-/* REAL FIRE VIDEO */
 
 .fire-video {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
   object-position: center bottom;
-
   z-index: 0;
 
   filter:
@@ -110,45 +75,28 @@ a {
     saturate(1.15);
 }
 
-/* ======================================
-   ORIGINAL P&B BACKGROUND ARTWORK
-====================================== */
-
-/*
-   Screen blending allows fire
-   to show through the dark portions
-   of the original background image.
-
-   The artwork remains at
-   100% CSS opacity.
-*/
+/* ORIGINAL ORNATE BACKGROUND LOGO */
 
 .background-art {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
 
   background-image:
     url("Pressed%20and%20burned%20background%20logo.png");
 
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 
   mix-blend-mode: screen;
-
   opacity: 1;
-
   z-index: 1;
-
   pointer-events: none;
 }
 
-/* ======================================
-   WEBSITE CONTENT ABOVE BACKGROUNDS
-====================================== */
+/* CONTENT ABOVE BACKGROUND */
 
 body > header,
 body > nav,
@@ -158,13 +106,10 @@ body > footer {
   z-index: 1;
 }
 
-/* ======================================
-   MAIN HEADER
-====================================== */
+/* MAIN HEADER */
 
 .main-header {
   background: rgba(0,0,0,0.72);
-
   text-align: center;
   padding: 15px;
 }
@@ -172,41 +117,29 @@ body > footer {
 .main-logo {
   width: 100%;
   max-width: 1100px;
-
-  height: auto;
   margin: 0 auto;
 }
 
-/* ======================================
-   NAVIGATION BAR
-====================================== */
+/* NAVIGATION */
 
 nav {
   display: flex;
-
   justify-content: center;
   align-items: center;
-
   flex-wrap: wrap;
-
   gap: 15px 22px;
   padding: 18px;
 
   background: rgba(0,0,0,0.85);
-
   border-top: 1px solid #c96c00;
   border-bottom: 2px solid #ff9000;
 }
 
 nav a {
   color: #ffffff;
-
   font-size: 16px;
   font-weight: bold;
-
-  transition:
-    color 0.2s,
-    transform 0.2s;
+  transition: color 0.2s;
 }
 
 nav a:hover,
@@ -214,112 +147,84 @@ nav a:focus-visible {
   color: #ffac39;
 }
 
-/* SHOP STICKERS NAVIGATION BUTTON */
+/* SHOP NAVIGATION BUTTON */
 
 .shop-nav {
   background: linear-gradient(
-    135deg,
-    #ffcc55,
-    #ff8000
+    135deg, #ffcc55, #ff8000
   );
 
   color: #111111;
-
   padding: 10px 20px;
   border-radius: 8px;
-
   border: 1px solid #ffb347;
 }
 
-nav .shop-nav:hover,
-nav .shop-nav:focus-visible {
+nav .shop-nav:hover {
   color: #111111;
   filter: brightness(1.15);
 }
 
-/* SHOWCASE AND ABOUT US BUTTONS */
+/* SHOWCASE AND ABOUT NAVIGATION */
 
 .showcase-nav,
 .about-nav {
   background: rgba(0,0,0,0.65);
-
   color: #ffb347;
-
   border: 2px solid #ff9000;
   border-radius: 8px;
-
   padding: 8px 18px;
 }
 
-/* ======================================
-   HOMEPAGE INTRODUCTION
-====================================== */
+/* HOMEPAGE INTRODUCTION */
 
 .intro {
   min-height: 65vh;
   padding: 80px 20px;
 
   display: flex;
-
   justify-content: center;
   align-items: center;
 
   text-align: center;
-  background: transparent;
 }
 
 .intro-content {
   width: 100%;
   max-width: 850px;
-
-  background: rgba(0,0,0,0.78);
-
-  border:
-    1px solid rgba(255,140,0,0.45);
-
-  border-radius: 18px;
-
   padding: 45px 30px;
 
-  box-shadow:
-    0 0 35px rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.78);
+  border: 1px solid rgba(255,140,0,0.45);
+  border-radius: 18px;
+  box-shadow: 0 0 35px rgba(0,0,0,0.4);
 }
 
 .intro h1 {
   font-size: 42px;
   color: #ffa12a;
-
   text-transform: uppercase;
   margin: 0 0 15px;
 }
 
 .intro p {
   font-size: 20px;
-
   max-width: 750px;
   margin: 0 auto 30px;
-
   color: #eeeeee;
 }
 
-/* ======================================
-   GENERAL BUTTONS
-====================================== */
+/* GENERAL BUTTONS */
 
 .button {
   display: inline-block;
-
   background: linear-gradient(
-    135deg,
-    #ffcc55,
-    #ff8000
+    135deg, #ffcc55, #ff8000
   );
 
   color: #111111;
-
   padding: 15px 28px;
   margin: 8px;
-
   border-radius: 8px;
   font-weight: bold;
 
@@ -334,32 +239,22 @@ nav .shop-nav:focus-visible {
   transform: translateY(-2px);
 }
 
-/* DARK OUTLINED BUTTONS */
-
 .outline {
   background: rgba(0,0,0,0.65);
-
   color: #ffb347;
-
   border: 2px solid #ff8c00;
 }
 
-/* ======================================
-   MAIN SHOP STICKERS BUTTON
-====================================== */
+/* MAIN SHOP BUTTON */
 
 .shop-button {
   display: inline-block;
 
   background: linear-gradient(
-    135deg,
-    #ffe178,
-    #ff9200,
-    #ff6200
+    135deg, #ffe178, #ff9200, #ff6200
   );
 
   color: #080808;
-
   border: 2px solid #ffcc55;
   border-radius: 10px;
 
@@ -385,43 +280,35 @@ nav .shop-nav:focus-visible {
     0 0 35px rgba(255,140,0,0.6);
 }
 
-/* ======================================
-   GENERAL CONTENT SECTIONS
-====================================== */
+/* GENERAL SECTIONS */
 
 section {
   padding: 75px 20px;
-
   background: rgba(0,0,0,0.18);
 }
 
 .container {
-  width: 100%;
   max-width: 1200px;
-
+  width: 100%;
   margin: 0 auto;
 }
 
 h2 {
-  text-align: center;
-  color: #ffad35;
-
-  font-size: 36px;
-
   width: fit-content;
   max-width: 100%;
-
   margin: 0 auto 20px;
 
-  background: rgba(0,0,0,0.78);
-
   padding: 10px 25px;
+  background: rgba(0,0,0,0.78);
   border-radius: 10px;
+
+  text-align: center;
+  color: #ffad35;
+  font-size: 36px;
 }
 
 .section-description {
   text-align: center;
-
   max-width: 800px;
   margin: 0 auto 35px;
 
@@ -429,14 +316,11 @@ h2 {
   color: #eeeeee;
 
   background: rgba(0,0,0,0.78);
-
   padding: 16px 22px;
   border-radius: 10px;
 }
 
-/* ======================================
-   FEATURED CREATIONS
-====================================== */
+/* FEATURED CREATIONS */
 
 .showcase {
   background: rgba(0,0,0,0.22);
@@ -444,7 +328,6 @@ h2 {
 
 .showcase img {
   width: 100%;
-
   border: 2px solid #d97706;
   border-radius: 15px;
 
@@ -454,12 +337,10 @@ h2 {
 
 .shop-prompt {
   text-align: center;
-
   margin-top: 35px;
   padding: 25px;
 
   background: rgba(0,0,0,0.78);
-
   border-radius: 15px;
 }
 
@@ -468,9 +349,7 @@ h2 {
   font-size: 25px;
 }
 
-/* ======================================
-   SERVICES
-====================================== */
+/* SERVICES */
 
 .services {
   background: rgba(0,0,0,0.12);
@@ -478,10 +357,8 @@ h2 {
 
 .service-grid {
   display: grid;
-
   grid-template-columns:
-    repeat(3, minmax(0,1fr));
-
+    repeat(3, minmax(0, 1fr));
   gap: 25px;
 }
 
@@ -489,10 +366,8 @@ h2 {
   padding: 35px 25px;
 
   background: rgba(10,10,10,0.85);
-
   border: 1px solid #bc6500;
   border-radius: 14px;
-
   text-align: center;
 }
 
@@ -505,89 +380,142 @@ h2 {
   color: #eeeeee;
 }
 
-/* ======================================
-   ABOUT SECTION
-====================================== */
+/* ABOUT SECTION */
 
 .about {
-  background: rgba(0,0,0,0.18);
-
   text-align: center;
 }
 
 .about-content {
   max-width: 850px;
   margin: 0 auto;
+  padding: 35px;
 
   background: rgba(0,0,0,0.82);
-
-  border:
-    1px solid rgba(255,140,0,0.35);
-
+  border: 1px solid rgba(255,140,0,0.35);
   border-radius: 16px;
-
-  padding: 35px;
 }
 
 .about-content p {
   max-width: 800px;
   margin: 0 auto 20px;
-
   font-size: 18px;
   color: #eeeeee;
 }
 
-/* ======================================
-   CONTACT SECTION
-====================================== */
+/* CONTACT SECTION */
 
 .contact {
-  background: rgba(0,0,0,0.18);
-
   text-align: center;
 }
 
-.business-card {
-  max-width: 950px;
-  margin: 0 auto 30px;
-}
-
-.business-card img {
-  width: 100%;
-
-  border-radius: 12px;
-  border: 2px solid #c9750b;
-}
-
 /* ======================================
-   FOOTER
+   BUSINESS CARD - WHITE SPACE REMOVED
 ====================================== */
+
+/*
+  The original PNG contains two
+  business card designs surrounded
+  by a white background.
+
+  We display the same original PNG
+  inside two cropped windows.
+
+  Only the black-and-gold cards
+  remain visible.
+
+  No image editing or new upload
+  is required.
+*/
+
+.business-card {
+  width: 100%;
+  max-width: 645px;
+  margin: 0 auto 35px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* CROPPED IMAGE WINDOWS */
+
+.card-crop {
+  position: relative;
+  display: block;
+
+  width: 100%;
+  overflow: hidden;
+
+  background: #050505;
+  border-radius: 20px;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,0.45);
+}
+
+/* TOP CARD */
+
+.card-front {
+  aspect-ratio: 645 / 279;
+}
+
+/* BOTTOM CARD */
+
+.card-back {
+  aspect-ratio: 645 / 275;
+}
+
+/* ORIGINAL IMAGE INSIDE EACH WINDOW */
+
+.card-crop img {
+  position: absolute;
+
+  width: 155.04%;
+  max-width: none;
+  height: auto;
+
+  left: -27.6%;
+
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* IMAGE POSITION FOR TOP CARD */
+
+.card-front img {
+  top: -1.1%;
+}
+
+/* IMAGE POSITION FOR BOTTOM CARD */
+
+.card-back img {
+  top: -105%;
+}
+
+/* FOOTER */
 
 footer {
   text-align: center;
-
   background: rgba(0,0,0,0.85);
-
   border-top: 2px solid #ff8c00;
 
   padding: 30px 15px;
   color: #cccccc;
 }
 
-/* ======================================
-   MOBILE AND TABLET
-====================================== */
+/* MOBILE AND TABLET */
 
 @media (max-width: 768px) {
 
-  .fire-video {
-    object-position: center bottom;
+  .background-art {
+    background-position: center;
+    background-size: contain;
   }
 
-  .background-art {
-    background-position: center center;
-    background-size: contain;
-    opacity: 1;
+  .fire-video {
+    object-position: center bottom;
   }
 
   .main-header {
@@ -646,17 +574,17 @@ footer {
     padding: 25px 18px;
   }
 
+  .business-card {
+    gap: 12px;
+  }
+
+  .card-crop {
+    border-radius: 12px;
+  }
+
 }
 
-/* ======================================
-   REDUCED MOTION ACCESSIBILITY
-====================================== */
-
-/*
-   Visitors who have requested
-   reduced motion will see the
-   static P&B background instead.
-*/
+/* REDUCED MOTION ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -679,14 +607,9 @@ footer {
 
 <body>
 
-<!-- ======================================
-     NEW FIXED FIRE AND LOGO BACKGROUND
-====================================== -->
+<!-- FIRE VIDEO AND STATIONARY P&B LOGO -->
 
-<div class="background-scene"
-     aria-hidden="true">
-
-  <!-- REAL FIRE VIDEO -->
+<div class="background-scene" aria-hidden="true">
 
   <video
     class="fire-video"
@@ -702,15 +625,11 @@ footer {
 
   </video>
 
-  <!-- ORIGINAL ORNATE P&B ARTWORK -->
-
   <div class="background-art"></div>
 
 </div>
 
-<!-- ======================================
-     MAIN BUSINESS HEADER
-====================================== -->
+<!-- MAIN HEADER -->
 
 <header class="main-header" id="home">
 
@@ -721,46 +640,33 @@ footer {
 
 </header>
 
-<!-- ======================================
-     NAVIGATION
-====================================== -->
+<!-- NAVIGATION -->
 
 <nav aria-label="Main navigation">
 
-  <a href="#home">
-    Home
-  </a>
+  <a href="#home">Home</a>
 
-  <a href="stickers.html"
-     class="shop-nav">
+  <a href="stickers.html" class="shop-nav">
     SHOP STICKERS
   </a>
 
-  <a href="showcase.html"
-     class="showcase-nav">
+  <a href="showcase.html" class="showcase-nav">
     SHOWCASE
   </a>
 
-  <a href="#services">
-    Services
-  </a>
+  <a href="#services">Services</a>
 
-  <a href="about-us.html"
-     class="about-nav">
+  <a href="about-us.html" class="about-nav">
     ABOUT US
   </a>
 
-  <a href="#contact">
-    Contact
-  </a>
+  <a href="#contact">Contact</a>
 
 </nav>
 
 <main>
 
-<!-- ======================================
-     HOMEPAGE INTRODUCTION
-====================================== -->
+<!-- INTRODUCTION -->
 
 <div class="intro">
 
@@ -777,25 +683,21 @@ footer {
       to stand out.
     </p>
 
-    <a href="stickers.html"
-       class="shop-button">
+    <a href="stickers.html" class="shop-button">
       SHOP STICKERS
     </a>
 
     <div>
 
-      <a href="about-us.html"
-         class="button outline">
+      <a href="about-us.html" class="button outline">
         ABOUT US
       </a>
 
-      <a href="showcase.html"
-         class="button outline">
+      <a href="showcase.html" class="button outline">
         View Our Work
       </a>
 
-      <a href="#contact"
-         class="button outline">
+      <a href="#contact" class="button outline">
         Contact Miles
       </a>
 
@@ -805,9 +707,7 @@ footer {
 
 </div>
 
-<!-- ======================================
-     FEATURED CREATIONS
-====================================== -->
+<!-- FEATURED CREATIONS -->
 
 <section class="showcase" id="showcase">
 
@@ -838,8 +738,7 @@ footer {
         and custom projects.
       </p>
 
-      <a href="showcase.html"
-         class="button outline">
+      <a href="showcase.html" class="button outline">
         VIEW SHOWCASE
       </a>
 
@@ -847,8 +746,7 @@ footer {
         Looking for stickers you can order?
       </p>
 
-      <a href="stickers.html"
-         class="shop-button">
+      <a href="stickers.html" class="shop-button">
         BROWSE STICKERS
       </a>
 
@@ -858,9 +756,7 @@ footer {
 
 </section>
 
-<!-- ======================================
-     SERVICES
-====================================== -->
+<!-- SERVICES -->
 
 <section class="services" id="services">
 
@@ -917,9 +813,7 @@ footer {
 
 </section>
 
-<!-- ======================================
-     ABOUT SECTION
-====================================== -->
+<!-- ABOUT SECTION -->
 
 <section class="about" id="about">
 
@@ -947,8 +841,7 @@ footer {
         Stick It Anywhere.
       </p>
 
-      <a href="about-us.html"
-         class="button outline">
+      <a href="about-us.html" class="button outline">
         Visit Our About Us Page
       </a>
 
@@ -958,9 +851,7 @@ footer {
 
 </section>
 
-<!-- ======================================
-     CONTACT SECTION
-====================================== -->
+<!-- CONTACT SECTION -->
 
 <section class="contact" id="contact">
 
@@ -976,12 +867,31 @@ footer {
       to discuss your project.
     </p>
 
+    <!-- BUSINESS CARD WITHOUT WHITE BOX -->
+
     <div class="business-card">
 
-      <img
-        src="Pressed%20and%20burned%20logo%20and%20business%20card%20ifo.png"
-        alt="Pressed and Burned Creations business card and contact information"
-        loading="lazy">
+      <!-- BUSINESS LOGO CARD -->
+
+      <div class="card-crop card-front">
+
+        <img
+          src="Pressed%20and%20burned%20logo%20and%20business%20card%20ifo.png"
+          alt="Pressed and Burned Creations business logo card"
+          loading="lazy">
+
+      </div>
+
+      <!-- MILES'S CONTACT CARD -->
+
+      <div class="card-crop card-back">
+
+        <img
+          src="Pressed%20and%20burned%20logo%20and%20business%20card%20ifo.png"
+          alt="Miles Johnson business contact card"
+          loading="lazy">
+
+      </div>
 
     </div>
 
@@ -999,9 +909,7 @@ footer {
 
 </main>
 
-<!-- ======================================
-     FOOTER
-====================================== -->
+<!-- FOOTER -->
 
 <footer>
 
