@@ -1,23 +1,25 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Pressed and Burned Creations</title>
 
 <meta name="description"
-content="Pressed and Burned Creations - Stickers, Decals, and Custom Designs. Stickers with an Attitude.">
+content="Pressed and Burned Creations - Stickers, Decals, and Custom Designs. Stickers With an Attitude.">
 
-<!-- P&B CUSTOM FAVICON -->
+<!-- ORIGINAL P&B FAVICON -->
 <link rel="icon" type="image/png" href="favicon.png">
 
 <style>
 
-/* ====================================
+/* ======================================
    GENERAL WEBSITE SETTINGS
-==================================== */
+====================================== */
 
 * {
   box-sizing: border-box;
@@ -36,6 +38,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   isolation: isolate;
+  overflow-x: hidden;
 }
 
 img {
@@ -45,13 +48,19 @@ img {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
-/* ====================================
-   REAL FIRE VIDEO BACKGROUND
-==================================== */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #ffd477;
+  outline-offset: 4px;
+}
+
+/* ======================================
+   FIXED FIRE AND LOGO BACKGROUND
+====================================== */
 
 .background-scene {
   position: fixed;
@@ -70,6 +79,7 @@ a {
   inset: 0;
   width: 100%;
   height: 100%;
+
   object-fit: cover;
   object-position: center bottom;
   z-index: 0;
@@ -79,9 +89,7 @@ a {
     saturate(1.15);
 }
 
-/* ====================================
-   ORIGINAL FIXED P&B BACKGROUND
-==================================== */
+/* ORIGINAL ORNATE P&B LOGO */
 
 .background-art {
   position: absolute;
@@ -92,7 +100,7 @@ a {
   background-image:
     url("Pressed%20and%20burned%20background%20logo.png");
 
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
 
@@ -102,7 +110,7 @@ a {
   pointer-events: none;
 }
 
-/* CONTENT ABOVE BACKGROUND */
+/* KEEP CONTENT ABOVE BACKGROUND */
 
 body > header,
 body > nav,
@@ -112,12 +120,12 @@ body > footer {
   z-index: 1;
 }
 
-/* ====================================
+/* ======================================
    MAIN HEADER
-==================================== */
+====================================== */
 
 .main-header {
-  background: rgba(0,0,0,0.72);
+  background: rgba(0,0,0,0.76);
   text-align: center;
   padding: 15px;
 }
@@ -128,19 +136,20 @@ body > footer {
   margin: 0 auto;
 }
 
-/* ====================================
-   NAVIGATION BAR
-==================================== */
+/* ======================================
+   NAVIGATION
+====================================== */
 
 nav {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
   gap: 15px 22px;
   padding: 18px;
 
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.88);
   border-top: 1px solid #c96c00;
   border-bottom: 2px solid #ff9000;
 }
@@ -149,25 +158,30 @@ nav a {
   color: #ffffff;
   font-size: 16px;
   font-weight: bold;
-  transition: color 0.2s;
+  text-align: center;
+  transition: color 0.2s, filter 0.2s;
 }
 
-nav a:hover,
-nav a:focus-visible {
-  color: #ffac39;
+nav a:hover {
+  color: #ffb347;
 }
 
 /* SHOP STICKERS NAV BUTTON */
 
-.shop-nav {
+nav .shop-nav {
+  display: inline-block;
+
   background: linear-gradient(
-    135deg, #ffcc55, #ff8000
+    135deg,
+    #ffcc55,
+    #ff8000
   );
 
   color: #111111;
+
   padding: 10px 20px;
-  border-radius: 8px;
   border: 1px solid #ffb347;
+  border-radius: 8px;
 }
 
 nav .shop-nav:hover {
@@ -177,100 +191,72 @@ nav .shop-nav:hover {
 
 /* SHOWCASE AND ABOUT NAV BUTTONS */
 
-.showcase-nav,
-.about-nav {
-  background: rgba(0,0,0,0.65);
+nav .showcase-nav,
+nav .about-nav {
+  display: inline-block;
+
+  background: rgba(0,0,0,0.72);
   color: #ffb347;
+
   border: 2px solid #ff9000;
   border-radius: 8px;
   padding: 8px 18px;
 }
 
-/* ====================================
-   HOMEPAGE INTRODUCTION
-==================================== */
-
-.intro {
-  min-height: 65vh;
-  padding: 80px 20px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.intro-content {
-  width: 100%;
-  max-width: 850px;
-  padding: 45px 30px;
-
-  background: rgba(0,0,0,0.78);
-  border: 1px solid rgba(255,140,0,0.45);
-  border-radius: 18px;
-
-  box-shadow:
-    0 0 35px rgba(0,0,0,0.4);
-}
-
-.intro h1 {
-  font-size: 42px;
-  color: #ffa12a;
-  text-transform: uppercase;
-  margin: 0 0 15px;
-}
-
-.intro p {
-  font-size: 20px;
-  max-width: 750px;
-  margin: 0 auto 30px;
-  color: #eeeeee;
-}
-
-/* ====================================
+/* ======================================
    GENERAL BUTTONS
-==================================== */
+====================================== */
 
 .button {
   display: inline-block;
 
   background: linear-gradient(
-    135deg, #ffcc55, #ff8000
+    135deg,
+    #ffcc55,
+    #ff8000
   );
 
   color: #111111;
+
   padding: 15px 28px;
   margin: 8px;
+
   border-radius: 8px;
   font-weight: bold;
+  text-align: center;
 
   transition:
     transform 0.2s,
     filter 0.2s;
 }
 
-.button:hover,
-.button:focus-visible {
+.button:hover {
   filter: brightness(1.15);
   transform: translateY(-2px);
 }
 
+/* DARK OUTLINED BUTTON */
+
 .outline {
-  background: rgba(0,0,0,0.65);
+  background: rgba(0,0,0,0.72);
   color: #ffb347;
   border: 2px solid #ff8c00;
 }
 
-/* MAIN SHOP STICKERS BUTTON */
+/* MAIN ORANGE SHOP BUTTON */
 
 .shop-button {
   display: inline-block;
 
   background: linear-gradient(
-    135deg, #ffe178, #ff9200, #ff6200
+    135deg,
+    #ffe178,
+    #ff9200,
+    #ff6200
   );
 
   color: #080808;
+
   border: 2px solid #ffcc55;
   border-radius: 10px;
 
@@ -279,6 +265,7 @@ nav .shop-nav:hover {
 
   font-size: 20px;
   font-weight: 900;
+  text-align: center;
 
   box-shadow:
     0 0 22px rgba(255,140,0,0.35);
@@ -288,17 +275,75 @@ nav .shop-nav:hover {
     box-shadow 0.2s;
 }
 
-.shop-button:hover,
-.shop-button:focus-visible {
+.shop-button:hover {
   transform: translateY(-3px);
 
   box-shadow:
     0 0 35px rgba(255,140,0,0.6);
 }
 
-/* ====================================
-   GENERAL SECTIONS
-==================================== */
+/* ======================================
+   HOMEPAGE INTRODUCTION
+====================================== */
+
+.intro {
+  min-height: 65vh;
+
+  padding: 80px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.intro-content {
+  width: 100%;
+  max-width: 850px;
+
+  padding: 45px 30px;
+
+  background: rgba(0,0,0,0.82);
+  border: 1px solid rgba(255,140,0,0.45);
+  border-radius: 18px;
+
+  box-shadow:
+    0 0 35px rgba(0,0,0,0.4);
+}
+
+.intro h1 {
+  margin: 0 0 15px;
+
+  color: #ffa12a;
+
+  font-size: 42px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.intro p {
+  max-width: 750px;
+
+  margin: 0 auto 25px;
+
+  color: #eeeeee;
+  font-size: 20px;
+}
+
+/* INTRO SECONDARY BUTTONS */
+
+.intro-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* ======================================
+   GENERAL CONTENT SECTIONS
+====================================== */
 
 section {
   padding: 75px 20px;
@@ -314,40 +359,44 @@ section {
 h2 {
   width: fit-content;
   max-width: 100%;
-  margin: 0 auto 20px;
 
+  margin: 0 auto 20px;
   padding: 10px 25px;
-  background: rgba(0,0,0,0.78);
+
+  background: rgba(0,0,0,0.82);
   border-radius: 10px;
 
   color: #ffad35;
   font-size: 36px;
+  line-height: 1.3;
   text-align: center;
 }
 
 .section-description {
   max-width: 800px;
+
   margin: 0 auto 35px;
   padding: 16px 22px;
 
-  background: rgba(0,0,0,0.78);
+  background: rgba(0,0,0,0.82);
   border-radius: 10px;
 
-  text-align: center;
   color: #eeeeee;
   font-size: 18px;
+  text-align: center;
 }
 
-/* ====================================
+/* ======================================
    FEATURED CREATIONS
-==================================== */
+====================================== */
 
 .showcase {
   background: rgba(0,0,0,0.22);
 }
 
-.showcase img {
+.showcase-image {
   width: 100%;
+
   border: 2px solid #d97706;
   border-radius: 15px;
 
@@ -357,21 +406,29 @@ h2 {
 
 .shop-prompt {
   text-align: center;
+
   margin-top: 35px;
   padding: 25px;
 
-  background: rgba(0,0,0,0.78);
+  background: rgba(0,0,0,0.82);
   border-radius: 15px;
 }
 
 .shop-prompt h3 {
+  margin: 0 0 15px;
+
   color: #ffb347;
   font-size: 25px;
+  line-height: 1.3;
 }
 
-/* ====================================
+.shop-prompt p {
+  color: #eeeeee;
+}
+
+/* ======================================
    SERVICES
-==================================== */
+====================================== */
 
 .services {
   background: rgba(0,0,0,0.12);
@@ -379,15 +436,17 @@ h2 {
 
 .service-grid {
   display: grid;
+
   grid-template-columns:
     repeat(3, minmax(0, 1fr));
+
   gap: 25px;
 }
 
 .service-card {
   padding: 35px 25px;
 
-  background: rgba(10,10,10,0.85);
+  background: rgba(10,10,10,0.88);
   border: 1px solid #bc6500;
   border-radius: 14px;
 
@@ -395,17 +454,20 @@ h2 {
 }
 
 .service-card h3 {
+  margin: 0 0 12px;
+
   color: #ffb347;
-  margin-top: 0;
+  font-size: 23px;
 }
 
 .service-card p {
   color: #eeeeee;
+  margin: 0;
 }
 
-/* ====================================
+/* ======================================
    ABOUT SECTION
-==================================== */
+====================================== */
 
 .about {
   text-align: center;
@@ -413,10 +475,11 @@ h2 {
 
 .about-content {
   max-width: 850px;
+
   margin: 0 auto;
   padding: 35px;
 
-  background: rgba(0,0,0,0.82);
+  background: rgba(0,0,0,0.86);
   border: 1px solid rgba(255,140,0,0.35);
   border-radius: 16px;
 }
@@ -425,23 +488,24 @@ h2 {
   max-width: 800px;
   margin: 0 auto 20px;
 
-  font-size: 18px;
   color: #eeeeee;
+  font-size: 18px;
 }
 
-/* ====================================
+/* ======================================
    CONTACT SECTION
-==================================== */
+====================================== */
 
 .contact {
   text-align: center;
 }
 
-/* BUSINESS CARDS WITHOUT WHITE SPACE */
+/* ORIGINAL BUSINESS CARD CROPPING */
 
 .business-card {
   width: 100%;
   max-width: 645px;
+
   margin: 0 auto 35px;
 
   display: flex;
@@ -451,11 +515,13 @@ h2 {
 
 .card-crop {
   position: relative;
+
   display: block;
   width: 100%;
-  overflow: hidden;
 
+  overflow: hidden;
   background: #050505;
+
   border-radius: 20px;
 
   box-shadow:
@@ -472,9 +538,11 @@ h2 {
 
 .card-crop img {
   position: absolute;
+
   width: 155.04%;
   max-width: none;
   height: auto;
+
   left: -27.6%;
 
   border: none;
@@ -490,19 +558,22 @@ h2 {
   top: -105%;
 }
 
-/* ====================================
-   NEW PUBLIC VISITOR COUNTER
-==================================== */
+/* ======================================
+   HOMEPAGE VISITOR COUNTER
+====================================== */
 
 .visitor-counter-area {
   max-width: 360px;
+
   margin: 0 auto 25px;
   padding: 20px 25px;
 
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.88);
 
   border: 1px solid #d88322;
   border-radius: 14px;
+
+  text-align: center;
 
   box-shadow:
     0 0 20px rgba(255,140,0,0.12);
@@ -524,118 +595,418 @@ h2 {
 }
 
 .visitor-counter-area .counterapi {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  min-height: 44px;
-  color: #ffffff;
-
-  font-size: 23px;
-  font-weight: bold;
+  min-height: 35px;
+  text-align: center;
+  margin: 0 auto;
 }
 
-/* ====================================
+.counter-status {
+  margin: 0;
+
+  color: #dddddd;
+  font-size: 15px;
+}
+
+.counter-status[hidden] {
+  display: none;
+}
+
+/* ======================================
    FOOTER
-==================================== */
+====================================== */
 
 footer {
-  text-align: center;
+  background: rgba(0,0,0,0.88);
 
-  background: rgba(0,0,0,0.85);
   border-top: 2px solid #ff8c00;
 
   padding: 30px 15px;
+
   color: #cccccc;
+  text-align: center;
 }
 
-/* ====================================
-   MOBILE AND TABLET
-==================================== */
+/* ======================================
+   TABLET LAYOUT
+====================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
-  .background-art {
-    background-position: center;
-    background-size: contain;
-  }
-
-  .fire-video {
-    object-position: center bottom;
-  }
-
-  .main-header {
-    padding: 10px 5px;
-  }
-
-  nav {
-    gap: 12px 15px;
-  }
-
-  nav a {
-    font-size: 13px;
-  }
-
-  .shop-nav,
-  .showcase-nav,
-  .about-nav {
-    padding: 9px 15px;
+  .service-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 
   .intro {
-    min-height: 55vh;
-    padding: 60px 15px;
-  }
-
-  .intro-content {
-    padding: 30px 18px;
+    min-height: auto;
   }
 
   .intro h1 {
-    font-size: 30px;
+    font-size: 36px;
+  }
+
+}
+
+/* ======================================
+   MOBILE HOMEPAGE IMPROVEMENTS
+   SCREENS 680px AND SMALLER
+====================================== */
+
+@media (max-width: 680px) {
+
+  /* HEADER */
+
+  .main-header {
+    padding: 10px 12px;
+  }
+
+  .main-logo {
+    max-width: 520px;
+  }
+
+  /* COMPACT TWO-COLUMN NAVIGATION */
+
+  nav {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 9px;
+    padding: 12px;
+
+    border-bottom-width: 2px;
+  }
+
+  nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 43px;
+
+    padding: 9px 5px;
+
+    font-size: 13px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  nav .shop-nav,
+  nav .showcase-nav,
+  nav .about-nav {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 43px;
+    padding: 8px 6px;
+
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  /* SHORTER HOMEPAGE INTRO */
+
+  .intro {
+    min-height: auto;
+
+    padding: 28px 13px 20px;
+  }
+
+  .intro-content {
+    padding: 25px 16px;
+
+    border-radius: 15px;
+
+    background: rgba(0,0,0,0.88);
+  }
+
+  .intro h1 {
+    margin-bottom: 15px;
+
+    font-size: clamp(25px, 7vw, 33px);
+    line-height: 1.17;
   }
 
   .intro p {
+    margin-bottom: 19px;
+
     font-size: 16px;
+    line-height: 1.6;
   }
 
-  .shop-button {
-    font-size: 18px;
-    padding: 15px 25px;
+  /* COMPACT MAIN SHOP BUTTON */
+
+  .intro .shop-button {
+    display: block;
+
+    width: 100%;
+    max-width: 300px;
+
+    margin: 14px auto 18px;
+
+    padding: 14px 16px;
+
+    font-size: 17px;
+  }
+
+  /* TWO SMALL BUTTONS, THEN CONTACT */
+
+  .intro-links {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-top: 8px;
+  }
+
+  .intro-links .button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 47px;
+
+    margin: 0;
+    padding: 10px 7px;
+
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .intro-links .button:last-child {
+    grid-column: 1 / -1;
+
+    width: 100%;
+    max-width: 265px;
+
+    justify-self: center;
+  }
+
+  /* LESS VERTICAL SPACE */
+
+  section {
+    padding: 36px 14px;
+  }
+
+  .container {
+    max-width: 100%;
   }
 
   h2 {
-    font-size: 28px;
+    margin: 0 auto 17px;
+    padding: 10px 15px;
+
+    font-size: clamp(23px, 6.2vw, 29px);
+    line-height: 1.25;
   }
+
+  .section-description {
+    margin: 0 auto 23px;
+    padding: 15px 16px;
+
+    background: rgba(0,0,0,0.90);
+
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* FEATURED CREATIONS */
+
+  .showcase-image {
+    border-radius: 11px;
+  }
+
+  .shop-prompt {
+    margin-top: 20px;
+    padding: 24px 16px;
+
+    border-radius: 12px;
+  }
+
+  .shop-prompt h3 {
+    font-size: 23px;
+    line-height: 1.3;
+  }
+
+  .shop-prompt p {
+    margin: 12px auto;
+
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .shop-prompt .button {
+    width: 100%;
+    max-width: 265px;
+
+    margin: 9px auto;
+
+    padding: 12px 14px;
+
+    font-size: 15px;
+  }
+
+  .shop-prompt .shop-button {
+    display: block;
+
+    width: 100%;
+    max-width: 300px;
+
+    margin: 12px auto 0;
+
+    padding: 14px 15px;
+
+    font-size: 17px;
+  }
+
+  /* SERVICES - VERTICAL CARDS */
 
   .service-grid {
     grid-template-columns: 1fr;
+    gap: 13px;
   }
 
-  section {
-    padding: 50px 15px;
+  .service-card {
+    padding: 23px 17px;
+
+    background: rgba(8,8,8,0.91);
+
+    border-radius: 12px;
   }
+
+  .service-card h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+
+  .service-card p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ABOUT SECTION */
 
   .about-content {
-    padding: 25px 18px;
+    padding: 24px 17px;
+
+    background: rgba(0,0,0,0.91);
+    border-radius: 13px;
   }
+
+  .about-content p {
+    margin-bottom: 16px;
+
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .about-content .button {
+    margin: 10px auto 0;
+
+    max-width: 100%;
+
+    padding: 12px 14px;
+
+    font-size: 14px;
+  }
+
+  /* CONTACT */
 
   .business-card {
     gap: 12px;
+    margin-bottom: 20px;
   }
 
   .card-crop {
     border-radius: 12px;
   }
 
+  .contact .button {
+    padding: 13px 24px;
+    font-size: 16px;
+  }
+
+  /* VISITOR COUNTER */
+
   .visitor-counter-area {
-    max-width: 300px;
-    padding: 18px;
+    max-width: 310px;
+
+    padding: 17px 15px;
+    margin-bottom: 22px;
+  }
+
+  .visitor-counter-title {
+    font-size: 15px;
+  }
+
+  /* FOOTER */
+
+  footer {
+    padding: 25px 15px;
+  }
+
+  footer p {
+    font-size: 13px;
+    line-height: 1.6;
   }
 
 }
 
-/* REDUCED MOTION */
+/* ======================================
+   VERY SMALL PHONES
+====================================== */
+
+@media (max-width: 360px) {
+
+  nav {
+    gap: 6px;
+    padding: 10px 8px;
+  }
+
+  nav a,
+  nav .shop-nav,
+  nav .showcase-nav,
+  nav .about-nav {
+    font-size: 12px;
+  }
+
+  .intro {
+    padding: 20px 10px 15px;
+  }
+
+  .intro-content {
+    padding: 21px 12px;
+  }
+
+  .intro h1 {
+    font-size: 24px;
+  }
+
+  .intro-links {
+    gap: 7px;
+  }
+
+  .intro-links .button {
+    font-size: 12px;
+    padding: 9px 5px;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+
+}
+
+/* ======================================
+   ACCESSIBILITY: REDUCED MOTION
+====================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -651,19 +1022,25 @@ footer {
     scroll-behavior: auto;
   }
 
+  .button,
+  .shop-button,
+  nav a {
+    transition: none;
+  }
+
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- ====================================
-     FIXED FIRE AND LOGO BACKGROUND
-==================================== -->
+<!-- ======================================
+     FIXED FIRE AND ORNATE P&B LOGO
+====================================== -->
 
-<div class="background-scene"
-     aria-hidden="true">
+<div class="background-scene" aria-hidden="true">
 
   <video
     class="fire-video"
@@ -683,9 +1060,9 @@ footer {
 
 </div>
 
-<!-- ====================================
-     MAIN BUSINESS HEADER
-==================================== -->
+<!-- ======================================
+     BUSINESS HEADER
+====================================== -->
 
 <header class="main-header" id="home">
 
@@ -696,13 +1073,15 @@ footer {
 
 </header>
 
-<!-- ====================================
+<!-- ======================================
      NAVIGATION
-==================================== -->
+====================================== -->
 
 <nav aria-label="Main navigation">
 
-  <a href="#home">Home</a>
+  <a href="#home">
+    Home
+  </a>
 
   <a href="stickers.html" class="shop-nav">
     SHOP STICKERS
@@ -712,57 +1091,73 @@ footer {
     SHOWCASE
   </a>
 
-  <a href="#services">Services</a>
+  <a href="#services">
+    Services
+  </a>
 
   <a href="about-us.html" class="about-nav">
     ABOUT US
   </a>
 
-  <a href="#contact">Contact</a>
+  <a href="#contact">
+    Contact
+  </a>
 
 </nav>
 
 <main>
 
-<!-- ====================================
+<!-- ======================================
      INTRODUCTION
-==================================== -->
+====================================== -->
 
 <div class="intro">
 
   <div class="intro-content">
 
-    <h1>Stickers With an Attitude</h1>
+    <h1>
+      Stickers With an Attitude
+    </h1>
 
     <p>
       Your Style. Your Sticker.
       Your Statement.
+    </p>
 
-      Bold custom stickers, decals,
-      and creative designs made
-      to stand out.
+    <p>
+      Bold custom stickers,
+      decals, and creative designs
+      made to stand out.
     </p>
 
     <a href="stickers.html"
        class="shop-button">
+
       SHOP STICKERS
+
     </a>
 
-    <div>
+    <div class="intro-links">
 
       <a href="about-us.html"
          class="button outline">
+
         ABOUT US
+
       </a>
 
       <a href="showcase.html"
          class="button outline">
+
         View Our Work
+
       </a>
 
       <a href="#contact"
          class="button outline">
+
         Contact Miles
+
       </a>
 
     </div>
@@ -771,15 +1166,17 @@ footer {
 
 </div>
 
-<!-- ====================================
+<!-- ======================================
      FEATURED CREATIONS
-==================================== -->
+====================================== -->
 
 <section class="showcase" id="showcase">
 
   <div class="container">
 
-    <h2>Featured Creations</h2>
+    <h2>
+      Featured Creations
+    </h2>
 
     <p class="section-description">
       From bold truck and motorcycle
@@ -792,11 +1189,14 @@ footer {
     <img
       src="Sticker%20merch%201.png"
       alt="Pressed and Burned Creations sticker showcase"
+      class="showcase-image"
       loading="lazy">
 
     <div class="shop-prompt">
 
-      <h3>Explore More of Our Creations!</h3>
+      <h3>
+        Explore More of Our Creations!
+      </h3>
 
       <p>
         Take a look at our artwork,
@@ -806,7 +1206,9 @@ footer {
 
       <a href="showcase.html"
          class="button outline">
+
         VIEW SHOWCASE
+
       </a>
 
       <p>
@@ -815,7 +1217,9 @@ footer {
 
       <a href="stickers.html"
          class="shop-button">
+
         BROWSE STICKERS
+
       </a>
 
     </div>
@@ -824,15 +1228,17 @@ footer {
 
 </section>
 
-<!-- ====================================
-     SERVICES
-==================================== -->
+<!-- ======================================
+     WHAT WE CREATE
+====================================== -->
 
 <section class="services" id="services">
 
   <div class="container">
 
-    <h2>What We Create</h2>
+    <h2>
+      What We Create
+    </h2>
 
     <p class="section-description">
       Custom designs with personality,
@@ -841,9 +1247,13 @@ footer {
 
     <div class="service-grid">
 
+      <!-- CUSTOM STICKERS -->
+
       <div class="service-card">
 
-        <h3>Custom Stickers</h3>
+        <h3>
+          Custom Stickers
+        </h3>
 
         <p>
           Unique stickers designed
@@ -853,9 +1263,13 @@ footer {
 
       </div>
 
+      <!-- CUSTOM DECALS -->
+
       <div class="service-card">
 
-        <h3>Custom Decals</h3>
+        <h3>
+          Custom Decals
+        </h3>
 
         <p>
           Eye-catching decals for
@@ -865,9 +1279,13 @@ footer {
 
       </div>
 
+      <!-- CREATIVE DESIGNS -->
+
       <div class="service-card">
 
-        <h3>Creative Designs</h3>
+        <h3>
+          Creative Designs
+        </h3>
 
         <p>
           Custom artwork that
@@ -883,15 +1301,17 @@ footer {
 
 </section>
 
-<!-- ====================================
-     ABOUT SECTION
-==================================== -->
+<!-- ======================================
+     ABOUT PRESSED AND BURNED
+====================================== -->
 
 <section class="about" id="about">
 
   <div class="container">
 
-    <h2>About Pressed and Burned</h2>
+    <h2>
+      About Pressed and Burned
+    </h2>
 
     <div class="about-content">
 
@@ -915,7 +1335,9 @@ footer {
 
       <a href="about-us.html"
          class="button outline">
+
         Visit Our About Us Page
+
       </a>
 
     </div>
@@ -924,27 +1346,31 @@ footer {
 
 </section>
 
-<!-- ====================================
-     CONTACT SECTION
-==================================== -->
+<!-- ======================================
+     CONTACT US
+====================================== -->
 
 <section class="contact" id="contact">
 
   <div class="container">
 
-    <h2>Contact Us</h2>
+    <h2>
+      Contact Us
+    </h2>
 
     <p class="section-description">
-      Have an idea for a custom sticker
-      or decal?
+      Have an idea for a custom
+      sticker or decal?
 
       Get in touch with Miles
       to discuss your project.
     </p>
 
-    <!-- BUSINESS CARD DISPLAY -->
+    <!-- BUSINESS CARDS -->
 
     <div class="business-card">
+
+      <!-- FRONT CARD -->
 
       <div class="card-crop card-front">
 
@@ -954,6 +1380,8 @@ footer {
           loading="lazy">
 
       </div>
+
+      <!-- CONTACT CARD -->
 
       <div class="card-crop card-back">
 
@@ -980,13 +1408,13 @@ footer {
 
 </main>
 
-<!-- ====================================
-     FOOTER AND VISITOR COUNTER
-==================================== -->
+<!-- ======================================
+     FOOTER
+====================================== -->
 
 <footer>
 
-  <!-- NEW SHARED VISITOR COUNTER -->
+  <!-- HOMEPAGE VISITOR COUNTER -->
 
   <div class="visitor-counter-area">
 
@@ -995,6 +1423,7 @@ footer {
     </p>
 
     <div
+      id="visitor-count"
       class="counterapi"
       ns="pressedandburnedcreations.com"
       action="visit"
@@ -1005,26 +1434,150 @@ footer {
       noAnim="true"
       color="#ffffff"
       bg="transparent"
-      style="min-height:44px"
+      style="min-height:35px"
       aria-label="Approximate website visitor count">
     </div>
+
+    <p
+      id="counter-status"
+      class="counter-status"
+      role="status">
+
+      Loading visitor count...
+
+    </p>
 
   </div>
 
   <p>
-    &copy; 2026 Pressed and Burned Creations.
+    &copy; 2026
+    Pressed and Burned Creations.
     All Rights Reserved.
   </p>
 
-  <p>Stickers With an Attitude.</p>
+  <p>
+    Stickers With an Attitude.
+  </p>
 
 </footer>
 
-<!-- FREE COUNTER SERVICE -->
+<!-- ======================================
+     COUNTERAPI SERVICE
+====================================== -->
 
 <script
   src="https://counterapi.com/c.js?ns=pressedandburnedcreations.com"
   async>
+</script>
+
+<!-- ======================================
+     COUNTER DISPLAY FALLBACK
+====================================== -->
+
+<script>
+
+(function () {
+
+  const counter =
+    document.getElementById("visitor-count");
+
+  const status =
+    document.getElementById("counter-status");
+
+  if (!counter || !status) {
+    return;
+  }
+
+  /*
+    If CounterAPI's normal embedded
+    widget successfully displays a
+    value, hide the loading message.
+  */
+
+  function checkCounter() {
+
+    if (counter.textContent.trim() !== "") {
+
+      status.hidden = true;
+
+      return true;
+
+    }
+
+    return false;
+
+  }
+
+  const observer = new MutationObserver(
+    checkCounter
+  );
+
+  observer.observe(counter, {
+    childList: true,
+    subtree: true,
+    characterData: true
+  });
+
+  /*
+    If the embedded widget doesn't
+    show a number, try the same
+    counter using the documented API.
+
+    This second request is read-only,
+    so it won't add a visit.
+  */
+
+  setTimeout(async function () {
+
+    if (checkCounter()) {
+      return;
+    }
+
+    try {
+
+      const response = await fetch(
+        "https://counterapi.com/api/pressedandburnedcreations.com/visit/all-pages?readOnly=true&unique=true",
+        {
+          cache: "no-store"
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Counter unavailable");
+      }
+
+      const data = await response.json();
+
+      if (
+        data.value === null ||
+        data.value === undefined ||
+        !Number.isFinite(Number(data.value))
+      ) {
+        throw new Error("Invalid count");
+      }
+
+      if (!checkCounter()) {
+
+        status.textContent =
+          Number(data.value).toLocaleString();
+
+      }
+
+    } catch (error) {
+
+      if (!checkCounter()) {
+
+        status.textContent =
+          "Visitor count temporarily unavailable";
+
+      }
+
+    }
+
+  }, 5000);
+
+})();
+
 </script>
 
 </body>
