@@ -12,6 +12,10 @@
 <link rel="icon" type="image/png" href="favicon.png">
 
 <style>
+/* ======================================
+   COLORS AND GLOBAL STYLING
+====================================== */
+
 :root {
   --ink: #090909;
   --panel: #111110;
@@ -73,7 +77,7 @@ button:focus-visible {
 }
 
 /* ======================================
-   BRIGHTER ANIMATED FIRE BACKGROUND
+   ANIMATED FIRE BACKGROUND
 ====================================== */
 
 .background-scene {
@@ -97,10 +101,8 @@ button:focus-visible {
 .fire-video {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
   object-position: center bottom;
 
@@ -120,7 +122,6 @@ button:focus-visible {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-
   opacity: 1;
   mix-blend-mode: screen;
 }
@@ -144,7 +145,7 @@ button:focus-visible {
     );
 }
 
-/* Make tablet flames especially visible */
+/* Brighter flames on tablets */
 
 @media (max-width: 1024px) {
   .fire-video {
@@ -180,7 +181,7 @@ body > footer {
 }
 
 /* ======================================
-   NAVIGATION
+   TOP NAVIGATION BAR
 ====================================== */
 
 .site-header {
@@ -194,7 +195,7 @@ body > footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: 24px;
 }
 
 .brand {
@@ -212,20 +213,32 @@ body > footer {
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
-  gap: 10px 27px;
+  gap: 10px 19px;
 }
 
 .main-nav a {
   color: #e0dcd6;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: .05em;
+  letter-spacing: .04em;
   white-space: nowrap;
 }
 
 .main-nav a:hover {
   color: var(--gold-light);
 }
+
+/* NEW CUSTOM ORDERS TOP NAVIGATION TAB */
+
+.main-nav .nav-custom {
+  color: var(--gold-light);
+}
+
+.main-nav .nav-custom:hover {
+  color: #ffffff;
+}
+
+/* STICKER SHOP TOP BUTTON */
 
 .main-nav .nav-shop {
   border: 1px solid var(--gold);
@@ -365,6 +378,7 @@ body > footer {
   padding: 17px;
   border: 1px solid rgba(233,161,75,.25);
   border-radius: 10px;
+
   background:
     linear-gradient(
       140deg,
@@ -380,6 +394,7 @@ body > footer {
   position: absolute;
   inset: -11px 27px auto;
   height: 1px;
+
   background:
     linear-gradient(
       90deg,
@@ -525,6 +540,7 @@ h2 {
   place-items: center;
   aspect-ratio: 1.1 / 1;
   padding: 23px;
+
   background:
     radial-gradient(
       circle at center,
@@ -929,8 +945,7 @@ h2 {
   }
 }
 
-/* Respect reduced-motion settings initially.
-   Visitors can enable the flames manually. */
+/* Respect reduced-motion settings */
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -956,7 +971,7 @@ h2 {
 <body>
 
 <!-- ======================================
-     BRIGHTER FIRE BACKGROUND
+     BRIGHT FIRE BACKGROUND
 ====================================== -->
 
 <div class="background-scene" aria-hidden="true">
@@ -983,7 +998,7 @@ h2 {
 </div>
 
 <!-- ======================================
-     HEADER
+     HEADER AND NAVIGATION
 ====================================== -->
 
 <header class="site-header" id="home">
@@ -1013,6 +1028,17 @@ h2 {
 
       <a href="#services">
         Services
+      </a>
+
+      <!-- =================================
+           CUSTOM ORDERS TOP BANNER TAB
+           THIS IS THE NEW NAVIGATION LINK
+      ================================== -->
+
+      <a
+        class="nav-custom"
+        href="custom-orders.html">
+        Custom Orders
       </a>
 
       <a href="about-us.html">
@@ -1065,16 +1091,21 @@ h2 {
 
       <div class="hero-actions">
 
-        <a class="btn btn-primary" href="stickers.html">
+        <a
+          class="btn btn-primary"
+          href="stickers.html">
           Explore Stickers ↗
         </a>
 
-        <!-- NEW CUSTOM ORDER BUTTON -->
-        <a class="btn btn-secondary" href="custom-orders.html">
+        <a
+          class="btn btn-secondary"
+          href="custom-orders.html">
           CREATE YOUR OWN ↗
         </a>
 
-        <a class="btn btn-secondary" href="showcase.html">
+        <a
+          class="btn btn-secondary"
+          href="showcase.html">
           See Our Work
         </a>
 
@@ -1316,10 +1347,13 @@ h2 {
 
     </div>
 
-    <!-- NEW CUSTOM ARTWORK BUTTON -->
+    <!-- CUSTOM ARTWORK BUTTON -->
+
     <div class="section-bottom">
 
-      <a class="btn btn-primary" href="custom-orders.html">
+      <a
+        class="btn btn-primary"
+        href="custom-orders.html">
         REQUEST CUSTOM ARTWORK ↗
       </a>
 
@@ -1402,21 +1436,16 @@ h2 {
 
       <div class="hero-actions">
 
-        <!-- NEW CUSTOM ORDER BUTTON -->
         <a
           class="btn btn-primary"
           href="custom-orders.html">
-
           START A CUSTOM ORDER ↗
-
         </a>
 
         <a
           class="btn btn-secondary"
           href="mailto:miles@pressedandburnedcreations.com">
-
           Email Miles ↗
-
         </a>
 
       </div>
@@ -1567,7 +1596,8 @@ h2 {
 })();
 </script>
 
-<!-- Original visitor counter integration -->
+<!-- ORIGINAL VISITOR COUNTER -->
+
 <script
   src="https://counterapi.com/c.js?ns=pressedandburnedcreations.com"
   async>
