@@ -2,23 +2,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Shop Stickers | Pressed and Burned Creations</title>
 
 <meta name="description"
-content="Shop bold custom sticker designs from Pressed and Burned Creations. Stickers With an Attitude!">
+content="Explore original stickers from Pressed and Burned Creations. Stickers With an Attitude!">
 
-<!-- ORIGINAL P&B FAVICON -->
 <link rel="icon" type="image/png" href="favicon.png">
 
 <style>
-
-/* ===================================
+/* ======================================
    GENERAL SETTINGS
-=================================== */
+====================================== */
 
 * {
   box-sizing: border-box;
@@ -33,14 +30,33 @@ body {
   margin: 0;
   min-height: 100vh;
   background: #050505;
-  color: #ffffff;
+  color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   isolation: isolate;
 }
 
-body.notice-open {
+body.dialog-open {
   overflow: hidden;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 img {
@@ -49,38 +65,37 @@ img {
   height: auto;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
   outline: 3px solid #ffd477;
-  outline-offset: 4px;
+  outline-offset: 3px;
 }
 
-/* ===================================
-   ORIGINAL FIXED ORNATE BACKGROUND
-   100% OPACITY
-=================================== */
+[hidden] {
+  display: none !important;
+}
+
+/* ======================================
+   ORIGINAL FIXED P&B BACKGROUND
+====================================== */
 
 body::before {
   content: "";
-
   position: fixed;
   inset: 0;
 
   background-image:
     url("Pressed%20and%20burned%20background%20logo.png");
 
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 
   opacity: 1;
-  pointer-events: none;
   z-index: 0;
+  pointer-events: none;
 }
 
 body > header,
@@ -91,12 +106,12 @@ body > footer {
   z-index: 1;
 }
 
-/* ===================================
-   HEADER
-=================================== */
+/* ======================================
+   BUSINESS HEADER
+====================================== */
 
 .main-header {
-  background: rgba(0,0,0,0.72);
+  background: rgba(0,0,0,.78);
   text-align: center;
   padding: 15px;
 }
@@ -104,33 +119,31 @@ body > footer {
 .main-logo {
   width: 100%;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: auto;
 }
 
-/* ===================================
+/* ======================================
    NAVIGATION
-=================================== */
+====================================== */
 
 nav {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 13px 20px;
 
-  gap: 15px 22px;
-  padding: 18px;
-
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,.90);
   border-top: 1px solid #c96c00;
   border-bottom: 2px solid #ff9000;
+  padding: 16px;
 }
 
 nav a {
-  color: #ffffff;
-  font-size: 16px;
+  color: #fff;
   font-weight: bold;
+  font-size: 15px;
   text-align: center;
-  transition: color 0.2s;
 }
 
 nav a:hover {
@@ -138,471 +151,689 @@ nav a:hover {
 }
 
 nav .shop-nav {
+  padding: 10px 18px;
   background: linear-gradient(
-    135deg,
-    #ffcc55,
-    #ff8000
+    135deg,#ffcc55,#ff8000
   );
-
-  color: #111111;
-  padding: 10px 20px;
-
   border: 1px solid #ffb347;
   border-radius: 8px;
+  color: #111;
 }
 
-nav .shop-nav:hover {
-  color: #111111;
-  filter: brightness(1.15);
+.cart-nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 9px 16px;
+  background: #16100a;
+  color: #ffb347;
+  border: 2px solid #ff9000;
+  border-radius: 9px;
+  font-weight: bold;
 }
 
-/* ===================================
-   INTRODUCTION
-=================================== */
+.cart-nav-button:hover {
+  background: #30200b;
+}
+
+.cart-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  height: 26px;
+  padding: 0 5px;
+  border-radius: 50%;
+
+  color: #111;
+  background: #ffb347;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+/* ======================================
+   SHOP INTRODUCTION
+====================================== */
 
 .shop-intro {
   max-width: 950px;
-  margin: 70px auto;
-  padding: 45px 30px;
+  margin: 45px auto;
+  padding: 40px 28px;
 
-  background: rgba(0,0,0,0.82);
+  background: rgba(0,0,0,.87);
   border: 1px solid #d97706;
   border-radius: 18px;
-
   text-align: center;
 
-  box-shadow:
-    0 0 30px rgba(0,0,0,0.4);
+  box-shadow: 0 0 30px rgba(0,0,0,.45);
 }
 
 h1 {
-  color: #ffae35;
-  font-size: clamp(32px,5vw,50px);
-  text-transform: uppercase;
   margin: 0 0 15px;
+  color: #ffae35;
+  font-size: clamp(30px,5vw,48px);
+  text-transform: uppercase;
+  line-height: 1.2;
 }
 
 .shop-intro p {
   font-size: 18px;
-  color: #eeeeee;
+  color: #eee;
 }
 
-/* ===================================
-   GENERAL SHOP SECTIONS
-=================================== */
+.demo-notice {
+  display: inline-block;
+  max-width: 700px;
+  margin-top: 15px;
+  padding: 13px 20px;
+
+  border: 1px solid #d88825;
+  border-radius: 10px;
+  background: #25190b;
+
+  color: #ffdc9a;
+  font-size: 15px;
+}
+
+/* ======================================
+   GENERAL SECTIONS
+====================================== */
 
 .shop-section {
   max-width: 1250px;
-  margin: 60px auto;
+  margin: 45px auto;
   padding: 20px;
 }
 
 h2 {
   width: fit-content;
   max-width: 100%;
-
   margin: 0 auto 25px;
   padding: 12px 25px;
 
-  background: rgba(0,0,0,0.82);
+  background: rgba(0,0,0,.85);
   color: #ffad35;
-
-  font-size: 32px;
-  text-align: center;
   border-radius: 10px;
+  text-align: center;
+  font-size: 32px;
 }
 
 .section-text {
   max-width: 850px;
-  margin: 0 auto 35px;
+  margin: 0 auto 30px;
   padding: 20px 25px;
 
-  background: rgba(0,0,0,0.82);
+  background: rgba(0,0,0,.85);
   border-radius: 12px;
-
+  color: #eee;
   text-align: center;
-  color: #eeeeee;
-  font-size: 18px;
 }
 
 .section-text p {
   margin: 0;
 }
 
-/* ===================================
-   FEATURED STICKER COLLAGE
-=================================== */
+/* ======================================
+   FEATURED IMAGE
+====================================== */
 
 .featured-image {
-  width: 100%;
-
+  overflow: hidden;
   border: 2px solid #ff9000;
   border-radius: 15px;
-
-  overflow: hidden;
-
-  box-shadow:
-    0 0 25px rgba(255,140,0,0.2);
 }
 
 .featured-image img {
   width: 100%;
-  height: auto;
 }
 
-/* ===================================
+/* ======================================
    PRODUCT GRID
-=================================== */
+====================================== */
 
 .sticker-grid {
   display: grid;
-
   grid-template-columns:
     repeat(3,minmax(0,1fr));
-
   gap: 25px;
-  margin-top: 35px;
 }
-
-/* INDIVIDUAL PRODUCT CARDS */
 
 .sticker-card {
   min-width: 0;
-
   display: flex;
   flex-direction: column;
 
-  background: rgba(0,0,0,0.90);
-
+  background: rgba(0,0,0,.93);
   border: 2px solid #b96b14;
   border-radius: 16px;
-
   overflow: hidden;
 
-  box-shadow:
-    0 5px 20px rgba(0,0,0,0.45);
-
+  box-shadow: 0 5px 20px rgba(0,0,0,.5);
   transition:
-    transform 0.25s,
-    border-color 0.25s,
-    box-shadow 0.25s;
+    transform .2s,
+    border-color .2s;
 }
 
 .sticker-card:hover {
-  transform: translateY(-5px);
-
+  transform: translateY(-4px);
   border-color: #ffae35;
-
-  box-shadow:
-    0 8px 30px rgba(255,140,0,0.20);
 }
-
-/* IMAGE AREA */
 
 .sticker-image {
-  width: 100%;
-  height: 270px;
-
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
+  height: 260px;
   padding: 15px;
 
-  background: rgba(12,12,12,0.92);
-
-  border-bottom:
-    1px solid rgba(255,165,40,0.3);
+  background: #101010;
+  border-bottom: 1px solid #633b15;
 }
-
-/* KEEP ORIGINAL IMAGE PROPORTIONS */
 
 .sticker-image img {
   width: 100%;
   height: 100%;
-
   object-fit: contain;
-  object-position: center;
 }
-
-/* PRODUCT DETAILS */
 
 .sticker-info {
   flex: 1;
-
   display: flex;
   flex-direction: column;
-  align-items: center;
-
-  padding: 22px 18px 25px;
-
+  padding: 20px;
   text-align: center;
 }
 
 .sticker-info h3 {
-  margin: 0 0 12px;
-
+  margin: 0 0 10px;
   color: #ffb347;
-  font-size: 21px;
-  line-height: 1.4;
+  font-size: 22px;
+  line-height: 1.3;
 }
 
 .sticker-info p {
-  margin: 0 0 18px;
-
-  color: #dddddd;
+  margin: 0 0 15px;
+  color: #ddd;
   font-size: 15px;
 }
 
-/* VIEW FULL DESIGN BUTTON */
+.pricing-note {
+  color: #ffcb78 !important;
+  font-weight: bold;
+  font-size: 14px !important;
+}
+
+/* ======================================
+   SIZE AND QUANTITY OPTIONS
+====================================== */
+
+.product-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: auto;
+  text-align: left;
+}
+
+.product-options label {
+  display: block;
+  margin-bottom: 6px;
+  color: #ffcb78;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.size-select {
+  width: 100%;
+  min-height: 45px;
+  padding: 9px;
+
+  background: #1c1c1c;
+  border: 1px solid #a56b2c;
+  border-radius: 7px;
+  color: #fff;
+}
+
+.qty-control {
+  display: flex;
+  height: 45px;
+  overflow: hidden;
+
+  border: 1px solid #a56b2c;
+  border-radius: 7px;
+}
+
+.qty-control button {
+  flex: 0 0 28px;
+  border: 0;
+  background: #2b2118;
+  color: #ffbb59;
+  font-size: 20px;
+}
+
+.qty-control button:hover {
+  background: #503218;
+}
+
+.qty-input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  padding: 4px 2px;
+
+  border: 0;
+  background: #111;
+  color: #fff;
+  text-align: center;
+
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.qty-input::-webkit-inner-spin-button,
+.qty-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.add-to-cart {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px 15px;
+
+  border: 1px solid #ffcc55;
+  border-radius: 9px;
+  background: linear-gradient(
+    135deg,#ffe178,#ff9200
+  );
+
+  color: #111;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.add-to-cart:hover {
+  filter: brightness(1.13);
+}
 
 .view-button {
-  display: inline-block;
-  margin-top: auto;
+  display: block;
+  margin-top: 12px;
+  padding: 10px;
 
-  background: rgba(0,0,0,0.70);
+  border: 1px solid #ff9000;
+  border-radius: 7px;
   color: #ffb347;
+  background: #0d0d0d;
 
-  border: 2px solid #ff9000;
-  border-radius: 8px;
-
-  padding: 10px 20px;
-
-  font-size: 14px;
   font-weight: bold;
-
-  transition:
-    background 0.2s,
-    color 0.2s;
+  font-size: 13px;
 }
 
 .view-button:hover {
-  background: #ff9900;
-  color: #111111;
+  background: #2b1c0e;
 }
 
-/* CENTER SEVENTH STICKER ON DESKTOP */
+/* CENTER THE SEVENTH CARD */
 
 .sticker-card:last-child {
   grid-column: 2;
 }
 
-/* ===================================
-   AVAILABILITY SECTION
-=================================== */
+/* ======================================
+   AVAILABILITY INFO
+====================================== */
 
 .category-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(2,minmax(0,1fr));
-
+  grid-template-columns: repeat(2,minmax(0,1fr));
   gap: 25px;
-  margin-top: 35px;
 }
 
-.category-card {
-  background: rgba(0,0,0,0.88);
-
+.category-card,
+.shop-message {
+  background: rgba(0,0,0,.90);
   border: 1px solid #bb6500;
   border-radius: 15px;
-
-  padding: 35px 25px;
-
+  padding: 30px 25px;
   text-align: center;
 }
 
-.category-card h3 {
-  color: #ffae35;
-  font-size: 24px;
-  margin-top: 0;
-}
-
-.category-card p {
-  color: #eeeeee;
-  font-size: 17px;
-}
-
-/* ===================================
-   MORE CREATIONS
-=================================== */
-
-.shop-message {
-  background: rgba(0,0,0,0.86);
-
-  border: 1px solid #c9750b;
-  border-radius: 16px;
-
-  padding: 35px 25px;
-  text-align: center;
-}
-
+.category-card h3,
 .shop-message h3 {
-  color: #ffb347;
-  font-size: 25px;
+  color: #ffae35;
   margin-top: 0;
 }
 
+.category-card p,
 .shop-message p {
-  color: #eeeeee;
-  font-size: 17px;
+  color: #eee;
 }
 
 .button {
   display: inline-block;
-
-  background: linear-gradient(
-    135deg,
-    #ffcc55,
-    #ff8000
-  );
-
-  color: #111111;
-
-  border-radius: 8px;
-  padding: 14px 25px;
-
-  font-weight: bold;
+  padding: 13px 24px;
   margin: 10px;
 
-  transition:
-    transform 0.2s,
-    filter 0.2s;
+  border-radius: 8px;
+  background: linear-gradient(
+    135deg,#ffcc55,#ff8000
+  );
+  color: #111;
+  font-weight: bold;
 }
 
-.button:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.15);
-}
-
-/* ===================================
+/* ======================================
    FOOTER
-=================================== */
+====================================== */
 
 footer {
-  text-align: center;
-
-  background: rgba(0,0,0,0.90);
+  background: rgba(0,0,0,.92);
   border-top: 2px solid #ff9000;
-
   padding: 30px 15px;
-  color: #cccccc;
+  text-align: center;
+  color: #ccc;
 }
 
-/* ===================================
-   ATTITUDE WARNING POPUP
-=================================== */
+/* ======================================
+   SLIDE-OUT CART
+====================================== */
+
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 800;
+  background: rgba(0,0,0,.76);
+}
+
+.cart-drawer {
+  position: fixed;
+  z-index: 801;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  width: min(440px,100%);
+  height: 100vh;
+  height: 100dvh;
+
+  background: #0b0b0b;
+  border-left: 2px solid #ed8b15;
+
+  box-shadow: -10px 0 40px rgba(0,0,0,.7);
+
+  animation: slideIn .23s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px;
+
+  border-bottom: 1px solid #73420c;
+}
+
+.cart-header h2 {
+  margin: 0;
+  padding: 0;
+  background: none;
+  font-size: 25px;
+}
+
+.cart-close {
+  width: 44px;
+  height: 44px;
+
+  background: #24170b;
+  border: 1px solid #d88825;
+  border-radius: 9px;
+  color: #fff;
+  font-size: 25px;
+}
+
+.cart-items {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.empty-cart {
+  text-align: center;
+  color: #ccc;
+  padding: 50px 15px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 85px 1fr;
+  gap: 15px;
+
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #4a341e;
+}
+
+.cart-item img {
+  width: 85px;
+  height: 90px;
+  object-fit: contain;
+  background: #151515;
+  border-radius: 8px;
+}
+
+.cart-item h3 {
+  margin: 0 0 5px;
+  color: #ffb347;
+  font-size: 17px;
+  line-height: 1.3;
+}
+
+.cart-item p {
+  margin: 3px 0;
+  color: #ddd;
+  font-size: 14px;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.cart-item-controls button {
+  min-width: 34px;
+  min-height: 36px;
+
+  background: #2b2118;
+  border: 1px solid #a56b2c;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.cart-item-controls input {
+  width: 80px;
+  height: 36px;
+  padding: 4px;
+
+  background: #151515;
+  color: #fff;
+  border: 1px solid #a56b2c;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.cart-item-controls .remove-item {
+  padding: 5px 10px;
+  color: #ff9e9e;
+  font-size: 12px;
+}
+
+.cart-footer {
+  flex-shrink: 0;
+  padding: 20px;
+  background: #13100d;
+  border-top: 1px solid #73420c;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+
+  color: #fff;
+  font-weight: bold;
+}
+
+.cart-total span:last-child {
+  color: #ffb347;
+}
+
+.cart-note {
+  margin: 0 0 14px;
+  color: #ccc;
+  font-size: 13px;
+}
+
+.checkout-disabled {
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  border-radius: 8px;
+
+  background: #51453a;
+  color: #ded6ce;
+  font-weight: bold;
+}
+
+.clear-cart {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 11px;
+
+  border: 1px solid #946023;
+  border-radius: 8px;
+  background: transparent;
+  color: #ffb347;
+  font-weight: bold;
+}
+
+/* ======================================
+   ADDED-TO-CART NOTIFICATION
+====================================== */
+
+.cart-toast {
+  position: fixed;
+  z-index: 950;
+  left: 50%;
+  bottom: 25px;
+
+  transform: translateX(-50%);
+
+  width: max-content;
+  max-width: calc(100% - 30px);
+
+  padding: 14px 22px;
+  background: #15100b;
+  color: #fff;
+
+  border: 2px solid #ffae35;
+  border-radius: 10px;
+
+  text-align: center;
+  font-weight: bold;
+
+  box-shadow: 0 8px 30px rgba(0,0,0,.6);
+}
+
+/* ======================================
+   ATTITUDE ADVISORY POPUP
+====================================== */
 
 .attitude-overlay {
   position: fixed;
   inset: 0;
-  z-index: 9999;
+  z-index: 1000;
 
   display: flex;
-  align-items: center;
   justify-content: center;
-
+  align-items: center;
   padding: 20px;
 
-  background: rgba(0,0,0,0.88);
-
-  -webkit-backdrop-filter: blur(5px);
+  background: rgba(0,0,0,.90);
   backdrop-filter: blur(5px);
-}
-
-.attitude-overlay[hidden] {
-  display: none;
 }
 
 .attitude-popup {
   width: 100%;
   max-width: 560px;
   max-height: 90vh;
-
   overflow-y: auto;
 
-  background: rgba(8,8,8,0.97);
+  padding: 38px 30px;
 
+  background: #090909;
   border: 2px solid #e78a19;
   border-radius: 20px;
-
-  padding: 40px 35px;
   text-align: center;
 
-  box-shadow:
-    0 0 35px rgba(255,126,0,0.25),
-    0 15px 50px rgba(0,0,0,0.75);
+  box-shadow: 0 0 35px rgba(255,126,0,.2);
 }
 
 .attitude-flames {
-  font-size: 37px;
-  margin-bottom: 12px;
+  font-size: 36px;
 }
 
 .attitude-popup h2 {
-  width: auto;
-  margin: 0 auto 20px;
+  background: none;
   padding: 0;
-
-  background: transparent;
-
-  color: #ffb347;
-
-  font-size: clamp(25px,5vw,35px);
-  line-height: 1.3;
+  font-size: 30px;
 }
 
 .attitude-popup p {
-  color: #f3f3f3;
-  font-size: 18px;
-  line-height: 1.75;
-  margin: 0 auto 18px;
-}
-
-.attitude-popup .notice-final {
-  font-weight: bold;
-  margin-bottom: 28px;
+  color: #eee;
+  font-size: 17px;
 }
 
 .attitude-continue {
-  display: inline-block;
-
   width: 100%;
-  max-width: 300px;
-
-  padding: 16px 24px;
+  max-width: 310px;
+  padding: 15px 22px;
 
   border: 2px solid #ffcb60;
   border-radius: 10px;
-
   background: linear-gradient(
-    135deg,
-    #ffcc55,
-    #ff9200,
-    #ff7000
+    135deg,#ffcc55,#ff9200
   );
 
-  color: #111111;
-
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 17px;
+  color: #111;
   font-weight: 900;
-
-  cursor: pointer;
-
-  transition:
-    transform 0.2s,
-    filter 0.2s;
 }
 
-.attitude-continue:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.15);
-}
-
-/* ===================================
-   TABLET RESPONSIVE LAYOUT
-=================================== */
+/* ======================================
+   TABLET
+====================================== */
 
 @media (max-width: 1000px) {
 
@@ -619,45 +850,33 @@ footer {
 
 }
 
-/* ===================================
-   MOBILE RESPONSIVE LAYOUT
-=================================== */
+/* ======================================
+   MOBILE
+====================================== */
 
 @media (max-width: 650px) {
 
   .main-header {
-    padding: 10px 12px;
+    padding: 10px;
   }
 
   nav {
     display: grid;
-
     grid-template-columns:
       repeat(2,minmax(0,1fr));
-
     gap: 9px;
     padding: 12px;
   }
 
-  nav a {
+  nav a,
+  nav .shop-nav,
+  nav .cart-nav-button {
     display: flex;
-    justify-content: center;
     align-items: center;
-
-    min-height: 43px;
-
-    padding: 9px 5px;
-
-    font-size: 13px;
-    line-height: 1.2;
-  }
-
-  nav .shop-nav {
-    display: flex;
     justify-content: center;
-    align-items: center;
 
-    padding: 9px 5px;
+    min-height: 44px;
+    padding: 8px 6px;
     font-size: 13px;
   }
 
@@ -671,8 +890,8 @@ footer {
   }
 
   .shop-section {
-    margin: 30px auto;
-    padding: 15px;
+    margin: 25px auto;
+    padding: 14px;
   }
 
   h2 {
@@ -681,11 +900,9 @@ footer {
   }
 
   .section-text {
-    font-size: 16px;
     padding: 17px;
+    font-size: 15px;
   }
-
-  /* ONE STICKER PER MOBILE ROW */
 
   .sticker-grid {
     grid-template-columns: 1fr;
@@ -698,28 +915,15 @@ footer {
   }
 
   .sticker-image {
-    height: 270px;
+    height: 250px;
   }
 
   .category-grid {
     grid-template-columns: 1fr;
   }
 
-  .category-card {
-    padding: 25px 18px;
-  }
-
-  .shop-message {
-    padding: 28px 18px;
-  }
-
   .attitude-popup {
-    padding: 30px 20px;
-    border-radius: 15px;
-  }
-
-  .attitude-flames {
-    font-size: 30px;
+    padding: 28px 20px;
   }
 
   .attitude-popup h2 {
@@ -730,16 +934,11 @@ footer {
     font-size: 16px;
   }
 
-  .attitude-continue {
-    font-size: 16px;
-    padding: 15px 20px;
-  }
-
 }
 
-/* ===================================
+/* ======================================
    REDUCED MOTION
-=================================== */
+====================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -747,10 +946,11 @@ footer {
     scroll-behavior: auto;
   }
 
-  .sticker-card,
-  .button,
-  .view-button,
-  .attitude-continue {
+  .cart-drawer {
+    animation: none;
+  }
+
+  .sticker-card {
     transition: none;
   }
 
@@ -761,9 +961,9 @@ footer {
 
 <body>
 
-<!-- ===================================
+<!-- ======================================
    BUSINESS HEADER
-=================================== -->
+====================================== -->
 
 <header class="main-header">
 
@@ -779,9 +979,9 @@ footer {
 
 </header>
 
-<!-- ===================================
+<!-- ======================================
    NAVIGATION
-=================================== -->
+====================================== -->
 
 <nav aria-label="Main navigation">
 
@@ -811,13 +1011,24 @@ footer {
     Contact
   </a>
 
+  <button
+    type="button"
+    class="cart-nav-button"
+    id="open-cart"
+    aria-label="Open shopping cart">
+
+    🛒 CART
+    <span class="cart-count" id="cart-count">0</span>
+
+  </button>
+
 </nav>
 
 <main>
 
-<!-- ===================================
+<!-- ======================================
    SHOP INTRODUCTION
-=================================== -->
+====================================== -->
 
 <div class="shop-intro">
 
@@ -836,11 +1047,19 @@ footer {
     Your Style. Your Sticker. Your Statement.
   </p>
 
+  <div class="demo-notice">
+
+    🔥 Shopping cart preview!
+    Browse our stickers and save your favorites.
+    Pricing and online checkout are coming soon.
+
+  </div>
+
 </div>
 
-<!-- ===================================
-   FEATURED STICKER COLLAGE
-=================================== -->
+<!-- ======================================
+   FEATURED DESIGNS
+====================================== -->
 
 <section class="shop-section">
 
@@ -849,11 +1068,10 @@ footer {
   <div class="section-text">
 
     <p>
-      Take a look at our collection
-      of creative sticker designs.
-      From humor to attitude,
-      we've got something
-      to make a statement!
+      Take a look at our growing collection
+      of original sticker designs.
+      From humor to attitude, we're creating
+      stickers with personality!
     </p>
 
   </div>
@@ -869,9 +1087,9 @@ footer {
 
 </section>
 
-<!-- ===================================
-   SEVEN STICKER COLLECTION
-=================================== -->
+<!-- ======================================
+   STICKER COLLECTION
+====================================== -->
 
 <section class="shop-section"
          id="sticker-collection">
@@ -881,35 +1099,33 @@ footer {
   <div class="section-text">
 
     <p>
-      Explore our growing collection
-      of original sticker designs!
-      Select View Full Design for
-      a closer look at any sticker.
-      Sizes, prices, and ordering
-      information will be added soon.
+      Choose a sticker, select a test size,
+      and enter your quantity.
+
+      Add it to your cart to try out
+      our new shopping experience!
+
+      Actual sizes and prices
+      will be announced later.
     </p>
 
   </div>
 
   <div class="sticker-grid">
 
-    <!-- =============================
-         STICKER 1
-         I'M THE VIBRATOR
-    ============================= -->
+    <!-- STICKER 1 -->
 
-    <article class="sticker-card">
+    <article class="sticker-card"
+             data-product-id="vibrator">
 
-      <a
-        href="Im_The_Vibrator.png"
-        target="_blank"
-        rel="noopener"
-        class="sticker-image"
-        aria-label="View I'm the Vibrator sticker">
+      <a class="sticker-image"
+         href="Im_The_Vibrator.png"
+         target="_blank"
+         rel="noopener">
 
         <img
           src="Im_The_Vibrator.png"
-          alt="I'm the Vibrator purple cartoon sticker"
+          alt="I'm the Vibrator sticker"
           loading="lazy">
 
       </a>
@@ -923,11 +1139,58 @@ footer {
           with plenty of personality.
         </p>
 
-        <a
-          href="Im_The_Vibrator.png"
-          target="_blank"
-          rel="noopener"
-          class="view-button">
+        <p class="pricing-note">
+          Pricing Coming Soon
+        </p>
+
+        <div class="product-options">
+
+          <div>
+            <label for="size-vibrator">
+              Size — longest side
+            </label>
+
+            <select class="size-select"
+                    id="size-vibrator">
+              <option value="3">3 inches</option>
+              <option value="5">5 inches</option>
+              <option value="8">8 inches</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="qty-vibrator">Quantity</label>
+
+            <div class="qty-control">
+              <button type="button"
+                      class="qty-minus"
+                      aria-label="Decrease quantity">−</button>
+
+              <input
+                id="qty-vibrator"
+                class="qty-input"
+                type="number"
+                min="1"
+                step="1"
+                inputmode="numeric"
+                value="1">
+
+              <button type="button"
+                      class="qty-plus"
+                      aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="add-to-cart" type="button">
+          🛒 ADD TO CART
+        </button>
+
+        <a class="view-button"
+           href="Im_The_Vibrator.png"
+           target="_blank"
+           rel="noopener">
           VIEW FULL DESIGN
         </a>
 
@@ -935,23 +1198,19 @@ footer {
 
     </article>
 
-    <!-- =============================
-         STICKER 2
-         LEFT LANE DRIVERS
-    ============================= -->
+    <!-- STICKER 2 -->
 
-    <article class="sticker-card">
+    <article class="sticker-card"
+             data-product-id="left-lane">
 
-      <a
-        href="left_lane_drivers.png"
-        target="_blank"
-        rel="noopener"
-        class="sticker-image"
-        aria-label="View Left Lane Drivers sticker">
+      <a class="sticker-image"
+         href="left_lane_drivers.png"
+         target="_blank"
+         rel="noopener">
 
         <img
           src="left_lane_drivers.png"
-          alt="Left Lane Drivers highway-themed sticker"
+          alt="Left Lane Drivers sticker"
           loading="lazy">
 
       </a>
@@ -965,11 +1224,53 @@ footer {
           for drivers with an attitude.
         </p>
 
-        <a
-          href="left_lane_drivers.png"
-          target="_blank"
-          rel="noopener"
-          class="view-button">
+        <p class="pricing-note">
+          Pricing Coming Soon
+        </p>
+
+        <div class="product-options">
+
+          <div>
+            <label for="size-left-lane">
+              Size — longest side
+            </label>
+            <select class="size-select"
+                    id="size-left-lane">
+              <option value="3">3 inches</option>
+              <option value="5">5 inches</option>
+              <option value="8">8 inches</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="qty-left-lane">Quantity</label>
+            <div class="qty-control">
+              <button type="button"
+                      class="qty-minus"
+                      aria-label="Decrease quantity">−</button>
+              <input id="qty-left-lane"
+                     class="qty-input"
+                     type="number"
+                     min="1"
+                     step="1"
+                     inputmode="numeric"
+                     value="1">
+              <button type="button"
+                      class="qty-plus"
+                      aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="add-to-cart" type="button">
+          🛒 ADD TO CART
+        </button>
+
+        <a class="view-button"
+           href="left_lane_drivers.png"
+           target="_blank"
+           rel="noopener">
           VIEW FULL DESIGN
         </a>
 
@@ -977,23 +1278,19 @@ footer {
 
     </article>
 
-    <!-- =============================
-         STICKER 3
-         OH GREAT SUBARU
-    ============================= -->
+    <!-- STICKER 3 -->
 
-    <article class="sticker-card">
+    <article class="sticker-card"
+             data-product-id="subaru">
 
-      <a
-        href="Oh-great-subaru.png"
-        target="_blank"
-        rel="noopener"
-        class="sticker-image"
-        aria-label="View Oh Great Another Subaru sticker">
+      <a class="sticker-image"
+         href="Oh-great-subaru.png"
+         target="_blank"
+         rel="noopener">
 
         <img
           src="Oh-great-subaru.png"
-          alt="Oh Great Another Subaru blue SUV sticker"
+          alt="Oh Great Another Subaru sticker"
           loading="lazy">
 
       </a>
@@ -1003,15 +1300,57 @@ footer {
         <h3>Oh Great... Another Subaru</h3>
 
         <p>
-          A humorous road-themed design
-          featuring a blue SUV.
+          A humorous road-themed
+          sticker featuring a blue SUV.
         </p>
 
-        <a
-          href="Oh-great-subaru.png"
-          target="_blank"
-          rel="noopener"
-          class="view-button">
+        <p class="pricing-note">
+          Pricing Coming Soon
+        </p>
+
+        <div class="product-options">
+
+          <div>
+            <label for="size-subaru">
+              Size — longest side
+            </label>
+            <select class="size-select"
+                    id="size-subaru">
+              <option value="3">3 inches</option>
+              <option value="5">5 inches</option>
+              <option value="8">8 inches</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="qty-subaru">Quantity</label>
+            <div class="qty-control">
+              <button type="button"
+                      class="qty-minus"
+                      aria-label="Decrease quantity">−</button>
+              <input id="qty-subaru"
+                     class="qty-input"
+                     type="number"
+                     min="1"
+                     step="1"
+                     inputmode="numeric"
+                     value="1">
+              <button type="button"
+                      class="qty-plus"
+                      aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="add-to-cart" type="button">
+          🛒 ADD TO CART
+        </button>
+
+        <a class="view-button"
+           href="Oh-great-subaru.png"
+           target="_blank"
+           rel="noopener">
           VIEW FULL DESIGN
         </a>
 
@@ -1019,23 +1358,19 @@ footer {
 
     </article>
 
-    <!-- =============================
-         STICKER 4
-         PATIENCE
-    ============================= -->
+    <!-- STICKER 4 -->
 
-    <article class="sticker-card">
+    <article class="sticker-card"
+             data-product-id="patience">
 
-      <a
-        href="Patience-Skull.png"
-        target="_blank"
-        rel="noopener"
-        class="sticker-image"
-        aria-label="View Patience sticker">
+      <a class="sticker-image"
+         href="Patience-Skull.png"
+         target="_blank"
+         rel="noopener">
 
         <img
           src="Patience-Skull.png"
-          alt="Patience skull and gauge sticker"
+          alt="Patience skull sticker"
           loading="lazy">
 
       </a>
@@ -1049,11 +1384,53 @@ footer {
           with a sarcastic edge.
         </p>
 
-        <a
-          href="Patience-Skull.png"
-          target="_blank"
-          rel="noopener"
-          class="view-button">
+        <p class="pricing-note">
+          Pricing Coming Soon
+        </p>
+
+        <div class="product-options">
+
+          <div>
+            <label for="size-patience">
+              Size — longest side
+            </label>
+            <select class="size-select"
+                    id="size-patience">
+              <option value="3">3 inches</option>
+              <option value="5">5 inches</option>
+              <option value="8">8 inches</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="qty-patience">Quantity</label>
+            <div class="qty-control">
+              <button type="button"
+                      class="qty-minus"
+                      aria-label="Decrease quantity">−</button>
+              <input id="qty-patience"
+                     class="qty-input"
+                     type="number"
+                     min="1"
+                     step="1"
+                     inputmode="numeric"
+                     value="1">
+              <button type="button"
+                      class="qty-plus"
+                      aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="add-to-cart" type="button">
+          🛒 ADD TO CART
+        </button>
+
+        <a class="view-button"
+           href="Patience-Skull.png"
+           target="_blank"
+           rel="noopener">
           VIEW FULL DESIGN
         </a>
 
@@ -1061,23 +1438,19 @@ footer {
 
     </article>
 
-    <!-- =============================
-         STICKER 5
-         TWO CENTS
-    ============================= -->
+    <!-- STICKER 5 -->
 
-    <article class="sticker-card">
+    <article class="sticker-card"
+             data-product-id="two-cents">
 
-      <a
-        href="Two_Cents.png"
-        target="_blank"
-        rel="noopener"
-        class="sticker-image"
-        aria-label="View Two Cents sticker">
+      <a class="sticker-image"
+         href="Two_Cents.png"
+         target="_blank"
+         rel="noopener">
 
         <img
           src="Two_Cents.png"
-          alt="Two Cents humorous penny sticker"
+          alt="Two Cents sticker"
           loading="lazy">
 
       </a>
@@ -1087,15 +1460,57 @@ footer {
         <h3>Two Cents</h3>
 
         <p>
-          A humorous sticker about
-          unsolicited opinions.
+          A funny, outspoken design
+          about unsolicited opinions.
         </p>
 
-        <a
-          href="Two_Cents.png"
-          target="_blank"
-          rel="noopener"
-          class="view-button">
+        <p class="pricing-note">
+          Pricing Coming Soon
+        </p>
+
+        <div class="product-options">
+
+          <div>
+            <label for="size-two-cents">
+              Size — longest side
+            </label>
+            <select class="size-select"
+                    id="size-two-cents">
+              <option value="3">3 inches</option>
+              <option value="5">5 inches</option>
+              <option value="8">8 inches</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="qty-two-cents">Quantity</label>
+            <div class="qty-control">
+              <button type="button"
+                      class="qty-minus"
+                      aria-label="Decrease quantity">−</button>
+              <input id="qty-two-cents"
+                     class="qty-input"
+                     type="number"
+                     min="1"
+                     step="1"
+                     inputmode="numeric"
+                     value="1">
+              <button type="button"
+                      class="qty-plus"
+                      aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="add-to-cart" type="button">
+          🛒 ADD TO CART
+        </button>
+
+        <a class="view-button"
+           href="Two_Cents.png"
+           target="_blank"
+           rel="noopener">
           VIEW FULL DESIGN
         </a>
 
@@ -1103,23 +1518,19 @@ footer {
 
     </article>
 
-    <!-- =============================
-         STICKER 6
-         SHITS & GIGGLES
-    ============================= -->
+    <!-- STICKER 6 -->
 
-    <article class="sticker-card">
+    <article class="sticker-card"
+             data-product-id="giggles">
 
-      <a
-        href="shits_and_giggles.png"
-        target="_blank"
-        rel="noopener"
-        class="sticker-image"
-        aria-label="View Shits and Giggles sticker">
+      <a class="sticker-image"
+         href="shits_and_giggles.png"
+         target="_blank"
+         rel="noopener">
 
         <img
           src="shits_and_giggles.png"
-          alt="Shits and Giggles humorous sticker"
+          alt="Shits and Giggles sticker"
           loading="lazy">
 
       </a>
@@ -1133,11 +1544,53 @@ footer {
           packed with personality.
         </p>
 
-        <a
-          href="shits_and_giggles.png"
-          target="_blank"
-          rel="noopener"
-          class="view-button">
+        <p class="pricing-note">
+          Pricing Coming Soon
+        </p>
+
+        <div class="product-options">
+
+          <div>
+            <label for="size-giggles">
+              Size — longest side
+            </label>
+            <select class="size-select"
+                    id="size-giggles">
+              <option value="3">3 inches</option>
+              <option value="5">5 inches</option>
+              <option value="8">8 inches</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="qty-giggles">Quantity</label>
+            <div class="qty-control">
+              <button type="button"
+                      class="qty-minus"
+                      aria-label="Decrease quantity">−</button>
+              <input id="qty-giggles"
+                     class="qty-input"
+                     type="number"
+                     min="1"
+                     step="1"
+                     inputmode="numeric"
+                     value="1">
+              <button type="button"
+                      class="qty-plus"
+                      aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="add-to-cart" type="button">
+          🛒 ADD TO CART
+        </button>
+
+        <a class="view-button"
+           href="shits_and_giggles.png"
+           target="_blank"
+           rel="noopener">
           VIEW FULL DESIGN
         </a>
 
@@ -1145,23 +1598,19 @@ footer {
 
     </article>
 
-    <!-- =============================
-         STICKER 7
-         IN GOD WE TRUST
-    ============================= -->
+    <!-- STICKER 7 -->
 
-    <article class="sticker-card">
+    <article class="sticker-card"
+             data-product-id="trust">
 
-      <a
-        href="In_God_We_Trust-sticker.png"
-        target="_blank"
-        rel="noopener"
-        class="sticker-image"
-        aria-label="View In God We Trust sticker">
+      <a class="sticker-image"
+         href="In_God_We_Trust-sticker.png"
+         target="_blank"
+         rel="noopener">
 
         <img
           src="In_God_We_Trust-sticker.png"
-          alt="In God We Trust gold and blue lightning sticker"
+          alt="In God We Trust sticker"
           loading="lazy">
 
       </a>
@@ -1171,16 +1620,58 @@ footer {
         <h3>In God We Trust</h3>
 
         <p>
-          A powerful gold-and-blue design
+          A bold gold-and-blue design
           featuring dramatic lightning
-          and a classic statement of faith.
+          and a statement of faith.
         </p>
 
-        <a
-          href="In_God_We_Trust-sticker.png"
-          target="_blank"
-          rel="noopener"
-          class="view-button">
+        <p class="pricing-note">
+          Pricing Coming Soon
+        </p>
+
+        <div class="product-options">
+
+          <div>
+            <label for="size-trust">
+              Size — longest side
+            </label>
+            <select class="size-select"
+                    id="size-trust">
+              <option value="3">3 inches</option>
+              <option value="5">5 inches</option>
+              <option value="8">8 inches</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="qty-trust">Quantity</label>
+            <div class="qty-control">
+              <button type="button"
+                      class="qty-minus"
+                      aria-label="Decrease quantity">−</button>
+              <input id="qty-trust"
+                     class="qty-input"
+                     type="number"
+                     min="1"
+                     step="1"
+                     inputmode="numeric"
+                     value="1">
+              <button type="button"
+                      class="qty-plus"
+                      aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="add-to-cart" type="button">
+          🛒 ADD TO CART
+        </button>
+
+        <a class="view-button"
+           href="In_God_We_Trust-sticker.png"
+           target="_blank"
+           rel="noopener">
           VIEW FULL DESIGN
         </a>
 
@@ -1192,9 +1683,9 @@ footer {
 
 </section>
 
-<!-- ===================================
-   STICKER AVAILABILITY INFORMATION
-=================================== -->
+<!-- ======================================
+   STICKER AVAILABILITY
+====================================== -->
 
 <section class="shop-section">
 
@@ -1208,8 +1699,8 @@ footer {
 
       <p>
         Our most popular stickers
-        will be available
-        from printed inventory.
+        will be available from
+        printed inventory.
       </p>
 
       <p>
@@ -1224,15 +1715,14 @@ footer {
       <h3>Made to Order</h3>
 
       <p>
-        Choose from our digital designs
-        and we'll produce your stickers
-        after ordering.
+        Select a design and we'll
+        produce your stickers after
+        an order is placed.
       </p>
 
       <p>
         Planned production time:
-        3–5 business days
-        before shipping.
+        3–5 business days before shipping.
       </p>
 
     </div>
@@ -1241,9 +1731,9 @@ footer {
 
 </section>
 
-<!-- ===================================
+<!-- ======================================
    MORE CREATIONS
-=================================== -->
+====================================== -->
 
 <section class="shop-section">
 
@@ -1254,19 +1744,17 @@ footer {
     <h3>We're Just Getting Started!</h3>
 
     <p>
-      We're preparing even more
-      sticker designs, along with
-      individual product sizes,
-      pricing, and ordering options.
+      We're preparing more sticker designs,
+      individual sizes, pricing,
+      and online ordering options.
     </p>
 
     <p>
-      Check back as we continue
-      expanding our collection!
+      You can try our shopping cart now.
+      Actual purchases are not available yet.
     </p>
 
-    <a href="index.html"
-       class="button">
+    <a href="index.html" class="button">
       RETURN TO HOMEPAGE
     </a>
 
@@ -1276,15 +1764,14 @@ footer {
 
 </main>
 
-<!-- ===================================
+<!-- ======================================
    FOOTER
-=================================== -->
+====================================== -->
 
 <footer>
 
   <p>
-    &copy; 2026
-    Pressed and Burned Creations.
+    &copy; 2026 Pressed and Burned Creations.
     All Rights Reserved.
   </p>
 
@@ -1292,13 +1779,98 @@ footer {
 
 </footer>
 
-<!-- ===================================
-   ATTITUDE WARNING POPUP
-=================================== -->
+<!-- ======================================
+   SHOPPING CART OVERLAY
+====================================== -->
+
+<div id="cart-overlay"
+     class="cart-overlay"
+     hidden>
+</div>
+
+<!-- ======================================
+   SLIDE-OUT SHOPPING CART
+====================================== -->
+
+<aside
+  id="cart-drawer"
+  class="cart-drawer"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="cart-title"
+  hidden>
+
+  <div class="cart-header">
+
+    <h2 id="cart-title">
+      🛒 Your Cart
+    </h2>
+
+    <button
+      id="close-cart"
+      class="cart-close"
+      type="button"
+      aria-label="Close shopping cart">
+
+      ×
+
+    </button>
+
+  </div>
+
+  <div class="cart-items" id="cart-items">
+  </div>
+
+  <div class="cart-footer">
+
+    <div class="cart-total">
+      <span>Subtotal</span>
+      <span>Pricing Coming Soon</span>
+    </div>
+
+    <p class="cart-note">
+      Your selections are saved in this browser.
+      Checkout is not available yet.
+      No order has been placed.
+    </p>
+
+    <button
+      type="button"
+      class="checkout-disabled"
+      disabled>
+      🔒 CHECKOUT COMING SOON
+    </button>
+
+    <button
+      type="button"
+      id="clear-cart"
+      class="clear-cart">
+      Clear Cart
+    </button>
+
+  </div>
+
+</aside>
+
+<!-- ======================================
+   ADD-TO-CART FEEDBACK
+====================================== -->
 
 <div
-  class="attitude-overlay"
+  id="cart-toast"
+  class="cart-toast"
+  role="status"
+  aria-live="polite"
+  hidden>
+</div>
+
+<!-- ======================================
+   ADULT HUMOR ADVISORY
+====================================== -->
+
+<div
   id="attitude-warning"
+  class="attitude-overlay"
   hidden>
 
   <div
@@ -1324,66 +1896,125 @@ footer {
       and strong language.
     </p>
 
-    <p class="notice-final">
-      Viewer discretion is advised.
+    <p>
+      <strong>
+        Viewer discretion is advised.
+      </strong>
     </p>
 
     <button
-      class="attitude-continue"
       id="attitude-continue"
+      class="attitude-continue"
       type="button">
-
       CONTINUE TO SHOP
-
     </button>
 
   </div>
 
 </div>
 
-<!-- ===================================
-   SHOW POPUP ONCE PER TAB SESSION
-=================================== -->
+<!-- ======================================
+   SHOPPING CART JAVASCRIPT
+====================================== -->
 
 <script>
-
 (function () {
+  "use strict";
 
-  const storageKey =
-    "pb-attitude-notice-seen-v1";
+  /*
+    PRODUCT CATALOG
 
-  const warning =
+    These are demo sizes only.
+    Each product has its own sizes array.
+
+    When Miles chooses real sizes,
+    we can configure them separately.
+
+    No prices or payment information
+    are stored in this version.
+  */
+
+  const products = {
+    "vibrator": {
+      name: "I'm the Vibrator",
+      image: "Im_The_Vibrator.png",
+      sizes: ["3", "5", "8"]
+    },
+
+    "left-lane": {
+      name: "Left Lane Drivers",
+      image: "left_lane_drivers.png",
+      sizes: ["3", "5", "8"]
+    },
+
+    "subaru": {
+      name: "Oh Great... Another Subaru",
+      image: "Oh-great-subaru.png",
+      sizes: ["3", "5", "8"]
+    },
+
+    "patience": {
+      name: "Patience — Walk It Off",
+      image: "Patience-Skull.png",
+      sizes: ["3", "5", "8"]
+    },
+
+    "two-cents": {
+      name: "Two Cents",
+      image: "Two_Cents.png",
+      sizes: ["3", "5", "8"]
+    },
+
+    "giggles": {
+      name: "Shits & Giggles",
+      image: "shits_and_giggles.png",
+      sizes: ["3", "5", "8"]
+    },
+
+    "trust": {
+      name: "In God We Trust",
+      image: "In_God_We_Trust-sticker.png",
+      sizes: ["3", "5", "8"]
+    }
+  };
+
+  const STORAGE_KEY = "pb-cart-v1";
+  const NOTICE_KEY = "pb-attitude-notice-seen-v1";
+
+  const countBadge =
+    document.getElementById("cart-count");
+
+  const openButton =
+    document.getElementById("open-cart");
+
+  const closeButton =
+    document.getElementById("close-cart");
+
+  const overlay =
+    document.getElementById("cart-overlay");
+
+  const drawer =
+    document.getElementById("cart-drawer");
+
+  const cartItems =
+    document.getElementById("cart-items");
+
+  const clearButton =
+    document.getElementById("clear-cart");
+
+  const toast =
+    document.getElementById("cart-toast");
+
+  const notice =
     document.getElementById("attitude-warning");
 
   const continueButton =
     document.getElementById("attitude-continue");
 
-  let alreadySeen = false;
-
-  /* CHECK PREVIOUS ACKNOWLEDGEMENT */
-
-  try {
-
-    alreadySeen =
-      sessionStorage.getItem(storageKey) === "yes";
-
-  } catch (error) {
-
-    alreadySeen = false;
-
-  }
-
-  if (alreadySeen) {
-    return;
-  }
-
-  /* SHOW POPUP */
-
-  warning.hidden = false;
-
-  document.body.classList.add("notice-open");
-
-  /* DISABLE PAGE BEHIND POPUP */
+  let cart = [];
+  let toastTimer;
+  let previousFocus = null;
+  let storageAvailable = true;
 
   const pageSections = [
     document.querySelector("body > header"),
@@ -1392,69 +2023,624 @@ footer {
     document.querySelector("body > footer")
   ].filter(Boolean);
 
-  pageSections.forEach(function (section) {
-    section.inert = true;
-  });
+  /*
+    VALIDATE A POSITIVE WHOLE NUMBER
+  */
 
-  continueButton.focus();
+  function validQuantity(value) {
+    const text = String(value).trim();
 
-  /* KEEP KEYBOARD FOCUS IN POPUP */
-
-  warning.addEventListener(
-    "keydown",
-    function (event) {
-
-      if (event.key === "Tab") {
-
-        event.preventDefault();
-        continueButton.focus();
-
-      }
-
+    if (!/^[1-9]\d*$/.test(text)) {
+      return null;
     }
-  );
 
-  /* CONTINUE TO SHOP */
+    const number = Number(text);
 
-  continueButton.addEventListener(
-    "click",
-    function () {
+    if (!Number.isSafeInteger(number)) {
+      return null;
+    }
 
-      try {
+    return number;
+  }
 
-        sessionStorage.setItem(
-          storageKey,
-          "yes"
-        );
+  /*
+    LOAD CART FROM BROWSER STORAGE
+  */
 
-      } catch (error) {
+  function loadCart() {
+    try {
+      const saved =
+        JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
 
-        /* SITE STILL WORKS */
-
+      if (!Array.isArray(saved)) {
+        return [];
       }
 
-      warning.hidden = true;
+      const cleaned = [];
 
-      document.body.classList.remove(
-        "notice-open"
-      );
+      saved.forEach(function (item) {
+        if (!item || !products[item.id]) {
+          return;
+        }
 
-      pageSections.forEach(function (section) {
-        section.inert = false;
+        const size = String(item.size);
+        const quantity = validQuantity(item.quantity);
+
+        if (!products[item.id].sizes.includes(size)) {
+          return;
+        }
+
+        if (quantity === null) {
+          return;
+        }
+
+        const existing = cleaned.find(function (entry) {
+          return entry.id === item.id &&
+                 entry.size === size;
+        });
+
+        if (existing) {
+          const total = existing.quantity + quantity;
+
+          if (Number.isSafeInteger(total)) {
+            existing.quantity = total;
+          }
+        } else {
+          cleaned.push({
+            id: item.id,
+            size: size,
+            quantity: quantity
+          });
+        }
       });
 
-      const shopLink =
-        document.querySelector("nav .shop-nav");
+      return cleaned;
 
-      if (shopLink) {
-        shopLink.focus();
+    } catch (error) {
+      storageAvailable = false;
+      return [];
+    }
+  }
+
+  /*
+    SAVE CART
+  */
+
+  function saveCart() {
+    try {
+      localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify(cart)
+      );
+
+      storageAvailable = true;
+
+    } catch (error) {
+      storageAvailable = false;
+    }
+
+    updateBadge();
+
+    if (!drawer.hidden) {
+      renderCart();
+    }
+  }
+
+  /*
+    UPDATE NAVIGATION ITEM COUNT
+  */
+
+  function updateBadge() {
+    const total = cart.reduce(function (sum, item) {
+      return sum + item.quantity;
+    }, 0);
+
+    const display = Number.isSafeInteger(total)
+      ? total.toLocaleString()
+      : "Many";
+
+    countBadge.textContent = display;
+
+    openButton.setAttribute(
+      "aria-label",
+      "Open shopping cart, " + display + " items"
+    );
+  }
+
+  /*
+    SMALL CONFIRMATION MESSAGE
+  */
+
+  function showToast(message) {
+    clearTimeout(toastTimer);
+
+    toast.textContent = message;
+    toast.hidden = false;
+
+    toastTimer = setTimeout(function () {
+      toast.hidden = true;
+    }, 2600);
+  }
+
+  /*
+    ADJUST QUANTITY ON PRODUCT CARD
+  */
+
+  function adjustCardQuantity(card, change) {
+    const input = card.querySelector(".qty-input");
+    const current = validQuantity(input.value) || 1;
+    const next = current + change;
+
+    if (next >= 1 && Number.isSafeInteger(next)) {
+      input.value = next;
+    }
+  }
+
+  /*
+    ADD A PRODUCT AND SIZE TO THE CART
+  */
+
+  function addToCart(card) {
+    const id = card.dataset.productId;
+    const size = card.querySelector(".size-select").value;
+
+    const input = card.querySelector(".qty-input");
+    const quantity = validQuantity(input.value);
+
+    if (!products[id] ||
+        !products[id].sizes.includes(size)) {
+      showToast("Please select a valid size.");
+      return;
+    }
+
+    if (quantity === null) {
+      input.focus();
+      showToast("Enter a positive whole-number quantity.");
+      return;
+    }
+
+    const existing = cart.find(function (item) {
+      return item.id === id &&
+             item.size === size;
+    });
+
+    if (existing) {
+      const newTotal = existing.quantity + quantity;
+
+      if (!Number.isSafeInteger(newTotal)) {
+        showToast("Quantity is too large.");
+        return;
       }
 
+      existing.quantity = newTotal;
+    } else {
+      cart.push({
+        id: id,
+        size: size,
+        quantity: quantity
+      });
     }
-  );
+
+    saveCart();
+
+    if (storageAvailable) {
+      showToast("✓ Added to Cart!");
+    } else {
+      showToast(
+        "Added, but this browser could not save your cart."
+      );
+    }
+  }
+
+  /*
+    CREATE THE CART ITEM CONTROLS
+  */
+
+  function makeButton(text, label, callback) {
+    const button = document.createElement("button");
+
+    button.type = "button";
+    button.textContent = text;
+    button.setAttribute("aria-label", label);
+
+    button.addEventListener("click", callback);
+
+    return button;
+  }
+
+  /*
+    CHANGE SAVED CART QUANTITY
+  */
+
+  function setCartQuantity(id, size, quantity) {
+    const item = cart.find(function (entry) {
+      return entry.id === id &&
+             entry.size === size;
+    });
+
+    if (!item) {
+      return;
+    }
+
+    if (!Number.isSafeInteger(quantity) || quantity < 1) {
+      showToast("Quantity must be at least 1.");
+      renderCart();
+      return;
+    }
+
+    item.quantity = quantity;
+    saveCart();
+  }
+
+  /*
+    REMOVE A SAVED CART ITEM
+  */
+
+  function removeCartItem(id, size) {
+    cart = cart.filter(function (item) {
+      return !(item.id === id && item.size === size);
+    });
+
+    saveCart();
+    showToast("Item removed from cart.");
+  }
+
+  /*
+    DRAW SAVED CART ITEMS
+  */
+
+  function renderCart() {
+    cartItems.replaceChildren();
+
+    if (cart.length === 0) {
+      const empty = document.createElement("div");
+      empty.className = "empty-cart";
+      empty.textContent =
+        "Your cart is empty. Explore our stickers and add your favorites!";
+
+      cartItems.appendChild(empty);
+      return;
+    }
+
+    cart.forEach(function (item) {
+      const product = products[item.id];
+
+      if (!product) {
+        return;
+      }
+
+      const row = document.createElement("div");
+      row.className = "cart-item";
+
+      const image = document.createElement("img");
+      image.src = product.image;
+      image.alt = product.name;
+
+      const info = document.createElement("div");
+
+      const title = document.createElement("h3");
+      title.textContent = product.name;
+
+      const size = document.createElement("p");
+      size.textContent =
+        "Longest side: " + item.size + " inches";
+
+      const price = document.createElement("p");
+      price.textContent = "Pricing Coming Soon";
+
+      const controls = document.createElement("div");
+      controls.className = "cart-item-controls";
+
+      const minus = makeButton(
+        "−",
+        "Decrease " + product.name + " quantity",
+        function () {
+          if (item.quantity > 1) {
+            setCartQuantity(
+              item.id,
+              item.size,
+              item.quantity - 1
+            );
+          }
+        }
+      );
+
+      const quantityInput =
+        document.createElement("input");
+
+      quantityInput.type = "number";
+      quantityInput.min = "1";
+      quantityInput.step = "1";
+      quantityInput.inputMode = "numeric";
+      quantityInput.value = item.quantity;
+
+      quantityInput.setAttribute(
+        "aria-label",
+        "Quantity for " + product.name
+      );
+
+      quantityInput.addEventListener("change", function () {
+        const next = validQuantity(quantityInput.value);
+
+        if (next === null) {
+          showToast("Enter a valid whole-number quantity.");
+          renderCart();
+          return;
+        }
+
+        setCartQuantity(
+          item.id,
+          item.size,
+          next
+        );
+      });
+
+      const plus = makeButton(
+        "+",
+        "Increase " + product.name + " quantity",
+        function () {
+          setCartQuantity(
+            item.id,
+            item.size,
+            item.quantity + 1
+          );
+        }
+      );
+
+      const remove = makeButton(
+        "Remove",
+        "Remove " + product.name + " from cart",
+        function () {
+          removeCartItem(item.id, item.size);
+        }
+      );
+
+      remove.className = "remove-item";
+
+      controls.append(
+        minus,
+        quantityInput,
+        plus,
+        remove
+      );
+
+      info.append(
+        title,
+        size,
+        price,
+        controls
+      );
+
+      row.append(image, info);
+      cartItems.appendChild(row);
+    });
+  }
+
+  /*
+    DISABLE BACKGROUND PAGE INTERACTION
+    WHEN A DIALOG IS OPEN
+  */
+
+  function setPageInert(value) {
+    pageSections.forEach(function (section) {
+      section.inert = value;
+    });
+  }
+
+  /*
+    OPEN THE CART DRAWER
+  */
+
+  function openCart() {
+    previousFocus = document.activeElement;
+
+    renderCart();
+
+    overlay.hidden = false;
+    drawer.hidden = false;
+
+    document.body.classList.add("dialog-open");
+    setPageInert(true);
+
+    closeButton.focus();
+  }
+
+  /*
+    CLOSE THE CART DRAWER
+  */
+
+  function closeCart() {
+    overlay.hidden = true;
+    drawer.hidden = true;
+
+    document.body.classList.remove("dialog-open");
+    setPageInert(false);
+
+    if (previousFocus &&
+        typeof previousFocus.focus === "function") {
+      previousFocus.focus();
+    }
+  }
+
+  /*
+    KEEP KEYBOARD FOCUS INSIDE THE
+    ACTIVE DIALOG FOR ACCESSIBILITY
+  */
+
+  function trapFocus(event, dialog) {
+    if (event.key !== "Tab") {
+      return;
+    }
+
+    const elements = Array.from(
+      dialog.querySelectorAll(
+        'button:not([disabled]), a[href], input:not([disabled]), select:not([disabled])'
+      )
+    ).filter(function (element) {
+      return element.getClientRects().length > 0;
+    });
+
+    if (!elements.length) {
+      event.preventDefault();
+      return;
+    }
+
+    const first = elements[0];
+    const last = elements[elements.length - 1];
+
+    if (event.shiftKey &&
+        document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey &&
+               document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+
+  /*
+    PRODUCT CARD BUTTONS
+  */
+
+  document.querySelectorAll(".sticker-card")
+    .forEach(function (card) {
+
+      const input = card.querySelector(".qty-input");
+
+      card.querySelector(".qty-minus")
+        .addEventListener("click", function () {
+          adjustCardQuantity(card, -1);
+        });
+
+      card.querySelector(".qty-plus")
+        .addEventListener("click", function () {
+          adjustCardQuantity(card, 1);
+        });
+
+      card.querySelector(".add-to-cart")
+        .addEventListener("click", function () {
+          addToCart(card);
+        });
+
+      input.addEventListener("change", function () {
+        if (validQuantity(input.value) === null) {
+          input.value = 1;
+          showToast(
+            "Quantity reset to 1. Enter a positive whole number."
+          );
+        }
+      });
+    });
+
+  /*
+    CART CONTROLS
+  */
+
+  openButton.addEventListener("click", openCart);
+  closeButton.addEventListener("click", closeCart);
+  overlay.addEventListener("click", closeCart);
+
+  clearButton.addEventListener("click", function () {
+    if (!cart.length) {
+      return;
+    }
+
+    if (confirm("Remove all items from your cart?")) {
+      cart = [];
+      saveCart();
+      showToast("Shopping cart cleared.");
+    }
+  });
+
+  /*
+    POPUP AND CART KEYBOARD BEHAVIOR
+  */
+
+  document.addEventListener("keydown", function (event) {
+    if (!notice.hidden) {
+      trapFocus(event, notice);
+      return;
+    }
+
+    if (!drawer.hidden) {
+      if (event.key === "Escape") {
+        closeCart();
+      } else {
+        trapFocus(event, drawer);
+      }
+    }
+  });
+
+  /*
+    UPDATE IF ANOTHER TAB CHANGES
+    THE SAME SAVED CART
+  */
+
+  window.addEventListener("storage", function (event) {
+    if (event.key === STORAGE_KEY) {
+      cart = loadCart();
+      updateBadge();
+
+      if (!drawer.hidden) {
+        renderCart();
+      }
+    }
+  });
+
+  /*
+    INITIALIZE SAVED CART
+  */
+
+  cart = loadCart();
+  updateBadge();
+
+  /*
+    ATTITUDE WARNING:
+    ONCE PER BROWSING SESSION
+  */
+
+  let noticeSeen = false;
+
+  try {
+    noticeSeen =
+      sessionStorage.getItem(NOTICE_KEY) === "yes";
+  } catch (error) {
+    noticeSeen = false;
+  }
+
+  if (!noticeSeen) {
+    notice.hidden = false;
+
+    document.body.classList.add("dialog-open");
+    setPageInert(true);
+
+    continueButton.focus();
+
+    continueButton.addEventListener(
+      "click",
+      function () {
+
+        try {
+          sessionStorage.setItem(
+            NOTICE_KEY,
+            "yes"
+          );
+        } catch (error) {
+          /* Continue without saved acknowledgement */
+        }
+
+        notice.hidden = true;
+
+        document.body.classList.remove("dialog-open");
+        setPageInert(false);
+
+        document.querySelector(".shop-nav").focus();
+      }
+    );
+  }
 
 })();
-
 </script>
 
 </body>
