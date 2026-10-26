@@ -104,7 +104,6 @@ button:focus-visible {
   object-fit: cover;
   object-position: center bottom;
 
-  /* Much brighter than the old .48 setting */
   filter:
     brightness(1.65)
     saturate(1.35)
@@ -130,7 +129,6 @@ button:focus-visible {
   position: absolute;
   inset: 0;
 
-  /* Lighter overlays make the fire visible */
   background:
     linear-gradient(
       90deg,
@@ -147,6 +145,7 @@ button:focus-visible {
 }
 
 /* Make tablet flames especially visible */
+
 @media (max-width: 1024px) {
   .fire-video {
     object-position: center bottom;
@@ -340,8 +339,6 @@ body > footer {
   font-size: 12px;
   text-shadow: 0 2px 8px #000;
 }
-
-/* Optional video playback button */
 
 .fire-play-button {
   margin-top: 15px;
@@ -1072,6 +1069,11 @@ h2 {
           Explore Stickers ↗
         </a>
 
+        <!-- NEW CUSTOM ORDER BUTTON -->
+        <a class="btn btn-secondary" href="custom-orders.html">
+          CREATE YOUR OWN ↗
+        </a>
+
         <a class="btn btn-secondary" href="showcase.html">
           See Our Work
         </a>
@@ -1314,6 +1316,15 @@ h2 {
 
     </div>
 
+    <!-- NEW CUSTOM ARTWORK BUTTON -->
+    <div class="section-bottom">
+
+      <a class="btn btn-primary" href="custom-orders.html">
+        REQUEST CUSTOM ARTWORK ↗
+      </a>
+
+    </div>
+
   </div>
 
 </section>
@@ -1389,13 +1400,26 @@ h2 {
         Get in touch with Miles to talk it through.
       </p>
 
-      <a
-        class="btn btn-primary"
-        href="mailto:miles@pressedandburnedcreations.com">
+      <div class="hero-actions">
 
-        Email Miles ↗
+        <!-- NEW CUSTOM ORDER BUTTON -->
+        <a
+          class="btn btn-primary"
+          href="custom-orders.html">
 
-      </a>
+          START A CUSTOM ORDER ↗
+
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="mailto:miles@pressedandburnedcreations.com">
+
+          Email Miles ↗
+
+        </a>
+
+      </div>
 
     </div>
 
