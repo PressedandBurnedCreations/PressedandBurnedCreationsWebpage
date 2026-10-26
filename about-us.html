@@ -1,33 +1,34 @@
+______________________________________________________________________________________________________________________________________________________
+                                                            10/25/2026 (5)
+
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#090909">
 
-<title>About Us | Pressed and Burned Creations</title>
+<title>Our Story | Pressed and Burned Creations</title>
 
 <meta name="description"
-content="Get to know Pressed and Burned Creations. Original stickers, custom decals, creative artwork, and designs with attitude.">
+content="Read the family story behind Pressed and Burned Creations, from motorcycle club T-shirts in 2019 to original stickers, custom artwork, and more.">
 
 <link rel="icon" type="image/png" href="favicon.png">
 
 <style>
 
 /* ======================================
-   COLORS AND GENERAL SETTINGS
+   COLORS AND GENERAL STYLING
 ====================================== */
 
 :root {
   --ink: #090909;
-  --panel: #111110;
   --paper: #f6f2eb;
-  --muted: #b7b0a8;
+  --muted: #c4bcb2;
   --gold: #e9a14b;
   --gold-light: #f9c47a;
-  --edge: rgba(235,171,95,.22);
+  --edge: rgba(235,171,95,.25);
   --max: 1200px;
 }
 
@@ -48,7 +49,7 @@ body {
   background: var(--ink);
   color: var(--paper);
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
   isolation: isolate;
 }
 
@@ -98,7 +99,7 @@ button:focus-visible {
   background:
     radial-gradient(
       ellipse 85% 80% at 50% 100%,
-      rgba(241,100,14,.50) 0%,
+      rgba(241,100,14,.50),
       rgba(144,41,7,.27) 35%,
       rgba(35,10,4,.15) 65%,
       #050505 100%
@@ -110,7 +111,6 @@ button:focus-visible {
   inset: 0;
   width: 100%;
   height: 100%;
-
   object-fit: cover;
   object-position: center bottom;
 
@@ -120,7 +120,7 @@ button:focus-visible {
     contrast(1.08);
 }
 
-/* ORIGINAL P&B ORNATE BACKGROUND */
+/* ORIGINAL ORNATE P&B LOGO */
 
 .background-art {
   position: absolute;
@@ -136,8 +136,6 @@ button:focus-visible {
   opacity: 1;
   mix-blend-mode: screen;
 }
-
-/* KEEP BACKGROUND FLAMES VISIBLE */
 
 .scene-shade {
   position: absolute;
@@ -158,7 +156,7 @@ button:focus-visible {
     );
 }
 
-/* EXTRA BRIGHTNESS FOR TABLETS */
+/* BRIGHTER FLAMES ON TABLETS */
 
 @media (max-width: 1024px) {
 
@@ -176,12 +174,6 @@ button:focus-visible {
         rgba(5,5,5,.30),
         rgba(5,5,5,.10),
         rgba(5,5,5,.25)
-      ),
-      linear-gradient(
-        180deg,
-        rgba(5,5,5,.10),
-        transparent 45%,
-        rgba(5,5,5,.22)
       );
   }
 
@@ -195,7 +187,7 @@ body > footer {
 }
 
 /* ======================================
-   MATCHING HEADER AND NAVIGATION
+   HEADER AND NAVIGATION
 ====================================== */
 
 .site-header {
@@ -206,7 +198,6 @@ body > footer {
 
 .header-inner {
   min-height: 99px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -226,8 +217,8 @@ body > footer {
 .main-nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
   gap: 10px 27px;
 }
 
@@ -246,27 +237,26 @@ body > footer {
 }
 
 .main-nav .nav-shop {
+  padding: 11px 17px;
   border: 1px solid var(--gold);
   border-radius: 5px;
-  padding: 11px 17px;
   color: var(--ink);
   background: var(--gold);
 }
 
 .main-nav .nav-shop:hover {
-  background: var(--gold-light);
   color: var(--ink);
+  background: var(--gold-light);
 }
 
 /* ======================================
-   BUTTONS
+   BUTTONS AND LINKS
 ====================================== */
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   min-height: 49px;
   padding: 13px 21px;
 
@@ -275,10 +265,7 @@ body > footer {
   font-weight: 800;
   letter-spacing: .04em;
 
-  transition:
-    transform .2s,
-    background .2s,
-    border-color .2s;
+  transition: transform .2s, background .2s;
 }
 
 .btn:hover {
@@ -286,8 +273,8 @@ body > footer {
 }
 
 .btn-primary {
-  background: var(--gold);
   color: #16100a;
+  background: var(--gold);
 }
 
 .btn-primary:hover {
@@ -296,7 +283,7 @@ body > footer {
 
 .btn-secondary {
   border: 1px solid rgba(255,255,255,.45);
-  background: rgba(13,13,13,.70);
+  background: rgba(13,13,13,.75);
 }
 
 .btn-secondary:hover {
@@ -305,41 +292,35 @@ body > footer {
 }
 
 .fire-play-button {
+  display: inline-block;
   margin-top: 18px;
   padding: 9px 13px;
 
   border: 1px solid var(--gold);
   border-radius: 5px;
-
   background: rgba(5,5,5,.82);
   color: var(--gold-light);
-
   font-size: 12px;
   font-weight: 800;
 }
 
-.fire-play-button:hover {
-  background: rgba(53,31,10,.95);
-}
-
 /* ======================================
-   ABOUT US HERO
+   HERO
 ====================================== */
 
 .about-hero {
-  padding: 88px 0 100px;
+  padding: 90px 0 100px;
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1.03fr .97fr;
-  align-items: center;
   gap: clamp(32px,5vw,80px);
+  align-items: center;
 }
 
 .eyebrow {
-  margin: 0 0 21px;
-
+  margin: 0 0 19px;
   color: var(--gold-light);
   font-size: 12px;
   font-weight: 800;
@@ -351,10 +332,10 @@ body > footer {
   margin: 0;
   max-width: 650px;
 
-  font-size: clamp(51px,6.2vw,91px);
+  font-size: clamp(50px,6.2vw,88px);
   font-weight: 900;
-  letter-spacing: -.069em;
-  line-height: 1;
+  line-height: 1.02;
+  letter-spacing: -.065em;
 
   text-shadow: 0 3px 19px rgba(0,0,0,.85);
 }
@@ -369,9 +350,8 @@ body > footer {
   max-width: 530px;
 
   color: #e8e1d9;
-  font-size: clamp(17px,1.8vw,19px);
-  line-height: 1.75;
-
+  font-size: 18px;
+  line-height: 1.8;
   text-shadow: 0 2px 10px #000;
 }
 
@@ -382,49 +362,26 @@ body > footer {
   margin-top: 31px;
 }
 
-/* ======================================
-   HERO IMAGE
-====================================== */
-
 .hero-art {
-  position: relative;
   min-width: 0;
   padding: 17px;
-
-  border: 1px solid rgba(233,161,75,.25);
+  border: 1px solid var(--edge);
   border-radius: 10px;
 
   background:
     linear-gradient(
       140deg,
-      rgba(40,29,19,.91),
-      rgba(10,10,10,.94) 54%
+      rgba(40,29,19,.92),
+      rgba(10,10,10,.94)
     );
 
-  box-shadow:
-    0 26px 85px rgba(0,0,0,.55);
-}
-
-.hero-art::before {
-  content: "";
-  position: absolute;
-  inset: -11px 27px auto;
-  height: 1px;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      var(--gold),
-      transparent
-    );
+  box-shadow: 0 26px 85px rgba(0,0,0,.55);
 }
 
 .hero-art img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: contain;
-
   background: #0c0c0c;
   border-radius: 5px;
 }
@@ -434,7 +391,6 @@ body > footer {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px;
-
   margin-top: 15px;
 
   color: #c9b49b;
@@ -444,28 +400,27 @@ body > footer {
 }
 
 /* ======================================
-   BRAND STATEMENT STRIP
+   STATEMENT STRIP
 ====================================== */
 
 .statement-strip {
-  background: rgba(9,9,9,.84);
+  background: rgba(9,9,9,.83);
   border-top: 1px solid var(--edge);
   border-bottom: 1px solid var(--edge);
 }
 
 .statement-strip .wrap {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px 31px;
+  gap: 12px 32px;
+  padding: 20px 0;
 
-  padding-block: 20px;
-
-  color: #bdb6ae;
+  color: #c8beb4;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: .17em;
+  letter-spacing: .15em;
   text-transform: uppercase;
 }
 
@@ -476,191 +431,181 @@ body > footer {
 }
 
 /* ======================================
-   GENERAL SECTION DESIGN
+   ORIGINAL OUR STORY SECTION
 ====================================== */
 
-.section-pad {
+.story-section {
   padding: 100px 0;
+  background: rgba(9,9,9,.87);
 }
 
-.section-dark {
-  background: rgba(8,8,8,.85);
-}
-
-.section-soft {
-  background: rgba(20,18,16,.82);
-}
-
-h2 {
-  margin: 0;
-
-  font-size: clamp(32px,4.1vw,53px);
-  line-height: 1.09;
-  letter-spacing: -.047em;
-}
-
-.section-description {
-  color: #ddd5cb;
-  font-size: 17px;
-  line-height: 1.8;
-}
-
-/* ======================================
-   ABOUT THE BRAND
-====================================== */
-
-.story-grid {
+.story-layout {
   display: grid;
-  grid-template-columns: .75fr 1.25fr;
-  gap: 42px 85px;
-  align-items: center;
+  grid-template-columns: .35fr .65fr;
+  gap: 55px;
+  align-items: start;
 }
 
-.story-statement {
+.story-side {
+  position: sticky;
+  top: 30px;
+}
+
+.story-side .year {
+  display: block;
   color: var(--gold);
-  font-size: clamp(45px,6vw,78px);
-  line-height: .99;
-  letter-spacing: -.07em;
+  font-size: clamp(65px,8vw,118px);
   font-weight: 900;
+  letter-spacing: -.08em;
+  line-height: 1;
 }
 
-.story-copy h2 {
-  max-width: 680px;
+.story-side .year-caption {
+  display: block;
+  margin-top: 15px;
+  color: #cfc2b2;
+  font-size: 13px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
 }
 
-.story-copy p:not(.eyebrow) {
-  max-width: 650px;
-  margin: 22px 0;
+.story-content {
+  padding: 40px 45px 45px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(29,24,19,.95),
+      rgba(9,9,9,.96)
+    );
 
-  color: #ddd5cb;
+  border: 1px solid var(--edge);
+  border-radius: 11px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.4);
+}
+
+.story-content h2 {
+  margin: 0 0 35px;
+  color: var(--paper);
+
+  font-size: clamp(37px,4.3vw,55px);
+  line-height: 1.1;
+  letter-spacing: -.05em;
+}
+
+.story-content h2 span {
+  color: var(--gold);
+}
+
+.story-content p {
+  margin: 0 0 25px;
+  color: #f0e7de;
   font-size: 17px;
-  line-height: 1.8;
+  line-height: 1.95;
+}
+
+.story-content .closing-paragraph {
+  color: #f9dfbb;
+  font-weight: 600;
+}
+
+.story-signature {
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid var(--edge);
+
+  color: var(--gold-light);
+  font-size: 22px;
+  font-weight: 700;
+  font-style: italic;
+  text-align: right;
 }
 
 /* ======================================
-   WHAT WE CREATE
+   FAMILY AND CREATIVE JOURNEY
 ====================================== */
+
+.journey-section {
+  padding: 90px 0;
+  background: rgba(20,18,16,.85);
+}
 
 .section-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 20px 40px;
-
   margin-bottom: 35px;
 }
 
-.section-heading .eyebrow {
-  margin-bottom: 12px;
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(33px,4vw,51px);
+  letter-spacing: -.045em;
+  line-height: 1.15;
 }
 
-.section-heading > p {
-  max-width: 350px;
-  margin: 0 0 3px;
-  color: #d0c7bc;
-}
-
-.creations-grid {
+.journey-grid {
   display: grid;
   grid-template-columns: repeat(3,minmax(0,1fr));
   gap: 23px;
 }
 
-.creation-card {
+.journey-card {
   padding: 32px 27px;
+  border: 1px solid var(--edge);
+  border-radius: 9px;
 
   background:
     linear-gradient(
       145deg,
-      rgba(38,29,20,.90),
+      rgba(38,29,20,.93),
       rgba(12,12,12,.94)
     );
-
-  border: 1px solid var(--edge);
-  border-radius: 9px;
 }
 
-.creation-number {
+.journey-number {
   display: block;
-  margin-bottom: 19px;
-
+  margin-bottom: 18px;
   color: var(--gold);
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: .14em;
+  letter-spacing: .16em;
 }
 
-.creation-card h3 {
-  margin: 0 0 14px;
+.journey-card h3 {
+  margin: 0 0 12px;
   font-size: 23px;
-  line-height: 1.25;
+  line-height: 1.3;
 }
 
-.creation-card p {
+.journey-card p {
   margin: 0;
-  color: #d0c7bc;
+  color: #d4cabe;
   font-size: 15px;
-  line-height: 1.75;
-}
-
-/* ======================================
-   MILES BIO PLACEHOLDER
-====================================== */
-
-.bio-panel {
-  display: grid;
-  grid-template-columns: .78fr 1.22fr;
-  gap: 35px 65px;
-  align-items: center;
-
-  padding: 50px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(34,26,18,.94),
-      rgba(10,10,10,.94)
-    );
-
-  border: 1px solid var(--edge);
-  border-radius: 10px;
-}
-
-.bio-mark {
-  color: var(--gold);
-  font-size: clamp(44px,5vw,70px);
-  line-height: 1;
-  letter-spacing: -.06em;
-  font-weight: 900;
-}
-
-.bio-copy h2 {
-  margin-bottom: 19px;
-}
-
-.bio-copy p:not(.eyebrow) {
-  margin: 0 0 16px;
-
-  color: #d6cdc1;
-  font-size: 16px;
   line-height: 1.8;
 }
 
 /* ======================================
-   FINAL CONTACT SECTION
+   CONTACT AND SHOP
 ====================================== */
+
+.contact-section {
+  padding: 100px 0;
+  background: rgba(8,8,8,.87);
+}
 
 .contact-grid {
   display: grid;
   grid-template-columns: 1.05fr .95fr;
-  gap: 35px 65px;
+  gap: 50px;
   align-items: center;
 }
 
-.contact-copy p:not(.eyebrow) {
-  max-width: 540px;
+.contact-copy h2 {
+  margin: 0 0 23px;
+  font-size: clamp(34px,4.3vw,53px);
+  line-height: 1.15;
+  letter-spacing: -.05em;
+}
 
-  color: #ddd5cb;
+.contact-copy p:not(.eyebrow) {
+  color: #e0d5c8;
   font-size: 17px;
   line-height: 1.8;
 }
@@ -669,37 +614,33 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 26px;
+  margin-top: 28px;
 }
 
 .contact-decoration {
-  padding: 45px 25px;
-
+  padding: 52px 25px;
   border: 1px solid var(--edge);
   border-radius: 10px;
-  background: rgba(8,8,8,.84);
-
+  background: rgba(25,18,11,.91);
   text-align: center;
 }
 
-.contact-decoration .big-text {
+.contact-decoration strong {
   display: block;
-
   color: var(--gold);
-  font-size: clamp(36px,4.4vw,62px);
+  font-size: clamp(34px,4.5vw,62px);
+  line-height: 1.15;
   font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -.06em;
+  letter-spacing: -.055em;
 }
 
-.contact-decoration .small-text {
+.contact-decoration span {
   display: block;
-  margin-top: 20px;
-
-  color: #cfc3b5;
+  margin-top: 22px;
+  color: #d4b998;
   font-size: 12px;
-  letter-spacing: .17em;
   text-transform: uppercase;
+  letter-spacing: .15em;
 }
 
 /* ======================================
@@ -707,9 +648,9 @@ h2 {
 ====================================== */
 
 .site-footer {
-  background: rgba(5,5,5,.92);
-  border-top: 1px solid var(--edge);
   padding: 33px 0;
+  border-top: 1px solid var(--edge);
+  background: rgba(5,5,5,.94);
 }
 
 .footer-inner {
@@ -728,8 +669,8 @@ h2 {
 
 .footer-tagline {
   color: var(--gold-light) !important;
-  letter-spacing: .08em;
   font-weight: 700;
+  letter-spacing: .08em;
 }
 
 .footer-links {
@@ -776,8 +717,13 @@ h2 {
     font-size: clamp(48px,6.3vw,69px);
   }
 
-  .story-grid {
-    gap: 35px;
+  .story-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .story-side {
+    position: static;
   }
 
 }
@@ -810,44 +756,41 @@ h2 {
   }
 
   .about-hero {
-    padding: 62px 0 66px;
+    padding: 65px 0;
   }
 
   .hero-grid,
-  .story-grid,
-  .bio-panel,
   .contact-grid {
     grid-template-columns: 1fr;
   }
 
   .about-hero h1 {
-    font-size: clamp(52px,10vw,78px);
+    font-size: clamp(49px,10vw,72px);
   }
 
   .hero-art {
-    max-width: 540px;
     width: 100%;
-    margin: 4px auto 0;
+    max-width: 540px;
+    margin: auto;
   }
 
-  .section-pad {
-    padding: 72px 0;
+  .story-section,
+  .journey-section,
+  .contact-section {
+    padding: 70px 0;
   }
 
-  .section-heading {
-    display: block;
+  .story-content {
+    padding: 30px 24px;
   }
 
-  .section-heading > p {
-    margin-top: 15px;
+  .story-content p {
+    font-size: 16px;
+    line-height: 1.85;
   }
 
-  .creations-grid {
+  .journey-grid {
     grid-template-columns: 1fr;
-  }
-
-  .bio-panel {
-    padding: 34px 25px;
   }
 
   .statement-strip .wrap {
@@ -860,10 +803,6 @@ h2 {
 
 }
 
-/* ======================================
-   SMALL MOBILE
-====================================== */
-
 @media (max-width: 470px) {
 
   .main-nav {
@@ -875,7 +814,7 @@ h2 {
   }
 
   .about-hero h1 {
-    font-size: clamp(46px,11vw,60px);
+    font-size: clamp(44px,11vw,58px);
   }
 
   .hero-actions,
@@ -906,7 +845,7 @@ h2 {
 }
 
 /* ======================================
-   ACCESSIBILITY: REDUCED MOTION
+   REDUCED MOTION
 ====================================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -937,7 +876,7 @@ h2 {
 <body>
 
 <!-- ======================================
-   BRIGHT FLAMES + ORNATE BACKGROUND
+   BRIGHT FLAMES AND P&B BACKGROUND
 ====================================== -->
 
 <div class="background-scene" aria-hidden="true">
@@ -971,10 +910,8 @@ h2 {
 
   <div class="wrap header-inner">
 
-    <a
-      class="brand"
-      href="index.html"
-      aria-label="Return to Pressed and Burned Creations homepage">
+    <a class="brand" href="index.html"
+       aria-label="Return to Pressed and Burned Creations homepage">
 
       <img
         src="Pressed%20and%20burned%20logo.png"
@@ -1017,50 +954,40 @@ h2 {
 <main>
 
 <!-- ======================================
-   ABOUT US HERO
+   HERO
 ====================================== -->
 
-<section
-  class="about-hero"
-  aria-labelledby="hero-title">
+<section class="about-hero" aria-labelledby="hero-title">
 
   <div class="wrap hero-grid">
 
     <div>
 
       <p class="eyebrow">
-        The People &amp; Personality Behind P&amp;B
+        The Family Behind Pressed &amp; Burned
       </p>
 
       <h1 id="hero-title">
-        Not Here to
-        <span>Blend In.</span>
+        Built From
+        <span>Creativity.</span>
       </h1>
 
       <p class="hero-description">
-        A little attitude. A lot of creativity.
-
-        Welcome to Pressed and Burned Creations,
-        where original ideas, bold graphics,
-        and personal expression come together.
+        What began with a few T-shirts
+        for a motorcycle riding club
+        grew into a family journey
+        filled with creativity,
+        new ideas, and endless possibilities.
       </p>
 
       <div class="hero-actions">
 
-        <a
-          class="btn btn-primary"
-          href="#our-story">
-
-          Get to Know Us ↗
-
+        <a class="btn btn-primary" href="#our-story">
+          Read Our Story ↗
         </a>
 
-        <a
-          class="btn btn-secondary"
-          href="showcase.html">
-
-          Explore Our Work
-
+        <a class="btn btn-secondary" href="showcase.html">
+          See Our Creations
         </a>
 
       </div>
@@ -1081,17 +1008,12 @@ h2 {
 
       <img
         src="Sticker%20merch%201.png"
-        alt="Original sticker designs from Pressed and Burned Creations">
+        alt="Pressed and Burned Creations original sticker artwork">
 
       <div class="art-caption">
 
-        <span>
-          Pressed &amp; Burned Creations
-        </span>
-
-        <span>
-          Stickers With an Attitude
-        </span>
+        <span>Pressed &amp; Burned Creations</span>
+        <span>Family • Creativity • Attitude</span>
 
       </div>
 
@@ -1102,79 +1024,100 @@ h2 {
 </section>
 
 <!-- ======================================
-   BRAND STATEMENT
+   BRAND STRIP
 ====================================== -->
 
 <div class="statement-strip">
 
   <div class="wrap">
 
-    <span>Original Designs</span>
-    <span>Bold Personality</span>
-    <span>Custom Creations</span>
+    <span>Family Inspired</span>
+    <span>Creatively Driven</span>
+    <span>Original Creations</span>
 
   </div>
 
 </div>
 
 <!-- ======================================
-   ABOUT THE BRAND
+   OUR STORY - ORIGINAL APPROVED TEXT
 ====================================== -->
 
 <section
-  class="section-pad section-dark"
+  class="story-section"
   id="our-story"
   aria-labelledby="story-title">
 
-  <div class="wrap story-grid">
+  <div class="wrap story-layout">
 
-    <div
-      class="story-statement"
-      aria-hidden="true">
+    <div class="story-side">
 
-      NOT<br>
-      ORDINARY.
+      <p class="eyebrow">
+        Where It All Began
+      </p>
+
+      <span class="year">2019</span>
+
+      <span class="year-caption">
+        The Beginning of Our Journey
+      </span>
 
     </div>
 
-    <div class="story-copy">
-
-      <p class="eyebrow">
-        Behind the Brand
-      </p>
+    <div class="story-content">
 
       <h2 id="story-title">
-        Creativity With a Point of View.
+        Our <span>Story</span>
       </h2>
 
       <p>
-        Pressed and Burned Creations
-        is about more than putting artwork
-        on a sticker.
-
-        It's about creating something
-        that reflects a personality,
-        makes someone laugh,
-        or says exactly what someone
-        wants to say.
+        Our story began in 2019 when we
+        purchased a direct-to-garment printer
+        to make T-shirts for our motorcycle
+        riding club. What started as shirts
+        for our members soon grew into making
+        them for other customers—and sparked
+        the idea for something bigger.
       </p>
 
       <p>
-        From ready-made designs to custom
-        stickers, decals, and artwork,
-        P&amp;B brings ideas and individuality
-        together.
-
-        Some designs are funny.
-        Others are bold.
-        And some simply make a statement.
+        With Miles's background in drawing
+        and about twenty years of experience
+        in designing and tattooing, we
+        continued finding new ways to bring
+        artwork to life. We added a sticker
+        printer, followed by sublimation
+        equipment and laser engravers.
       </p>
 
       <p>
-        That's the spirit behind
-        Pressed and Burned Creations:
-        creating artwork with personality.
+        Along the way, we attended apparel
+        and printing shows, learned new
+        software, and developed our skills
+        one project at a time.
       </p>
+
+      <p>
+        As our business grows, we're proud
+        to share this journey with our
+        daughter and grandchildren.
+        Building something together as a
+        family makes this next chapter
+        especially meaningful to us.
+      </p>
+
+      <p class="closing-paragraph">
+        We're starting with bold, custom
+        stickers, with more printed,
+        pressed, and engraved products
+        to come. From our family to yours,
+        we look forward to helping you
+        bring your ideas to life.
+      </p>
+
+      <div class="story-signature">
+        — Miles &amp; Patty
+      </div>
 
     </div>
 
@@ -1183,140 +1126,75 @@ h2 {
 </section>
 
 <!-- ======================================
-   WHAT WE CREATE
+   OUR CREATIVE JOURNEY
 ====================================== -->
 
 <section
-  class="section-pad section-soft"
-  id="our-creations"
-  aria-labelledby="creations-title">
+  class="journey-section"
+  aria-labelledby="journey-title">
 
   <div class="wrap">
 
     <div class="section-heading">
 
-      <div>
-
-        <p class="eyebrow">
-          What We're About
-        </p>
-
-        <h2 id="creations-title">
-          Designed to Stand Out.
-        </h2>
-
-      </div>
-
-      <p>
-        From original sticker artwork
-        to personalized ideas,
-        our work is all about expression.
+      <p class="eyebrow">
+        From an Idea to a Family Business
       </p>
 
-    </div>
-
-    <div class="creations-grid">
-
-      <div class="creation-card">
-
-        <span class="creation-number">
-          01 /
-        </span>
-
-        <h3>Original Stickers</h3>
-
-        <p>
-          Designs with humor, attitude,
-          personality, and a distinctive
-          point of view.
-        </p>
-
-      </div>
-
-      <div class="creation-card">
-
-        <span class="creation-number">
-          02 /
-        </span>
-
-        <h3>Custom Decals</h3>
-
-        <p>
-          Creative decals that allow
-          customers to add personal style
-          to the things that matter to them.
-        </p>
-
-      </div>
-
-      <div class="creation-card">
-
-        <span class="creation-number">
-          03 /
-        </span>
-
-        <h3>Creative Artwork</h3>
-
-        <p>
-          Custom concepts and graphics
-          built around individual ideas,
-          preferences, and inspiration.
-        </p>
-
-      </div>
+      <h2 id="journey-title">
+        Creativity Has No Finish Line.
+      </h2>
 
     </div>
 
-  </div>
+    <div class="journey-grid">
 
-</section>
+      <div class="journey-card">
 
-<!-- ======================================
-   MILES BIO COMING SOON
-====================================== -->
+        <span class="journey-number">
+          01 / OUR BEGINNING
+        </span>
 
-<section
-  class="section-pad section-dark"
-  id="meet-miles"
-  aria-labelledby="bio-title">
+        <h3>Motorcycle Club T-Shirts</h3>
 
-  <div class="wrap">
-
-    <div class="bio-panel">
-
-      <div
-        class="bio-mark"
-        aria-hidden="true">
-
-        MEET<br>
-        MILES.
+        <p>
+          It started in 2019 with a
+          direct-to-garment printer
+          and shirts for our motorcycle
+          riding club.
+        </p>
 
       </div>
 
-      <div class="bio-copy">
+      <div class="journey-card">
 
-        <p class="eyebrow">
-          The Creator Behind P&amp;B
-        </p>
+        <span class="journey-number">
+          02 / GROWING CREATIVELY
+        </span>
 
-        <h2 id="bio-title">
-          The Story Is Still Being Written.
-        </h2>
+        <h3>New Tools, New Possibilities</h3>
 
         <p>
-          Miles is the creative mind
-          behind Pressed and Burned Creations.
+          Sticker printing, sublimation,
+          and laser engraving opened
+          the door to new creative projects.
         </p>
 
-        <p>
-          We're putting together a closer
-          look at his story, inspiration,
-          and the creative work behind P&amp;B.
-        </p>
+      </div>
+
+      <div class="journey-card">
+
+        <span class="journey-number">
+          03 / FAMILY FIRST
+        </span>
+
+        <h3>Creating Together</h3>
 
         <p>
-          Stay tuned as we share more
-          about the person behind the designs.
+          Sharing the journey with our
+          daughter and grandchildren
+          makes building the business
+          especially meaningful.
         </p>
 
       </div>
@@ -1328,11 +1206,11 @@ h2 {
 </section>
 
 <!-- ======================================
-   CONTACT AND SHOP SECTION
+   CONTACT / SHOP SECTION
 ====================================== -->
 
 <section
-  class="section-pad section-soft"
+  class="contact-section"
   id="contact"
   aria-labelledby="contact-title">
 
@@ -1341,42 +1219,33 @@ h2 {
     <div class="contact-copy">
 
       <p class="eyebrow">
-        Let's Create Something
+        Your Ideas, Our Next Chapter
       </p>
 
       <h2 id="contact-title">
-        Have an Idea of Your Own?
+        Have Something You'd Like to Create?
       </h2>
 
       <p>
-        Whether you've got a concept
-        for a sticker, a decal,
-        or a piece of artwork,
-        we'd love to hear about it.
-      </p>
-
-      <p>
-        Get in touch with Miles
-        to discuss your ideas,
-        or explore the designs
-        already available in our Sticker Shop.
+        Whether you're looking for an
+        original sticker or have a custom
+        project in mind, we'd love
+        to hear your ideas.
       </p>
 
       <div class="contact-actions">
 
-        <a
-          class="btn btn-primary"
-          href="index.html#contact">
+        <a class="btn btn-primary"
+           href="stickers.html">
 
-          Contact Us ↗
+          Explore Stickers ↗
 
         </a>
 
-        <a
-          class="btn btn-secondary"
-          href="stickers.html">
+        <a class="btn btn-secondary"
+           href="index.html#contact">
 
-          Explore Stickers
+          Contact Us
 
         </a>
 
@@ -1386,15 +1255,17 @@ h2 {
 
     <div class="contact-decoration">
 
-      <span class="big-text">
-        YOUR<br>IDEA.
-      </span>
+      <strong>
+        MADE WITH<br>
+        CREATIVITY.
+      </strong>
 
-      <span class="big-text">
-        YOUR<br>STYLE.
-      </span>
+      <strong>
+        BUILT WITH<br>
+        FAMILY.
+      </strong>
 
-      <span class="small-text">
+      <span>
         Pressed &amp; Burned Creations
       </span>
 
@@ -1452,7 +1323,7 @@ h2 {
 </footer>
 
 <!-- ======================================
-   SAMSUNG TABLET / MOBILE VIDEO SUPPORT
+   SAMSUNG TABLET VIDEO SUPPORT
 ====================================== -->
 
 <script>
@@ -1490,13 +1361,9 @@ h2 {
     ) {
 
       attempt.then(function () {
-
         playButton.hidden = true;
-
       }).catch(function () {
-
         showPlayButton();
-
       });
 
     }
@@ -1506,9 +1373,7 @@ h2 {
   video.addEventListener(
     "playing",
     function () {
-
       playButton.hidden = true;
-
     }
   );
 
@@ -1529,14 +1394,10 @@ h2 {
     ).matches;
 
   if (reducedMotion) {
-
     video.pause();
     showPlayButton();
-
   } else {
-
     startFlames();
-
   }
 
 })();
