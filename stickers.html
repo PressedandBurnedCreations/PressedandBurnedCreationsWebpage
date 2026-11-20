@@ -3,56 +3,54 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#090909">
+<meta name="description" content="Explore PeelRuckus original stickers by Pressed & Burned Creations. Peel it. Stick it. Stir things up.">
 
-<title>Shop Stickers | Pressed and Burned Creations</title>
-
-<meta name="description"
-content="Explore original stickers from Pressed and Burned Creations. Stickers With an Attitude!">
+<title>PeelRuckus Sticker Shop | Pressed &amp; Burned Creations</title>
 
 <link rel="icon" type="image/png" href="favicon.png">
 
 <style>
-/* ======================================
-   P&B WEBSITE THEME
-====================================== */
+
+/* =========================================
+   PEELRUCKUS STICKER SHOP
+   PRESSED & BURNED CREATIONS
+========================================= */
 
 :root {
-  --ink: #090909;
-  --paper: #f6f2eb;
-  --muted: #b7b0a8;
-  --gold: #e9a14b;
-  --gold-light: #f9c47a;
-  --edge: rgba(235,171,95,.22);
-  --max: 1200px;
+  --black: #080808;
+  --gold: #f6b326;
+  --yellow: #ffe34b;
+  --orange: #ff7900;
+  --cream: #fff1d8;
+  --muted: #d7c7b2;
+  --edge: rgba(255,181,36,.44);
+  --max: 1250px;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html {
   scroll-behavior: smooth;
-  background: var(--ink);
+  background: var(--black);
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--ink);
-  color: var(--paper);
+  color: #fff;
+  background: var(--black);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   isolation: isolate;
 }
 
-body.dialog-open {
-  overflow: hidden;
-}
+body.dialog-open { overflow: hidden; }
 
 img {
   display: block;
+  width: 100%;
   max-width: 100%;
   height: auto;
 }
@@ -62,55 +60,37 @@ a {
   text-decoration: none;
 }
 
-button, input, select {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-button:disabled {
-  cursor: not-allowed;
-}
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
 
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible {
-  outline: 3px solid var(--gold-light);
+  outline: 3px solid var(--yellow);
   outline-offset: 3px;
 }
 
-[hidden] {
-  display: none !important;
-}
+[hidden] { display: none !important; }
 
 .wrap {
-  width: min(calc(100% - 48px), var(--max));
-  margin-inline: auto;
+  width: min(calc(100% - 36px),var(--max));
+  margin: auto;
 }
 
-/* ======================================
-   BRIGHT ANIMATED FLAMES
-====================================== */
+/* =========================================
+   PRESERVED FIXED FIRE AND ORNATE BACKGROUND
+========================================= */
 
 .background-scene {
   position: fixed;
   inset: 0;
   z-index: 0;
-  overflow: hidden;
   pointer-events: none;
+  overflow: hidden;
   isolation: isolate;
-
-  background:
-    radial-gradient(
-      ellipse 85% 80% at 50% 100%,
-      rgba(241,100,14,.50),
-      rgba(144,41,7,.27) 35%,
-      rgba(35,10,4,.15) 65%,
-      #050505 100%
-    );
+  background: #050505;
 }
 
 .fire-video {
@@ -120,7 +100,6 @@ select:focus-visible {
   height: 100%;
   object-fit: cover;
   object-position: center bottom;
-
   filter:
     brightness(1.65)
     saturate(1.35)
@@ -130,13 +109,11 @@ select:focus-visible {
 .background-art {
   position: absolute;
   inset: 0;
-
   background-image:
     url("Pressed%20and%20burned%20background%20logo.png");
-
   background-position: center;
-  background-repeat: no-repeat;
   background-size: contain;
+  background-repeat: no-repeat;
   opacity: 1;
   mix-blend-mode: screen;
 }
@@ -144,39 +121,19 @@ select:focus-visible {
 .scene-shade {
   position: absolute;
   inset: 0;
-
   background:
     linear-gradient(
       90deg,
-      rgba(5,5,5,.38),
-      rgba(5,5,5,.15) 54%,
-      rgba(5,5,5,.32)
+      rgba(0,0,0,.39),
+      rgba(0,0,0,.13) 50%,
+      rgba(0,0,0,.39)
     ),
     linear-gradient(
       180deg,
-      rgba(5,5,5,.10),
+      rgba(0,0,0,.21),
       transparent 40%,
-      rgba(5,5,5,.25)
+      rgba(0,0,0,.38)
     );
-}
-
-@media (max-width: 1024px) {
-  .fire-video {
-    filter:
-      brightness(2.10)
-      saturate(1.50)
-      contrast(1.08);
-  }
-
-  .scene-shade {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(5,5,5,.30),
-        rgba(5,5,5,.10),
-        rgba(5,5,5,.25)
-      );
-  }
 }
 
 body > header,
@@ -186,343 +143,328 @@ body > footer {
   z-index: 1;
 }
 
-/* ======================================
-   MATCHING HEADER
-====================================== */
+/* =========================================
+   MATCHING HOMEPAGE HEADER
+========================================= */
 
 .site-header {
-  border-bottom: 1px solid var(--edge);
-  background: rgba(7,7,7,.87);
-  backdrop-filter: blur(12px);
+  background: rgba(5,5,5,.91);
+  border-bottom: 2px solid var(--gold);
+  box-shadow: 0 5px 24px rgba(255,105,0,.25);
+}
+
+.site-header::before {
+  content: "";
+  display: block;
+  height: 6px;
+  background:
+    linear-gradient(
+      90deg,
+      #8d2500,
+      #ff7e00,
+      #ffe74f,
+      #ff7e00,
+      #8d2500
+    );
 }
 
 .header-inner {
-  min-height: 99px;
+  min-height: 110px;
+  padding: 18px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: 26px;
 }
 
 .brand {
-  flex: 0 1 310px;
-  min-width: 0;
+  flex: 0 0 auto;
+  width: min(280px,100%);
 }
 
 .brand img {
-  width: 100%;
-  max-width: 310px;
+  filter: drop-shadow(0 0 8px rgba(255,136,0,.24));
 }
 
 .main-nav {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
   align-items: center;
-  gap: 10px 25px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px 17px;
 }
 
 .main-nav a {
-  color: #e0dcd6;
   font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .05em;
+  font-weight: 800;
+  color: #f3eadc;
   white-space: nowrap;
 }
 
 .main-nav a:hover {
-  color: var(--gold-light);
+  color: var(--yellow);
+}
+
+.main-nav .nav-custom {
+  color: var(--yellow);
 }
 
 .main-nav .nav-shop {
-  padding: 11px 17px;
-  border: 1px solid var(--gold);
-  border-radius: 5px;
-  background: var(--gold);
-  color: var(--ink);
+  color: #100c06;
+  padding: 11px 15px;
+  background:
+    linear-gradient(
+      180deg,
+      #fff36c,
+      #ffc029 65%,
+      #ff8c00
+    );
+  border: 1px solid #ffe989;
+  border-radius: 7px;
+  box-shadow: 0 0 13px rgba(255,143,0,.38);
 }
 
 .main-nav .nav-shop:hover {
-  background: var(--gold-light);
-  color: var(--ink);
+  color: #000;
+  background: var(--yellow);
 }
 
 .cart-nav-button {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  min-height: 43px;
-  padding: 8px 13px;
-
-  border: 1px solid var(--gold);
-  border-radius: 5px;
-  background: #1b130c;
-  color: var(--gold-light);
-  font-size: 13px;
+  gap: 7px;
+  padding: 9px 13px;
+  background: #1c1309;
+  color: var(--yellow);
+  border: 2px solid var(--gold);
+  border-radius: 8px;
   font-weight: 800;
 }
 
 .cart-nav-button:hover {
-  background: #37220f;
+  background: #35210a;
 }
 
 .cart-count {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-grid;
+  place-items: center;
   min-width: 25px;
-  min-height: 25px;
-  padding: 2px 6px;
-
+  height: 25px;
+  padding: 0 5px;
   border-radius: 50%;
   background: var(--gold);
   color: #111;
   font-size: 12px;
-  font-weight: 900;
 }
 
-/* ======================================
-   BUTTONS AND TYPOGRAPHY
-====================================== */
-
-.eyebrow {
-  margin: 0 0 19px;
-  color: var(--gold-light);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: .23em;
-  text-transform: uppercase;
-}
-
-h1, h2, h3, p {
-  overflow-wrap: break-word;
-}
-
-h2 {
-  margin: 0;
-  font-size: clamp(32px,4vw,52px);
-  line-height: 1.12;
-  letter-spacing: -.045em;
-}
+/* =========================================
+   BUTTONS
+========================================= */
 
 .btn {
   display: inline-flex;
-  align-items: center;
   justify-content: center;
-  min-height: 49px;
-  padding: 13px 21px;
-
-  border: 1px solid transparent;
-  border-radius: 5px;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: .04em;
-
-  transition: transform .2s, background .2s;
+  align-items: center;
+  min-height: 48px;
+  padding: 12px 23px;
+  border-radius: 9px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 900;
+  transition: transform .2s, box-shadow .2s;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
+.btn:hover { transform: translateY(-2px); }
+
+.btn-gold {
+  color: #130b00;
+  border: 2px solid #fff18e;
+  background:
+    linear-gradient(
+      180deg,
+      #ffec69,
+      #ffbd1c 65%,
+      #ff8c00
+    );
+  box-shadow: 0 0 17px rgba(255,119,0,.36);
 }
 
-.btn-primary {
-  background: var(--gold);
-  color: #16100a;
-}
-
-.btn-primary:hover {
-  background: var(--gold-light);
-}
-
-.btn-secondary {
-  border-color: rgba(255,255,255,.42);
-  background: rgba(13,13,13,.70);
-  color: var(--paper);
-}
-
-.btn-secondary:hover {
-  border-color: var(--gold);
-  color: var(--gold-light);
-}
-
-.fire-play-button {
-  margin-top: 18px;
-  padding: 9px 13px;
-
+.btn-outline {
+  color: #fff2dc;
   border: 1px solid var(--gold);
-  border-radius: 5px;
-  background: rgba(5,5,5,.82);
-  color: var(--gold-light);
-  font-size: 12px;
-  font-weight: 800;
+  background: rgba(6,6,6,.88);
 }
 
-/* ======================================
-   STICKER SHOP HERO
-====================================== */
+/* =========================================
+   PEELRUCKUS BRAND HERO
+========================================= */
 
 .shop-hero {
-  padding: 85px 0 92px;
+  padding: 35px 0 63px;
+  text-align: center;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.04fr .96fr;
-  align-items: center;
-  gap: clamp(30px,5vw,75px);
-}
-
-.shop-hero h1 {
-  margin: 0;
-  font-size: clamp(51px,6.2vw,87px);
+.eyebrow {
+  color: var(--yellow);
+  font-size: 12px;
   font-weight: 900;
-  letter-spacing: -.065em;
-  line-height: 1;
-  text-shadow: 0 3px 19px #000;
-}
-
-.shop-hero h1 span {
-  display: block;
-  color: var(--gold);
-}
-
-.hero-description {
-  max-width: 540px;
-  margin: 27px 0;
-  color: #e8e1d9;
-  font-size: 18px;
-  line-height: 1.8;
+  letter-spacing: .17em;
+  text-transform: uppercase;
   text-shadow: 0 2px 10px #000;
+}
+
+.hero-frame {
+  max-width: 1120px;
+  margin: 23px auto 0;
+  padding: 9px;
+  border: 2px solid var(--gold);
+  border-radius: 15px;
+  background: rgba(5,5,5,.94);
+  box-shadow:
+    0 0 23px rgba(255,110,0,.54),
+    0 22px 65px rgba(0,0,0,.7);
+}
+
+.hero-frame img {
+  border-radius: 7px;
+}
+
+.hero-copy {
+  max-width: 850px;
+  margin: 30px auto 0;
+  padding: 26px;
+  border: 1px solid var(--edge);
+  border-radius: 14px;
+  background: rgba(0,0,0,.86);
+}
+
+.hero-copy h1 {
+  margin: 0;
+  color: var(--yellow);
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: clamp(28px,4.2vw,47px);
+  line-height: 1.15;
+}
+
+.hero-copy p {
+  color: #eee1cf;
+  font-size: 16px;
 }
 
 .hero-actions {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 14px;
-}
-
-.hero-art {
-  min-width: 0;
-  padding: 17px;
-  border: 1px solid var(--edge);
-  border-radius: 10px;
-
-  background:
-    linear-gradient(
-      140deg,
-      rgba(40,29,19,.92),
-      rgba(10,10,10,.94)
-    );
-
-  box-shadow: 0 26px 85px rgba(0,0,0,.55);
-}
-
-.hero-art img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  background: #0c0c0c;
-  border-radius: 5px;
-}
-
-.art-caption {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 8px;
-  margin-top: 15px;
-
-  color: #c9b49b;
-  font-size: 10px;
-  letter-spacing: .15em;
-  text-transform: uppercase;
+  gap: 13px;
+  margin-top: 23px;
 }
 
 .demo-note {
-  max-width: 580px;
-  margin-top: 25px;
-  padding: 14px 17px;
-
-  border-left: 3px solid var(--gold);
-  background: rgba(12,10,8,.79);
-  color: #f0d7b4;
-  font-size: 13px;
+  max-width: 730px;
+  margin: 24px auto 0;
+  padding: 16px 21px;
+  background: rgba(37,23,8,.94);
+  color: #ffe4b7;
+  border: 1px solid #ce831d;
+  border-radius: 10px;
+  font-size: 14px;
 }
 
-/* ======================================
-   STATEMENT STRIP
-====================================== */
+.fire-play-button {
+  display: block;
+  margin: 17px auto 0;
+  padding: 9px 13px;
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+  background: rgba(0,0,0,.85);
+  color: var(--yellow);
+  font-size: 12px;
+}
+
+/* =========================================
+   BRAND STRIP
+========================================= */
 
 .statement-strip {
-  background: rgba(9,9,9,.84);
+  background: rgba(4,4,4,.91);
   border-top: 1px solid var(--edge);
   border-bottom: 1px solid var(--edge);
 }
 
 .statement-strip .wrap {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  gap: 10px 31px;
-  padding: 20px 0;
-
-  color: #c5bcb2;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 35px;
+  padding: 17px 0;
+  color: #e7c78f;
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .16em;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-align: center;
   text-transform: uppercase;
 }
 
-.statement-strip span + span::before {
-  content: "✦";
-  color: var(--gold);
-  margin-right: 30px;
-}
+/* =========================================
+   SECTION STYLING
+========================================= */
 
-/* ======================================
-   SECTIONS
-====================================== */
-
-.section-pad {
-  padding: 96px 0;
-}
+.section-pad { padding: 75px 0; }
 
 .section-dark {
-  background: rgba(8,8,8,.87);
+  background: rgba(5,5,5,.86);
 }
 
 .section-soft {
-  background: rgba(20,18,16,.84);
+  background: rgba(15,10,6,.87);
 }
 
 .section-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 22px 45px;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
+  text-align: center;
 }
 
-.section-heading .eyebrow {
-  margin-bottom: 12px;
+.section-heading h2 {
+  margin: 8px 0 13px;
+  color: #ffdc57;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: clamp(29px,4vw,48px);
+  line-height: 1.2;
+  text-shadow: 0 3px 15px #000;
 }
 
-.section-heading > p {
-  max-width: 380px;
-  margin: 0 0 3px;
-  color: #d3c9be;
-  font-size: 16px;
+.section-heading p {
+  max-width: 780px;
+  margin: 12px auto;
+  color: #ecdfce;
 }
 
-/* ======================================
+.gold-rule {
+  width: min(550px,80%);
+  height: 3px;
+  margin: 20px auto 0;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #ff8500,
+      #ffe759,
+      #ff8500,
+      transparent
+    );
+}
+
+/* =========================================
    STICKER PRODUCT CARDS
-====================================== */
+========================================= */
 
 .sticker-grid {
   display: grid;
   grid-template-columns: repeat(3,minmax(0,1fr));
-  gap: 22px;
+  gap: 23px;
 }
 
 .sticker-card {
@@ -530,35 +472,31 @@ h2 {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 9px;
-  background: #151413;
-
-  transition: transform .2s, border-color .2s;
+  border: 2px solid #d28c18;
+  border-radius: 14px;
+  background: rgba(5,5,5,.96);
+  box-shadow: 0 9px 28px rgba(0,0,0,.6);
 }
 
 .sticker-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--gold);
+  border-color: var(--yellow);
+  box-shadow: 0 0 16px rgba(255,145,0,.35);
 }
 
-.sticker-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 1.12 / 1;
+.product-image-link {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1.15 / 1;
   padding: 22px;
-
   background:
     radial-gradient(
-      circle at center,
-      #302519,
-      #121110 67%
+      circle,
+      rgba(91,43,13,.67),
+      #0c0b0a 75%
     );
 }
 
-.sticker-image img {
+.product-image-link img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -568,650 +506,489 @@ h2 {
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: 23px 21px;
+  gap: 12px;
+  padding: 21px;
+  border-top: 1px solid var(--edge);
 }
 
 .sticker-info h3 {
-  margin: 0 0 9px;
-  color: var(--paper);
-  font-size: 21px;
-  line-height: 1.3;
-  letter-spacing: -.025em;
+  margin: 0;
+  color: #ffda60;
+  font-size: 22px;
+  line-height: 1.25;
 }
 
 .sticker-description {
-  margin: 0 0 13px;
-  color: #bcb4ac;
+  margin: 0;
+  color: #ddccba;
   font-size: 14px;
 }
 
 .pricing-note {
-  margin: 0 0 20px;
-  color: var(--gold-light);
+  margin: 0;
+  color: #ffcd6a;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 800;
 }
-
-/* ======================================
-   PRODUCT CONTROLS
-====================================== */
 
 .product-options {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  grid-template-columns: 1fr 105px;
+  gap: 10px;
   margin-top: auto;
 }
 
 .option-group label {
   display: block;
-  margin-bottom: 7px;
-  color: #ddd0bf;
+  margin-bottom: 5px;
+  color: #e9dac8;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: bold;
 }
 
-.size-select,
-.qty-input {
-  color: #fff;
-  background: #1b1917;
-  border: 1px solid #785b3b;
-  border-radius: 5px;
-}
-
-.size-select {
-  width: 100%;
-  min-height: 44px;
-  padding: 8px;
-}
-
-.qty-control {
-  display: flex;
-  align-items: stretch;
-  min-height: 44px;
-  border: 1px solid #785b3b;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.qty-control button {
-  flex: 0 0 29px;
-  border: 0;
-  color: var(--gold-light);
-  background: #2b2118;
-  font-size: 19px;
-}
-
-.qty-control button:hover {
-  background: #503218;
-}
-
-.qty-input {
-  flex: 1;
-  min-width: 0;
-  width: 100%;
-  padding: 5px 1px;
-  border: 0;
-  border-radius: 0;
-  text-align: center;
-  appearance: textfield;
-  -moz-appearance: textfield;
-}
-
-.qty-input::-webkit-inner-spin-button,
-.qty-input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-}
-
-.add-to-cart {
-  width: 100%;
-  min-height: 47px;
-  margin-top: 18px;
-  padding: 12px;
-
-  border: 1px solid var(--gold);
-  border-radius: 5px;
-  background: var(--gold);
-  color: #16100a;
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: .04em;
-}
-
-.add-to-cart:hover {
-  background: var(--gold-light);
-}
-
-.view-button {
+.option-group select,
+.option-group input {
   display: block;
-  margin-top: 13px;
-  padding: 8px 2px;
-  color: #d4c3ae;
-  font-size: 12px;
-  font-weight: 700;
+  width: 100%;
+  min-height: 43px;
+  padding: 9px;
+  border: 1px solid #b77b2e;
+  border-radius: 7px;
+  background: #191611;
+  color: #fff;
+}
+
+.add-cart {
+  width: 100%;
+  margin-top: 9px;
+  padding: 12px;
+  border: 1px solid #fff18e;
+  border-radius: 8px;
+  background: linear-gradient(#ffe765,#ffad15);
+  color: #160e00;
+  font-weight: 900;
+}
+
+.add-cart:hover {
+  background: var(--yellow);
+}
+
+.view-design {
+  display: block;
+  padding: 8px;
+  color: #ffd15a;
   text-align: center;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  font-size: 12px;
+  font-weight: 800;
 }
 
-.view-button:hover {
-  color: var(--gold-light);
+.product-disclaimer {
+  max-width: 840px;
+  margin: 27px auto 0;
+  padding: 15px 20px;
+  border: 1px solid var(--edge);
+  border-radius: 9px;
+  background: rgba(0,0,0,.87);
+  color: #d8c9b7;
+  text-align: center;
+  font-size: 13px;
 }
 
-/* ======================================
-   READY TO SHIP / MADE TO ORDER
-====================================== */
+/* =========================================
+   AVAILABILITY CARDS
+========================================= */
 
 .category-grid {
   display: grid;
   grid-template-columns: repeat(2,minmax(0,1fr));
-  gap: 24px;
+  gap: 22px;
 }
 
 .category-card {
-  padding: 35px;
-  border: 1px solid var(--edge);
-  border-radius: 9px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(38,29,20,.93),
-      rgba(12,12,12,.94)
-    );
+  padding: 29px;
+  border: 1px solid var(--gold);
+  border-radius: 13px;
+  background: rgba(0,0,0,.91);
 }
 
 .category-number {
-  color: var(--gold);
+  color: var(--orange);
   font-size: 12px;
-  font-weight: 800;
-  letter-spacing: .16em;
+  font-weight: 900;
+  letter-spacing: .12em;
 }
 
 .category-card h3 {
-  margin: 17px 0 13px;
-  font-size: 26px;
-  letter-spacing: -.03em;
+  color: #ffda5c;
+  font-size: 27px;
+  margin: 12px 0;
 }
 
 .category-card p {
-  color: #d3c9be;
-  font-size: 15px;
+  color: #e9dccc;
 }
 
-/* ======================================
-   MORE CREATIONS
-====================================== */
+/* =========================================
+   CUSTOM ORDERS PROMOTION
+========================================= */
 
 .more-panel {
+  max-width: 1020px;
+  margin: auto;
+  padding: 35px;
   display: grid;
-  grid-template-columns: .8fr 1.2fr;
+  grid-template-columns: .65fr 1.35fr;
   align-items: center;
-  gap: 30px 50px;
-
-  padding: 45px;
-  border: 1px solid var(--edge);
-  border-radius: 10px;
-
+  gap: 33px;
+  border: 2px solid var(--gold);
+  border-radius: 16px;
   background:
     linear-gradient(
-      135deg,
-      rgba(34,26,18,.94),
-      rgba(10,10,10,.94)
+      130deg,
+      rgba(69,32,5,.96),
+      rgba(4,4,4,.96)
     );
 }
 
 .more-mark {
-  color: var(--gold);
-  font-size: clamp(45px,5vw,76px);
-  line-height: 1;
-  letter-spacing: -.06em;
+  color: var(--yellow);
+  font-size: clamp(34px,5vw,61px);
   font-weight: 900;
+  line-height: .98;
+  text-shadow: 0 0 16px rgba(255,105,0,.5);
 }
 
 .more-copy h2 {
-  font-size: clamp(29px,3vw,42px);
+  margin: 0 0 14px;
+  color: var(--yellow);
+  font-size: clamp(25px,3.5vw,39px);
 }
 
 .more-copy p {
-  margin: 18px 0 24px;
-  color: #d7cdbf;
+  color: #e9dccb;
 }
 
-/* ======================================
+/* =========================================
    FOOTER
-====================================== */
+========================================= */
 
 .site-footer {
   padding: 33px 0;
-  border-top: 1px solid var(--edge);
-  background: rgba(5,5,5,.94);
+  border-top: 3px solid var(--gold);
+  background: rgba(3,3,3,.95);
 }
 
 .footer-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 22px;
 }
 
-.footer-inner p {
-  margin: 4px 0;
-  color: #a9a39c;
-  font-size: 12px;
+.footer-brand {
+  color: var(--yellow);
+  font-size: 18px;
+  font-weight: 900;
 }
 
-.footer-tagline {
-  color: var(--gold-light) !important;
-  font-weight: 700;
-  letter-spacing: .08em;
+.footer-slogan {
+  color: #efc780;
+  font-style: italic;
+}
+
+.footer-small {
+  color: #bfb2a1;
+  font-size: 12px;
 }
 
 .footer-links {
   display: flex;
   flex-wrap: wrap;
   gap: 12px 22px;
-}
-
-.footer-links a {
-  color: #c9c1b8;
   font-size: 12px;
+  color: #e2c18e;
 }
 
 .footer-links a:hover {
-  color: var(--gold-light);
+  color: #fff;
 }
 
-/* ======================================
-   SLIDE-OUT CART
-====================================== */
+/* =========================================
+   SHOPPING CART BACKDROP
+========================================= */
 
 .cart-overlay {
   position: fixed;
   inset: 0;
-  z-index: 800;
-  background: rgba(0,0,0,.76);
+  z-index: 20;
+  background: rgba(0,0,0,.78);
 }
+
+/* =========================================
+   SHOPPING CART DRAWER
+========================================= */
 
 .cart-drawer {
   position: fixed;
-  z-index: 801;
   top: 0;
   right: 0;
-
+  bottom: 0;
+  width: min(100%,475px);
+  z-index: 21;
   display: flex;
   flex-direction: column;
-  width: min(450px,100%);
-  height: 100vh;
-  height: 100dvh;
-
-  border-left: 1px solid var(--gold);
-  background: #0f0e0d;
-  box-shadow: -10px 0 40px rgba(0,0,0,.7);
-
-  animation: slide-in .25s ease-out;
-}
-
-@keyframes slide-in {
-  from { transform: translateX(100%); }
-  to { transform: translateX(0); }
+  border-left: 2px solid var(--gold);
+  background: #10100e;
+  box-shadow: -12px 0 40px rgba(0,0,0,.8);
 }
 
 .cart-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 15px;
-  padding: 19px 21px;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 23px;
   border-bottom: 1px solid var(--edge);
 }
 
 .cart-header h2 {
-  font-size: 25px;
+  margin: 0;
+  color: var(--yellow);
+  font-size: 24px;
 }
 
 .cart-close {
-  min-width: 43px;
-  height: 43px;
-  border: 1px solid #93622d;
-  border-radius: 5px;
-  background: #24170b;
+  border: 1px solid var(--gold);
+  border-radius: 7px;
+  background: #21180e;
   color: #fff;
-  font-size: 26px;
+  padding: 4px 12px;
+  font-size: 25px;
 }
 
 .cart-items {
   flex: 1;
-  min-height: 0;
   overflow-y: auto;
   padding: 20px;
 }
 
-.empty-cart {
-  padding: 60px 15px;
-  color: #cfc6bc;
-  text-align: center;
+.cart-empty {
+  color: #e5d9c6;
 }
 
 .cart-item {
   display: grid;
-  grid-template-columns: 84px 1fr;
-  gap: 15px;
-  padding: 0 0 18px;
-  margin-bottom: 18px;
+  grid-template-columns: 82px 1fr;
+  gap: 14px;
+  margin-bottom: 17px;
+  padding-bottom: 17px;
   border-bottom: 1px solid var(--edge);
 }
 
 .cart-item img {
-  width: 84px;
-  height: 88px;
+  width: 82px;
+  height: 82px;
   object-fit: contain;
-  border-radius: 5px;
-  background: #1b1712;
+  border-radius: 7px;
+  background: #24170a;
 }
 
 .cart-item h3 {
-  margin: 0 0 7px;
-  color: var(--gold-light);
-  font-size: 16px;
-  line-height: 1.3;
+  margin: 0;
+  color: var(--yellow);
+  font-size: 17px;
 }
 
 .cart-item p {
   margin: 4px 0;
-  color: #d3cbc3;
-  font-size: 13px;
+  color: #d6c7b1;
+  font-size: 12px;
 }
 
 .cart-controls {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 12px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 9px;
 }
 
 .cart-controls button {
-  min-width: 34px;
-  min-height: 36px;
-  border: 1px solid #785b3b;
-  border-radius: 5px;
-  background: #2b2118;
+  min-width: 32px;
+  min-height: 32px;
+  border: 1px solid #ae762b;
+  border-radius: 6px;
   color: #fff;
-}
-
-.cart-controls button:hover {
-  border-color: var(--gold);
+  background: #2c2013;
 }
 
 .cart-controls input {
-  width: 70px;
-  height: 36px;
+  width: 65px;
+  min-height: 32px;
   padding: 4px;
-
-  border: 1px solid #785b3b;
+  border: 1px solid #ae762b;
   border-radius: 5px;
-  background: #1b1917;
+  background: #17120c;
   color: #fff;
   text-align: center;
 }
 
 .cart-controls .remove-item {
-  padding: 5px 10px;
-  color: #ffc0b9;
-  font-size: 12px;
+  padding: 5px 8px;
+  color: #ffcd9f;
 }
 
 .cart-footer {
-  flex-shrink: 0;
-  padding: 21px;
-  border-top: 1px solid var(--edge);
-  background: #18130f;
+  padding: 20px;
+  border-top: 2px solid var(--gold);
+  background: #15120f;
 }
 
 .cart-total {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 12px;
-  font-weight: bold;
-}
-
-.cart-total span:last-child {
-  color: var(--gold-light);
+  gap: 12px;
+  color: var(--yellow);
+  font-weight: 900;
 }
 
 .cart-note {
-  color: #c7bdb2;
+  color: #e6d9c6;
   font-size: 13px;
 }
 
-.checkout-disabled {
+.checkout-disabled,
+.clear-cart {
+  display: block;
   width: 100%;
-  min-height: 47px;
-  margin-top: 10px;
   padding: 12px;
-  border: 0;
-  border-radius: 5px;
-  background: #534a40;
-  color: #e0d8cf;
+  margin-top: 10px;
+  border-radius: 8px;
   font-weight: 800;
 }
 
-.clear-cart {
-  width: 100%;
-  min-height: 42px;
-  margin-top: 11px;
-  border: 1px solid #93622d;
-  border-radius: 5px;
-  background: transparent;
-  color: var(--gold-light);
-  font-weight: 700;
+.checkout-disabled {
+  border: 1px solid #8c7755;
+  background: #443a2e;
+  color: #e7d3b4;
 }
+
+.clear-cart {
+  border: 1px solid var(--gold);
+  background: #221608;
+  color: #ffda83;
+}
+
+/* =========================================
+   ADD-TO-CART TOAST
+========================================= */
 
 .cart-toast {
   position: fixed;
-  z-index: 950;
-  bottom: 23px;
+  bottom: 22px;
   left: 50%;
   transform: translateX(-50%);
-
+  z-index: 35;
   width: max-content;
-  max-width: calc(100% - 30px);
-  padding: 14px 20px;
-
-  border: 1px solid var(--gold);
-  border-radius: 7px;
-  background: #17120c;
-  color: #fff;
+  max-width: calc(100% - 32px);
+  padding: 13px 20px;
+  border: 2px solid var(--gold);
+  border-radius: 10px;
+  background: #171008;
+  color: #ffe77a;
   text-align: center;
-  font-weight: 700;
-  box-shadow: 0 8px 25px rgba(0,0,0,.6);
+  box-shadow: 0 5px 28px #000;
 }
 
-/* ======================================
-   ATTITUDE ADVISORY POPUP
-====================================== */
+/* =========================================
+   MATURE-HUMOR ADVISORY
+========================================= */
 
 .attitude-overlay {
   position: fixed;
   inset: 0;
-  z-index: 1000;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 40;
+  display: grid;
+  place-items: center;
   padding: 20px;
-
-  background: rgba(0,0,0,.89);
-  backdrop-filter: blur(6px);
+  overflow-y: auto;
+  background: rgba(0,0,0,.91);
 }
 
 .attitude-popup {
   width: min(100%,540px);
-  max-height: 90vh;
-  overflow-y: auto;
-  padding: 36px 30px;
-
-  border: 1px solid var(--gold);
-  border-radius: 10px;
-  background: #12100e;
+  padding: 34px;
+  border: 2px solid var(--gold);
+  border-radius: 18px;
+  background:
+    linear-gradient(
+      145deg,
+      #351808,
+      #060606 65%
+    );
+  box-shadow: 0 0 35px rgba(255,107,0,.42);
   text-align: center;
-  box-shadow: 0 0 45px rgba(233,161,75,.16);
-}
-
-.attitude-flames {
-  color: var(--gold);
-  font-size: 31px;
 }
 
 .attitude-popup h2 {
-  margin: 13px 0 18px;
-  color: var(--gold-light);
-  font-size: clamp(26px,4vw,37px);
+  color: var(--yellow);
+  font-size: 30px;
 }
 
 .attitude-popup p {
-  color: #e5dcd2;
-  font-size: 16px;
+  color: #f1e2d0;
+}
+
+.attitude-flames {
+  font-size: 32px;
 }
 
 .attitude-continue {
-  width: min(100%,310px);
-  min-height: 48px;
-  margin-top: 15px;
-  padding: 12px 18px;
-
-  border: 1px solid var(--gold);
-  border-radius: 5px;
-  background: var(--gold);
-  color: #111;
+  padding: 13px 25px;
+  margin-top: 14px;
+  border: 2px solid #fff18e;
+  border-radius: 8px;
+  background: linear-gradient(#ffe765,#ffab12);
+  color: #150c00;
   font-weight: 900;
 }
 
-.attitude-continue:hover {
-  background: var(--gold-light);
-}
+/* =========================================
+   TABLET AND MOBILE
+========================================= */
 
-/* ======================================
-   TABLET
-====================================== */
-
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
   .header-inner {
     flex-direction: column;
-    padding-block: 16px;
-    gap: 15px;
+    gap: 14px;
   }
 
   .brand {
-    flex: none;
-    width: min(100%,310px);
+    width: 270px;
   }
 
   .main-nav {
     justify-content: center;
   }
+}
 
+@media (max-width: 900px) {
   .sticker-grid {
     grid-template-columns: repeat(2,minmax(0,1fr));
   }
 
-  .hero-grid {
-    gap: 30px;
-  }
-
-  .shop-hero h1 {
-    font-size: clamp(48px,6.3vw,69px);
+  .fire-video {
+    filter:
+      brightness(2.10)
+      saturate(1.50)
+      contrast(1.08);
   }
 }
 
-/* ======================================
-   MOBILE
-====================================== */
-
-@media (max-width: 720px) {
+@media (max-width: 650px) {
   .wrap {
-    width: min(calc(100% - 32px),var(--max));
-  }
-
-  .brand img {
-    max-width: 255px;
-    margin: auto;
-  }
-
-  .main-nav {
-    gap: 9px 16px;
-  }
-
-  .main-nav a {
-    font-size: 12px;
-  }
-
-  .main-nav .nav-shop {
-    padding: 8px 12px;
-  }
-
-  .cart-nav-button {
-    min-height: 42px;
-  }
-
-  .shop-hero {
-    padding: 62px 0 70px;
-  }
-
-  .hero-grid,
-  .more-panel {
-    grid-template-columns: 1fr;
-  }
-
-  .shop-hero h1 {
-    font-size: clamp(50px,10vw,75px);
-  }
-
-  .hero-art {
-    max-width: 540px;
-    width: 100%;
-    margin: auto;
-  }
-
-  .section-pad {
-    padding: 72px 0;
-  }
-
-  .section-heading {
-    display: block;
-  }
-
-  .section-heading > p {
-    margin-top: 15px;
-  }
-
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .more-panel {
-    padding: 30px 24px;
-  }
-
-  .statement-strip .wrap {
-    gap: 8px 18px;
-  }
-
-  .statement-strip span + span::before {
-    margin-right: 12px;
-  }
-}
-
-@media (max-width: 570px) {
-  .sticker-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .sticker-image {
-    aspect-ratio: 1.3 / 1;
+    width: min(calc(100% - 26px),var(--max));
   }
 
   .main-nav {
@@ -1219,19 +996,49 @@ h2 {
   }
 
   .main-nav a {
-    font-size: 11px;
+    font-size: 12px;
+  }
+
+  .main-nav .nav-shop {
+    padding: 8px 11px;
+  }
+
+  .shop-hero {
+    padding: 24px 0 45px;
+  }
+
+  .hero-frame {
+    padding: 4px;
+  }
+
+  .hero-copy {
+    padding: 22px 15px;
   }
 
   .hero-actions {
     flex-direction: column;
   }
 
-  .hero-actions .btn {
-    width: 100%;
+  .section-pad {
+    padding: 55px 0;
+  }
+
+  .sticker-grid,
+  .category-grid,
+  .more-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image-link {
+    aspect-ratio: 1.35 / 1;
   }
 
   .product-options {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 100px;
+  }
+
+  .more-panel {
+    padding: 27px;
   }
 
   .footer-inner {
@@ -1239,47 +1046,18 @@ h2 {
   }
 
   .footer-links {
-    margin-top: 20px;
-  }
-
-  .statement-strip span {
-    font-size: 10px;
-  }
-
-  .statement-strip span + span::before {
-    content: none;
-  }
-
-  .attitude-popup {
-    padding: 28px 22px;
+    margin-top: 23px;
   }
 }
 
-/* ======================================
-   REDUCED MOTION
-====================================== */
-
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+  html { scroll-behavior: auto; }
 
-  .fire-video {
-    display: none;
-  }
+  .fire-video { display: none; }
 
-  .background-art {
-    mix-blend-mode: normal;
-  }
-
-  .cart-drawer {
-    animation: none;
-  }
-
-  *,
-  *::before,
-  *::after {
-    transition: none !important;
+  .sticker-card,
+  .btn {
+    transition: none;
   }
 }
 
@@ -1288,12 +1066,9 @@ h2 {
 
 <body>
 
-<!-- ======================================
-   BRIGHT FIRE BACKGROUND
-====================================== -->
+<!-- FIXED FIRE BACKGROUND -->
 
 <div class="background-scene" aria-hidden="true">
-
   <video
     id="fire-video"
     class="fire-video"
@@ -1303,47 +1078,35 @@ h2 {
     playsinline
     webkit-playsinline
     preload="auto">
-
     <source
       src="pressed-and-burned-fire-loop-5s.mp4"
       type="video/mp4">
-
   </video>
 
   <div class="background-art"></div>
   <div class="scene-shade"></div>
-
 </div>
 
-<!-- ======================================
-   MATCHING SITE HEADER
-====================================== -->
+<!-- MAIN BUSINESS HEADER -->
 
 <header class="site-header">
-
   <div class="wrap header-inner">
 
     <a
       class="brand"
       href="index.html"
-      aria-label="Return to Pressed and Burned Creations homepage">
-
+      aria-label="Pressed and Burned Creations homepage">
       <img
         src="Pressed%20and%20burned%20logo.png"
         alt="Pressed and Burned Creations">
-
     </a>
 
     <nav class="main-nav" aria-label="Main navigation">
-
       <a href="index.html">Home</a>
-
       <a href="showcase.html">Showcase</a>
-
       <a href="index.html#services">Services</a>
-
+      <a class="nav-custom" href="custom-orders.html">Custom Orders</a>
       <a href="about-us.html">About Us</a>
-
       <a href="index.html#contact">Contact</a>
 
       <a
@@ -1357,71 +1120,70 @@ h2 {
         id="open-cart"
         class="cart-nav-button"
         type="button"
-        aria-label="Open shopping cart">
-
+        aria-controls="cart-drawer"
+        aria-expanded="false">
         🛒 Cart
-        <span
-          id="cart-count"
-          class="cart-count"
-          aria-hidden="true">0</span>
-
+        <span id="cart-count" class="cart-count">0</span>
       </button>
-
     </nav>
-
   </div>
-
 </header>
 
 <main>
 
-<!-- ======================================
-   SHOP HERO
-====================================== -->
+<!-- PEELRUCKUS HERO -->
 
 <section class="shop-hero" aria-labelledby="hero-title">
+  <div class="wrap">
 
-  <div class="wrap hero-grid">
+    <p class="eyebrow">
+      Original Sticker Collection by Pressed &amp; Burned Creations
+    </p>
 
-    <div>
+    <div class="hero-frame">
+      <img
+        src="Peel%20Ruckus.png"
+        alt="PeelRuckus by Pressed and Burned Creations. Peel it. Stick it. Stir things up."
+        fetchpriority="high">
+    </div>
 
-      <p class="eyebrow">
-        Pressed &amp; Burned Creations
-      </p>
-
+    <div class="hero-copy">
       <h1 id="hero-title">
-        Stickers With
-        <span>an Attitude.</span>
+        Welcome to the PeelRuckus Sticker Shop
       </h1>
 
-      <p class="hero-description">
-        Bold designs. Original artwork.
-        A little humor and plenty of personality.
-        Browse stickers that were made
-        to stand out.
+      <p>
+        Bold original artwork, unforgettable designs,
+        and a little humor for people who like
+        to make a statement.
       </p>
 
-      <div class="hero-actions">
+      <p><strong>
+        Peel it. Stick it. Stir things up.
+      </strong></p>
 
-        <a
-          class="btn btn-primary"
-          href="#sticker-collection">
-          Explore Stickers ↗
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#sticker-collection">
+          🔥 Explore the Stickers
         </a>
 
-        <a
-          class="btn btn-secondary"
-          href="showcase.html">
+        <a class="btn btn-outline" href="custom-orders.html">
+          Create Your Own
+        </a>
+
+        <a class="btn btn-outline" href="showcase.html">
           See Our Work
         </a>
-
       </div>
 
       <div class="demo-note">
-        🔥 Shopping cart preview:
-        Select example sizes, choose quantities,
-        and save stickers to your cart.
-        Pricing and checkout are coming later.
+        <strong>Shopping cart preview</strong>
+        <p>
+          Browse original PeelRuckus designs,
+          choose sample sizes and quantities,
+          and save selections in your cart.
+          Pricing and checkout are not active yet.
+        </p>
       </div>
 
       <button
@@ -1431,47 +1193,22 @@ h2 {
         hidden>
         🔥 Show Background Flames
       </button>
-
-    </div>
-
-    <div class="hero-art">
-
-      <img
-        src="Sticker%20merch%201.png"
-        alt="Pressed and Burned Creations sticker collection">
-
-      <div class="art-caption">
-
-        <span>Pressed &amp; Burned Creations</span>
-        <span>Original Sticker Designs</span>
-
-      </div>
-
     </div>
 
   </div>
-
 </section>
 
-<!-- ======================================
-   BRAND STATEMENT
-====================================== -->
+<!-- BRAND STRIP -->
 
 <div class="statement-strip">
-
   <div class="wrap">
-
     <span>Original Artwork</span>
-    <span>Designs With Personality</span>
-    <span>Your Style, Your Statement</span>
-
+    <span>PeelRuckus Sticker Designs</span>
+    <span>Peel it. Stick it. Stir things up.</span>
   </div>
-
 </div>
 
-<!-- ======================================
-   STICKER COLLECTION
-====================================== -->
+<!-- STICKER COLLECTION -->
 
 <section
   class="section-pad section-dark"
@@ -1481,58 +1218,43 @@ h2 {
   <div class="wrap">
 
     <div class="section-heading">
+      <p class="eyebrow">Explore PeelRuckus Originals</p>
 
-      <div>
-
-        <p class="eyebrow">
-          Explore the Collection
-        </p>
-
-        <h2 id="collection-title">
-          Find Your Statement.
-        </h2>
-
-      </div>
+      <h2 id="collection-title">
+        Find Your Next Favorite Sticker
+      </h2>
 
       <p>
-        Choose your favorite sticker,
-        select a test size, and enter
-        the quantity you'd like to save
-        in your cart.
+        Take a look through Miles's original designs.
+        Choose a sample size and quantity to try
+        out the shopping cart.
       </p>
 
+      <div class="gold-rule"></div>
     </div>
 
-    <!--
-      The seven sticker cards are generated
-      from the product catalog below.
-      All images and product names are
-      preserved from the previous page.
-    -->
-
-    <div
-      id="sticker-grid"
-      class="sticker-grid">
-
-      <p>Loading sticker designs...</p>
-
+    <div id="sticker-grid" class="sticker-grid">
+      <p>Loading PeelRuckus stickers...</p>
     </div>
 
     <noscript>
       <p>
-        Please enable JavaScript to view
-        the interactive sticker collection
-        and shopping cart.
+        Please enable JavaScript to view the
+        sticker catalog and shopping-cart preview.
       </p>
     </noscript>
 
-  </div>
+    <p class="product-disclaimer">
+      Displayed sizes are examples, not confirmed
+      production options. Product availability,
+      prices, taxes, shipping, and checkout
+      will be confirmed before online sales begin.
+    </p>
 
+  </div>
 </section>
 
-<!-- ======================================
-   HOW OUR STICKERS ARE AVAILABLE
-====================================== -->
+<!-- STICKER AVAILABILITY INFORMATION -->
 
 <section
   class="section-pad section-soft"
@@ -1541,31 +1263,23 @@ h2 {
   <div class="wrap">
 
     <div class="section-heading">
+      <p class="eyebrow">How PeelRuckus Works</p>
 
-      <div>
-
-        <p class="eyebrow">
-          Our Sticker Options
-        </p>
-
-        <h2 id="availability-title">
-          Made for Your Style.
-        </h2>
-
-      </div>
+      <h2 id="availability-title">
+        Made to Stick. Made to Stand Out.
+      </h2>
 
       <p>
-        Some designs will be ready
-        to ship, while others will
-        be made especially for you.
+        PeelRuckus plans to offer both
+        ready-to-ship and made-to-order stickers.
+        Availability will be identified
+        when ordering launches.
       </p>
-
     </div>
 
     <div class="category-grid">
 
       <div class="category-card">
-
         <span class="category-number">
           01 / READY TO SHIP
         </span>
@@ -1573,20 +1287,17 @@ h2 {
         <h3>Ready to Ship</h3>
 
         <p>
-          Our most popular stickers
-          will be available from
-          printed inventory.
+          Selected sticker designs may be
+          available from already-printed inventory.
         </p>
 
         <p>
-          These designs will be marked
-          Ready to Ship when available.
+          Actual availability will be shown
+          when ordering becomes active.
         </p>
-
       </div>
 
       <div class="category-card">
-
         <span class="category-number">
           02 / MADE TO ORDER
         </span>
@@ -1594,27 +1305,23 @@ h2 {
         <h3>Made to Order</h3>
 
         <p>
-          Select a design and we'll
-          produce your stickers after
-          an order is placed.
+          Other designs may be printed
+          after an order is accepted.
         </p>
 
         <p>
-          Planned production time:
-          3–5 business days before shipping.
+          Production estimates and shipping
+          information will be provided
+          when the checkout system launches.
         </p>
-
       </div>
 
     </div>
 
   </div>
-
 </section>
 
-<!-- ======================================
-   MORE DESIGNS COMING
-====================================== -->
+<!-- CUSTOM CREATIONS PROMOTION -->
 
 <section
   class="section-pad section-dark"
@@ -1623,81 +1330,75 @@ h2 {
   <div class="wrap">
 
     <div class="more-panel">
-
       <div class="more-mark" aria-hidden="true">
-        MORE<br>
-        TO COME.
+        MORE<br>RUCKUS<br>AHEAD.
       </div>
 
       <div class="more-copy">
-
-        <p class="eyebrow">
-          We're Just Getting Started
-        </p>
+        <p class="eyebrow">More Designs Are Coming</p>
 
         <h2 id="more-title">
-          More Creations Are on the Way.
+          Your Idea Could Be Next.
         </h2>
 
         <p>
-          We're preparing new sticker designs,
-          additional size options, pricing,
-          and future online ordering features.
-          For now, enjoy exploring our
-          collection and trying the cart.
+          More PeelRuckus designs are on the way.
+          Have something original in mind?
+          Pressed &amp; Burned Creations
+          also welcomes custom sticker,
+          decal, and artwork inquiries.
         </p>
 
-        <a class="btn btn-primary" href="index.html">
-          Return to Homepage ↗
+        <a class="btn btn-gold" href="custom-orders.html">
+          Request a Custom Quote
         </a>
 
+        <p>
+          <small>
+            Custom requests are subject to review,
+            availability, and pricing confirmation.
+          </small>
+        </p>
       </div>
-
     </div>
 
   </div>
-
 </section>
 
 </main>
 
-<!-- ======================================
-   FOOTER
-====================================== -->
+<!-- FOOTER -->
 
 <footer class="site-footer">
-
   <div class="wrap footer-inner">
 
     <div>
+      <div class="footer-brand">
+        Pressed &amp; Burned Creations
+      </div>
 
-      <p class="footer-tagline">
-        Stickers With an Attitude.
+      <p class="footer-slogan">
+        PeelRuckus — Peel it. Stick it. Stir things up.
       </p>
 
-      <p>
+      <p class="footer-small">
         &copy; 2026 Pressed and Burned Creations.
         All Rights Reserved.
       </p>
-
     </div>
 
     <div class="footer-links">
-
       <a href="index.html">Home</a>
       <a href="showcase.html">Showcase</a>
+      <a href="custom-orders.html">Custom Orders</a>
       <a href="about-us.html">About Us</a>
       <a href="index.html#contact">Contact</a>
-
     </div>
 
   </div>
-
 </footer>
 
-<!-- ======================================
-   CART BACKDROP
-====================================== -->
+<!-- CART BACKDROP -->
 
 <div
   id="cart-overlay"
@@ -1705,9 +1406,7 @@ h2 {
   hidden>
 </div>
 
-<!-- ======================================
-   SLIDE-OUT SHOPPING CART
-====================================== -->
+<!-- SLIDE-OUT CART -->
 
 <aside
   id="cart-drawer"
@@ -1718,9 +1417,8 @@ h2 {
   hidden>
 
   <div class="cart-header">
-
     <h2 id="cart-title">
-      🛒 Your Cart
+      🛒 Your PeelRuckus Cart
     </h2>
 
     <button
@@ -1728,52 +1426,38 @@ h2 {
       class="cart-close"
       type="button"
       aria-label="Close shopping cart">
-      ×
+      &times;
     </button>
-
   </div>
 
-  <div
-    id="cart-items"
-    class="cart-items">
-  </div>
+  <div id="cart-items" class="cart-items"></div>
 
   <div class="cart-footer">
-
     <div class="cart-total">
-
       <span>Subtotal</span>
       <span>Pricing Coming Soon</span>
-
     </div>
 
     <p class="cart-note">
       Your selections are saved in this browser.
-      Checkout isn't available yet.
-      No order has been submitted.
+      No order has been placed, and checkout
+      is not available yet.
     </p>
 
     <button
-      type="button"
       class="checkout-disabled"
+      type="button"
       disabled>
       🔒 CHECKOUT COMING SOON
     </button>
 
-    <button
-      id="clear-cart"
-      type="button"
-      class="clear-cart">
+    <button id="clear-cart" class="clear-cart" type="button">
       Clear Cart
     </button>
-
   </div>
-
 </aside>
 
-<!-- ======================================
-   ADD-TO-CART NOTIFICATION
-====================================== -->
+<!-- CART NOTIFICATION -->
 
 <div
   id="cart-toast"
@@ -1783,9 +1467,7 @@ h2 {
   hidden>
 </div>
 
-<!-- ======================================
-   ATTITUDE CONTENT ADVISORY
-====================================== -->
+<!-- MATURE-HUMOR ADVISORY -->
 
 <div
   id="attitude-warning"
@@ -1799,27 +1481,22 @@ h2 {
     aria-labelledby="attitude-title"
     aria-describedby="attitude-description">
 
-    <div
-      class="attitude-flames"
-      aria-hidden="true">
+    <div class="attitude-flames" aria-hidden="true">
       🔥 🔥 🔥
     </div>
 
     <h2 id="attitude-title">
-      A Little Attitude Ahead!
+      A Little Ruckus Ahead!
     </h2>
 
     <p id="attitude-description">
-      Some of our sticker designs
-      contain mature humor,
-      suggestive themes,
-      and strong language.
+      Some PeelRuckus sticker designs
+      contain mature humor, suggestive
+      themes, or strong language.
     </p>
 
     <p>
-      <strong>
-        Viewer discretion is advised.
-      </strong>
+      <strong>Viewer discretion is advised.</strong>
     </p>
 
     <button
@@ -1828,376 +1505,112 @@ h2 {
       type="button">
       CONTINUE TO SHOP
     </button>
-
   </div>
-
 </div>
 
-<!-- ======================================
-   PRODUCT CATALOG + SHOPPING CART
-====================================== -->
+<!-- =========================================
+   ORIGINAL PRODUCT CATALOG AND CART PREVIEW
+   STABLE PRODUCT IDS AND STORAGE KEY
+========================================= -->
 
 <script>
 (function () {
   "use strict";
 
-  /*
-    PRODUCT CONFIGURATION
-
-    These seven products and their IDs
-    match the original Sticker Shop.
-
-    Sizes are examples only.
-    The longest dimension determines
-    the size label.
-
-    No prices are configured yet.
-  */
+  // Preserve original product IDs and filenames.
+  // Sample sizes only. No prices or checkout yet.
 
   const products = {
     "vibrator": {
       name: "I'm the Vibrator",
-      description:
-        "A bold, cheeky design with plenty of personality.",
+      description: "A bold, cheeky design with plenty of personality.",
       image: "Im_The_Vibrator.png",
-      sizes: ["3", "5", "8"]
+      sizes: ["3","5","8"]
     },
 
     "left-lane": {
       name: "Left Lane Drivers",
-      description:
-        "A highway-inspired design for drivers with an attitude.",
+      description: "A highway-inspired design for drivers with a rebellious streak.",
       image: "left_lane_drivers.png",
-      sizes: ["3", "5", "8"]
+      sizes: ["3","5","8"]
     },
 
     "subaru": {
       name: "Oh Great... Another Subaru",
-      description:
-        "A humorous road-themed sticker featuring a blue SUV.",
+      description: "A humorous road-themed sticker featuring a blue SUV.",
       image: "Oh-great-subaru.png",
-      sizes: ["3", "5", "8"]
+      sizes: ["3","5","8"]
     },
 
     "patience": {
       name: "Patience — Walk It Off",
-      description:
-        "A skull-themed design with a sarcastic edge.",
+      description: "A skull-themed design with a sarcastic edge.",
       image: "Patience-Skull.png",
-      sizes: ["3", "5", "8"]
+      sizes: ["3","5","8"]
     },
 
     "two-cents": {
       name: "Two Cents",
-      description:
-        "A funny, outspoken design about unsolicited opinions.",
+      description: "A funny, outspoken design about unsolicited opinions.",
       image: "Two_Cents.png",
-      sizes: ["3", "5", "8"]
+      sizes: ["3","5","8"]
     },
 
     "giggles": {
       name: "Shits & Giggles",
-      description:
-        "A playful, irreverent design packed with personality.",
+      description: "A playful, irreverent design packed with personality.",
       image: "shits_and_giggles.png",
-      sizes: ["3", "5", "8"]
+      sizes: ["3","5","8"]
     },
 
     "trust": {
       name: "In God We Trust",
-      description:
-        "A bold gold-and-blue design featuring dramatic lightning and a statement of faith.",
+      description: "A dramatic gold-and-blue design with lightning.",
       image: "In_God_We_Trust-sticker.png",
-      sizes: ["3", "5", "8"]
+      sizes: ["3","5","8"]
     }
   };
 
-  /*
-    IMPORTANT:
-    Keep these storage keys the same
-    as the previous Sticker Shop.
-
-    This allows previously saved carts
-    to carry over to the redesigned page.
-  */
-
+  // Existing keys preserved for saved-cart compatibility.
   const STORAGE_KEY = "pb-cart-v1";
   const NOTICE_KEY = "pb-attitude-notice-seen-v1";
 
-  const productGrid =
-    document.getElementById("sticker-grid");
-
-  const countBadge =
-    document.getElementById("cart-count");
-
-  const openButton =
-    document.getElementById("open-cart");
-
-  const closeButton =
-    document.getElementById("close-cart");
-
-  const overlay =
-    document.getElementById("cart-overlay");
-
-  const drawer =
-    document.getElementById("cart-drawer");
-
-  const cartItems =
-    document.getElementById("cart-items");
-
-  const clearButton =
-    document.getElementById("clear-cart");
-
-  const toast =
-    document.getElementById("cart-toast");
-
-  const notice =
-    document.getElementById("attitude-warning");
-
-  const continueButton =
-    document.getElementById("attitude-continue");
-
-  const video =
-    document.getElementById("fire-video");
-
-  const fireButton =
-    document.getElementById("fire-play-button");
+  const grid = document.getElementById("sticker-grid");
+  const badge = document.getElementById("cart-count");
+  const openButton = document.getElementById("open-cart");
+  const closeButton = document.getElementById("close-cart");
+  const overlay = document.getElementById("cart-overlay");
+  const drawer = document.getElementById("cart-drawer");
+  const cartItems = document.getElementById("cart-items");
+  const clearButton = document.getElementById("clear-cart");
+  const toast = document.getElementById("cart-toast");
+  const notice = document.getElementById("attitude-warning");
+  const continueButton = document.getElementById("attitude-continue");
 
   let cart = [];
-  let toastTimer;
+  let toastTimer = null;
   let previousFocus = null;
-  let storageAvailable = true;
-
-  const pageSections = [
-    document.querySelector("body > header"),
-    document.querySelector("body > main"),
-    document.querySelector("body > footer")
-  ].filter(Boolean);
-
-  /* ======================================
-     VALIDATE QUANTITY
-  ====================================== */
 
   function validQuantity(value) {
-    const text = String(value).trim();
+    const raw = String(value).trim();
 
-    if (!/^[1-9]\d*$/.test(text)) {
-      return null;
-    }
+    if (!/^[1-9]\d*$/.test(raw)) return null;
 
-    const number = Number(text);
-
-    if (!Number.isSafeInteger(number)) {
-      return null;
-    }
-
-    return number;
+    const number = Number(raw);
+    return Number.isSafeInteger(number) && number <= 999
+      ? number
+      : null;
   }
-
-  /* ======================================
-     DISPLAY A SMALL NOTIFICATION
-  ====================================== */
 
   function showToast(message) {
     clearTimeout(toastTimer);
-
     toast.textContent = message;
     toast.hidden = false;
 
     toastTimer = setTimeout(function () {
       toast.hidden = true;
-    }, 2600);
+    }, 2800);
   }
-
-  /* ======================================
-     GENERATE THE SEVEN PRODUCT CARDS
-  ====================================== */
-
-  function createProductCards() {
-    productGrid.replaceChildren();
-
-    Object.entries(products).forEach(
-      function ([id, product]) {
-
-        const card = document.createElement("article");
-        card.className = "sticker-card";
-        card.dataset.productId = id;
-
-        const imageLink = document.createElement("a");
-        imageLink.className = "sticker-image";
-        imageLink.href = product.image;
-        imageLink.target = "_blank";
-        imageLink.rel = "noopener";
-
-        const image = document.createElement("img");
-        image.src = product.image;
-        image.alt = product.name + " sticker";
-        image.loading = "lazy";
-
-        imageLink.appendChild(image);
-
-        const info = document.createElement("div");
-        info.className = "sticker-info";
-
-        const title = document.createElement("h3");
-        title.textContent = product.name;
-
-        const description =
-          document.createElement("p");
-        description.className = "sticker-description";
-        description.textContent = product.description;
-
-        const price = document.createElement("p");
-        price.className = "pricing-note";
-        price.textContent = "Pricing Coming Soon";
-
-        const options =
-          document.createElement("div");
-        options.className = "product-options";
-
-        /* SIZE SELECTION */
-
-        const sizeGroup =
-          document.createElement("div");
-        sizeGroup.className = "option-group";
-
-        const sizeLabel =
-          document.createElement("label");
-        sizeLabel.htmlFor = "size-" + id;
-        sizeLabel.textContent = "Size — longest side";
-
-        const sizeSelect =
-          document.createElement("select");
-        sizeSelect.id = "size-" + id;
-        sizeSelect.className = "size-select";
-
-        product.sizes.forEach(function (size) {
-          const option =
-            document.createElement("option");
-          option.value = size;
-          option.textContent = size + " inches";
-          sizeSelect.appendChild(option);
-        });
-
-        sizeGroup.append(sizeLabel, sizeSelect);
-
-        /* QUANTITY SELECTION */
-
-        const qtyGroup =
-          document.createElement("div");
-        qtyGroup.className = "option-group";
-
-        const qtyLabel =
-          document.createElement("label");
-        qtyLabel.htmlFor = "qty-" + id;
-        qtyLabel.textContent = "Quantity";
-
-        const qtyControl =
-          document.createElement("div");
-        qtyControl.className = "qty-control";
-
-        const minus =
-          document.createElement("button");
-        minus.type = "button";
-        minus.textContent = "−";
-        minus.setAttribute(
-          "aria-label",
-          "Decrease " + product.name + " quantity"
-        );
-
-        const input =
-          document.createElement("input");
-        input.id = "qty-" + id;
-        input.className = "qty-input";
-        input.type = "number";
-        input.min = "1";
-        input.step = "1";
-        input.inputMode = "numeric";
-        input.value = "1";
-
-        const plus =
-          document.createElement("button");
-        plus.type = "button";
-        plus.textContent = "+";
-        plus.setAttribute(
-          "aria-label",
-          "Increase " + product.name + " quantity"
-        );
-
-        minus.addEventListener("click", function () {
-          const current =
-            validQuantity(input.value) || 1;
-
-          input.value = Math.max(1, current - 1);
-        });
-
-        plus.addEventListener("click", function () {
-          const current =
-            validQuantity(input.value) || 1;
-
-          if (Number.isSafeInteger(current + 1)) {
-            input.value = current + 1;
-          } else {
-            showToast("Quantity is too large.");
-          }
-        });
-
-        input.addEventListener("change", function () {
-          if (validQuantity(input.value) === null) {
-            input.value = 1;
-            showToast("Quantity reset to 1.");
-          }
-        });
-
-        qtyControl.append(minus, input, plus);
-        qtyGroup.append(qtyLabel, qtyControl);
-
-        options.append(sizeGroup, qtyGroup);
-
-        /* ADD TO CART */
-
-        const addButton =
-          document.createElement("button");
-        addButton.className = "add-to-cart";
-        addButton.type = "button";
-        addButton.textContent = "🛒 ADD TO CART";
-
-        addButton.addEventListener("click", function () {
-          addToCart(
-            id,
-            sizeSelect.value,
-            input.value
-          );
-        });
-
-        /* VIEW FULL IMAGE */
-
-        const viewButton =
-          document.createElement("a");
-        viewButton.className = "view-button";
-        viewButton.href = product.image;
-        viewButton.target = "_blank";
-        viewButton.rel = "noopener";
-        viewButton.textContent = "VIEW FULL DESIGN ↗";
-
-        info.append(
-          title,
-          description,
-          price,
-          options,
-          addButton,
-          viewButton
-        );
-
-        card.append(imageLink, info);
-        productGrid.appendChild(card);
-      }
-    );
-  }
-
-  /* ======================================
-     LOAD SAVED CART
-  ====================================== */
 
   function loadCart() {
     try {
@@ -2205,42 +1618,31 @@ h2 {
         localStorage.getItem(STORAGE_KEY) || "[]"
       );
 
-      if (!Array.isArray(saved)) {
-        return [];
-      }
+      if (!Array.isArray(saved)) return [];
 
       const cleaned = [];
 
       saved.forEach(function (item) {
-        if (!item || !products[item.id]) {
-          return;
-        }
+        if (!item || !products[item.id]) return;
 
         const size = String(item.size);
-        const quantity =
-          validQuantity(item.quantity);
+        const quantity = validQuantity(item.quantity);
 
         if (
           !products[item.id].sizes.includes(size) ||
           quantity === null
-        ) {
-          return;
-        }
+        ) return;
 
-        const existing = cleaned.find(
-          function (entry) {
-            return entry.id === item.id &&
-                   entry.size === size;
-          }
-        );
+        const existing = cleaned.find(function (entry) {
+          return entry.id === item.id &&
+                 entry.size === size;
+        });
 
         if (existing) {
-          const total =
-            existing.quantity + quantity;
-
-          if (Number.isSafeInteger(total)) {
-            existing.quantity = total;
-          }
+          existing.quantity = Math.min(
+            999,
+            existing.quantity + quantity
+          );
         } else {
           cleaned.push({
             id: item.id,
@@ -2253,14 +1655,9 @@ h2 {
       return cleaned;
 
     } catch (error) {
-      storageAvailable = false;
       return [];
     }
   }
-
-  /* ======================================
-     SAVE CART
-  ====================================== */
 
   function saveCart() {
     try {
@@ -2268,11 +1665,8 @@ h2 {
         STORAGE_KEY,
         JSON.stringify(cart)
       );
-
-      storageAvailable = true;
-
     } catch (error) {
-      storageAvailable = false;
+      showToast("Cart updated, but browser storage is unavailable.");
     }
 
     updateBadge();
@@ -2282,70 +1676,153 @@ h2 {
     }
   }
 
-  /* ======================================
-     CART ITEM COUNT
-  ====================================== */
-
   function updateBadge() {
-    const total = cart.reduce(
-      function (sum, item) {
-        return sum + item.quantity;
-      },
-      0
-    );
+    const count = cart.reduce(function (sum, item) {
+      return sum + item.quantity;
+    }, 0);
 
-    const display = Number.isSafeInteger(total)
-      ? total.toLocaleString()
-      : "Many";
-
-    countBadge.textContent = display;
+    badge.textContent = count.toLocaleString();
 
     openButton.setAttribute(
       "aria-label",
-      "Open shopping cart, " + display + " items"
+      "Open shopping cart, " + count + " items"
     );
   }
 
-  /* ======================================
-     ADD TO CART
-  ====================================== */
+  function renderProducts() {
+    grid.replaceChildren();
+
+    Object.entries(products).forEach(function (entry) {
+      const id = entry[0];
+      const product = entry[1];
+
+      const card = document.createElement("article");
+      card.className = "sticker-card";
+      card.dataset.productId = id;
+
+      const imageLink = document.createElement("a");
+      imageLink.className = "product-image-link";
+      imageLink.href = product.image;
+      imageLink.target = "_blank";
+      imageLink.rel = "noopener";
+      imageLink.setAttribute(
+        "aria-label",
+        "View full design: " + product.name
+      );
+
+      const image = document.createElement("img");
+      image.src = product.image;
+      image.alt = product.name;
+      image.loading = "lazy";
+
+      imageLink.appendChild(image);
+
+      const info = document.createElement("div");
+      info.className = "sticker-info";
+
+      const title = document.createElement("h3");
+      title.textContent = product.name;
+
+      const description = document.createElement("p");
+      description.className = "sticker-description";
+      description.textContent = product.description;
+
+      const price = document.createElement("p");
+      price.className = "pricing-note";
+      price.textContent = "Pricing Coming Soon";
+
+      const options = document.createElement("div");
+      options.className = "product-options";
+
+      const sizeGroup = document.createElement("div");
+      sizeGroup.className = "option-group";
+
+      const sizeLabel = document.createElement("label");
+      sizeLabel.htmlFor = "size-" + id;
+      sizeLabel.textContent = "Sample size (longest side)";
+
+      const sizeSelect = document.createElement("select");
+      sizeSelect.id = "size-" + id;
+      sizeSelect.className = "size-select";
+
+      product.sizes.forEach(function (size) {
+        const option = document.createElement("option");
+        option.value = size;
+        option.textContent = size + " inches";
+        sizeSelect.appendChild(option);
+      });
+
+      sizeGroup.append(sizeLabel, sizeSelect);
+
+      const qtyGroup = document.createElement("div");
+      qtyGroup.className = "option-group";
+
+      const qtyLabel = document.createElement("label");
+      qtyLabel.htmlFor = "qty-" + id;
+      qtyLabel.textContent = "Quantity";
+
+      const qtyInput = document.createElement("input");
+      qtyInput.id = "qty-" + id;
+      qtyInput.className = "qty-input";
+      qtyInput.type = "number";
+      qtyInput.min = "1";
+      qtyInput.max = "999";
+      qtyInput.step = "1";
+      qtyInput.value = "1";
+
+      qtyGroup.append(qtyLabel, qtyInput);
+      options.append(sizeGroup, qtyGroup);
+
+      const addButton = document.createElement("button");
+      addButton.className = "add-cart";
+      addButton.type = "button";
+      addButton.textContent = "🛒 ADD TO CART";
+
+      const viewButton = document.createElement("a");
+      viewButton.className = "view-design";
+      viewButton.href = product.image;
+      viewButton.target = "_blank";
+      viewButton.rel = "noopener";
+      viewButton.textContent = "VIEW FULL DESIGN ↗";
+
+      info.append(
+        title,
+        description,
+        price,
+        options,
+        addButton,
+        viewButton
+      );
+
+      card.append(imageLink, info);
+      grid.appendChild(card);
+    });
+  }
 
   function addToCart(id, size, quantityValue) {
-    const quantity =
-      validQuantity(quantityValue);
+    const product = products[id];
+    const quantity = validQuantity(quantityValue);
 
-    if (
-      !products[id] ||
-      !products[id].sizes.includes(size)
-    ) {
-      showToast("Please select a valid size.");
+    if (!product || !product.sizes.includes(size)) {
+      showToast("Please choose a valid sample size.");
       return;
     }
 
     if (quantity === null) {
-      showToast(
-        "Enter a positive whole-number quantity."
-      );
+      showToast("Enter a quantity between 1 and 999.");
       return;
     }
 
-    const existing = cart.find(
-      function (item) {
-        return item.id === id &&
-               item.size === size;
-      }
-    );
+    const existing = cart.find(function (item) {
+      return item.id === id && item.size === size;
+    });
 
     if (existing) {
-      const newTotal =
-        existing.quantity + quantity;
-
-      if (!Number.isSafeInteger(newTotal)) {
-        showToast("Quantity is too large.");
+      if (existing.quantity + quantity > 999) {
+        showToast("Maximum quantity is 999 per design and size.");
         return;
       }
-
-      existing.quantity = newTotal;
+      existing.quantity += quantity;
     } else {
       cart.push({
         id: id,
@@ -2355,277 +1832,192 @@ h2 {
     }
 
     saveCart();
-
-    if (storageAvailable) {
-      showToast("✓ Added to Cart!");
-    } else {
-      showToast(
-        "Added, but the browser couldn't save the cart."
-      );
-    }
+    showToast("✓ Added to your PeelRuckus cart preview!");
   }
 
-  /* ======================================
-     CART QUANTITY CHANGES
-  ====================================== */
+  grid.addEventListener("click", function (event) {
+    const button = event.target.closest(".add-cart");
 
-  function setCartQuantity(id, size, quantity) {
-    const item = cart.find(
-      function (entry) {
-        return entry.id === id &&
-               entry.size === size;
-      }
-    );
+    if (!button) return;
 
-    if (!item) {
-      return;
-    }
+    const card = button.closest(".sticker-card");
+    if (!card) return;
 
-    if (
-      !Number.isSafeInteger(quantity) ||
-      quantity < 1
-    ) {
-      showToast("Quantity must be at least 1.");
-      renderCart();
-      return;
-    }
+    const id = card.dataset.productId;
+    const size = card.querySelector(".size-select").value;
+    const quantity = card.querySelector(".qty-input").value;
 
-    item.quantity = quantity;
-    saveCart();
-  }
-
-  /* ======================================
-     REMOVE ITEM
-  ====================================== */
-
-  function removeCartItem(id, size) {
-    cart = cart.filter(
-      function (item) {
-        return !(
-          item.id === id &&
-          item.size === size
-        );
-      }
-    );
-
-    saveCart();
-    showToast("Item removed from cart.");
-  }
-
-  /* ======================================
-     CART CONTROL BUTTON
-  ====================================== */
-
-  function makeCartButton(
-    text,
-    label,
-    callback
-  ) {
-    const button =
-      document.createElement("button");
-
-    button.type = "button";
-    button.textContent = text;
-    button.setAttribute("aria-label", label);
-
-    button.addEventListener(
-      "click",
-      callback
-    );
-
-    return button;
-  }
-
-  /* ======================================
-     DISPLAY CART
-  ====================================== */
+    addToCart(id, size, quantity);
+  });
 
   function renderCart() {
     cartItems.replaceChildren();
 
     if (cart.length === 0) {
-      const empty =
-        document.createElement("div");
-
-      empty.className = "empty-cart";
-
+      const empty = document.createElement("p");
+      empty.className = "cart-empty";
       empty.textContent =
-        "Your cart is empty. Browse our stickers and add your favorites!";
-
+        "Your cart is empty. Explore PeelRuckus designs and add your favorites!";
       cartItems.appendChild(empty);
       return;
     }
 
     cart.forEach(function (item) {
       const product = products[item.id];
+      if (!product) return;
 
-      if (!product) {
-        return;
-      }
-
-      const row =
-        document.createElement("div");
+      const row = document.createElement("div");
       row.className = "cart-item";
+      row.dataset.id = item.id;
+      row.dataset.size = item.size;
 
-      const image =
-        document.createElement("img");
+      const image = document.createElement("img");
       image.src = product.image;
       image.alt = product.name;
 
-      const info =
-        document.createElement("div");
+      const info = document.createElement("div");
 
-      const title =
-        document.createElement("h3");
+      const title = document.createElement("h3");
       title.textContent = product.name;
 
-      const size =
-        document.createElement("p");
+      const size = document.createElement("p");
       size.textContent =
-        "Longest side: " + item.size + " inches";
+        "Sample size: " + item.size + " inches";
 
-      const price =
-        document.createElement("p");
+      const price = document.createElement("p");
       price.textContent = "Pricing Coming Soon";
 
-      const controls =
-        document.createElement("div");
+      const controls = document.createElement("div");
       controls.className = "cart-controls";
 
-      const minus = makeCartButton(
-        "−",
-        "Decrease " + product.name + " quantity",
-        function () {
-          if (item.quantity > 1) {
-            setCartQuantity(
-              item.id,
-              item.size,
-              item.quantity - 1
-            );
-          }
-        }
+      const minus = document.createElement("button");
+      minus.type = "button";
+      minus.dataset.action = "minus";
+      minus.textContent = "−";
+      minus.setAttribute(
+        "aria-label",
+        "Decrease quantity for " + product.name
       );
 
-      const quantityInput =
-        document.createElement("input");
-
-      quantityInput.type = "number";
-      quantityInput.min = "1";
-      quantityInput.step = "1";
-      quantityInput.inputMode = "numeric";
-      quantityInput.value = item.quantity;
-
-      quantityInput.setAttribute(
+      const qty = document.createElement("input");
+      qty.type = "number";
+      qty.min = "1";
+      qty.max = "999";
+      qty.step = "1";
+      qty.value = String(item.quantity);
+      qty.className = "cart-quantity";
+      qty.setAttribute(
         "aria-label",
         "Quantity for " + product.name
       );
 
-      quantityInput.addEventListener(
-        "change",
-        function () {
-
-          const next =
-            validQuantity(quantityInput.value);
-
-          if (next === null) {
-            showToast(
-              "Enter a valid whole-number quantity."
-            );
-
-            renderCart();
-            return;
-          }
-
-          setCartQuantity(
-            item.id,
-            item.size,
-            next
-          );
-        }
+      const plus = document.createElement("button");
+      plus.type = "button";
+      plus.dataset.action = "plus";
+      plus.textContent = "+";
+      plus.setAttribute(
+        "aria-label",
+        "Increase quantity for " + product.name
       );
 
-      const plus = makeCartButton(
-        "+",
-        "Increase " + product.name + " quantity",
-        function () {
-          setCartQuantity(
-            item.id,
-            item.size,
-            item.quantity + 1
-          );
-        }
-      );
-
-      const remove = makeCartButton(
-        "Remove",
-        "Remove " + product.name + " from cart",
-        function () {
-          removeCartItem(
-            item.id,
-            item.size
-          );
-        }
-      );
-
+      const remove = document.createElement("button");
+      remove.type = "button";
+      remove.dataset.action = "remove";
       remove.className = "remove-item";
+      remove.textContent = "Remove";
 
-      controls.append(
-        minus,
-        quantityInput,
-        plus,
-        remove
-      );
-
-      info.append(
-        title,
-        size,
-        price,
-        controls
-      );
-
+      controls.append(minus, qty, plus, remove);
+      info.append(title, size, price, controls);
       row.append(image, info);
       cartItems.appendChild(row);
     });
   }
 
-  /* ======================================
-     MODAL PAGE LOCK
-  ====================================== */
-
-  function setPageInert(value) {
-    pageSections.forEach(function (section) {
-      section.inert = value;
+  function updateCartItem(id, size, quantity) {
+    const index = cart.findIndex(function (item) {
+      return item.id === id && item.size === size;
     });
+
+    if (index < 0) return;
+
+    if (quantity === 0) {
+      cart.splice(index, 1);
+    } else {
+      const valid = validQuantity(quantity);
+
+      if (valid === null) {
+        showToast("Quantity must be between 1 and 999.");
+        renderCart();
+        return;
+      }
+
+      cart[index].quantity = valid;
+    }
+
+    saveCart();
   }
 
-  /* ======================================
-     OPEN THE CART
-  ====================================== */
+  cartItems.addEventListener("click", function (event) {
+    const button = event.target.closest("button[data-action]");
+    if (!button) return;
+
+    const row = button.closest(".cart-item");
+    if (!row) return;
+
+    const id = row.dataset.id;
+    const size = row.dataset.size;
+
+    const item = cart.find(function (entry) {
+      return entry.id === id && entry.size === size;
+    });
+
+    if (!item) return;
+
+    const action = button.dataset.action;
+
+    if (action === "plus") {
+      updateCartItem(id, size, item.quantity + 1);
+    } else if (action === "minus") {
+      updateCartItem(id, size, item.quantity - 1);
+    } else if (action === "remove") {
+      updateCartItem(id, size, 0);
+    }
+  });
+
+  cartItems.addEventListener("change", function (event) {
+    if (!event.target.matches(".cart-quantity")) return;
+
+    const row = event.target.closest(".cart-item");
+    if (!row) return;
+
+    updateCartItem(
+      row.dataset.id,
+      row.dataset.size,
+      event.target.value
+    );
+  });
 
   function openCart() {
-    previousFocus = document.activeElement;
+    if (!notice.hidden) return;
 
+    previousFocus = document.activeElement;
     renderCart();
 
     overlay.hidden = false;
     drawer.hidden = false;
 
     document.body.classList.add("dialog-open");
-    setPageInert(true);
+    openButton.setAttribute("aria-expanded", "true");
 
     closeButton.focus();
   }
-
-  /* ======================================
-     CLOSE THE CART
-  ====================================== */
 
   function closeCart() {
     overlay.hidden = true;
     drawer.hidden = true;
 
     document.body.classList.remove("dialog-open");
-    setPageInert(false);
+    openButton.setAttribute("aria-expanded", "false");
 
     if (
       previousFocus &&
@@ -2635,35 +2027,78 @@ h2 {
     }
   }
 
-  /* ======================================
-     ACCESSIBLE KEYBOARD NAVIGATION
-  ====================================== */
+  openButton.addEventListener("click", openCart);
+  closeButton.addEventListener("click", closeCart);
+  overlay.addEventListener("click", closeCart);
 
-  function trapFocus(event, dialog) {
-    if (event.key !== "Tab") {
+  clearButton.addEventListener("click", function () {
+    cart = [];
+    saveCart();
+    showToast("Cart cleared.");
+  });
+
+  function closeNotice() {
+    try {
+      sessionStorage.setItem(NOTICE_KEY, "yes");
+    } catch (error) {
+      // The advisory still closes if storage is blocked.
+    }
+
+    notice.hidden = true;
+    document.body.classList.remove("dialog-open");
+
+    if (previousFocus && previousFocus.focus) {
+      previousFocus.focus();
+    }
+  }
+
+  function initializeNotice() {
+    let seen = false;
+
+    try {
+      seen = sessionStorage.getItem(NOTICE_KEY) === "yes";
+    } catch (error) {
+      seen = false;
+    }
+
+    if (seen) return;
+
+    previousFocus = document.activeElement;
+    notice.hidden = false;
+    document.body.classList.add("dialog-open");
+    continueButton.focus();
+  }
+
+  continueButton.addEventListener("click", closeNotice);
+
+  // Close the shopping cart using Escape.
+  // Keep keyboard focus within whichever dialog is open.
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !drawer.hidden) {
+      closeCart();
       return;
     }
 
-    const elements = Array.from(
-      dialog.querySelectorAll(
-        'button:not([disabled]), a[href], input:not([disabled]), select:not([disabled])'
+    const activeDialog = !notice.hidden
+      ? notice
+      : (!drawer.hidden ? drawer : null);
+
+    if (!activeDialog || event.key !== "Tab") return;
+
+    const focusable = Array.from(
+      activeDialog.querySelectorAll(
+        'button:not([disabled]), input:not([disabled]), a[href], select:not([disabled])'
       )
     ).filter(function (element) {
       return element.getClientRects().length > 0;
     });
 
-    if (!elements.length) {
-      event.preventDefault();
-      return;
-    }
+    if (focusable.length === 0) return;
 
-    const first = elements[0];
-    const last = elements[elements.length - 1];
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
 
-    if (
-      event.shiftKey &&
-      document.activeElement === first
-    ) {
+    if (event.shiftKey && document.activeElement === first) {
       event.preventDefault();
       last.focus();
     } else if (
@@ -2672,151 +2107,21 @@ h2 {
     ) {
       event.preventDefault();
       first.focus();
+    } else if (!activeDialog.contains(document.activeElement)) {
+      event.preventDefault();
+      first.focus();
     }
-  }
+  });
 
-  /* ======================================
-     CART BUTTON EVENTS
-  ====================================== */
-
-  openButton.addEventListener(
-    "click",
-    openCart
-  );
-
-  closeButton.addEventListener(
-    "click",
-    closeCart
-  );
-
-  overlay.addEventListener(
-    "click",
-    closeCart
-  );
-
-  clearButton.addEventListener(
-    "click",
-    function () {
-      if (!cart.length) {
-        return;
-      }
-
-      if (
-        confirm(
-          "Remove all items from your cart?"
-        )
-      ) {
-        cart = [];
-        saveCart();
-        showToast("Shopping cart cleared.");
-      }
-    }
-  );
-
-  /* ======================================
-     KEYBOARD HANDLING
-  ====================================== */
-
-  document.addEventListener(
-    "keydown",
-    function (event) {
-
-      if (!notice.hidden) {
-        trapFocus(event, notice);
-        return;
-      }
-
-      if (!drawer.hidden) {
-        if (event.key === "Escape") {
-          closeCart();
-        } else {
-          trapFocus(event, drawer);
-        }
-      }
-    }
-  );
-
-  /* ======================================
-     SYNC CART ACROSS OPEN TABS
-  ====================================== */
-
-  window.addEventListener(
-    "storage",
-    function (event) {
-
-      if (event.key === STORAGE_KEY) {
-        cart = loadCart();
-        updateBadge();
-
-        if (!drawer.hidden) {
-          renderCart();
-        }
-      }
-    }
-  );
-
-  /* ======================================
-     ATTITUDE POPUP
-     ONCE PER BROWSER TAB SESSION
-  ====================================== */
-
-  function initializeNotice() {
-    let noticeSeen = false;
-
-    try {
-      noticeSeen =
-        sessionStorage.getItem(NOTICE_KEY) === "yes";
-    } catch (error) {
-      noticeSeen = false;
-    }
-
-    if (noticeSeen) {
-      return;
-    }
-
-    notice.hidden = false;
-    document.body.classList.add("dialog-open");
-    setPageInert(true);
-
-    continueButton.focus();
-
-    continueButton.addEventListener(
-      "click",
-      function () {
-
-        try {
-          sessionStorage.setItem(
-            NOTICE_KEY,
-            "yes"
-          );
-        } catch (error) {
-          /* Continue without saved acknowledgment */
-        }
-
-        notice.hidden = true;
-        document.body.classList.remove("dialog-open");
-        setPageInert(false);
-
-        document.querySelector(".nav-shop").focus();
-      }
-    );
-  }
-
-  /* ======================================
-     SAMSUNG TABLET VIDEO SUPPORT
-  ====================================== */
-
+  // Preserve the animated fire fallback button.
   function initializeFlames() {
-    if (!video || !fireButton) {
-      return;
-    }
+    const video = document.getElementById("fire-video");
+    const button = document.getElementById("fire-play-button");
+
+    if (!video || !button) return;
 
     video.muted = true;
     video.defaultMuted = true;
-
-    function showPlayButton() {
-      fireButton.hidden = false;
-    }
 
     function startFlames() {
       video.style.display = "block";
@@ -2824,34 +2129,24 @@ h2 {
 
       const attempt = video.play();
 
-      if (
-        attempt &&
-        typeof attempt.then === "function"
-      ) {
+      if (attempt && typeof attempt.then === "function") {
         attempt.then(function () {
-          fireButton.hidden = true;
+          button.hidden = true;
         }).catch(function () {
-          showPlayButton();
+          button.hidden = false;
         });
       }
     }
 
-    video.addEventListener(
-      "playing",
-      function () {
-        fireButton.hidden = true;
-      }
-    );
+    video.addEventListener("playing", function () {
+      button.hidden = true;
+    });
 
-    video.addEventListener(
-      "error",
-      showPlayButton
-    );
+    video.addEventListener("error", function () {
+      button.hidden = false;
+    });
 
-    fireButton.addEventListener(
-      "click",
-      startFlames
-    );
+    button.addEventListener("click", startFlames);
 
     const reducedMotion =
       window.matchMedia &&
@@ -2861,21 +2156,15 @@ h2 {
 
     if (reducedMotion) {
       video.pause();
-      showPlayButton();
     } else {
       startFlames();
     }
   }
 
-  /* ======================================
-     INITIALIZE THE STICKER SHOP
-  ====================================== */
-
-  createProductCards();
-
+  // Start the Sticker Shop.
+  renderProducts();
   cart = loadCart();
   updateBadge();
-
   initializeNotice();
   initializeFlames();
 
