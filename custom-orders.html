@@ -5,453 +5,3999 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#090909">
-<meta name="description" content="Tell Pressed and Burned Creations about your custom sticker, apparel, decal, engraving, sublimation or artwork project. Request a personalized quote.">
-<title>Request a Custom Quote | Pressed and Burned Creations</title>
+
+<meta name="description"
+content="Explore the five-step custom quote process at Pressed and Burned Creations. Custom stickers, apparel, decals, artwork and more. Form preview only; submissions are coming soon.">
+
+<title>Custom Orders | Pressed &amp; Burned Creations</title>
+
 <link rel="icon" type="image/png" href="favicon.png">
+
 <style>
-:root{--ink:#090909;--panel:#111110;--paper:#f6f2eb;--muted:#c5bdb4;--gold:#e9a14b;--gold-light:#f9c47a;--edge:rgba(235,171,95,.25);--max:1200px}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;background:var(--ink)}
-body{margin:0;background:var(--ink);color:var(--paper);font:16px/1.6 Arial,Helvetica,sans-serif;isolation:isolate}
-a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.54}img{display:block;max-width:100%;height:auto}
-:focus-visible{outline:3px solid var(--gold-light);outline-offset:3px}[hidden]{display:none!important}
-.wrap{width:min(calc(100% - 48px),var(--max));margin-inline:auto}
-.background-scene{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;isolation:isolate;background:radial-gradient(ellipse 85% 80% at 50% 100%,rgba(241,100,14,.50),rgba(144,41,7,.27) 35%,rgba(35,10,4,.15) 65%,#050505)}
-.fire-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;filter:brightness(1.65) saturate(1.35) contrast(1.08)}
-.background-art{position:absolute;inset:0;background-image:url("Pressed%20and%20burned%20background%20logo.png");background-position:center;background-repeat:no-repeat;background-size:contain;opacity:1;mix-blend-mode:screen}
-.scene-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.38),rgba(5,5,5,.15) 54%,rgba(5,5,5,.32)),linear-gradient(180deg,rgba(5,5,5,.10),transparent 40%,rgba(5,5,5,.25))}
-body>header,body>main,body>footer{position:relative;z-index:1}
-.site-header{border-bottom:1px solid var(--edge);background:rgba(7,7,7,.88);backdrop-filter:blur(12px)}
-.header-inner{min-height:99px;display:flex;align-items:center;justify-content:space-between;gap:28px}
-.brand{flex:0 1 310px;min-width:0}.brand img{width:100%;max-width:310px}
-.main-nav{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:10px 27px}
-.main-nav a{color:#e0dcd6;font-size:13px;font-weight:700;letter-spacing:.05em;white-space:nowrap}.main-nav a:hover,.main-nav a[aria-current]{color:var(--gold-light)}
-.main-nav .nav-shop{border:1px solid var(--gold);border-radius:5px;padding:11px 17px;color:var(--ink);background:var(--gold)}.main-nav .nav-shop:hover{background:var(--gold-light);color:var(--ink)}
-.hero{padding:72px 0 34px}.eyebrow{margin:0 0 14px;color:var(--gold-light);font-size:12px;text-transform:uppercase;font-weight:800;letter-spacing:.2em}
-h1{margin:0;max-width:850px;font-size:clamp(42px,6.2vw,77px);letter-spacing:-.065em;line-height:1.03;font-weight:900;text-shadow:0 3px 19px rgba(0,0,0,.85)}h1 em{font-style:normal;color:var(--gold)}
-.hero p.hero-lead{max-width:790px;margin:22px 0 0;color:#f0e7df;font-size:clamp(16px,2vw,19px);text-shadow:0 2px 10px #000}
-.layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:26px;align-items:start;padding-bottom:90px}
-.card{border:1px solid var(--edge);border-radius:11px;background:rgba(14,13,12,.94);box-shadow:0 20px 60px rgba(0,0,0,.42);backdrop-filter:blur(8px)}
-.form-shell{overflow:hidden}.form-heading{padding:28px 31px 18px;border-bottom:1px solid var(--edge)}
-.progress-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:12px}.progress-top strong{font-size:13px;color:var(--gold-light)}.progress-top span{font-size:12px;color:var(--muted)}
-.progress-track{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}.progress-track span{height:6px;border-radius:10px;background:#3b3026}.progress-track span.done{background:var(--gold)}
-.form-step{padding:30px 31px 18px}.form-step h2{margin:0 0 8px;font-size:clamp(25px,3vw,34px);letter-spacing:-.045em;line-height:1.16}.step-lead{margin:0 0 26px;color:#d6cabe;font-size:15px}
-.field{margin-bottom:22px}label.field-label,legend{display:block;margin:0 0 9px;font-size:14px;font-weight:800;color:#f5ece3}legend{padding:0}.hint{margin:8px 0 0;color:var(--muted);font-size:12px}.required{color:var(--gold-light)}
-input[type=text],input[type=email],input[type=tel],input[type=number],input[type=date],input[type=file],select,textarea{display:block;width:100%;min-height:45px;border:1px solid #6b5a48;border-radius:6px;background:#171615;color:var(--paper);padding:11px 12px}
-textarea{min-height:118px;resize:vertical}input::placeholder,textarea::placeholder{color:#a89c90}input:disabled,textarea:disabled,select:disabled{opacity:.6;cursor:not-allowed}input[type=checkbox],input[type=radio]{accent-color:var(--gold);width:17px;height:17px;flex:none;margin:3px 0 0}
-fieldset{margin:0;padding:0;border:0;min-width:0}.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.option{display:flex;align-items:flex-start;gap:10px;border:1px solid rgba(234,184,120,.29);background:#1a1816;border-radius:7px;padding:12px 13px;font-size:14px;line-height:1.4;cursor:pointer}.option:has(input:checked){border-color:var(--gold);background:#292016}.option small{display:block;margin-top:4px;color:#c7b7a5;font-size:12px}
-.check-row{display:flex;gap:10px;align-items:flex-start;margin:11px 0;color:#ebe4dd;font-size:14px;line-height:1.5}.check-row input{margin-top:3px}
-.field-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.field-grid .field{margin-bottom:16px}
-.notice{padding:16px 18px;border:1px solid rgba(233,161,75,.35);border-left:4px solid var(--gold);border-radius:5px;background:rgba(65,42,19,.36);color:#f1e2cf;font-size:14px;margin:16px 0}.notice strong{display:block;margin-bottom:3px;color:var(--gold-light)}
-.subpanel{border:1px solid var(--edge);background:#191715;border-radius:9px;padding:20px;margin:15px 0}.subpanel h3{font-size:20px;margin:0 0 7px;color:var(--gold-light)}.subpanel p{color:var(--muted);font-size:13px;margin:0 0 18px}
-.subpanel .field:last-child{margin-bottom:0}.mini-label{font-size:13px;font-weight:bold;margin:0 0 7px;display:block}
-.garment-details{margin-top:12px;border-top:1px solid var(--edge);padding-top:16px}.size-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}.size-grid label{display:block;text-align:center;font-size:12px;color:#f5dcb9}.size-grid input{padding:8px;text-align:center;min-width:0}
-.actions{padding:19px 31px 26px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid var(--edge)}.actions .right-actions{display:flex;gap:10px;margin-left:auto;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:47px;padding:12px 20px;border-radius:5px;font-size:13px;font-weight:800;letter-spacing:.025em;border:1px solid transparent;transition:background .15s,transform .15s}
-.btn:hover:not(:disabled){transform:translateY(-1px)}.btn-primary{background:var(--gold);color:#191108}.btn-primary:hover{background:var(--gold-light)}.btn-secondary{border-color:#a98b6a;color:#f6eee5;background:#1b1917}.btn-secondary:hover{border-color:var(--gold-light)}
-.summary-card{padding:22px;position:sticky;top:20px}.summary-card h2{font-size:19px;margin:0 0 8px;color:var(--gold-light)}.summary-card p{font-size:13px;color:var(--muted);margin:0 0 15px}
-.summary-toggle{width:100%;border:1px solid var(--edge);border-radius:5px;background:#2d2118;color:#ffdbaf;padding:11px 12px;font-size:13px;font-weight:800;text-align:left;display:flex;justify-content:space-between}.summary-content{margin-top:15px;color:#e8ded5;font-size:13px;overflow-wrap:anywhere}
-.summary-entry{padding:11px 0;border-bottom:1px solid var(--edge)}.summary-entry strong{display:block;font-size:12px;color:var(--gold-light);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}.summary-entry span{white-space:pre-line}
-.review-grid{display:grid;grid-template-columns:1fr;gap:13px}.review-box{padding:17px;border:1px solid var(--edge);border-radius:7px;background:#1b1916;overflow-wrap:anywhere}.review-title{display:flex;justify-content:space-between;align-items:center;gap:10px}.review-title h3{margin:0;font-size:16px;color:var(--gold-light)}.review-title button{border:0;background:none;color:var(--gold-light);text-decoration:underline;font-size:12px}.review-box p{white-space:pre-line;color:#e3d8cc;font-size:13px;margin:9px 0 0}
-.inline-error{color:#ffbd9e;font-size:13px;font-weight:700;margin:13px 0 0}#status-msg{margin-top:14px;white-space:pre-line}
-.success{padding:45px 31px;text-align:center}.success h2{font-size:30px;color:var(--gold-light);margin:0}.success p{max-width:520px;margin:16px auto;color:#e6ddd5}
-.fire-play-button{margin-top:18px;padding:9px 13px;border:1px solid var(--gold);border-radius:5px;background:rgba(5,5,5,.82);color:var(--gold-light);font-size:12px;font-weight:800}
-.file-names{list-style:none;margin:8px 0 0;padding:0;color:#d5c5b4;font-size:12px}.file-names li{margin:5px 0}
-.site-footer{background:rgba(5,5,5,.91);border-top:1px solid var(--edge);padding:30px 0}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.footer-inner p{margin:4px 0;color:#b5aea6;font-size:12px}.footer-tagline{color:var(--gold-light)!important;font-weight:700;letter-spacing:.08em}
-@media(max-width:1024px){.fire-video{filter:brightness(2.10) saturate(1.50) contrast(1.08)}.scene-shade{background:linear-gradient(90deg,rgba(5,5,5,.30),rgba(5,5,5,.10),rgba(5,5,5,.25)),linear-gradient(180deg,rgba(5,5,5,.10),transparent 45%,rgba(5,5,5,.22))}}
-@media(max-width:950px){.header-inner{flex-direction:column;padding-block:16px;gap:15px}.brand{flex:none;width:min(100%,310px)}.main-nav{justify-content:center}.layout{grid-template-columns:1fr}.summary-card{position:static;order:-1;padding:14px 18px}.summary-card p{margin-bottom:8px}.summary-card h2{font-size:16px}}
-@media(max-width:720px){.wrap{width:min(calc(100% - 32px),var(--max))}.brand img{max-width:255px;margin:auto}.main-nav{gap:9px 18px}.main-nav a{font-size:12px}.main-nav .nav-shop{padding:8px 12px}.hero{padding:52px 0 24px}.layout{padding-bottom:60px}.form-heading{padding:22px 20px 16px}.form-step{padding:25px 20px 10px}.actions{padding:18px 20px 24px}.options{grid-template-columns:1fr}.field-grid{grid-template-columns:1fr;gap:0}}
-@media(max-width:470px){.main-nav{gap:10px 14px}.main-nav a{font-size:11px}.actions .right-actions{width:100%;margin-left:0}.actions .right-actions .btn{flex:1}.size-grid{grid-template-columns:repeat(3,1fr)}.btn{padding:11px 13px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fire-video{display:none}.background-art{mix-blend-mode:normal}*,*::before,*::after{transition:none!important}}
+
+/* ==========================================
+   PRESSED & BURNED CREATIONS
+   CUSTOM ORDERS — PREVIEW VERSION
+
+   Flames: 100% brightness
+   Background logo: 50% opacity
+
+   IMPORTANT:
+   Quote submissions are disabled.
+========================================== */
+
+:root {
+  --black: #080808;
+  --gold: #f6b326;
+  --yellow: #ffe34b;
+  --orange: #ff7900;
+  --cream: #fff2db;
+  --muted: #d6c9b7;
+  --edge: rgba(255,181,36,.43);
+  --max: 1250px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--black);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--black);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.65;
+  isolation: isolate;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.wrap {
+  width: min(calc(100% - 36px), var(--max));
+  margin-inline: auto;
+}
+
+/* ==========================================
+   APPROVED FLAME BACKGROUND
+========================================== */
+
+.background-scene {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+
+  background: radial-gradient(
+    ellipse 85% 80% at 50% 100%,
+    rgba(241,100,14,.50),
+    rgba(144,41,7,.27) 35%,
+    rgba(35,10,4,.15) 65%,
+    #050505
+  );
+}
+
+.fire-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+
+  filter:
+    brightness(1.00)
+    saturate(1.35)
+    contrast(1.08);
+}
+
+.background-art {
+  position: absolute;
+  inset: 0;
+
+  background:
+    url("Pressed%20and%20burned%20background%20logo.png")
+    center / contain no-repeat;
+
+  opacity: .50;
+  mix-blend-mode: screen;
+}
+
+.scene-shade {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.39),
+      rgba(0,0,0,.13) 50%,
+      rgba(0,0,0,.39)
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.20),
+      transparent 40%,
+      rgba(0,0,0,.38)
+    );
+}
+
+body > header,
+body > main,
+body > footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================
+   HEADER AND NAVIGATION
+========================================== */
+
+.site-header {
+  background: rgba(5,5,5,.91);
+  border-bottom: 2px solid var(--gold);
+  box-shadow: 0 5px 24px rgba(255,105,0,.25);
+}
+
+.site-header::before {
+  content: "";
+  display: block;
+  height: 6px;
+
+  background: linear-gradient(
+    90deg,
+    #8d2500,
+    #ff7e00,
+    #ffe74f,
+    #ff7e00,
+    #8d2500
+  );
+}
+
+.header-inner {
+  min-height: 110px;
+  padding: 18px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.brand {
+  display: block;
+  flex: 0 0 auto;
+  width: min(280px,100%);
+}
+
+.brand img {
+  width: 100%;
+
+  filter:
+    drop-shadow(0 0 8px rgba(255,136,0,.24));
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+}
+
+.main-nav a {
+  color: #f3eadc;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  color: var(--yellow);
+}
+
+.main-nav .nav-custom {
+  color: var(--yellow);
+}
+
+.main-nav .nav-shop {
+  padding: 11px 16px;
+  color: #100c06;
+
+  background: linear-gradient(
+    180deg,
+    #fff36c,
+    #ffc029 65%,
+    #ff8c00
+  );
+
+  border: 1px solid #ffe989;
+  border-radius: 7px;
+
+  box-shadow:
+    0 0 13px rgba(255,143,0,.38);
+}
+
+.main-nav .nav-shop:hover {
+  color: black;
+  background: var(--yellow);
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 12px 20px;
+
+  border: 2px solid transparent;
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+
+  transition:
+    transform .2s,
+    box-shadow .2s;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.btn-gold {
+  color: #140d00;
+  border-color: #fff18e;
+
+  background: linear-gradient(
+    180deg,
+    #ffec69,
+    #ffbd1c 65%,
+    #ff8c00
+  );
+
+  box-shadow:
+    0 0 17px rgba(255,119,0,.38);
+}
+
+.btn-gold:hover {
+  box-shadow:
+    0 0 24px rgba(255,145,0,.65);
+}
+
+.btn-outline {
+  color: var(--cream);
+  background: rgba(8,8,8,.90);
+  border: 1px solid var(--gold);
+}
+
+.btn-outline:hover {
+  box-shadow:
+    0 0 17px rgba(255,145,0,.35);
+}
+
+/* ==========================================
+   CUSTOM ORDERS HERO
+========================================== */
+
+.hero {
+  padding: 73px 0 57px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: clamp(25px,5vw,70px);
+  align-items: center;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+
+  color: var(--yellow);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+
+  text-shadow: 0 2px 10px black;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-size: clamp(42px,5.7vw,76px);
+  font-weight: 900;
+  letter-spacing: -.055em;
+  line-height: 1.07;
+
+  text-shadow: 0 3px 19px black;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--yellow);
+}
+
+.hero-lead {
+  max-width: 670px;
+  margin: 24px 0 0;
+
+  color: #f0e3d2;
+  font-size: clamp(16px,1.8vw,19px);
+
+  text-shadow: 0 2px 10px black;
+}
+
+.hero-art {
+  padding: 20px;
+  border: 2px solid var(--gold);
+  border-radius: 14px;
+
+  background: rgba(5,5,5,.94);
+
+  box-shadow:
+    0 0 22px rgba(255,115,0,.4),
+    0 25px 65px rgba(0,0,0,.6);
+}
+
+.hero-art img {
+  max-width: 100%;
+  margin: auto;
+}
+
+.hero-art-caption {
+  margin: 15px 0 0;
+  color: var(--yellow);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.fire-play-button {
+  margin-top: 18px;
+  padding: 9px 13px;
+
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+
+  background: rgba(5,5,5,.88);
+  color: var(--yellow);
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* ==========================================
+   BRAND STATEMENT
+========================================== */
+
+.statement-strip {
+  background: rgba(5,5,5,.91);
+  border-top: 1px solid var(--edge);
+  border-bottom: 1px solid var(--edge);
+}
+
+.statement-strip .wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 32px;
+
+  padding: 18px 0;
+
+  color: #e9c48e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* ==========================================
+   PREVIEW NOTICE
+========================================== */
+
+.preview-section {
+  padding: 48px 0 25px;
+}
+
+.preview-banner {
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  padding: 23px 28px;
+
+  background: rgba(31,22,10,.96);
+
+  box-shadow:
+    0 12px 38px rgba(0,0,0,.4);
+}
+
+.preview-banner h2 {
+  margin: 0 0 9px;
+  color: var(--yellow);
+  font-size: clamp(21px,2.5vw,27px);
+}
+
+.preview-banner p {
+  margin: 0;
+  color: var(--cream);
+  font-size: 15px;
+}
+
+.preview-banner strong {
+  color: var(--yellow);
+}
+
+/* ==========================================
+   FORM LAYOUT
+========================================== */
+
+.form-section {
+  padding: 28px 0 85px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 300px;
+  gap: 25px;
+  align-items: start;
+}
+
+.card {
+  min-width: 0;
+  border: 2px solid var(--gold);
+  border-radius: 14px;
+
+  background: rgba(10,9,8,.96);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.55);
+}
+
+.form-shell {
+  overflow: hidden;
+}
+
+.form-heading {
+  padding: 28px 31px 22px;
+  border-bottom: 1px solid var(--edge);
+}
+
+.progress-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 13px;
+}
+
+.progress-top strong {
+  color: var(--yellow);
+  font-size: 15px;
+}
+
+.progress-top span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.progress-track {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 6px;
+}
+
+.progress-track span {
+  height: 7px;
+  border-radius: 10px;
+  background: #382b20;
+}
+
+.progress-track span.done {
+  background: linear-gradient(
+    90deg,
+    var(--orange),
+    var(--yellow)
+  );
+}
+
+.form-step {
+  padding: 33px 31px 20px;
+}
+
+.form-step h2 {
+  margin: 0 0 8px;
+
+  color: var(--yellow);
+  font-size: clamp(26px,3vw,36px);
+  line-height: 1.18;
+}
+
+.step-lead {
+  margin: 0 0 28px;
+  color: #e1d1be;
+  font-size: 15px;
+}
+
+/* ==========================================
+   FIELDS AND OPTIONS
+========================================== */
+
+.field {
+  margin-bottom: 23px;
+}
+
+.field-label,
+legend {
+  display: block;
+  margin: 0 0 10px;
+
+  color: #fff2de;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+legend {
+  padding: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.required {
+  color: var(--yellow);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 47px;
+
+  border: 1px solid #8c6a3d;
+  border-radius: 7px;
+
+  background: #171513;
+  color: white;
+
+  padding: 11px 13px;
+}
+
+textarea {
+  min-height: 125px;
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #ad9c87;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--gold);
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  margin: 3px 0 0;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 11px;
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  padding: 14px;
+  border: 1px solid var(--edge);
+  border-radius: 8px;
+
+  background: #1c1713;
+  color: #f2e5d5;
+
+  font-size: 14px;
+  line-height: 1.45;
+  cursor: pointer;
+}
+
+.option:has(input:checked) {
+  border-color: var(--yellow);
+  background: #35240e;
+}
+
+.option small {
+  display: block;
+  margin-top: 4px;
+  color: #d0b896;
+  font-size: 12px;
+}
+
+.check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  margin: 13px 0;
+  color: #f0e5d7;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 17px;
+}
+
+.hint {
+  margin: 8px 0 0;
+  color: #c7b8a6;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.notice {
+  margin: 17px 0;
+  padding: 17px 19px;
+
+  border: 1px solid var(--edge);
+  border-left: 4px solid var(--gold);
+  border-radius: 7px;
+
+  background: rgba(66,43,19,.45);
+  color: var(--cream);
+
+  font-size: 14px;
+}
+
+.notice strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--yellow);
+}
+
+.subpanel {
+  margin: 18px 0;
+  padding: 22px;
+
+  border: 1px solid var(--edge);
+  border-radius: 10px;
+
+  background: #191511;
+}
+
+.subpanel h3 {
+  margin: 0 0 9px;
+  color: var(--yellow);
+  font-size: 21px;
+}
+
+.subpanel h4 {
+  margin: 0 0 13px;
+  color: #ffdf9e;
+}
+
+.subpanel > p {
+  margin: 0 0 19px;
+  color: #d0bc9f;
+  font-size: 13px;
+}
+
+.garment-details {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--edge);
+}
+
+.size-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(4,minmax(0,1fr));
+  gap: 9px;
+}
+
+.size-grid label {
+  color: var(--cream);
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.size-grid input {
+  min-width: 0;
+  padding: 8px;
+  text-align: center;
+}
+
+.file-names {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  color: #e7d5c2;
+  font-size: 12px;
+}
+
+.file-names li {
+  margin: 5px 0;
+}
+
+.inline-error {
+  color: #ffb6a3;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* ==========================================
+   NAVIGATION ACTIONS
+========================================== */
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 13px;
+
+  padding: 22px 31px 30px;
+  border-top: 1px solid var(--edge);
+}
+
+.right-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-left: auto;
+}
+
+/* ==========================================
+   LIVE SUMMARY
+========================================== */
+
+.summary-card {
+  position: sticky;
+  top: 20px;
+  padding: 25px;
+}
+
+.summary-card h2 {
+  margin: 0 0 10px;
+  color: var(--yellow);
+  font-size: 22px;
+}
+
+.summary-card p {
+  color: #d5c3ae;
+  font-size: 13px;
+}
+
+.summary-toggle {
+  width: 100%;
+  margin-top: 13px;
+  padding: 12px 14px;
+
+  display: flex;
+  justify-content: space-between;
+
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+
+  background: #30200d;
+  color: var(--yellow);
+
+  font-size: 13px;
+  font-weight: 900;
+  text-align: left;
+}
+
+.summary-content {
+  margin-top: 16px;
+  overflow-wrap: anywhere;
+}
+
+.summary-entry {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--edge);
+}
+
+.summary-entry strong {
+  display: block;
+  margin-bottom: 5px;
+
+  color: var(--yellow);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.summary-entry span {
+  color: #f1e5d6;
+  font-size: 13px;
+  white-space: pre-line;
+}
+
+/* ==========================================
+   FINAL REVIEW
+========================================== */
+
+.review-grid {
+  display: grid;
+  gap: 13px;
+}
+
+.review-box {
+  padding: 18px;
+
+  border: 1px solid var(--edge);
+  border-radius: 9px;
+
+  background: #1c1712;
+  overflow-wrap: anywhere;
+}
+
+.review-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.review-title h3 {
+  margin: 0;
+  color: var(--yellow);
+  font-size: 16px;
+}
+
+.review-title button {
+  border: 0;
+  background: none;
+
+  color: var(--yellow);
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+.review-box p {
+  margin: 10px 0 0;
+  color: #eadccc;
+  font-size: 13px;
+  white-space: pre-line;
+}
+
+.preview-complete {
+  margin-top: 20px;
+  padding: 20px;
+
+  border: 1px solid var(--gold);
+  border-radius: 9px;
+
+  background: #261b0d;
+}
+
+.preview-complete h3 {
+  margin: 0 0 9px;
+  color: var(--yellow);
+}
+
+.preview-complete p {
+  margin: 0;
+  color: var(--cream);
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.site-footer {
+  padding: 33px 0;
+
+  border-top: 3px solid var(--gold);
+  background: rgba(3,3,3,.95);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 23px;
+}
+
+.footer-brand {
+  color: var(--yellow);
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.footer-slogan {
+  color: #edc67e;
+  font-style: italic;
+}
+
+.footer-small {
+  color: #bfb1a0;
+  font-size: 12px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+}
+
+.footer-links a {
+  color: #e2c18e;
+  font-size: 12px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1050px) {
+
+  .header-inner {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .brand {
+    width: 270px;
+  }
+
+  .main-nav {
+    justify-content: center;
+  }
+
+  /* Flame brightness stays at 100%. */
+
+}
+
+@media (max-width: 950px) {
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-art {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-card {
+    position: static;
+    order: -1;
+  }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+
+  .wrap {
+    width: min(
+      calc(100% - 26px),
+      var(--max)
+    );
+  }
+
+  .brand {
+    width: min(265px,90%);
+  }
+
+  .main-nav {
+    gap: 9px 13px;
+  }
+
+  .main-nav a {
+    font-size: 12px;
+  }
+
+  .main-nav .nav-shop {
+    padding: 8px 12px;
+  }
+
+  .hero {
+    padding: 48px 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px,10vw,62px);
+  }
+
+  .preview-banner {
+    padding: 20px;
+  }
+
+  .form-heading {
+    padding: 22px 20px;
+  }
+
+  .form-step {
+    padding: 25px 20px 16px;
+  }
+
+  .field-grid,
+  .options {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    padding: 20px;
+  }
+
+  .actions .right-actions {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .right-actions .btn {
+    flex: 1;
+  }
+
+  .subpanel {
+    padding: 17px;
+  }
+
+  .footer-inner {
+    display: block;
+  }
+
+  .footer-links {
+    margin-top: 23px;
+  }
+
+}
+
+@media (max-width: 420px) {
+
+  .size-grid {
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+  }
+
+  .btn {
+    padding: 11px 13px;
+  }
+
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .fire-video {
+    display: none;
+  }
+
+  .btn {
+    transition: none;
+  }
+
+}
+
 </style>
 </head>
+
 <body>
+
+<!-- ==========================================
+     ANIMATED FIRE BACKGROUND
+========================================== -->
+
 <div class="background-scene" aria-hidden="true">
-  <video id="fire-video" class="fire-video" autoplay muted loop playsinline webkit-playsinline preload="metadata"><source src="pressed-and-burned-fire-loop-5s.mp4" type="video/mp4"></video>
-  <div class="background-art"></div><div class="scene-shade"></div>
+
+  <video
+    id="fire-video"
+    class="fire-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata">
+
+    <source
+      src="pressed-and-burned-fire-loop-5s.mp4"
+      type="video/mp4">
+
+  </video>
+
+  <div class="background-art"></div>
+  <div class="scene-shade"></div>
+
 </div>
+
+<!-- ==========================================
+     HEADER
+========================================== -->
+
 <header class="site-header">
+
   <div class="wrap header-inner">
-    <a class="brand" href="index.html" aria-label="Pressed and Burned Creations homepage"><img src="Pressed%20and%20burned%20logo.png" alt="Pressed and Burned Creations"></a>
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="index.html">Home</a><a href="showcase.html">Showcase</a><a href="index.html#services">Services</a><a href="about-us.html">About Us</a><a href="index.html#contact">Contact</a><a href="stickers.html" class="nav-shop">Sticker Shop</a>
+
+    <a
+      class="brand"
+      href="index.html"
+      aria-label="Pressed and Burned Creations homepage">
+
+      <img
+        src="Pressed%20and%20burned%20logo.png"
+        alt="Pressed and Burned Creations">
+
+    </a>
+
+    <nav
+      class="main-nav"
+      aria-label="Main navigation">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="showcase.html">
+        Showcase
+      </a>
+
+      <a href="index.html#services">
+        Services
+      </a>
+
+      <a
+        class="nav-custom"
+        href="custom-orders.html"
+        aria-current="page">
+        Custom Orders
+      </a>
+
+      <a href="about-us.html">
+        About Us
+      </a>
+
+      <a href="index.html#contact">
+        Contact
+      </a>
+
+      <a
+        class="nav-shop"
+        href="stickers.html">
+        Sticker Shop
+      </a>
+
     </nav>
+
   </div>
+
 </header>
+
 <main>
-  <section class="hero wrap" aria-labelledby="page-title">
-    <p class="eyebrow">Original ideas / Made personal / Your creation</p>
-    <h1 id="page-title">Have an idea? <em>Let's make it real.</em></h1>
-    <p class="hero-lead">Tell us what you're imagining. This guided request takes you through only the questions relevant to your project. Miles will review the details and prepare a custom quote—no payment or order commitment today.</p>
-    <button id="fire-play-button" class="fire-play-button" type="button" hidden>🔥 Show Background Flames</button>
-  </section>
-  <div class="wrap layout">
-    <div class="card form-shell">
-      <div class="form-heading">
-        <div class="progress-top"><strong id="progress-name">1. Your Project</strong><span id="progress-count">Step 1 of 5</span></div>
-        <div class="progress-track" id="progress-track" aria-hidden="true"><span class="done"></span><span></span><span></span><span></span><span></span></div>
-      </div>
-      <!-- SETUP: Create a P&B form at FormSubmit.app and paste its *real* endpoint in FORM_ENDPOINT in the script below.
-           No live submission is attempted while the endpoint is blank. Do not use FormSubmit.co URLs: that is a different service. -->
-      <form id="quote-form" method="POST" enctype="multipart/form-data" novalidate>
-        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
-        <input type="hidden" name="_subject" value="New P&B Custom Quote Request">
-        <section class="form-step" data-step="0" aria-labelledby="step-title-0">
-          <h2 id="step-title-0">Tell us about your project.</h2>
-          <p class="step-lead">Pick everything that fits. You can request several types of products in one quote.</p>
-          <fieldset class="field"><legend>What would you like us to create? <span class="required">*</span></legend>
-            <div class="options" id="categories">
-              <label class="option"><input type="checkbox" name="project_category" value="stickers">Custom Stickers</label>
-              <label class="option"><input type="checkbox" name="project_category" value="decals">Custom Decals</label>
-              <label class="option"><input type="checkbox" name="project_category" value="artwork">Custom Artwork</label>
-              <label class="option"><input type="checkbox" name="project_category" value="apparel">Custom Apparel</label>
-              <label class="option"><input type="checkbox" name="project_category" value="engraving">Engraving <small>Subject to availability</small></label>
-              <label class="option"><input type="checkbox" name="project_category" value="sublimation">Sublimation Products <small>Subject to availability</small></label>
-              <label class="option"><input type="checkbox" name="project_category" value="other">Other / Not Sure</label>
-            </div>
-            <p class="inline-error" id="categories-error" hidden>Please select at least one project type.</p>
-          </fieldset>
-          <div class="field"><label class="field-label" for="project-description">Tell us what you have in mind <span class="required">*</span></label>
-            <textarea id="project-description" name="project_description" required maxlength="5000" placeholder="What's the occasion? What would you like to make? Include any details you already know."></textarea>
-            <p class="hint">A few sentences are fine. You don't need everything figured out.</p>
-          </div>
-          <fieldset class="field"><legend>What help do you need with artwork? <span class="required">*</span></legend>
-            <div class="options" id="artwork-options">
-              <label class="option"><input type="radio" name="artwork_need" value="Finished artwork supplied">I'll supply finished artwork</label>
-              <label class="option"><input type="radio" name="artwork_need" value="Modify an existing design">Modify an existing design</label>
-              <label class="option"><input type="radio" name="artwork_need" value="Create artwork from scratch">Create artwork from scratch</label>
-              <label class="option"><input type="radio" name="artwork_need" value="Not Sure Yet">Not Sure Yet</label>
-            </div>
-          </fieldset>
-          <div class="notice" id="design-fees-notice" hidden><strong>About artwork and design fees</strong>Additional design charges may apply when creating or modifying artwork. Miles will explain any charges in your quote before work begins.</div>
-          <div class="field"><label class="field-label" for="art-files">Attach reference artwork or photos (optional)</label>
-            <input id="art-files" type="file" name="artwork_files" multiple accept=".png,.jpg,.jpeg,.webp,.pdf,.svg,.ai,.eps">
-            <p class="hint">Up to 5 files. Please keep each file under 10 MB; final upload limits will be verified with FormSubmit.app before launch.</p>
-            <ul class="file-names" id="file-names" aria-live="polite"></ul>
-            <p class="inline-error" id="file-error" hidden></p>
-          </div>
-          <div class="field" id="artwork-permission-wrap" hidden>
-            <label class="check-row"><input type="checkbox" id="artwork-permission" name="artwork_permission" value="Confirmed"><span>I confirm that I own the artwork I'm supplying or have permission to use and reproduce it for this project. <span class="required">*</span></span></label>
-            <p class="hint">P&B may still request proof of permission or decline protected designs.</p>
-          </div>
-        </section>
-        <section class="form-step" data-step="1" aria-labelledby="step-title-1" hidden>
-          <h2 id="step-title-1">Let's talk details.</h2>
-          <p class="step-lead">Only the product categories you selected appear here. All specifications can be approximate.</p>
-          <div id="product-panels"></div>
-          <div id="customer-item-banner" class="notice" hidden><strong>Supplying your own merchandise?</strong>Customer-supplied items require P&B's approval before delivery. Allow extra time for shipping and inspection. Before any work begins, each shipment or drop-off must include your completed, personally signed paper waiver. Customers pay shipping to P&B and return shipping; P&B arranges the return label.</div>
-        </section>
-        <section class="form-step" data-step="2" aria-labelledby="step-title-2" hidden>
-          <h2 id="step-title-2">Timing, budget &amp; delivery.</h2>
-          <p class="step-lead">A few practical details will help Miles put together your quote. No delivery date or price is guaranteed by this request.</p>
-          <div class="field-grid">
-            <div class="field"><label class="field-label" for="needed-date">Preferred completion date (optional)</label><input id="needed-date" type="date" name="preferred_completion_date"><p class="hint">Subject to Miles's review and availability.</p></div>
-            <div class="field"><label class="field-label" for="budget">Estimated budget (optional)</label><input id="budget" type="number" name="estimated_budget_usd" min="0" step="1" inputmode="numeric" placeholder="e.g. 250"><label class="check-row"><input type="checkbox" id="budget-unsure" name="budget_not_sure" value="Yes"><span>Not Sure Yet</span></label></div>
-          </div>
-          <label class="check-row"><input type="checkbox" id="no-deadline" name="no_specific_deadline" value="Yes"><span>I don't have a specific deadline.</span></label>
-          <label class="check-row"><input type="checkbox" id="rush-request" name="rush_production_requested" value="Yes"><span><strong>Request Rush Production.</strong> I understand any rush scheduling or fees must be reviewed and quoted by Miles.</span></label>
-          <div class="notice" id="urgent-notice" hidden><strong>Close requested date</strong>Your requested completion date is within seven calendar days. Miles will need to review whether the project can be completed in time. This does not promise rush production.</div>
-          <fieldset class="field" style="margin-top:28px"><legend>How would you prefer to receive your order? <span class="required">*</span></legend>
-            <div class="options" id="delivery-options">
-              <label class="option"><input type="radio" name="delivery_method" value="Shipping">Shipping</label>
-              <label class="option"><input type="radio" name="delivery_method" value="Local Pickup (subject to availability)">Local Pickup <small>Subject to availability</small></label>
-              <label class="option"><input type="radio" name="delivery_method" value="Not Sure Yet">Not Sure Yet</label>
-            </div>
-          </fieldset>
-          <div class="field" id="zip-wrap" hidden><label class="field-label" for="shipping-zip">Destination ZIP code <span class="required">*</span></label><input id="shipping-zip" type="text" name="shipping_zip_code" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" placeholder="5-digit ZIP code"><p class="hint">Used only to estimate shipping. A full address is collected if you accept the quote.</p></div>
-        </section>
-        <section class="form-step" data-step="3" aria-labelledby="step-title-3" hidden>
-          <h2 id="step-title-3">How can we reach you?</h2>
-          <p class="step-lead">Miles may have a question about your idea. Your contact information is only for handling your request unless you separately opt in to marketing.</p>
-          <div class="field-grid">
-            <div class="field"><label class="field-label" for="customer-name">Full name <span class="required">*</span></label><input id="customer-name" type="text" name="customer_full_name" autocomplete="name" required maxlength="120"></div>
-            <div class="field"><label class="field-label" for="customer-email">Email address <span class="required">*</span></label><input id="customer-email" type="email" name="email" autocomplete="email" required maxlength="254"></div>
-            <div class="field"><label class="field-label" for="customer-phone">Phone number <span class="required">*</span></label><input id="customer-phone" type="tel" name="customer_phone" autocomplete="tel" required maxlength="30" placeholder="(555) 555-0123"></div>
-          </div>
-          <fieldset class="field"><legend>Preferred way for Miles to contact you <span class="required">*</span></legend>
-            <div class="options"><label class="option"><input type="radio" name="preferred_contact_method" value="Phone Call">Phone Call</label><label class="option"><input type="radio" name="preferred_contact_method" value="Text Message">Text Message</label><label class="option"><input type="radio" name="preferred_contact_method" value="Email">Email</label></div>
-          </fieldset>
-          <div class="subpanel"><h3>Project communication</h3>
-            <label class="check-row"><input type="checkbox" name="phone_call_permission" id="phone-permission" value="Authorized" required><span><strong>Required:</strong> I authorize Pressed and Burned Creations to call me at the number provided about this custom quote request, including questions about artwork, pricing, and project details. <span class="required">*</span></span></label>
-            <label class="check-row"><input type="checkbox" name="project_text_permission" id="text-permission" value="Authorized"><span><strong>Optional:</strong> I agree to receive text messages about this custom quote request. This is not permission for promotional texts.</span></label>
-            <p class="hint" id="text-preference-note" hidden>If you prefer text messages, please check the separate text authorization above. Otherwise Miles can contact you by email or an authorized call.</p>
-          </div>
-          <div class="subpanel" id="waiver-ack-wrap" hidden>
-            <h3>Customer-supplied items</h3>
-            <p>For any merchandise you provide, you must wait for Miles to authorize delivery, then include a printed, completed, personally signed paper waiver with your items. No customization starts before P&B receives and approves the merchandise and waiver.</p>
-            <div class="notice"><strong>Printable waiver</strong><span id="waiver-unavailable">The printable waiver will be added here before the form goes live. Miles will also provide it when approving your project.</span><a id="waiver-link" class="btn btn-secondary" href="#" download hidden>Download &amp; Print Waiver</a></div>
-            <label class="check-row"><input type="checkbox" id="waiver-ack" name="paper_waiver_acknowledgment" value="Acknowledged"><span>I understand that I must print, complete, personally sign, and physically include the waiver with each shipment or delivery of my own items, after P&B authorizes delivery. <span class="required">*</span></span></label>
-          </div>
-          <div class="subpanel"><h3>Stay in the P&amp;B loop? 🔥</h3>
-            <label class="check-row"><input type="checkbox" id="newsletter-optin" name="newsletter_double_optin_requested" value="Yes"><span><strong>Optional:</strong> I'd like occasional P&B emails about new releases, custom creations, special offers, and news.</span></label>
-            <p class="hint">Checking this box requests a separate email confirmation. You're not subscribed until you confirm; the newsletter service must be connected before launch. Unsubscribe anytime.</p>
-          </div>
-        </section>
-        <section class="form-step" data-step="4" aria-labelledby="step-title-4" hidden>
-          <h2 id="step-title-4">One last look.</h2>
-          <p class="step-lead">Check your details below. Use Edit to return to any section. This is just a quote request—no payment or order is created.</p>
-          <div class="review-grid" id="review-grid" aria-live="polite"></div>
-          <p class="hint" style="margin-top:20px">Miles will review your project and contact you with next steps. Quotes, services, deadlines, shipping and any added fees require individual approval.</p>
-        </section>
-        <div class="actions" id="form-actions">
-          <button id="back-btn" class="btn btn-secondary" type="button" hidden>← Back</button>
-          <div class="right-actions"><button id="next-btn" class="btn btn-primary" type="button">Continue →</button><button id="submit-btn" class="btn btn-primary" type="submit" hidden>Submit Quote Request →</button></div>
-          <p class="inline-error" id="status-msg" role="alert" hidden></p>
-        </div>
-      </form>
-      <div id="success-panel" class="success" role="status" hidden><h2>Thank you for reaching out! 🔥</h2><p>Your custom quote request was received by the form service. Miles will review the details and get back to you. This is not an order confirmation or a promise of a production date.</p><p>If you asked about the newsletter, that subscription still requires separate email confirmation.</p><a href="index.html" class="btn btn-secondary">Return to Homepage</a></div>
+
+<!-- ==========================================
+     HERO
+========================================== -->
+
+<section class="hero" aria-labelledby="page-title">
+
+  <div class="wrap hero-grid">
+
+    <div>
+
+      <p class="eyebrow">
+        Pressed &amp; Burned Creations
+      </p>
+
+      <h1 id="page-title">
+        Your Idea.
+        <span>Our Creativity.</span>
+      </h1>
+
+      <p class="hero-lead">
+        Have a custom project in mind?
+        Explore our guided quote process
+        for stickers, decals, apparel,
+        engraving, artwork, and more.
+      </p>
+
+      <p class="hero-lead">
+        Our custom quote experience is being
+        prepared for launch. You can explore
+        the steps below, but requests cannot
+        be submitted just yet.
+      </p>
+
+      <button
+        id="fire-play-button"
+        class="fire-play-button"
+        type="button"
+        hidden>
+        🔥 Show Background Flames
+      </button>
+
     </div>
-    <aside class="card summary-card" aria-label="Request summary">
-      <h2>Your creation, your way.</h2><p>See what you've chosen without leaving the current step.</p>
-      <button type="button" id="summary-toggle" class="summary-toggle" aria-expanded="false" aria-controls="summary-content">View My Request <span aria-hidden="true">+</span></button>
-      <div class="summary-content" id="summary-content" hidden aria-live="polite"></div>
-      <p style="margin-top:18px">Not sure about a detail? That's okay. Miles can help you figure it out.</p>
-    </aside>
+
+    <div class="hero-art">
+
+      <img
+        src="Pressed%20and%20burned%20logo.png"
+        alt="Pressed and Burned Creations logo">
+
+      <p class="hero-art-caption">
+        Custom Creations • Original Ideas
+      </p>
+
+    </div>
+
   </div>
+
+</section>
+
+<!-- ==========================================
+     STATEMENT STRIP
+========================================== -->
+
+<div class="statement-strip">
+
+  <div class="wrap">
+
+    <span>Custom Designs</span>
+    <span>Made Personal</span>
+    <span>Family Creativity</span>
+
+  </div>
+
+</div>
+
+<!-- ==========================================
+     IMPORTANT PREVIEW NOTICE
+========================================== -->
+
+<section
+  class="preview-section"
+  aria-labelledby="preview-title">
+
+  <div class="wrap">
+
+    <div class="preview-banner">
+
+      <h2 id="preview-title">
+        🔥 Custom Quote Form — Preview Only
+      </h2>
+
+      <p>
+        Our online quote system is still
+        under development.
+        <strong>No requests, files, personal
+        information, or orders can be
+        submitted through this preview.</strong>
+        You are welcome to explore all five steps
+        and see how the finished form will work.
+        Information entered here remains in
+        your browser during this visit and is
+        not sent to Pressed &amp; Burned Creations.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ==========================================
+     FIVE-STEP QUOTE PREVIEW
+========================================== -->
+
+<section
+  class="form-section"
+  aria-label="Custom quote form preview">
+
+  <div class="wrap layout">
+
+    <div class="card form-shell">
+
+      <div class="form-heading">
+
+        <div class="progress-top">
+
+          <strong id="progress-name">
+            1. Your Project
+          </strong>
+
+          <span id="progress-count">
+            Step 1 of 5
+          </span>
+
+        </div>
+
+        <div
+          class="progress-track"
+          id="progress-track"
+          aria-hidden="true">
+
+          <span class="done"></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </div>
+
+      </div>
+
+      <!--
+        PREVIEW-ONLY FORM
+
+        There is deliberately NO action URL,
+        NO submission endpoint and NO fetch
+        request anywhere in this page.
+
+        All navigation is local to the browser.
+      -->
+
+      <form
+        id="quote-form"
+        novalidate>
+
+        <!-- ==============================
+             STEP 1 — YOUR PROJECT
+        ============================== -->
+
+        <section
+          class="form-step"
+          data-step="0"
+          aria-labelledby="step-title-0">
+
+          <h2 id="step-title-0">
+            Tell us about your project.
+          </h2>
+
+          <p class="step-lead">
+            Choose everything that fits.
+            You can explore multiple custom
+            product types in one request.
+            These selections are not being sent.
+          </p>
+
+          <fieldset class="field">
+
+            <legend>
+              What would you like us to create?
+              <span class="required">*</span>
+            </legend>
+
+            <div class="options" id="categories">
+
+              <label class="option">
+                <input
+                  type="checkbox"
+                  name="project_category"
+                  value="stickers">
+                Custom Stickers
+              </label>
+
+              <label class="option">
+                <input
+                  type="checkbox"
+                  name="project_category"
+                  value="decals">
+                Custom Decals
+              </label>
+
+              <label class="option">
+                <input
+                  type="checkbox"
+                  name="project_category"
+                  value="artwork">
+                Custom Artwork
+              </label>
+
+              <label class="option">
+                <input
+                  type="checkbox"
+                  name="project_category"
+                  value="apparel">
+                Custom Apparel
+              </label>
+
+              <label class="option">
+                <input
+                  type="checkbox"
+                  name="project_category"
+                  value="engraving">
+                <span>
+                  Engraving
+                  <small>
+                    Subject to availability
+                  </small>
+                </span>
+              </label>
+
+              <label class="option">
+                <input
+                  type="checkbox"
+                  name="project_category"
+                  value="sublimation">
+                <span>
+                  Sublimation Products
+                  <small>
+                    Subject to availability
+                  </small>
+                </span>
+              </label>
+
+              <label class="option">
+                <input
+                  type="checkbox"
+                  name="project_category"
+                  value="other">
+                Other / Not Sure
+              </label>
+
+            </div>
+
+            <p class="hint">
+              Required when live quote requests open.
+            </p>
+
+          </fieldset>
+
+          <div class="field">
+
+            <label
+              class="field-label"
+              for="project-description">
+
+              Tell us what you have in mind
+              <span class="required">*</span>
+
+            </label>
+
+            <textarea
+              id="project-description"
+              name="project_description"
+              maxlength="5000"
+              placeholder="Describe your idea, the occasion, or what you would like created."></textarea>
+
+            <p class="hint">
+              A few sentences are fine.
+              You can leave this blank
+              while exploring the preview.
+            </p>
+
+          </div>
+
+          <fieldset class="field">
+
+            <legend>
+              What help do you need with artwork?
+              <span class="required">*</span>
+            </legend>
+
+            <div
+              class="options"
+              id="artwork-options">
+
+              <label class="option">
+                <input
+                  type="radio"
+                  name="artwork_need"
+                  value="Finished artwork supplied">
+                I'll supply finished artwork
+              </label>
+
+              <label class="option">
+                <input
+                  type="radio"
+                  name="artwork_need"
+                  value="Modify an existing design">
+                Modify an existing design
+              </label>
+
+              <label class="option">
+                <input
+                  type="radio"
+                  name="artwork_need"
+                  value="Create artwork from scratch">
+                Create artwork from scratch
+              </label>
+
+              <label class="option">
+                <input
+                  type="radio"
+                  name="artwork_need"
+                  value="Not Sure Yet">
+                Not Sure Yet
+              </label>
+
+            </div>
+
+          </fieldset>
+
+          <div
+            class="notice"
+            id="design-fees-notice"
+            hidden>
+
+            <strong>
+              Artwork and design fees
+            </strong>
+
+            Additional design charges may apply
+            when creating or modifying artwork.
+            Miles will explain any charges in
+            the quote before work begins.
+
+          </div>
+
+          <div class="field">
+
+            <label
+              class="field-label"
+              for="art-files">
+
+              Reference artwork or photos
+              (optional)
+
+            </label>
+
+            <input
+              id="art-files"
+              type="file"
+              name="artwork_files"
+              multiple
+              accept=".png,.jpg,.jpeg,.webp,.pdf,.svg,.ai,.eps">
+
+            <p class="hint">
+              Preview only: selected filenames
+              are displayed locally.
+              No files are uploaded.
+              The planned limit is five files;
+              final upload limits will be verified
+              before launch.
+            </p>
+
+            <ul
+              class="file-names"
+              id="file-names"
+              aria-live="polite"></ul>
+
+            <p
+              class="inline-error"
+              id="file-error"
+              hidden></p>
+
+          </div>
+
+          <div
+            class="field"
+            id="artwork-permission-wrap"
+            hidden>
+
+            <label class="check-row">
+
+              <input
+                type="checkbox"
+                id="artwork-permission"
+                name="artwork_permission"
+                value="Confirmed">
+
+              <span>
+                I confirm that I own the artwork
+                I'm supplying or have permission
+                to use and reproduce it.
+                <span class="required">*</span>
+              </span>
+
+            </label>
+
+            <p class="hint">
+              This acknowledgment will be required
+              for applicable live quote requests.
+              P&amp;B may still request proof
+              of permission.
+            </p>
+
+          </div>
+
+        </section>
+
+        <!-- ==============================
+             STEP 2 — PRODUCT DETAILS
+        ============================== -->
+
+        <section
+          class="form-step"
+          data-step="1"
+          aria-labelledby="step-title-1"
+          hidden>
+
+          <h2 id="step-title-1">
+            Let's talk details.
+          </h2>
+
+          <p class="step-lead">
+            The sections below respond to
+            your product selections.
+            Approximate specifications are fine.
+          </p>
+
+          <div
+            class="notice"
+            id="empty-products">
+
+            <strong>
+              Select a product type
+            </strong>
+
+            Return to Step 1 to choose
+            a product category and see
+            its custom questions.
+
+          </div>
+
+          <div id="product-panels"></div>
+
+          <div
+            id="customer-item-banner"
+            class="notice"
+            hidden>
+
+            <strong>
+              Supplying your own merchandise?
+            </strong>
+
+            You must wait for P&amp;B to approve
+            your project and explicitly
+            authorize delivery before sending
+            or dropping off any items.
+
+            A printed, completed, personally
+            signed waiver must accompany the items.
+            P&amp;B must receive and approve both
+            the merchandise and waiver before
+            customization begins.
+
+            Customers pay inbound shipping.
+            Return shipping arrangements and costs
+            will be confirmed before approval.
+
+          </div>
+
+        </section>
+
+        <!-- ==============================
+             STEP 3 — TIMING AND DELIVERY
+        ============================== -->
+
+        <section
+          class="form-step"
+          data-step="2"
+          aria-labelledby="step-title-2"
+          hidden>
+
+          <h2 id="step-title-2">
+            Timing, budget &amp; delivery.
+          </h2>
+
+          <p class="step-lead">
+            These details help establish
+            the eventual quote.
+            No price, delivery date, or
+            production schedule is guaranteed.
+          </p>
+
+          <div class="field-grid">
+
+            <div class="field">
+
+              <label
+                class="field-label"
+                for="needed-date">
+                Preferred completion date
+                (optional)
+              </label>
+
+              <input
+                id="needed-date"
+                type="date"
+                name="preferred_completion_date">
+
+              <p class="hint">
+                Subject to approval and availability.
+              </p>
+
+            </div>
+
+            <div class="field">
+
+              <label
+                class="field-label"
+                for="budget">
+                Estimated budget (optional)
+              </label>
+
+              <input
+                id="budget"
+                type="number"
+                name="estimated_budget_usd"
+                min="0"
+                step="1"
+                placeholder="e.g. 250">
+
+              <label class="check-row">
+
+                <input
+                  id="budget-unsure"
+                  type="checkbox"
+                  name="budget_not_sure"
+                  value="Yes">
+
+                <span>Not Sure Yet</span>
+
+              </label>
+
+            </div>
+
+          </div>
+
+          <label class="check-row">
+
+            <input
+              id="no-deadline"
+              type="checkbox"
+              name="no_specific_deadline"
+              value="Yes">
+
+            <span>
+              I don't have a specific deadline.
+            </span>
+
+          </label>
+
+          <label class="check-row">
+
+            <input
+              id="rush-request"
+              type="checkbox"
+              name="rush_production_requested"
+              value="Yes">
+
+            <span>
+              <strong>
+                Request Rush Production.
+              </strong>
+              Rush scheduling and any extra
+              fees require Miles's approval.
+            </span>
+
+          </label>
+
+          <div
+            id="urgent-notice"
+            class="notice"
+            hidden>
+
+            <strong>
+              Close requested date
+            </strong>
+
+            Your requested completion date
+            is within seven calendar days.
+            Availability and rush fees
+            must be reviewed individually.
+
+          </div>
+
+          <fieldset class="field">
+
+            <legend>
+              How would you prefer to receive
+              your order?
+              <span class="required">*</span>
+            </legend>
+
+            <div
+              class="options"
+              id="delivery-options">
+
+              <label class="option">
+
+                <input
+                  type="radio"
+                  name="delivery_method"
+                  value="Shipping">
+
+                Shipping
+
+              </label>
+
+              <label class="option">
+
+                <input
+                  type="radio"
+                  name="delivery_method"
+                  value="Local Pickup (subject to availability)">
+
+                <span>
+                  Local Pickup
+                  <small>
+                    Subject to availability
+                  </small>
+                </span>
+
+              </label>
+
+              <label class="option">
+
+                <input
+                  type="radio"
+                  name="delivery_method"
+                  value="Not Sure Yet">
+
+                Not Sure Yet
+
+              </label>
+
+            </div>
+
+          </fieldset>
+
+          <div
+            class="field"
+            id="zip-wrap"
+            hidden>
+
+            <label
+              class="field-label"
+              for="shipping-zip">
+
+              Destination ZIP code
+
+            </label>
+
+            <input
+              id="shipping-zip"
+              type="text"
+              name="shipping_zip_code"
+              inputmode="numeric"
+              autocomplete="postal-code"
+              maxlength="5"
+              pattern="[0-9]{5}"
+              placeholder="5-digit ZIP code">
+
+            <p class="hint">
+              For estimating shipping.
+              A full delivery address would
+              be collected after quote approval.
+            </p>
+
+          </div>
+
+        </section>
+
+        <!-- ==============================
+             STEP 4 — CUSTOMER CONTACT
+        ============================== -->
+
+        <section
+          class="form-step"
+          data-step="3"
+          aria-labelledby="step-title-3"
+          hidden>
+
+          <h2 id="step-title-3">
+            How can we reach you?
+          </h2>
+
+          <p class="step-lead">
+            This section demonstrates the
+            contact information and permissions
+            that will be needed when quote
+            requests become available.
+            You do not need to enter real
+            contact information in this preview.
+          </p>
+
+          <div class="field-grid">
+
+            <div class="field">
+
+              <label
+                class="field-label"
+                for="customer-name">
+                Full name
+                <span class="required">*</span>
+              </label>
+
+              <input
+                id="customer-name"
+                type="text"
+                name="customer_full_name"
+                autocomplete="off"
+                maxlength="120">
+
+            </div>
+
+            <div class="field">
+
+              <label
+                class="field-label"
+                for="customer-email">
+                Email address
+                <span class="required">*</span>
+              </label>
+
+              <input
+                id="customer-email"
+                type="email"
+                name="email"
+                autocomplete="off"
+                maxlength="254">
+
+            </div>
+
+            <div class="field">
+
+              <label
+                class="field-label"
+                for="customer-phone">
+                Phone number
+                <span class="required">*</span>
+              </label>
+
+              <input
+                id="customer-phone"
+                type="tel"
+                name="customer_phone"
+                autocomplete="off"
+                maxlength="30"
+                placeholder="(555) 555-0123">
+
+            </div>
+
+          </div>
+
+          <fieldset class="field">
+
+            <legend>
+              Preferred way for Miles to
+              contact you
+              <span class="required">*</span>
+            </legend>
+
+            <div class="options">
+
+              <label class="option">
+
+                <input
+                  type="radio"
+                  name="preferred_contact_method"
+                  value="Phone Call">
+
+                Phone Call
+
+              </label>
+
+              <label class="option">
+
+                <input
+                  type="radio"
+                  name="preferred_contact_method"
+                  value="Text Message">
+
+                Text Message
+
+              </label>
+
+              <label class="option">
+
+                <input
+                  type="radio"
+                  name="preferred_contact_method"
+                  value="Email">
+
+                Email
+
+              </label>
+
+            </div>
+
+          </fieldset>
+
+          <div class="subpanel">
+
+            <h3>
+              Project Communication
+            </h3>
+
+            <label class="check-row">
+
+              <input
+                type="checkbox"
+                name="phone_call_permission"
+                id="phone-permission"
+                value="Authorized">
+
+              <span>
+                <strong>
+                  Required when live:
+                </strong>
+                I authorize Pressed &amp; Burned
+                Creations to call me at the number
+                provided about this custom quote
+                request, including artwork,
+                pricing, and project questions.
+                <span class="required">*</span>
+              </span>
+
+            </label>
+
+            <label class="check-row">
+
+              <input
+                type="checkbox"
+                name="project_text_permission"
+                id="text-permission"
+                value="Authorized">
+
+              <span>
+                <strong>Optional:</strong>
+                I agree to receive text messages
+                about this custom quote request.
+                This is not permission for
+                promotional texts.
+              </span>
+
+            </label>
+
+            <p
+              class="hint"
+              id="text-preference-note"
+              hidden>
+
+              If you prefer text messages,
+              the separate text authorization
+              will be needed when submissions
+              are available.
+
+            </p>
+
+          </div>
+
+          <!-- CUSTOMER-SUPPLIED ITEMS -->
+
+          <div
+            class="subpanel"
+            id="waiver-ack-wrap"
+            hidden>
+
+            <h3>
+              Customer-Supplied Items
+            </h3>
+
+            <p>
+              Before shipping or delivering
+              your own items, Miles must approve
+              the project and authorize delivery.
+              A printed, completed, personally
+              signed waiver must accompany
+              the merchandise.
+            </p>
+
+            <div class="notice">
+
+              <strong>
+                Printable Customer-Supplied
+                Item Waiver
+              </strong>
+
+              <span id="waiver-unavailable">
+
+                The printable waiver will be
+                available here before live quote
+                submissions launch.
+                Miles will also provide it
+                when approving a project.
+
+              </span>
+
+              <a
+                id="waiver-link"
+                class="btn btn-outline"
+                href="#"
+                download
+                hidden>
+
+                Download &amp; Print Waiver
+
+              </a>
+
+            </div>
+
+            <label class="check-row">
+
+              <input
+                id="waiver-ack"
+                type="checkbox"
+                name="paper_waiver_acknowledgment"
+                value="Acknowledged">
+
+              <span>
+                I understand that I must print,
+                complete, personally sign,
+                and physically include the
+                waiver with my items after
+                P&amp;B authorizes delivery.
+                <span class="required">*</span>
+              </span>
+
+            </label>
+
+          </div>
+
+          <!-- MARKETING IS SEPARATE -->
+
+          <div class="subpanel">
+
+            <h3>
+              Stay in the P&amp;B Loop? 🔥
+            </h3>
+
+            <label class="check-row">
+
+              <input
+                type="checkbox"
+                id="newsletter-optin"
+                name="newsletter_double_optin_requested"
+                value="Yes">
+
+              <span>
+                <strong>Optional:</strong>
+                I'd like occasional P&amp;B emails
+                about new releases, custom creations,
+                special offers, and news.
+              </span>
+
+            </label>
+
+            <p class="hint">
+              This is a preview only.
+              No newsletter subscription occurs.
+              A separate email-confirmation system
+              will be needed before launch.
+            </p>
+
+          </div>
+
+        </section>
+
+        <!-- ==============================
+             STEP 5 — FINAL REVIEW
+        ============================== -->
+
+        <section
+          class="form-step"
+          data-step="4"
+          aria-labelledby="step-title-4"
+          hidden>
+
+          <h2 id="step-title-4">
+            One last look.
+          </h2>
+
+          <p class="step-lead">
+            This is how customers will review
+            their quote details before submitting
+            when the service launches.
+            Use Edit to return to any section.
+          </p>
+
+          <div
+            class="review-grid"
+            id="review-grid"
+            aria-live="polite"></div>
+
+          <div class="notice">
+
+            <strong>
+              Preview Only — Nothing Will Be Sent
+            </strong>
+
+            Online submissions, customer
+            notifications, and quote processing
+            are not active yet.
+
+            This preview does not create
+            an order, quote, payment, or
+            customer account.
+
+          </div>
+
+          <div
+            class="preview-complete"
+            id="preview-complete-note"
+            role="status"
+            hidden>
+
+            <h3>
+              You've Reached the End of the Preview!
+            </h3>
+
+            <p>
+              Thank you for exploring our custom
+              quote experience.
+              No information or files were sent.
+              We're preparing this service
+              for a future launch.
+            </p>
+
+          </div>
+
+        </section>
+
+        <!-- ==============================
+             FORM NAVIGATION
+
+             NO SUBMIT BUTTON EXISTS
+        ============================== -->
+
+        <div class="actions">
+
+          <button
+            id="back-btn"
+            class="btn btn-outline"
+            type="button"
+            hidden>
+
+            ← Back
+
+          </button>
+
+          <div class="right-actions">
+
+            <button
+              id="next-btn"
+              class="btn btn-gold"
+              type="button">
+
+              Continue →
+
+            </button>
+
+            <button
+              id="preview-finish-btn"
+              class="btn btn-gold"
+              type="button"
+              hidden>
+
+              Finish Preview
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </form>
+
+    </div>
+
+    <!-- ======================================
+         LIVE REQUEST SUMMARY
+    ======================================= -->
+
+    <aside
+      class="card summary-card"
+      aria-label="Preview request summary">
+
+      <h2>
+        Your Creation, Your Way.
+      </h2>
+
+      <p>
+        Explore your selections throughout
+        the five-step form.
+      </p>
+
+      <p>
+        This is a demonstration.
+        Your entries are not sent to P&amp;B.
+      </p>
+
+      <button
+        id="summary-toggle"
+        class="summary-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="summary-content">
+
+        View My Preview
+        <span aria-hidden="true">+</span>
+
+      </button>
+
+      <div
+        class="summary-content"
+        id="summary-content"
+        hidden
+        aria-live="polite"></div>
+
+      <p style="margin-top:20px">
+        Not sure about a project detail?
+        That's okay. Miles can help
+        when live quote requests open.
+      </p>
+
+      <button
+        id="reset-preview"
+        class="btn btn-outline"
+        type="button">
+
+        Start Preview Over
+
+      </button>
+
+    </aside>
+
+  </div>
+
+</section>
+
 </main>
-<footer class="site-footer"><div class="wrap footer-inner"><div><p class="footer-tagline">Stickers With an Attitude.</p><p>&copy; 2026 Pressed and Burned Creations. All Rights Reserved.</p></div><p>Questions? <a href="index.html#contact" style="color:var(--gold-light);text-decoration:underline">Contact P&amp;B</a></p></div></footer>
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer class="site-footer">
+
+  <div class="wrap footer-inner">
+
+    <div>
+
+      <div class="footer-brand">
+        Pressed &amp; Burned Creations
+      </div>
+
+      <p class="footer-slogan">
+        PeelRuckus —
+        Peel it. Stick it. Stir things up.
+      </p>
+
+      <p class="footer-small">
+        &copy; 2026 Pressed and Burned Creations.
+        All Rights Reserved.
+      </p>
+
+    </div>
+
+    <nav
+      class="footer-links"
+      aria-label="Footer navigation">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="showcase.html">
+        Showcase
+      </a>
+
+      <a href="stickers.html">
+        Sticker Shop
+      </a>
+
+      <a href="custom-orders.html">
+        Custom Orders
+      </a>
+
+      <a href="about-us.html">
+        About Us
+      </a>
+
+      <a href="index.html#contact">
+        Contact
+      </a>
+
+    </nav>
+
+  </div>
+
+</footer>
+
+<!-- ==========================================
+     PREVIEW FORM JAVASCRIPT
+
+     NO NETWORK REQUESTS
+     NO FORM SUBMISSION ENDPOINT
+     NO CUSTOMER DATA TRANSMISSION
+========================================== -->
+
 <script>
-(function(){
-  'use strict';
-  // -------------------------------------------------------------------
-  // LAUNCH SETUP — do not invent or guess this value.
-  // Create a new P&B form in FormSubmit.app, configure its notification
-  // recipient as DeeJohnson@vtwinx.com, and paste the EXACT form endpoint.
-  // Set up/test autoresponder and newsletter double opt-in separately.
-  // -------------------------------------------------------------------
-  const FORM_ENDPOINT = '';
-  // Add the actual reviewed PDF's filename once approved and uploaded to
-  // the same GitHub folder (e.g. 'customer-supplied-item-waiver.pdf').
-  const WAIVER_FILE = '';
-  const MAX_FILES = 5;
-  const MAX_FILE_BYTES = 10 * 1024 * 1024; // FormSubmit.app Free file size limit per file; verify in account.
-  const form = document.getElementById('quote-form');
-  const steps = Array.from(document.querySelectorAll('.form-step'));
-  const names = ['Your Project','Product Details','Timing & Delivery','Contact Details','Review & Submit'];
+(function () {
+  "use strict";
+
+  const form = document.getElementById("quote-form");
+
+  const steps = Array.from(
+    document.querySelectorAll(".form-step")
+  );
+
+  const stepNames = [
+    "Your Project",
+    "Product Details",
+    "Timing & Delivery",
+    "Contact Details",
+    "Review Preview"
+  ];
+
   let currentStep = 0;
-  const qs = (selector,root=document) => root.querySelector(selector);
-  const qsa = (selector,root=document) => Array.from(root.querySelectorAll(selector));
-  const checked = (selector,root=document) => qsa(selector,root).filter(el=>el.checked);
-  const val = id => (document.getElementById(id)?.value||'').trim();
-  const categoryLabels = {stickers:'Custom Stickers',decals:'Custom Decals',artwork:'Custom Artwork',apparel:'Custom Apparel',engraving:'Engraving',sublimation:'Sublimation Products',other:'Other / Not Sure'};
-  const categories = () => checked('input[name="project_category"]').map(el=>el.value);
-  const safe = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const supplyOptions = '<option value="">Select one</option><option value="P&B supplies items">P&B supplies the items</option><option value="Customer supplies items">I will supply my own items</option><option value="Not Sure Yet">Not Sure Yet</option>';
-  const quantityHTML = (prefix) => `<div class="field"><label class="field-label" for="${prefix}-qty">Approximate quantity</label><input id="${prefix}-qty" type="number" name="${prefix}_quantity" min="1" step="1" inputmode="numeric" placeholder="How many?"><label class="check-row"><input type="checkbox" class="unsure-control" data-target="${prefix}-qty" name="${prefix}_quantity_unsure" value="Yes"><span>Not Sure Yet</span></label></div>`;
-  const colorHTML = (prefix) => `<div class="field"><label class="field-label" for="${prefix}-color">Preferred color(s) (optional)</label><input id="${prefix}-color" type="text" name="${prefix}_colors" maxlength="160" placeholder="Colors, combinations, or a reference"><label class="check-row"><input type="checkbox" class="unsure-control" data-target="${prefix}-color" name="${prefix}_colors_unsure" value="Yes"><span>Not Sure Yet</span></label></div>`;
-  const dimHTML = (prefix) => `<div class="field"><label class="field-label" for="${prefix}-size">Approximate size / dimensions</label><input id="${prefix}-size" type="text" name="${prefix}_dimensions" maxlength="150" placeholder="e.g. 3 in. across, or 8 × 10 in."><label class="check-row"><input type="checkbox" class="unsure-control" data-target="${prefix}-size" name="${prefix}_size_unsure" value="Yes"><span>Not Sure Yet</span></label></div>`;
-  const sourceHTML = (prefix) => `<div class="field"><label class="field-label" for="${prefix}-source">Who supplies the item to customize?</label><select id="${prefix}-source" name="${prefix}_item_supplier" data-supplier>${supplyOptions}</select><p class="hint">If you supply an item, Miles must approve it before you send or deliver it.</p></div>`;
-  const notesHTML = prefix => `<div class="field"><label class="field-label" for="${prefix}-notes">Anything else for this product? (optional)</label><textarea id="${prefix}-notes" name="${prefix}_notes" rows="2" maxlength="1200" placeholder="Material, finish, specific requests, etc."></textarea></div>`;
-  const apparelTypes = [ ['tshirt','T-Shirts'],['hoodie','Hoodies'],['sweatshirt','Sweatshirts'],['hat','Hats'],['othergarment','Other Apparel'] ];
-  function buildProductPanels(){
-    const container = document.getElementById('product-panels');
-    container.innerHTML = Object.entries(categoryLabels).map(([key,label])=>{
-      if(key==='apparel'){
-        return `<section class="subpanel product-panel" id="panel-apparel" data-category="apparel" hidden><h3>Custom Apparel</h3><p>Choose the clothing types that apply, then share details separately for each.</p><fieldset class="field"><legend>Which garments are you interested in?</legend><div class="options">${apparelTypes.map(([id,name])=>`<label class="option"><input type="checkbox" name="apparel_type" value="${name}" data-garment="${id}">${name}</label>`).join('')}<label class="option"><input type="checkbox" name="apparel_type" value="Not Sure Yet" data-garment="unsure">Not Sure Yet</label></div></fieldset><div id="garment-panels">${apparelTypes.map(([id,name])=>{
-          const pre='apparel_'+id;
-          return `<section class="garment-details" id="garment-${id}" data-garment-panel="${id}" hidden><h4 style="color:var(--gold-light);margin:0 0 12px">${name}</h4>${sourceHTML(pre)}${colorHTML(pre)}<div class="field"><span class="field-label">Quantities by size (optional)</span><div class="size-grid">${['XS','S','M','L','XL','2XL','3XL','4XL'].map(size=>`<label>${size}<input type="number" name="${pre}_size_${size}" min="0" step="1" inputmode="numeric" placeholder="0" aria-label="${name} quantity size ${size}"></label>`).join('')}</div><label class="check-row"><input type="checkbox" class="garment-size-unsure" data-garment-id="${id}" name="${pre}_sizes_unsure" value="Yes"><span>Not Sure Yet</span></label><p class="hint">For hats or specialty items, use Other / Not Sure Yet where appropriate.</p></div><div class="field"><label class="field-label" for="${pre}-placement">Artwork placement</label><select id="${pre}-placement" name="${pre}_artwork_placement"><option value="">Select one</option>${id==='hat'?'<option>Front</option><option>Side</option><option>Back</option>':'<option>Front</option><option>Back</option><option>Front &amp; Back</option><option>Sleeve</option>'}<option>Other</option><option>Not Sure Yet</option></select></div>${notesHTML(pre)}</section>`;
-        }).join('')}</div></section>`;
+
+  const qs = (selector, root = document) =>
+    root.querySelector(selector);
+
+  const qsa = (selector, root = document) =>
+    Array.from(root.querySelectorAll(selector));
+
+  const checked = (selector, root = document) =>
+    qsa(selector, root).filter(el => el.checked);
+
+  const val = id =>
+    (document.getElementById(id)?.value || "").trim();
+
+  const categoryLabels = {
+    stickers: "Custom Stickers",
+    decals: "Custom Decals",
+    artwork: "Custom Artwork",
+    apparel: "Custom Apparel",
+    engraving: "Engraving",
+    sublimation: "Sublimation Products",
+    other: "Other / Not Sure"
+  };
+
+  const categories = () =>
+    checked('input[name="project_category"]')
+      .map(el => el.value);
+
+  function safe(value) {
+    return String(value).replace(
+      /[&<>"']/g,
+      character => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      })[character]
+    );
+  }
+
+  /* ========================================
+     REUSABLE PRODUCT FIELDS
+  ======================================== */
+
+  const supplierOptions = `
+    <option value="">Select one</option>
+    <option value="P&B supplies items">
+      P&B supplies the items
+    </option>
+    <option value="Customer supplies items">
+      I will supply my own items
+    </option>
+    <option value="Not Sure Yet">
+      Not Sure Yet
+    </option>
+  `;
+
+  function quantityHTML(prefix) {
+    return `
+      <div class="field">
+        <label class="field-label"
+               for="${prefix}-qty">
+          Approximate quantity
+        </label>
+
+        <input
+          id="${prefix}-qty"
+          type="number"
+          name="${prefix}_quantity"
+          min="1"
+          step="1"
+          placeholder="How many?">
+
+        <label class="check-row">
+          <input
+            type="checkbox"
+            class="unsure-control"
+            data-target="${prefix}-qty"
+            name="${prefix}_quantity_unsure"
+            value="Yes">
+          <span>Not Sure Yet</span>
+        </label>
+      </div>
+    `;
+  }
+
+  function colorHTML(prefix) {
+    return `
+      <div class="field">
+        <label class="field-label"
+               for="${prefix}-color">
+          Preferred color(s)
+        </label>
+
+        <input
+          id="${prefix}-color"
+          type="text"
+          name="${prefix}_colors"
+          maxlength="160"
+          placeholder="Preferred colors">
+
+        <label class="check-row">
+          <input
+            type="checkbox"
+            class="unsure-control"
+            data-target="${prefix}-color"
+            name="${prefix}_colors_unsure"
+            value="Yes">
+          <span>Not Sure Yet</span>
+        </label>
+      </div>
+    `;
+  }
+
+  function dimensionsHTML(prefix) {
+    return `
+      <div class="field">
+        <label class="field-label"
+               for="${prefix}-size">
+          Approximate size / dimensions
+        </label>
+
+        <input
+          id="${prefix}-size"
+          type="text"
+          name="${prefix}_dimensions"
+          maxlength="150"
+          placeholder="e.g. 3 inches across">
+
+        <label class="check-row">
+          <input
+            type="checkbox"
+            class="unsure-control"
+            data-target="${prefix}-size"
+            name="${prefix}_size_unsure"
+            value="Yes">
+          <span>Not Sure Yet</span>
+        </label>
+      </div>
+    `;
+  }
+
+  function supplierHTML(prefix) {
+    return `
+      <div class="field">
+        <label class="field-label"
+               for="${prefix}-source">
+          Who supplies the item to customize?
+        </label>
+
+        <select
+          id="${prefix}-source"
+          name="${prefix}_item_supplier"
+          data-supplier>
+          ${supplierOptions}
+        </select>
+
+        <p class="hint">
+          Customer-supplied merchandise must
+          be approved before delivery.
+        </p>
+      </div>
+    `;
+  }
+
+  function notesHTML(prefix) {
+    return `
+      <div class="field">
+        <label class="field-label"
+               for="${prefix}-notes">
+          Additional product details
+        </label>
+
+        <textarea
+          id="${prefix}-notes"
+          name="${prefix}_notes"
+          rows="2"
+          maxlength="1200"
+          placeholder="Material, finish, artwork placement, or other requests."></textarea>
+      </div>
+    `;
+  }
+
+  /* ========================================
+     APPAREL OPTIONS
+  ======================================== */
+
+  const apparelTypes = [
+    ["tshirt", "T-Shirts"],
+    ["hoodie", "Hoodies"],
+    ["sweatshirt", "Sweatshirts"],
+    ["hat", "Hats"],
+    ["othergarment", "Other Apparel"]
+  ];
+
+  function buildApparelPanel() {
+
+    const garments = apparelTypes.map(
+      ([id, label]) => `
+        <label class="option">
+
+          <input
+            type="checkbox"
+            name="apparel_type"
+            value="${label}"
+            data-garment="${id}">
+
+          ${label}
+
+        </label>
+      `
+    ).join("");
+
+    const garmentPanels = apparelTypes.map(
+      ([id, label]) => {
+
+        const prefix = "apparel_" + id;
+
+        const sizes = [
+          "XS", "S", "M", "L",
+          "XL", "2XL", "3XL", "4XL"
+        ].map(size => `
+          <label>
+            ${size}
+            <input
+              type="number"
+              name="${prefix}_size_${size}"
+              min="0"
+              step="1"
+              placeholder="0"
+              aria-label="${label} quantity size ${size}">
+          </label>
+        `).join("");
+
+        const placements = id === "hat"
+          ? `
+            <option>Front</option>
+            <option>Side</option>
+            <option>Back</option>
+          `
+          : `
+            <option>Front</option>
+            <option>Back</option>
+            <option>Front &amp; Back</option>
+            <option>Sleeve</option>
+          `;
+
+        return `
+          <section
+            class="garment-details"
+            id="garment-${id}"
+            data-garment-panel="${id}"
+            hidden>
+
+            <h4>${label}</h4>
+
+            ${supplierHTML(prefix)}
+            ${colorHTML(prefix)}
+
+            <div class="field">
+
+              <span class="field-label">
+                Quantities by size
+              </span>
+
+              <div class="size-grid">
+                ${sizes}
+              </div>
+
+              <label class="check-row">
+                <input
+                  type="checkbox"
+                  class="garment-size-unsure"
+                  data-garment-id="${id}"
+                  name="${prefix}_sizes_unsure"
+                  value="Yes">
+                <span>Not Sure Yet</span>
+              </label>
+
+            </div>
+
+            <div class="field">
+
+              <label class="field-label"
+                     for="${prefix}-placement">
+                Artwork placement
+              </label>
+
+              <select
+                id="${prefix}-placement"
+                name="${prefix}_artwork_placement">
+
+                <option value="">Select one</option>
+                ${placements}
+                <option>Other</option>
+                <option>Not Sure Yet</option>
+
+              </select>
+
+            </div>
+
+            ${notesHTML(prefix)}
+
+          </section>
+        `;
       }
-      let parts = '';
-      if(key!=='artwork') parts += quantityHTML(key);
-      if(['stickers','decals','engraving','sublimation','other'].includes(key)) parts += dimHTML(key);
-      if(key!=='artwork') parts += colorHTML(key);
-      if(['decals','engraving','sublimation','other'].includes(key))parts += sourceHTML(key);
-      parts += notesHTML(key);
-      return `<section class="subpanel product-panel" data-category="${key}" hidden><h3>${label}</h3><p>Approximate details are fine. Anything undecided can be discussed with Miles.</p>${parts}</section>`;
-    }).join('');
-    qsa('input[data-garment]').forEach(el=>el.addEventListener('change',updateGarments));
-    qsa('[data-supplier]').forEach(el=>el.addEventListener('change',updateWaiver));
-    qsa('.unsure-control').forEach(el=>el.addEventListener('change',()=>{const target=document.getElementById(el.dataset.target);target.disabled=el.checked;if(el.checked)target.value='';updateSummaries();}));
-    qsa('.garment-size-unsure').forEach(el=>el.addEventListener('change',()=>{const panel=qs('#garment-'+el.dataset.garmentId);qsa('input[type=number]',panel).forEach(input=>{input.disabled=el.checked;if(el.checked)input.value='';});updateSummaries();}));
-    qsa('#product-panels input,#product-panels textarea,#product-panels select').forEach(el=>el.addEventListener('input',updateSummaries));
+    ).join("");
+
+    return `
+      <section
+        class="subpanel product-panel"
+        id="panel-apparel"
+        data-category="apparel"
+        hidden>
+
+        <h3>Custom Apparel</h3>
+
+        <p>
+          Select the garments you're interested in.
+          Each garment type can have its own details.
+        </p>
+
+        <fieldset class="field">
+
+          <legend>
+            Which garments are you interested in?
+          </legend>
+
+          <div class="options">
+            ${garments}
+
+            <label class="option">
+              <input
+                type="checkbox"
+                name="apparel_type"
+                value="Not Sure Yet"
+                data-garment="unsure">
+              Not Sure Yet
+            </label>
+
+          </div>
+
+        </fieldset>
+
+        <div id="garment-panels">
+          ${garmentPanels}
+        </div>
+
+      </section>
+    `;
   }
-  function togglePanel(root,show){root.hidden=!show;qsa('input,textarea,select',root).forEach(el=>el.disabled=!show);}
-  function updateProductPanels(){const selected=categories();qsa('.product-panel').forEach(panel=>togglePanel(panel,selected.includes(panel.dataset.category)));updateGarments();updateWaiver();updateSummaries();}
-  function updateGarments(){
-    qsa('[data-garment-panel]').forEach(panel=>{const name=panel.dataset.garmentPanel;const input=qs(`[data-garment="${name}"]`);togglePanel(panel,!qs('#panel-apparel').hidden&&input.checked);});
-    updateWaiver();updateSummaries();
-  }
-  function anyCustomerSupplied(){return qsa('[data-supplier]').some(el=>!el.disabled&&el.value==='Customer supplies items');}
-  function updateWaiver(){
-    const needs=anyCustomerSupplied();
-    document.getElementById('customer-item-banner').hidden=!needs;
-    document.getElementById('waiver-ack-wrap').hidden=!needs;
-    document.getElementById('waiver-ack').required=needs;
-    if(!needs)document.getElementById('waiver-ack').checked=false;
-    updateSummaries();
-  }
-  function updateArtwork(){
-    const need=qs('input[name="artwork_need"]:checked')?.value||'';
-    const files=document.getElementById('art-files').files;
-    const showPermission=need==='Finished artwork supplied'||need==='Modify an existing design'||files.length>0;
-    document.getElementById('design-fees-notice').hidden=!(need==='Modify an existing design'||need==='Create artwork from scratch');
-    document.getElementById('artwork-permission-wrap').hidden=!showPermission;
-    document.getElementById('artwork-permission').required=showPermission;
-    if(!showPermission)document.getElementById('artwork-permission').checked=false;
-    const names=document.getElementById('file-names');names.replaceChildren();
-    [...files].forEach(file=>{const li=document.createElement('li');li.textContent=`• ${file.name} (${(file.size/1048576).toFixed(1)} MB)`;names.appendChild(li);});
-    const err=document.getElementById('file-error');
-    const tooMany=files.length>MAX_FILES;const tooLarge=[...files].some(f=>f.size>MAX_FILE_BYTES);
-    err.hidden=!tooMany&&!tooLarge;
-    err.textContent=tooMany?`Please select no more than ${MAX_FILES} files.`:tooLarge?'Please select files under 10 MB each.':'';
-    updateSummaries();
-  }
-  function updateDelivery(){const ship=qs('input[name="delivery_method"]:checked')?.value==='Shipping';document.getElementById('zip-wrap').hidden=!ship;document.getElementById('shipping-zip').required=ship;if(!ship)document.getElementById('shipping-zip').value='';updateSummaries();}
-  function updateTiming(){
-    const noDeadline=document.getElementById('no-deadline');const date=document.getElementById('needed-date');
-    if(noDeadline.checked){date.value='';date.disabled=true;}else date.disabled=false;
-    const budget=document.getElementById('budget');budget.disabled=document.getElementById('budget-unsure').checked;if(budget.disabled)budget.value='';
-    const notice=document.getElementById('urgent-notice');notice.hidden=true;
-    if(date.value){const due=new Date(date.value+'T12:00:00');const today=new Date();today.setHours(12,0,0,0);const days=Math.round((due-today)/86400000);notice.hidden=!(days>=0&&days<=7);}
-    updateSummaries();
-  }
-  function showError(text){const msg=document.getElementById('status-msg');msg.textContent=text;msg.hidden=false;}
-  function clearError(){const msg=document.getElementById('status-msg');msg.textContent='';msg.hidden=true;document.getElementById('categories-error').hidden=true;}
-  function validInput(input){if(!input.checkValidity()){input.reportValidity();input.focus();return false;}return true;}
-  function validateStep(step){
-    clearError();
-    if(step===0){
-      if(!categories().length){document.getElementById('categories-error').hidden=false;qs('#categories input').focus();return false;}
-      if(!validInput(document.getElementById('project-description')))return false;
-      if(!qs('input[name="artwork_need"]:checked')){showError('Please choose an artwork option—even Not Sure Yet is fine.');qs('#artwork-options input').focus();return false;}
-      if(!document.getElementById('file-error').hidden){showError('Please correct the artwork attachments.');return false;}
-      if(document.getElementById('artwork-permission').required&&!document.getElementById('artwork-permission').checked){showError('Please confirm your permission to use the supplied artwork.');document.getElementById('artwork-permission').focus();return false;}
-    }
-    if(step===1){
-      if(categories().includes('apparel')&&!checked('input[name="apparel_type"]').length){showError('Please select an apparel type, or Not Sure Yet.');qs('input[name="apparel_type"]').focus();return false;}
-      const numeric=qsa('#product-panels input[type="number"]').filter(el=>!el.disabled&&el.value!=='');
-      for(const el of numeric)if(!validInput(el))return false;
-    }
-    if(step===2){
-      if(!qs('input[name="delivery_method"]:checked')){showError('Please choose a delivery preference. Not Sure Yet is fine.');qs('#delivery-options input').focus();return false;}
-      if(!document.getElementById('needed-date').disabled&&document.getElementById('needed-date').value&&!validInput(document.getElementById('needed-date')))return false;
-      if(!document.getElementById('budget').disabled&&document.getElementById('budget').value&&!validInput(document.getElementById('budget')))return false;
-      if(document.getElementById('shipping-zip').required&&!/^[0-9]{5}$/.test(val('shipping-zip'))){showError('Please enter a valid five-digit ZIP code for shipping estimates.');document.getElementById('shipping-zip').focus();return false;}
-    }
-    if(step===3){
-      for(const id of ['customer-name','customer-email','customer-phone'])if(!validInput(document.getElementById(id)))return false;
-      if(val('customer-phone').replace(/\D/g,'').length<10){showError('Please enter a complete phone number.');document.getElementById('customer-phone').focus();return false;}
-      if(!qs('input[name="preferred_contact_method"]:checked')){showError('Please choose a preferred contact method.');qs('input[name="preferred_contact_method"]').focus();return false;}
-      if(!document.getElementById('phone-permission').checked){showError('Please authorize calls related to your custom quote request.');document.getElementById('phone-permission').focus();return false;}
-      if(anyCustomerSupplied()&&!document.getElementById('waiver-ack').checked){showError('Please acknowledge the printed, personally signed waiver requirement.');document.getElementById('waiver-ack').focus();return false;}
-    }
-    return true;
-  }
-  function getDetails(){
-    const chosen=categories();
-    const result=[];
-    chosen.forEach(key=>{
-      let parts=[];
-      if(key==='apparel'){
-        checked('input[name="apparel_type"]').forEach(t=>{
-          const id=t.dataset.garment;
-          if(id==='unsure'){parts.push('Apparel type: Not Sure Yet');return;}
-          const pre='apparel_'+id;
-          const supplier=val(pre+'-source');const color=val(pre+'-color');const place=val(pre+'-placement');
-          const sizes=qsa(`[name^="${pre}_size_"]`).filter(el=>el.value&&!el.disabled).map(el=>el.name.substring((pre+'_size_').length)+': '+el.value);
-          let line=t.value;
-          if(supplier)line+=' | Supplier: '+supplier;
-          if(color)line+=' | Colors: '+color;
-          if(qs(`[name="${pre}_colors_unsure"]`)?.checked)line+=' | Colors: Not Sure Yet';
-          if(sizes.length)line+=' | Sizes: '+sizes.join(', ');
-          if(qs(`[name="${pre}_sizes_unsure"]`)?.checked)line+=' | Sizes: Not Sure Yet';
-          if(place)line+=' | Placement: '+place;
-          if(val(pre+'-notes'))line+=' | Notes: '+val(pre+'-notes');
-          parts.push(line);
-        });
-      } else {
-        for(const [suffix,label] of [['-qty','Quantity'],['-size','Dimensions'],['-color','Colors'],['-source','Item supplier'],['-notes','Notes']])if(val(key+suffix))parts.push(`${label}: ${val(key+suffix)}`);
-        for(const [suffix,label] of [['_quantity_unsure','Quantity'],['_size_unsure','Dimensions'],['_colors_unsure','Colors']])if(qs(`[name="${key+suffix}"]`)?.checked)parts.push(`${label}: Not Sure Yet`);
+
+  /* ========================================
+     BUILD ALL PRODUCT PANELS
+  ======================================== */
+
+  function buildProductPanels() {
+
+    const container =
+      document.getElementById("product-panels");
+
+    container.innerHTML = Object.entries(
+      categoryLabels
+    ).map(([key, label]) => {
+
+      if (key === "apparel") {
+        return buildApparelPanel();
       }
-      result.push({title:categoryLabels[key],text:parts.join('\n')||'Details to discuss with Miles'});
+
+      let fields = "";
+
+      if (key !== "artwork") {
+        fields += quantityHTML(key);
+      }
+
+      if ([
+        "stickers",
+        "decals",
+        "engraving",
+        "sublimation",
+        "other"
+      ].includes(key)) {
+        fields += dimensionsHTML(key);
+      }
+
+      if (key !== "artwork") {
+        fields += colorHTML(key);
+      }
+
+      if ([
+        "decals",
+        "engraving",
+        "sublimation",
+        "other"
+      ].includes(key)) {
+        fields += supplierHTML(key);
+      }
+
+      fields += notesHTML(key);
+
+      return `
+        <section
+          class="subpanel product-panel"
+          data-category="${key}"
+          hidden>
+
+          <h3>${label}</h3>
+
+          <p>
+            Approximate specifications are fine.
+            Undecided details can be discussed
+            before a quote is approved.
+          </p>
+
+          ${fields}
+
+        </section>
+      `;
+
+    }).join("");
+
+    qsa('input[data-garment]').forEach(
+      input => input.addEventListener(
+        "change",
+        updateGarments
+      )
+    );
+
+    qsa("[data-supplier]").forEach(
+      input => input.addEventListener(
+        "change",
+        updateWaiver
+      )
+    );
+
+    qsa(".unsure-control").forEach(input => {
+      input.addEventListener("change", () => {
+
+        const target = document.getElementById(
+          input.dataset.target
+        );
+
+        if (!target) return;
+
+        target.disabled = input.checked;
+
+        if (input.checked) {
+          target.value = "";
+        }
+
+        updateSummaries();
+
+      });
     });
-    return result;
+
+    qsa(".garment-size-unsure").forEach(input => {
+      input.addEventListener("change", () => {
+
+        const panel = document.getElementById(
+          "garment-" + input.dataset.garmentId
+        );
+
+        if (!panel) return;
+
+        qsa('input[type="number"]', panel).forEach(
+          field => {
+            field.disabled = input.checked;
+
+            if (input.checked) {
+              field.value = "";
+            }
+          }
+        );
+
+        updateSummaries();
+
+      });
+    });
+
+    qsa(
+      "#product-panels input," +
+      "#product-panels select," +
+      "#product-panels textarea"
+    ).forEach(input => {
+
+      input.addEventListener(
+        "input",
+        updateSummaries
+      );
+
+      input.addEventListener(
+        "change",
+        updateSummaries
+      );
+
+    });
+
   }
-  function getSummary(){
-    const productDetails=getDetails();
-    const artwork=qs('input[name="artwork_need"]:checked')?.value||'Not selected';
-    const delivery=qs('input[name="delivery_method"]:checked')?.value||'Not selected';
-    const timing=document.getElementById('no-deadline').checked?'No specific deadline':(val('needed-date')||'Flexible / unspecified');
-    const budget=document.getElementById('budget-unsure').checked?'Not Sure Yet':val('budget')?'$'+Number(val('budget')).toLocaleString('en-US'):'Not provided';
-    const contact=qs('input[name="preferred_contact_method"]:checked')?.value||'Not selected';
-    return [
-      {title:'Products',text:categories().map(k=>categoryLabels[k]).join(', ')||'No products selected'},
-      {title:'Project description',text:val('project-description')||'Not entered'},
-      {title:'Artwork',text:artwork+'\n'+([...document.getElementById('art-files').files].map(f=>f.name).join(', ')||'No attachments')},
-      {title:'Product details',text:productDetails.map(d=>d.title+'\n'+d.text).join('\n\n')||'Not entered'},
-      {title:'Timing & budget',text:`Preferred completion: ${timing}\nRush requested: ${document.getElementById('rush-request').checked?'Yes':'No'}\nEstimated budget: ${budget}`},
-      {title:'Delivery',text:delivery+(delivery==='Shipping'&&val('shipping-zip')?' | ZIP: '+val('shipping-zip'):'')},
-      {title:'Customer',text:`${val('customer-name')||'Name not entered'}\n${val('customer-email')||'Email not entered'}\n${val('customer-phone')||'Phone not entered'}\nPreferred contact: ${contact}`},
-      {title:'Permissions',text:`Project phone calls: ${document.getElementById('phone-permission').checked?'Authorized':'Not yet authorized'}\nProject texts: ${document.getElementById('text-permission').checked?'Authorized':'Not authorized'}\nNewsletter confirmation requested: ${document.getElementById('newsletter-optin').checked?'Yes':'No'}${anyCustomerSupplied()?'\nPrinted waiver acknowledgment: '+(document.getElementById('waiver-ack').checked?'Acknowledged':'Not yet acknowledged'):''}`}
-    ];
+
+  function togglePanel(panel, show) {
+
+    panel.hidden = !show;
+
+    qsa(
+      "input, textarea, select",
+      panel
+    ).forEach(field => {
+
+      field.disabled = !show;
+
+    });
+
   }
-  function updateSummaries(){
-    const summary=getSummary();
-    const slim=summary.filter(x=>x.title!=='Permissions');
-    const summaryContent=document.getElementById('summary-content');
-    summaryContent.innerHTML=slim.map(x=>`<div class="summary-entry"><strong>${safe(x.title)}</strong><span>${safe(x.text)}</span></div>`).join('');
-    const grid=document.getElementById('review-grid');
-    grid.innerHTML=summary.map((x,i)=>`<div class="review-box"><div class="review-title"><h3>${safe(x.title)}</h3><button type="button" class="edit-step" data-edit-step="${i<=2?0:i===3?1:i===4||i===5?2:3}">Edit</button></div><p>${safe(x.text)}</p></div>`).join('');
-    qsa('.edit-step').forEach(b=>b.addEventListener('click',()=>showStep(Number(b.dataset.editStep))));
+
+  function updateProductPanels() {
+
+    const selected = categories();
+
+    qsa(".product-panel").forEach(panel => {
+
+      togglePanel(
+        panel,
+        selected.includes(panel.dataset.category)
+      );
+
+    });
+
+    document.getElementById(
+      "empty-products"
+    ).hidden = selected.length > 0;
+
+    updateGarments();
+    updateWaiver();
+    updateSummaries();
+
   }
-  function showStep(next){
-    currentStep=next;steps.forEach((step,i)=>step.hidden=i!==next);
-    document.getElementById('progress-name').textContent=`${next+1}. ${names[next]}`;
-    document.getElementById('progress-count').textContent=`Step ${next+1} of 5`;
-    qsa('#progress-track span').forEach((el,i)=>el.classList.toggle('done',i<=next));
-    document.getElementById('back-btn').hidden=next===0;
-    document.getElementById('next-btn').hidden=next===4;
-    document.getElementById('submit-btn').hidden=next!==4;
-    clearError();updateSummaries();
-    const h=qs('.form-step:not([hidden]) h2');if(h)h.setAttribute('tabindex','-1');
-    document.querySelector('.form-shell').scrollIntoView({block:'start',behavior:'auto'});
-    if(h)h.focus({preventScroll:true});
+
+  function updateGarments() {
+
+    qsa("[data-garment-panel]").forEach(panel => {
+
+      const id = panel.dataset.garmentPanel;
+
+      const checkbox = qs(
+        `[data-garment="${id}"]`
+      );
+
+      const apparelPanel =
+        document.getElementById("panel-apparel");
+
+      const show =
+        !apparelPanel.hidden &&
+        checkbox.checked;
+
+      togglePanel(panel, show);
+
+    });
+
+    updateWaiver();
+    updateSummaries();
+
   }
-  document.getElementById('next-btn').addEventListener('click',()=>{if(validateStep(currentStep))showStep(Math.min(4,currentStep+1));});
-  document.getElementById('back-btn').addEventListener('click',()=>showStep(Math.max(0,currentStep-1)));
-  document.getElementById('summary-toggle').addEventListener('click',e=>{const btn=e.currentTarget;const show=btn.getAttribute('aria-expanded')!=='true';btn.setAttribute('aria-expanded',String(show));qs('span',btn).textContent=show?'−':'+';document.getElementById('summary-content').hidden=!show;updateSummaries();});
-  qsa('input[name="project_category"]').forEach(el=>el.addEventListener('change',updateProductPanels));
-  qsa('input[name="artwork_need"]').forEach(el=>el.addEventListener('change',updateArtwork));
-  document.getElementById('art-files').addEventListener('change',updateArtwork);
-  qsa('input[name="delivery_method"]').forEach(el=>el.addEventListener('change',updateDelivery));
-  ['needed-date','no-deadline','budget','budget-unsure','rush-request'].forEach(id=>document.getElementById(id).addEventListener('change',updateTiming));
-  qsa('input[name="preferred_contact_method"]').forEach(el=>el.addEventListener('change',()=>{document.getElementById('text-preference-note').hidden=qs('input[name="preferred_contact_method"]:checked')?.value!=='Text Message';updateSummaries();}));
-  qsa('#quote-form input,#quote-form textarea,#quote-form select').forEach(el=>el.addEventListener('input',updateSummaries));
-  if(WAIVER_FILE){const a=document.getElementById('waiver-link');a.href=WAIVER_FILE;a.hidden=false;document.getElementById('waiver-unavailable').hidden=true;}
-  form.addEventListener('submit',async e=>{
-    e.preventDefault();
-    for(let i=0;i<4;i++)if(!validateStep(i)){showStep(i);validateStep(i);return;}
-    if(!FORM_ENDPOINT||!/^https:\/\/formsubmit\.app\/f\/[A-Za-z0-9_-]+$/.test(FORM_ENDPOINT)){
-      showError('This is a working form preview, but P&B has not connected its FormSubmit.app submission endpoint yet. Your request has NOT been sent.');return;
+
+  /* ========================================
+     CUSTOMER-SUPPLIED ITEM WAIVER
+  ======================================== */
+
+  function anyCustomerSupplied() {
+
+    return qsa("[data-supplier]").some(
+      input =>
+        !input.disabled &&
+        input.value === "Customer supplies items"
+    );
+
+  }
+
+  function updateWaiver() {
+
+    const required = anyCustomerSupplied();
+
+    document.getElementById(
+      "customer-item-banner"
+    ).hidden = !required;
+
+    document.getElementById(
+      "waiver-ack-wrap"
+    ).hidden = !required;
+
+    if (!required) {
+      document.getElementById(
+        "waiver-ack"
+      ).checked = false;
     }
-    if(anyCustomerSupplied()&&!WAIVER_FILE){showError('The approved printable waiver must be added before customer-supplied-item requests can be accepted. Your request was not sent.');return;}
-    const payload=new FormData(form);
-    payload.set('request_summary',getSummary().map(x=>`${x.title}:\n${x.text}`).join('\n\n'));
-    payload.set('_ts',String(formRenderedAt));
-    payload.set('permissions_recorded_at',new Date().toISOString());
-    const submit=document.getElementById('submit-btn');submit.disabled=true;submit.textContent='Sending…';clearError();
-    try{
-      const response=await fetch(FORM_ENDPOINT,{method:'POST',body:payload,headers:{Accept:'application/json'}});
-      const result=await response.json();
-      if(!response.ok||result.ok!==true)throw new Error(result.error||result.message||'Submission not accepted');
-      form.hidden=true;document.getElementById('form-actions').hidden=true;
-      document.querySelector('.form-heading').hidden=true;
-      document.getElementById('success-panel').hidden=false;
-      document.getElementById('success-panel').scrollIntoView({block:'center'});
-    }catch(err){showError('We could not confirm your request was received. Please try again later or contact P&B directly. No order has been created.');}
-    finally{submit.disabled=false;submit.textContent='Submit Quote Request →';}
+
+    updateSummaries();
+
+  }
+
+  /* ========================================
+     ARTWORK FILE PREVIEW
+     NO FILE UPLOAD TAKES PLACE
+  ======================================== */
+
+  function updateArtwork() {
+
+    const need = qs(
+      'input[name="artwork_need"]:checked'
+    )?.value || "";
+
+    const files = Array.from(
+      document.getElementById("art-files").files
+    );
+
+    const showPermission =
+      need === "Finished artwork supplied" ||
+      need === "Modify an existing design" ||
+      files.length > 0;
+
+    document.getElementById(
+      "design-fees-notice"
+    ).hidden = !(
+      need === "Modify an existing design" ||
+      need === "Create artwork from scratch"
+    );
+
+    document.getElementById(
+      "artwork-permission-wrap"
+    ).hidden = !showPermission;
+
+    const list = document.getElementById(
+      "file-names"
+    );
+
+    list.replaceChildren();
+
+    files.forEach(file => {
+
+      const item = document.createElement("li");
+
+      item.textContent =
+        file.name +
+        " (" +
+        (file.size / 1048576).toFixed(1) +
+        " MB) — Not uploaded";
+
+      list.appendChild(item);
+
+    });
+
+    const error = document.getElementById(
+      "file-error"
+    );
+
+    error.hidden = files.length <= 5;
+
+    error.textContent = files.length > 5
+      ? "The planned live limit is five files."
+      : "";
+
+    updateSummaries();
+
+  }
+
+  /* ========================================
+     TIMING AND DELIVERY
+  ======================================== */
+
+  function updateDelivery() {
+
+    const shipping = qs(
+      'input[name="delivery_method"]:checked'
+    )?.value === "Shipping";
+
+    document.getElementById(
+      "zip-wrap"
+    ).hidden = !shipping;
+
+    updateSummaries();
+
+  }
+
+  function updateTiming() {
+
+    const date = document.getElementById(
+      "needed-date"
+    );
+
+    const noDeadline = document.getElementById(
+      "no-deadline"
+    );
+
+    date.disabled = noDeadline.checked;
+
+    if (noDeadline.checked) {
+      date.value = "";
+    }
+
+    const budget = document.getElementById(
+      "budget"
+    );
+
+    const unsure = document.getElementById(
+      "budget-unsure"
+    );
+
+    budget.disabled = unsure.checked;
+
+    if (unsure.checked) {
+      budget.value = "";
+    }
+
+    const notice = document.getElementById(
+      "urgent-notice"
+    );
+
+    notice.hidden = true;
+
+    if (date.value) {
+
+      const due = new Date(
+        date.value + "T12:00:00"
+      );
+
+      const today = new Date();
+
+      today.setHours(12,0,0,0);
+
+      const days = Math.round(
+        (due - today) / 86400000
+      );
+
+      notice.hidden = !(
+        days >= 0 && days <= 7
+      );
+
+    }
+
+    updateSummaries();
+
+  }
+
+  /* ========================================
+     PRODUCT DETAILS SUMMARY
+  ======================================== */
+
+  function getDetails() {
+
+    const results = [];
+
+    categories().forEach(key => {
+
+      const parts = [];
+
+      if (key === "apparel") {
+
+        checked(
+          'input[name="apparel_type"]'
+        ).forEach(item => {
+
+          const id = item.dataset.garment;
+
+          if (id === "unsure") {
+            parts.push(
+              "Apparel type: Not Sure Yet"
+            );
+            return;
+          }
+
+          const prefix = "apparel_" + id;
+
+          let line = item.value;
+
+          const source = val(prefix + "-source");
+          const colors = val(prefix + "-color");
+          const placement = val(
+            prefix + "-placement"
+          );
+
+          if (source) {
+            line += " | Supplier: " + source;
+          }
+
+          if (colors) {
+            line += " | Colors: " + colors;
+          }
+
+          if (placement) {
+            line += " | Placement: " + placement;
+          }
+
+          const sizes = qsa(
+            `[name^="${prefix}_size_"]`
+          ).filter(
+            input =>
+              input.value && !input.disabled
+          ).map(
+            input =>
+              input.name.substring(
+                (prefix + "_size_").length
+              ) + ": " + input.value
+          );
+
+          if (sizes.length) {
+            line += " | Sizes: " + sizes.join(", ");
+          }
+
+          if (qs(
+            `[name="${prefix}_sizes_unsure"]`
+          )?.checked) {
+            line += " | Sizes: Not Sure Yet";
+          }
+
+          if (val(prefix + "-notes")) {
+            line += " | Notes: " +
+              val(prefix + "-notes");
+          }
+
+          parts.push(line);
+
+        });
+
+      } else {
+
+        const fields = [
+          ["-qty", "Quantity"],
+          ["-size", "Dimensions"],
+          ["-color", "Colors"],
+          ["-source", "Item supplier"],
+          ["-notes", "Notes"]
+        ];
+
+        fields.forEach(([suffix, label]) => {
+
+          const value = val(key + suffix);
+
+          if (value) {
+            parts.push(
+              label + ": " + value
+            );
+          }
+
+        });
+
+      }
+
+      results.push({
+        title: categoryLabels[key],
+        text: parts.join("\n") ||
+          "Details not selected"
+      });
+
+    });
+
+    return results;
+
+  }
+
+  /* ========================================
+     FULL SUMMARY
+  ======================================== */
+
+  function getSummary() {
+
+    const artwork = qs(
+      'input[name="artwork_need"]:checked'
+    )?.value || "Not selected";
+
+    const delivery = qs(
+      'input[name="delivery_method"]:checked'
+    )?.value || "Not selected";
+
+    const contact = qs(
+      'input[name="preferred_contact_method"]:checked'
+    )?.value || "Not selected";
+
+    const timing = document.getElementById(
+      "no-deadline"
+    ).checked
+      ? "No specific deadline"
+      : val("needed-date") || "Not specified";
+
+    const budget = document.getElementById(
+      "budget-unsure"
+    ).checked
+      ? "Not Sure Yet"
+      : val("budget")
+        ? "$" + Number(val("budget")).toLocaleString()
+        : "Not provided";
+
+    const files = Array.from(
+      document.getElementById("art-files").files
+    ).map(file => file.name);
+
+    const products = getDetails();
+
+    return [
+
+      {
+        title: "Products",
+        text: categories().map(
+          key => categoryLabels[key]
+        ).join(", ") || "Not selected"
+      },
+
+      {
+        title: "Project Description",
+        text: val("project-description") ||
+          "Not entered"
+      },
+
+      {
+        title: "Artwork",
+        text:
+          artwork +
+          "\nSelected files: " +
+          (files.join(", ") || "None") +
+          "\nNo files uploaded"
+      },
+
+      {
+        title: "Product Details",
+        text: products.map(
+          product =>
+            product.title + "\n" + product.text
+        ).join("\n\n") || "Not entered"
+      },
+
+      {
+        title: "Timing & Budget",
+        text:
+          "Preferred completion: " + timing +
+          "\nRush requested: " +
+          (document.getElementById(
+            "rush-request"
+          ).checked ? "Yes" : "No") +
+          "\nEstimated budget: " + budget
+      },
+
+      {
+        title: "Delivery",
+        text:
+          delivery +
+          (delivery === "Shipping" &&
+          val("shipping-zip")
+            ? "\nZIP: " + val("shipping-zip")
+            : "")
+      },
+
+      {
+        title: "Contact Details",
+        text:
+          (val("customer-name") ||
+            "Name not entered") + "\n" +
+          (val("customer-email") ||
+            "Email not entered") + "\n" +
+          (val("customer-phone") ||
+            "Phone not entered") +
+          "\nPreferred contact: " + contact
+      },
+
+      {
+        title: "Permissions",
+        text:
+          "Project calls: " +
+          (document.getElementById(
+            "phone-permission"
+          ).checked
+            ? "Checked in preview"
+            : "Not checked") +
+
+          "\nProject texts: " +
+          (document.getElementById(
+            "text-permission"
+          ).checked
+            ? "Checked in preview"
+            : "Not checked") +
+
+          "\nNewsletter: " +
+          (document.getElementById(
+            "newsletter-optin"
+          ).checked
+            ? "Checked in preview"
+            : "Not checked") +
+
+          (anyCustomerSupplied()
+            ? "\nPaper waiver: " +
+              (document.getElementById(
+                "waiver-ack"
+              ).checked
+                ? "Acknowledged in preview"
+                : "Not acknowledged")
+            : "") +
+
+          "\nNo consent was transmitted"
+      }
+
+    ];
+
+  }
+
+  function updateSummaries() {
+
+    const data = getSummary();
+
+    const summary = document.getElementById(
+      "summary-content"
+    );
+
+    summary.innerHTML = data
+      .filter(item => item.title !== "Permissions")
+      .map(item => `
+        <div class="summary-entry">
+
+          <strong>
+            ${safe(item.title)}
+          </strong>
+
+          <span>
+            ${safe(item.text)}
+          </span>
+
+        </div>
+      `).join("");
+
+    const review = document.getElementById(
+      "review-grid"
+    );
+
+    review.innerHTML = data.map(
+      (item, index) => {
+
+        let step = 0;
+
+        if (index === 3) step = 1;
+        if (index === 4 || index === 5) step = 2;
+        if (index >= 6) step = 3;
+
+        return `
+          <div class="review-box">
+
+            <div class="review-title">
+
+              <h3>${safe(item.title)}</h3>
+
+              <button
+                type="button"
+                class="edit-step"
+                data-edit-step="${step}">
+                Edit
+              </button>
+
+            </div>
+
+            <p>${safe(item.text)}</p>
+
+          </div>
+        `;
+
+      }
+    ).join("");
+
+    qsa(".edit-step").forEach(button => {
+
+      button.addEventListener("click", () => {
+
+        showStep(
+          Number(button.dataset.editStep)
+        );
+
+      });
+
+    });
+
+  }
+
+  /* ========================================
+     FIVE-STEP NAVIGATION
+  ======================================== */
+
+  function showStep(stepNumber) {
+
+    currentStep = stepNumber;
+
+    steps.forEach((step, index) => {
+
+      step.hidden = index !== stepNumber;
+
+    });
+
+    document.getElementById(
+      "progress-name"
+    ).textContent =
+      (stepNumber + 1) +
+      ". " +
+      stepNames[stepNumber];
+
+    document.getElementById(
+      "progress-count"
+    ).textContent =
+      "Step " +
+      (stepNumber + 1) +
+      " of 5";
+
+    qsa("#progress-track span").forEach(
+      (element, index) => {
+
+        element.classList.toggle(
+          "done",
+          index <= stepNumber
+        );
+
+      }
+    );
+
+    document.getElementById(
+      "back-btn"
+    ).hidden = stepNumber === 0;
+
+    document.getElementById(
+      "next-btn"
+    ).hidden = stepNumber === 4;
+
+    document.getElementById(
+      "preview-finish-btn"
+    ).hidden = stepNumber !== 4;
+
+    if (stepNumber !== 4) {
+      document.getElementById(
+        "preview-complete-note"
+      ).hidden = true;
+    }
+
+    updateSummaries();
+
+    const heading = qs(
+      '.form-step:not([hidden]) h2'
+    );
+
+    if (heading) {
+      heading.setAttribute("tabindex", "-1");
+    }
+
+    document.querySelector(
+      ".form-shell"
+    ).scrollIntoView({
+      block: "start",
+      behavior: "auto"
+    });
+
+    if (heading) {
+      heading.focus({
+        preventScroll: true
+      });
+    }
+
+  }
+
+  document.getElementById(
+    "next-btn"
+  ).addEventListener("click", () => {
+
+    // Preview navigation deliberately
+    // does not require personal details.
+
+    showStep(
+      Math.min(4, currentStep + 1)
+    );
+
   });
-  const formRenderedAt=Date.now();
-  buildProductPanels();updateProductPanels();updateArtwork();updateDelivery();updateTiming();showStep(0);
-  // Background flame playback matching the homepage.
-  const video=document.getElementById('fire-video'),fireButton=document.getElementById('fire-play-button');
-  function playFlames(){video.style.display='block';video.muted=true;const promise=video.play();if(promise&&typeof promise.then==='function')promise.then(()=>fireButton.hidden=true).catch(()=>fireButton.hidden=false);}
-  video.addEventListener('playing',()=>fireButton.hidden=true);
-  video.addEventListener('error',()=>fireButton.hidden=false);
-  fireButton.addEventListener('click',playFlames);
-  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){video.pause();fireButton.hidden=false;}else playFlames();
+
+  document.getElementById(
+    "back-btn"
+  ).addEventListener("click", () => {
+
+    showStep(
+      Math.max(0, currentStep - 1)
+    );
+
+  });
+
+  document.getElementById(
+    "preview-finish-btn"
+  ).addEventListener("click", () => {
+
+    document.getElementById(
+      "preview-complete-note"
+    ).hidden = false;
+
+    document.getElementById(
+      "preview-complete-note"
+    ).scrollIntoView({
+      block: "nearest"
+    });
+
+  });
+
+  /* ========================================
+     LIVE SUMMARY PANEL
+  ======================================== */
+
+  document.getElementById(
+    "summary-toggle"
+  ).addEventListener("click", event => {
+
+    const button = event.currentTarget;
+
+    const expanded =
+      button.getAttribute("aria-expanded") !== "true";
+
+    button.setAttribute(
+      "aria-expanded",
+      String(expanded)
+    );
+
+    qs("span", button).textContent =
+      expanded ? "−" : "+";
+
+    document.getElementById(
+      "summary-content"
+    ).hidden = !expanded;
+
+    updateSummaries();
+
+  });
+
+  /* ========================================
+     PREVIEW RESET
+  ======================================== */
+
+  document.getElementById(
+    "reset-preview"
+  ).addEventListener("click", () => {
+
+    form.reset();
+
+    qsa(".unsure-control").forEach(input => {
+      const target = document.getElementById(
+        input.dataset.target
+      );
+
+      if (target) target.disabled = false;
+    });
+
+    qsa(".garment-size-unsure").forEach(input => {
+      const panel = document.getElementById(
+        "garment-" + input.dataset.garmentId
+      );
+
+      if (panel) {
+        qsa('input[type="number"]', panel)
+          .forEach(field => {
+            field.disabled = false;
+          });
+      }
+    });
+
+    document.getElementById(
+      "preview-complete-note"
+    ).hidden = true;
+
+    updateProductPanels();
+    updateArtwork();
+    updateDelivery();
+    updateTiming();
+    showStep(0);
+
+  });
+
+  /* ========================================
+     CHANGE EVENTS
+  ======================================== */
+
+  qsa(
+    'input[name="project_category"]'
+  ).forEach(input => {
+
+    input.addEventListener(
+      "change",
+      updateProductPanels
+    );
+
+  });
+
+  qsa(
+    'input[name="artwork_need"]'
+  ).forEach(input => {
+
+    input.addEventListener(
+      "change",
+      updateArtwork
+    );
+
+  });
+
+  document.getElementById(
+    "art-files"
+  ).addEventListener(
+    "change",
+    updateArtwork
+  );
+
+  qsa(
+    'input[name="delivery_method"]'
+  ).forEach(input => {
+
+    input.addEventListener(
+      "change",
+      updateDelivery
+    );
+
+  });
+
+  [
+    "needed-date",
+    "no-deadline",
+    "budget",
+    "budget-unsure",
+    "rush-request"
+  ].forEach(id => {
+
+    document.getElementById(id)
+      .addEventListener(
+        "change",
+        updateTiming
+      );
+
+  });
+
+  qsa(
+    'input[name="preferred_contact_method"]'
+  ).forEach(input => {
+
+    input.addEventListener("change", () => {
+
+      const choice = qs(
+        'input[name="preferred_contact_method"]:checked'
+      )?.value;
+
+      document.getElementById(
+        "text-preference-note"
+      ).hidden = choice !== "Text Message";
+
+      updateSummaries();
+
+    });
+
+  });
+
+  qsa(
+    "#quote-form input," +
+    "#quote-form textarea," +
+    "#quote-form select"
+  ).forEach(input => {
+
+    input.addEventListener(
+      "input",
+      updateSummaries
+    );
+
+    input.addEventListener(
+      "change",
+      updateSummaries
+    );
+
+  });
+
+  /* ========================================
+     ABSOLUTE SUBMISSION BLOCK
+
+     This preview never sends data.
+     Even pressing Enter inside the form
+     cannot trigger a submission.
+
+     A live submission implementation must
+     be added and tested separately later.
+  ======================================== */
+
+  form.addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    // No fetch()
+    // No form.action
+    // No FormSubmit endpoint
+    // No customer data transmission
+
+    return false;
+
+  });
+
+  /* ========================================
+     INITIALIZE PREVIEW
+  ======================================== */
+
+  buildProductPanels();
+  updateProductPanels();
+  updateArtwork();
+  updateDelivery();
+  updateTiming();
+  showStep(0);
+
+  /* ========================================
+     ANIMATED FIRE BACKGROUND
+
+     Approved brightness is controlled
+     entirely through CSS.
+  ======================================== */
+
+  const video = document.getElementById(
+    "fire-video"
+  );
+
+  const fireButton = document.getElementById(
+    "fire-play-button"
+  );
+
+  if (video && fireButton) {
+
+    function playFlames() {
+
+      video.style.display = "block";
+      video.muted = true;
+
+      const attempt = video.play();
+
+      if (
+        attempt &&
+        typeof attempt.then === "function"
+      ) {
+        attempt.then(() => {
+          fireButton.hidden = true;
+        }).catch(() => {
+          fireButton.hidden = false;
+        });
+      }
+
+    }
+
+    video.addEventListener(
+      "playing",
+      () => {
+        fireButton.hidden = true;
+      }
+    );
+
+    video.addEventListener(
+      "error",
+      () => {
+        fireButton.hidden = false;
+      }
+    );
+
+    fireButton.addEventListener(
+      "click",
+      playFlames
+    );
+
+    const reducedMotion =
+      window.matchMedia &&
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+    if (reducedMotion) {
+      video.pause();
+    } else {
+      playFlames();
+    }
+
+  }
+
 })();
 </script>
+
 </body>
 </html>
