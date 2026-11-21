@@ -1,1408 +1,1524 @@
-______________________________________________________________________________________________________________________________________________________
-                                                            10/25/2026 (5)
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090909">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
 
-<title>Our Story | Pressed and Burned Creations</title>
+  <meta name="description"
+        content="Meet the family behind Pressed and Burned Creations. Discover how Miles and Patty started in 2019 and built a creative business featuring PeelRuckus stickers, personalized products, and original artwork.">
 
-<meta name="description"
-content="Read the family story behind Pressed and Burned Creations, from motorcycle club T-shirts in 2019 to original stickers, custom artwork, and more.">
+  <title>Our Story | Pressed &amp; Burned Creations</title>
 
-<link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
 
-<style>
+  <style>
+    /* ==========================================
+       PRESSED & BURNED CREATIONS
+       ABOUT US — PEELRUCKUS REDESIGN
+    ========================================== */
 
-/* ======================================
-   COLORS AND GENERAL STYLING
-====================================== */
+    :root {
+      --black: #080808;
+      --gold: #f6b326;
+      --yellow: #ffe34b;
+      --orange: #ff7900;
+      --cream: #fff2db;
+      --muted: #d6c9b7;
+      --edge: rgba(255,181,36,.43);
+      --max: 1250px;
+    }
 
-:root {
-  --ink: #090909;
-  --paper: #f6f2eb;
-  --muted: #c4bcb2;
-  --gold: #e9a14b;
-  --gold-light: #f9c47a;
-  --edge: rgba(235,171,95,.25);
-  --max: 1200px;
-}
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+    html {
+      scroll-behavior: smooth;
+      background: var(--black);
+    }
 
-html {
-  scroll-behavior: smooth;
-  background: var(--ink);
-}
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--black);
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      isolation: isolate;
+    }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  background: var(--ink);
-  color: var(--paper);
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.7;
-  isolation: isolate;
-}
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
 
-button {
-  font: inherit;
-  cursor: pointer;
-}
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--yellow);
+      outline-offset: 4px;
+    }
 
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid var(--gold-light);
-  outline-offset: 4px;
-}
+    [hidden] {
+      display: none !important;
+    }
 
-[hidden] {
-  display: none !important;
-}
+    .wrap {
+      width: min(calc(100% - 36px), var(--max));
+      margin-inline: auto;
+    }
 
-.wrap {
-  width: min(calc(100% - 48px), var(--max));
-  margin-inline: auto;
-}
+    /* ==========================================
+       ANIMATED FIRE BACKGROUND
+    ========================================== */
 
-/* ======================================
-   BRIGHT ANIMATED FIRE BACKGROUND
-====================================== */
+    .background-scene {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
 
-.background-scene {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-  isolation: isolate;
-
-  background:
-    radial-gradient(
-      ellipse 85% 80% at 50% 100%,
-      rgba(241,100,14,.50),
-      rgba(144,41,7,.27) 35%,
-      rgba(35,10,4,.15) 65%,
-      #050505 100%
-    );
-}
-
-.fire-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center bottom;
-
-  filter:
-    brightness(1.65)
-    saturate(1.35)
-    contrast(1.08);
-}
-
-/* ORIGINAL ORNATE P&B LOGO */
-
-.background-art {
-  position: absolute;
-  inset: 0;
-
-  background-image:
-    url("Pressed%20and%20burned%20background%20logo.png");
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  opacity: 1;
-  mix-blend-mode: screen;
-}
-
-.scene-shade {
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5,5,5,.38),
-      rgba(5,5,5,.15) 54%,
-      rgba(5,5,5,.32)
-    ),
-    linear-gradient(
-      180deg,
-      rgba(5,5,5,.10),
-      transparent 40%,
-      rgba(5,5,5,.25)
-    );
-}
-
-/* BRIGHTER FLAMES ON TABLETS */
-
-@media (max-width: 1024px) {
-
-  .fire-video {
-    filter:
-      brightness(2.10)
-      saturate(1.50)
-      contrast(1.08);
-  }
-
-  .scene-shade {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(5,5,5,.30),
-        rgba(5,5,5,.10),
-        rgba(5,5,5,.25)
+      background: radial-gradient(
+        ellipse 85% 80% at 50% 100%,
+        rgba(241,100,14,.50),
+        rgba(144,41,7,.27) 35%,
+        rgba(35,10,4,.15) 65%,
+        #050505
       );
-  }
-
-}
-
-body > header,
-body > main,
-body > footer {
-  position: relative;
-  z-index: 1;
-}
-
-/* ======================================
-   HEADER AND NAVIGATION
-====================================== */
-
-.site-header {
-  border-bottom: 1px solid var(--edge);
-  background: rgba(7,7,7,.87);
-  backdrop-filter: blur(12px);
-}
-
-.header-inner {
-  min-height: 99px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 28px;
-}
-
-.brand {
-  flex: 0 1 310px;
-  min-width: 0;
-}
-
-.brand img {
-  width: 100%;
-  max-width: 310px;
-}
-
-.main-nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 10px 27px;
-}
-
-.main-nav a {
-  color: #e0dcd6;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .05em;
-  white-space: nowrap;
-  transition: color .2s;
-}
-
-.main-nav a:hover,
-.main-nav a[aria-current="page"] {
-  color: var(--gold-light);
-}
-
-.main-nav .nav-shop {
-  padding: 11px 17px;
-  border: 1px solid var(--gold);
-  border-radius: 5px;
-  color: var(--ink);
-  background: var(--gold);
-}
-
-.main-nav .nav-shop:hover {
-  color: var(--ink);
-  background: var(--gold-light);
-}
-
-/* ======================================
-   BUTTONS AND LINKS
-====================================== */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 49px;
-  padding: 13px 21px;
-
-  border-radius: 5px;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: .04em;
-
-  transition: transform .2s, background .2s;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.btn-primary {
-  color: #16100a;
-  background: var(--gold);
-}
-
-.btn-primary:hover {
-  background: var(--gold-light);
-}
-
-.btn-secondary {
-  border: 1px solid rgba(255,255,255,.45);
-  background: rgba(13,13,13,.75);
-}
-
-.btn-secondary:hover {
-  border-color: var(--gold);
-  color: var(--gold-light);
-}
-
-.fire-play-button {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 9px 13px;
-
-  border: 1px solid var(--gold);
-  border-radius: 5px;
-  background: rgba(5,5,5,.82);
-  color: var(--gold-light);
-  font-size: 12px;
-  font-weight: 800;
-}
-
-/* ======================================
-   HERO
-====================================== */
-
-.about-hero {
-  padding: 90px 0 100px;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.03fr .97fr;
-  gap: clamp(32px,5vw,80px);
-  align-items: center;
-}
-
-.eyebrow {
-  margin: 0 0 19px;
-  color: var(--gold-light);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: .23em;
-  text-transform: uppercase;
-}
-
-.about-hero h1 {
-  margin: 0;
-  max-width: 650px;
-
-  font-size: clamp(50px,6.2vw,88px);
-  font-weight: 900;
-  line-height: 1.02;
-  letter-spacing: -.065em;
-
-  text-shadow: 0 3px 19px rgba(0,0,0,.85);
-}
-
-.about-hero h1 span {
-  display: block;
-  color: var(--gold);
-}
-
-.hero-description {
-  margin: 28px 0 0;
-  max-width: 530px;
-
-  color: #e8e1d9;
-  font-size: 18px;
-  line-height: 1.8;
-  text-shadow: 0 2px 10px #000;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 31px;
-}
-
-.hero-art {
-  min-width: 0;
-  padding: 17px;
-  border: 1px solid var(--edge);
-  border-radius: 10px;
-
-  background:
-    linear-gradient(
-      140deg,
-      rgba(40,29,19,.92),
-      rgba(10,10,10,.94)
-    );
-
-  box-shadow: 0 26px 85px rgba(0,0,0,.55);
-}
-
-.hero-art img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  background: #0c0c0c;
-  border-radius: 5px;
-}
-
-.art-caption {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 15px;
-
-  color: #c9b49b;
-  font-size: 10px;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-}
-
-/* ======================================
-   STATEMENT STRIP
-====================================== */
-
-.statement-strip {
-  background: rgba(9,9,9,.83);
-  border-top: 1px solid var(--edge);
-  border-bottom: 1px solid var(--edge);
-}
-
-.statement-strip .wrap {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 12px 32px;
-  padding: 20px 0;
-
-  color: #c8beb4;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-}
-
-.statement-strip span + span::before {
-  content: "✦";
-  color: var(--gold);
-  margin-right: 30px;
-}
-
-/* ======================================
-   ORIGINAL OUR STORY SECTION
-====================================== */
-
-.story-section {
-  padding: 100px 0;
-  background: rgba(9,9,9,.87);
-}
-
-.story-layout {
-  display: grid;
-  grid-template-columns: .35fr .65fr;
-  gap: 55px;
-  align-items: start;
-}
-
-.story-side {
-  position: sticky;
-  top: 30px;
-}
-
-.story-side .year {
-  display: block;
-  color: var(--gold);
-  font-size: clamp(65px,8vw,118px);
-  font-weight: 900;
-  letter-spacing: -.08em;
-  line-height: 1;
-}
-
-.story-side .year-caption {
-  display: block;
-  margin-top: 15px;
-  color: #cfc2b2;
-  font-size: 13px;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-}
-
-.story-content {
-  padding: 40px 45px 45px;
-  background:
-    linear-gradient(
-      145deg,
-      rgba(29,24,19,.95),
-      rgba(9,9,9,.96)
-    );
-
-  border: 1px solid var(--edge);
-  border-radius: 11px;
-  box-shadow: 0 20px 60px rgba(0,0,0,.4);
-}
-
-.story-content h2 {
-  margin: 0 0 35px;
-  color: var(--paper);
-
-  font-size: clamp(37px,4.3vw,55px);
-  line-height: 1.1;
-  letter-spacing: -.05em;
-}
-
-.story-content h2 span {
-  color: var(--gold);
-}
-
-.story-content p {
-  margin: 0 0 25px;
-  color: #f0e7de;
-  font-size: 17px;
-  line-height: 1.95;
-}
-
-.story-content .closing-paragraph {
-  color: #f9dfbb;
-  font-weight: 600;
-}
-
-.story-signature {
-  margin-top: 35px;
-  padding-top: 25px;
-  border-top: 1px solid var(--edge);
-
-  color: var(--gold-light);
-  font-size: 22px;
-  font-weight: 700;
-  font-style: italic;
-  text-align: right;
-}
-
-/* ======================================
-   FAMILY AND CREATIVE JOURNEY
-====================================== */
-
-.journey-section {
-  padding: 90px 0;
-  background: rgba(20,18,16,.85);
-}
-
-.section-heading {
-  margin-bottom: 35px;
-}
-
-.section-heading h2 {
-  margin: 0;
-  font-size: clamp(33px,4vw,51px);
-  letter-spacing: -.045em;
-  line-height: 1.15;
-}
-
-.journey-grid {
-  display: grid;
-  grid-template-columns: repeat(3,minmax(0,1fr));
-  gap: 23px;
-}
-
-.journey-card {
-  padding: 32px 27px;
-  border: 1px solid var(--edge);
-  border-radius: 9px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(38,29,20,.93),
-      rgba(12,12,12,.94)
-    );
-}
-
-.journey-number {
-  display: block;
-  margin-bottom: 18px;
-  color: var(--gold);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: .16em;
-}
-
-.journey-card h3 {
-  margin: 0 0 12px;
-  font-size: 23px;
-  line-height: 1.3;
-}
-
-.journey-card p {
-  margin: 0;
-  color: #d4cabe;
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-/* ======================================
-   CONTACT AND SHOP
-====================================== */
-
-.contact-section {
-  padding: 100px 0;
-  background: rgba(8,8,8,.87);
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.contact-copy h2 {
-  margin: 0 0 23px;
-  font-size: clamp(34px,4.3vw,53px);
-  line-height: 1.15;
-  letter-spacing: -.05em;
-}
-
-.contact-copy p:not(.eyebrow) {
-  color: #e0d5c8;
-  font-size: 17px;
-  line-height: 1.8;
-}
-
-.contact-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 28px;
-}
-
-.contact-decoration {
-  padding: 52px 25px;
-  border: 1px solid var(--edge);
-  border-radius: 10px;
-  background: rgba(25,18,11,.91);
-  text-align: center;
-}
-
-.contact-decoration strong {
-  display: block;
-  color: var(--gold);
-  font-size: clamp(34px,4.5vw,62px);
-  line-height: 1.15;
-  font-weight: 900;
-  letter-spacing: -.055em;
-}
-
-.contact-decoration span {
-  display: block;
-  margin-top: 22px;
-  color: #d4b998;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: .15em;
-}
-
-/* ======================================
-   FOOTER
-====================================== */
-
-.site-footer {
-  padding: 33px 0;
-  border-top: 1px solid var(--edge);
-  background: rgba(5,5,5,.94);
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 22px;
-}
-
-.footer-inner p {
-  margin: 4px 0;
-  color: #a9a39c;
-  font-size: 12px;
-}
-
-.footer-tagline {
-  color: var(--gold-light) !important;
-  font-weight: 700;
-  letter-spacing: .08em;
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 22px;
-}
-
-.footer-links a {
-  color: #c9c1b8;
-  font-size: 12px;
-}
-
-.footer-links a:hover {
-  color: var(--gold-light);
-}
-
-/* ======================================
-   TABLET
-====================================== */
-
-@media (max-width: 950px) {
-
-  .header-inner {
-    flex-direction: column;
-    padding-block: 16px;
-    gap: 15px;
-  }
-
-  .brand {
-    flex: none;
-    width: min(100%,310px);
-  }
-
-  .main-nav {
-    justify-content: center;
-  }
-
-  .hero-grid {
-    gap: 30px;
-  }
-
-  .about-hero h1 {
-    font-size: clamp(48px,6.3vw,69px);
-  }
-
-  .story-layout {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .story-side {
-    position: static;
-  }
-
-}
-
-/* ======================================
-   MOBILE
-====================================== */
-
-@media (max-width: 720px) {
-
-  .wrap {
-    width: min(calc(100% - 32px),var(--max));
-  }
-
-  .brand img {
-    max-width: 255px;
-    margin: auto;
-  }
-
-  .main-nav {
-    gap: 9px 18px;
-  }
-
-  .main-nav a {
-    font-size: 12px;
-  }
-
-  .main-nav .nav-shop {
-    padding: 8px 12px;
-  }
-
-  .about-hero {
-    padding: 65px 0;
-  }
-
-  .hero-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-hero h1 {
-    font-size: clamp(49px,10vw,72px);
-  }
-
-  .hero-art {
-    width: 100%;
-    max-width: 540px;
-    margin: auto;
-  }
-
-  .story-section,
-  .journey-section,
-  .contact-section {
-    padding: 70px 0;
-  }
-
-  .story-content {
-    padding: 30px 24px;
-  }
-
-  .story-content p {
-    font-size: 16px;
-    line-height: 1.85;
-  }
-
-  .journey-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .statement-strip .wrap {
-    gap: 8px 18px;
-  }
-
-  .statement-strip span + span::before {
-    margin-right: 12px;
-  }
-
-}
-
-@media (max-width: 470px) {
-
-  .main-nav {
-    gap: 10px 15px;
-  }
-
-  .main-nav a {
-    font-size: 11px;
-  }
-
-  .about-hero h1 {
-    font-size: clamp(44px,11vw,58px);
-  }
-
-  .hero-actions,
-  .contact-actions {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  .statement-strip span {
-    font-size: 10px;
-  }
-
-  .statement-strip span + span::before {
-    content: none;
-  }
-
-  .footer-inner {
-    display: block;
-  }
-
-  .footer-links {
-    margin-top: 20px;
-  }
-
-}
-
-/* ======================================
-   REDUCED MOTION
-====================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-  html {
-    scroll-behavior: auto;
-  }
-
-  .fire-video {
-    display: none;
-  }
-
-  .background-art {
-    mix-blend-mode: normal;
-  }
-
-  *,
-  *::before,
-  *::after {
-    transition: none !important;
-  }
-
-}
-
-</style>
+    }
+
+    .fire-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center bottom;
+      filter:
+        brightness(1.65)
+        saturate(1.35)
+        contrast(1.08);
+    }
+
+    .background-art {
+      position: absolute;
+      inset: 0;
+      background:
+        url("Pressed%20and%20burned%20background%20logo.png")
+        center / contain no-repeat;
+      opacity: 1;
+      mix-blend-mode: screen;
+    }
+
+    .scene-shade {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.39),
+          rgba(0,0,0,.13) 50%,
+          rgba(0,0,0,.39)
+        ),
+        linear-gradient(
+          180deg,
+          rgba(0,0,0,.20),
+          transparent 40%,
+          rgba(0,0,0,.38)
+        );
+    }
+
+    body > header,
+    body > main,
+    body > footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ==========================================
+       HEADER AND NAVIGATION
+    ========================================== */
+
+    .site-header {
+      background: rgba(5,5,5,.91);
+      border-bottom: 2px solid var(--gold);
+      box-shadow: 0 5px 24px rgba(255,105,0,.25);
+    }
+
+    .site-header::before {
+      content: "";
+      display: block;
+      height: 6px;
+      background: linear-gradient(
+        90deg,
+        #8d2500,
+        #ff7e00,
+        #ffe74f,
+        #ff7e00,
+        #8d2500
+      );
+    }
+
+    .header-inner {
+      min-height: 110px;
+      padding: 18px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: block;
+      flex: 0 0 auto;
+      width: min(280px,100%);
+    }
+
+    .brand img {
+      width: 100%;
+      filter:
+        drop-shadow(0 0 8px rgba(255,136,0,.24));
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+    }
+
+    .main-nav a {
+      font-size: 13px;
+      font-weight: 800;
+      color: #f3eadc;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
+      color: var(--yellow);
+    }
+
+    .main-nav .nav-custom {
+      color: var(--yellow);
+    }
+
+    .main-nav .nav-shop {
+      padding: 11px 16px;
+      color: #100c06;
+      background: linear-gradient(
+        180deg,
+        #fff36c,
+        #ffc029 65%,
+        #ff8c00
+      );
+      border: 1px solid #ffe989;
+      border-radius: 7px;
+      box-shadow:
+        0 0 13px rgba(255,143,0,.38);
+    }
+
+    .main-nav .nav-shop:hover {
+      color: black;
+      background: var(--yellow);
+    }
+
+    /* ==========================================
+       BUTTONS
+    ========================================== */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 13px 23px;
+      border-radius: 9px;
+      font-size: 14px;
+      font-weight: 900;
+      text-align: center;
+      transition:
+        transform .2s,
+        box-shadow .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      color: #140d00;
+      border: 2px solid #fff18e;
+      background: linear-gradient(
+        180deg,
+        #ffec69,
+        #ffbd1c 65%,
+        #ff8c00
+      );
+      box-shadow:
+        0 0 17px rgba(255,119,0,.38);
+    }
+
+    .btn-gold:hover {
+      box-shadow:
+        0 0 24px rgba(255,145,0,.65);
+    }
+
+    .btn-outline {
+      color: var(--cream);
+      background: rgba(8,8,8,.87);
+      border: 1px solid var(--gold);
+    }
+
+    .btn-outline:hover {
+      box-shadow:
+        0 0 17px rgba(255,145,0,.35);
+    }
+
+    /* ==========================================
+       ABOUT US HERO
+    ========================================== */
+
+    .about-hero {
+      padding: 80px 0 90px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: clamp(25px,5vw,75px);
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--yellow);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+      text-shadow: 0 2px 10px black;
+    }
+
+    .about-hero h1 {
+      margin: 0;
+      font-size: clamp(46px,5.8vw,78px);
+      font-weight: 900;
+      letter-spacing: -.065em;
+      line-height: 1.05;
+      text-shadow: 0 3px 19px black;
+    }
+
+    .about-hero h1 span {
+      display: block;
+      color: var(--yellow);
+    }
+
+    .hero-description {
+      max-width: 560px;
+      margin: 26px 0 0;
+      color: #f0e3d2;
+      font-size: clamp(16px,1.8vw,19px);
+      text-shadow: 0 2px 10px black;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 30px;
+    }
+
+    .hero-art {
+      padding: 25px;
+      border: 2px solid var(--gold);
+      border-radius: 14px;
+      background: rgba(5,5,5,.95);
+      box-shadow:
+        0 0 22px rgba(255,115,0,.53),
+        0 25px 65px rgba(0,0,0,.65);
+    }
+
+    .hero-art img {
+      width: 100%;
+      max-width: 540px;
+      margin: auto;
+      object-fit: contain;
+    }
+
+    .art-caption {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 17px 10px 4px;
+      color: #efc47c;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .fire-play-button {
+      margin-top: 18px;
+      padding: 9px 13px;
+      border: 1px solid var(--gold);
+      border-radius: 6px;
+      background: rgba(5,5,5,.88);
+      color: var(--yellow);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    /* ==========================================
+       BRAND STATEMENT STRIP
+    ========================================== */
+
+    .statement-strip {
+      background: rgba(5,5,5,.91);
+      border-top: 1px solid var(--edge);
+      border-bottom: 1px solid var(--edge);
+    }
+
+    .statement-strip .wrap {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 32px;
+      padding: 19px 0;
+      color: #e9c48e;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================
+       ORIGINAL FAMILY STORY
+    ========================================== */
+
+    .story-section {
+      padding: 90px 0;
+      background: rgba(6,6,6,.91);
+    }
+
+    .story-layout {
+      display: grid;
+      grid-template-columns: .32fr .68fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .story-side {
+      position: sticky;
+      top: 30px;
+    }
+
+    .story-year {
+      display: block;
+      margin-top: 12px;
+      color: var(--yellow);
+      font-size: clamp(65px,8vw,115px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -.07em;
+      text-shadow:
+        0 0 20px rgba(255,145,0,.35);
+    }
+
+    .story-year-caption {
+      display: block;
+      margin-top: 15px;
+      color: #dfcaa7;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .story-content {
+      padding: clamp(24px,4vw,50px);
+      background: linear-gradient(
+        145deg,
+        rgba(40,27,13,.96),
+        rgba(8,8,8,.97)
+      );
+      border: 2px solid var(--gold);
+      border-radius: 14px;
+      box-shadow:
+        0 20px 60px rgba(0,0,0,.55);
+    }
+
+    .story-content h2 {
+      margin: 0 0 30px;
+      font-family: Georgia, serif;
+      font-size: clamp(36px,4.3vw,54px);
+      font-style: italic;
+      line-height: 1.15;
+    }
+
+    .story-content h2 span {
+      color: var(--yellow);
+    }
+
+    .story-content p {
+      margin: 0 0 25px;
+      color: #f0e7de;
+      font-size: 17px;
+      line-height: 1.95;
+    }
+
+    .story-content .closing-paragraph {
+      color: #ffdf9f;
+      font-weight: 600;
+    }
+
+    .story-signature {
+      margin-top: 35px;
+      padding-top: 25px;
+      border-top: 1px solid var(--edge);
+      color: var(--yellow);
+      font-family: Georgia, serif;
+      font-size: 25px;
+      font-style: italic;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    /* ==========================================
+       CREATIVE JOURNEY
+    ========================================== */
+
+    .journey-section {
+      padding: 85px 0;
+      background: rgba(16,11,7,.88);
+    }
+
+    .section-heading {
+      margin-bottom: 36px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: #ffdc58;
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: clamp(30px,4vw,49px);
+      line-height: 1.2;
+      text-shadow: 0 3px 12px black;
+    }
+
+    .section-heading p:not(.eyebrow) {
+      max-width: 760px;
+      color: #e6d8c6;
+    }
+
+    .gold-rule {
+      width: min(590px,80%);
+      height: 3px;
+      margin-top: 22px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        #ff8a00,
+        #ffe95b,
+        #ff8a00,
+        transparent
+      );
+    }
+
+    .journey-grid {
+      display: grid;
+      grid-template-columns:
+        repeat(3,minmax(0,1fr));
+      gap: 22px;
+    }
+
+    .journey-card {
+      padding: 30px;
+      border: 2px solid #d28c18;
+      border-radius: 14px;
+      background: linear-gradient(
+        145deg,
+        rgba(40,26,9,.97),
+        rgba(5,5,5,.97)
+      );
+      box-shadow:
+        0 9px 28px rgba(0,0,0,.55);
+    }
+
+    .journey-number {
+      display: block;
+      margin-bottom: 19px;
+      color: var(--yellow);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .13em;
+    }
+
+    .journey-card h3 {
+      margin: 0 0 14px;
+      color: var(--cream);
+      font-size: 22px;
+      line-height: 1.3;
+    }
+
+    .journey-card p {
+      margin: 0;
+      color: #e3d2bb;
+      font-size: 15px;
+    }
+
+    /* ==========================================
+       PEELRUCKUS BRAND SECTION
+    ========================================== */
+
+    .peel-section {
+      padding: 90px 0;
+      background: rgba(6,6,6,.91);
+    }
+
+    .peel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .peel-art {
+      padding: 14px;
+      border: 2px solid var(--gold);
+      border-radius: 14px;
+      background: rgba(4,4,4,.96);
+      box-shadow:
+        0 0 25px rgba(255,116,0,.28);
+    }
+
+    .peel-art img {
+      width: 100%;
+      border-radius: 7px;
+    }
+
+    .peel-copy h2 {
+      margin: 0 0 20px;
+      color: var(--yellow);
+      font-size: clamp(33px,4.2vw,52px);
+      line-height: 1.15;
+    }
+
+    .peel-copy p:not(.eyebrow) {
+      color: #eadccc;
+      font-size: 16px;
+    }
+
+    .peel-slogan {
+      margin: 23px 0;
+      color: var(--yellow) !important;
+      font-size: 20px !important;
+      font-weight: 900;
+      font-style: italic;
+    }
+
+    /* ==========================================
+       CONTACT SECTION
+    ========================================== */
+
+    .contact-section {
+      padding: 85px 0;
+      background: rgba(16,11,7,.91);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px 55px;
+      align-items: center;
+    }
+
+    .contact-copy h2 {
+      margin: 0 0 19px;
+      color: var(--yellow);
+      font-size: clamp(29px,4vw,49px);
+      line-height: 1.13;
+    }
+
+    .contact-copy p:not(.eyebrow) {
+      color: #eadccc;
+      font-size: 16px;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 25px;
+    }
+
+    .contact-decoration {
+      padding: 38px 25px;
+      border: 2px solid var(--gold);
+      border-radius: 14px;
+      background: rgba(6,6,6,.94);
+      text-align: center;
+    }
+
+    .contact-decoration img {
+      width: 100%;
+      max-width: 430px;
+      margin: auto;
+    }
+
+    .contact-decoration p {
+      color: #efd29d;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* ==========================================
+       FOOTER
+    ========================================== */
+
+    .site-footer {
+      padding: 33px 0;
+      border-top: 3px solid var(--gold);
+      background: rgba(3,3,3,.95);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 23px;
+    }
+
+    .footer-brand {
+      color: var(--yellow);
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .footer-slogan {
+      color: #edc67e;
+      font-style: italic;
+    }
+
+    .footer-small {
+      color: #bfb1a0;
+      font-size: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 22px;
+    }
+
+    .footer-links a {
+      color: #e2c18e;
+      font-size: 12px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    /* ==========================================
+       TABLET
+    ========================================== */
+
+    @media (max-width: 1050px) {
+      .header-inner {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .brand {
+        width: 270px;
+      }
+
+      .main-nav {
+        justify-content: center;
+      }
+
+      .fire-video {
+        filter:
+          brightness(2.10)
+          saturate(1.50)
+          contrast(1.08);
+      }
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid,
+      .story-layout,
+      .peel-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .story-side {
+        position: static;
+      }
+
+      .journey-grid {
+        grid-template-columns:
+          repeat(2,minmax(0,1fr));
+      }
+
+      .hero-art,
+      .peel-art {
+        max-width: 700px;
+        margin: auto;
+      }
+    }
+
+    /* ==========================================
+       MOBILE
+    ========================================== */
+
+    @media (max-width: 650px) {
+      .wrap {
+        width: min(
+          calc(100% - 26px),
+          var(--max)
+        );
+      }
+
+      .brand {
+        width: min(265px,90%);
+      }
+
+      .main-nav {
+        gap: 9px 13px;
+      }
+
+      .main-nav a {
+        font-size: 12px;
+      }
+
+      .main-nav .nav-shop {
+        padding: 8px 12px;
+      }
+
+      .about-hero {
+        padding: 48px 0 55px;
+      }
+
+      .about-hero h1 {
+        font-size: clamp(44px,10vw,64px);
+      }
+
+      .hero-actions,
+      .contact-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .story-section,
+      .journey-section,
+      .peel-section,
+      .contact-section {
+        padding: 58px 0;
+      }
+
+      .story-content {
+        padding: 25px 20px;
+      }
+
+      .story-content p {
+        font-size: 16px;
+        line-height: 1.85;
+      }
+
+      .journey-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .journey-card {
+        padding: 26px;
+      }
+
+      .footer-inner {
+        display: block;
+      }
+
+      .footer-links {
+        margin-top: 23px;
+      }
+    }
+
+    /* ==========================================
+       ACCESSIBILITY
+    ========================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .fire-video {
+        display: none;
+      }
+
+      .btn {
+        transition: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- ======================================
-   BRIGHT FLAMES AND P&B BACKGROUND
-====================================== -->
+  <!-- =======================================
+       ANIMATED FLAME BACKGROUND
+  ======================================== -->
 
-<div class="background-scene" aria-hidden="true">
+  <div class="background-scene"
+       aria-hidden="true">
 
-  <video
-    id="fire-video"
-    class="fire-video"
-    autoplay
-    muted
-    loop
-    playsinline
-    webkit-playsinline
-    preload="auto">
+    <video
+      id="fire-video"
+      class="fire-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      webkit-playsinline
+      preload="auto">
 
-    <source
-      src="pressed-and-burned-fire-loop-5s.mp4"
-      type="video/mp4">
+      <source
+        src="pressed-and-burned-fire-loop-5s.mp4"
+        type="video/mp4">
 
-  </video>
+    </video>
 
-  <div class="background-art"></div>
-  <div class="scene-shade"></div>
-
-</div>
-
-<!-- ======================================
-   HEADER
-====================================== -->
-
-<header class="site-header">
-
-  <div class="wrap header-inner">
-
-    <a class="brand" href="index.html"
-       aria-label="Return to Pressed and Burned Creations homepage">
-
-      <img
-        src="Pressed%20and%20burned%20logo.png"
-        alt="Pressed and Burned Creations">
-
-    </a>
-
-    <nav class="main-nav" aria-label="Main navigation">
-
-      <a href="index.html">
-        Home
-      </a>
-
-      <a href="showcase.html">
-        Showcase
-      </a>
-
-      <a href="index.html#services">
-        Services
-      </a>
-
-      <a href="about-us.html" aria-current="page">
-        About Us
-      </a>
-
-      <a href="index.html#contact">
-        Contact
-      </a>
-
-      <a class="nav-shop" href="stickers.html">
-        Sticker Shop
-      </a>
-
-    </nav>
+    <div class="background-art"></div>
+    <div class="scene-shade"></div>
 
   </div>
 
-</header>
+  <!-- =======================================
+       HEADER
+  ======================================== -->
 
-<main>
+  <header class="site-header">
+    <div class="wrap header-inner">
 
-<!-- ======================================
-   HERO
-====================================== -->
+      <a class="brand"
+         href="index.html"
+         aria-label="Pressed and Burned Creations homepage">
 
-<section class="about-hero" aria-labelledby="hero-title">
+        <img
+          src="Pressed%20and%20burned%20logo.png"
+          alt="Pressed and Burned Creations">
 
-  <div class="wrap hero-grid">
+      </a>
 
-    <div>
+      <nav class="main-nav"
+           aria-label="Main navigation">
 
-      <p class="eyebrow">
-        The Family Behind Pressed &amp; Burned
-      </p>
+        <a href="index.html">Home</a>
 
-      <h1 id="hero-title">
-        Built From
-        <span>Creativity.</span>
-      </h1>
+        <a href="showcase.html">Showcase</a>
 
-      <p class="hero-description">
-        What began with a few T-shirts
-        for a motorcycle riding club
-        grew into a family journey
-        filled with creativity,
-        new ideas, and endless possibilities.
-      </p>
+        <a href="index.html#services">Services</a>
 
-      <div class="hero-actions">
-
-        <a class="btn btn-primary" href="#our-story">
-          Read Our Story ↗
+        <a class="nav-custom"
+           href="custom-orders.html">
+          Custom Orders
         </a>
 
-        <a class="btn btn-secondary" href="showcase.html">
-          See Our Creations
+        <a href="about-us.html"
+           aria-current="page">
+          About Us
         </a>
 
-      </div>
+        <a href="index.html#contact">Contact</a>
 
-      <button
-        id="fire-play-button"
-        class="fire-play-button"
-        type="button"
-        hidden>
-
-        🔥 Show Background Flames
-
-      </button>
-
-    </div>
-
-    <div class="hero-art">
-
-      <img
-        src="Sticker%20merch%201.png"
-        alt="Pressed and Burned Creations original sticker artwork">
-
-      <div class="art-caption">
-
-        <span>Pressed &amp; Burned Creations</span>
-        <span>Family • Creativity • Attitude</span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ======================================
-   BRAND STRIP
-====================================== -->
-
-<div class="statement-strip">
-
-  <div class="wrap">
-
-    <span>Family Inspired</span>
-    <span>Creatively Driven</span>
-    <span>Original Creations</span>
-
-  </div>
-
-</div>
-
-<!-- ======================================
-   OUR STORY - ORIGINAL APPROVED TEXT
-====================================== -->
-
-<section
-  class="story-section"
-  id="our-story"
-  aria-labelledby="story-title">
-
-  <div class="wrap story-layout">
-
-    <div class="story-side">
-
-      <p class="eyebrow">
-        Where It All Began
-      </p>
-
-      <span class="year">2019</span>
-
-      <span class="year-caption">
-        The Beginning of Our Journey
-      </span>
-
-    </div>
-
-    <div class="story-content">
-
-      <h2 id="story-title">
-        Our <span>Story</span>
-      </h2>
-
-      <p>
-        Our story began in 2019 when we
-        purchased a direct-to-garment printer
-        to make T-shirts for our motorcycle
-        riding club. What started as shirts
-        for our members soon grew into making
-        them for other customers—and sparked
-        the idea for something bigger.
-      </p>
-
-      <p>
-        With Miles's background in drawing
-        and about twenty years of experience
-        in designing and tattooing, we
-        continued finding new ways to bring
-        artwork to life. We added a sticker
-        printer, followed by sublimation
-        equipment and laser engravers.
-      </p>
-
-      <p>
-        Along the way, we attended apparel
-        and printing shows, learned new
-        software, and developed our skills
-        one project at a time.
-      </p>
-
-      <p>
-        As our business grows, we're proud
-        to share this journey with our
-        daughter and grandchildren.
-        Building something together as a
-        family makes this next chapter
-        especially meaningful to us.
-      </p>
-
-      <p class="closing-paragraph">
-        We're starting with bold, custom
-        stickers, with more printed,
-        pressed, and engraved products
-        to come. From our family to yours,
-        we look forward to helping you
-        bring your ideas to life.
-      </p>
-
-      <div class="story-signature">
-        — Miles &amp; Patty
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ======================================
-   OUR CREATIVE JOURNEY
-====================================== -->
-
-<section
-  class="journey-section"
-  aria-labelledby="journey-title">
-
-  <div class="wrap">
-
-    <div class="section-heading">
-
-      <p class="eyebrow">
-        From an Idea to a Family Business
-      </p>
-
-      <h2 id="journey-title">
-        Creativity Has No Finish Line.
-      </h2>
-
-    </div>
-
-    <div class="journey-grid">
-
-      <div class="journey-card">
-
-        <span class="journey-number">
-          01 / OUR BEGINNING
-        </span>
-
-        <h3>Motorcycle Club T-Shirts</h3>
-
-        <p>
-          It started in 2019 with a
-          direct-to-garment printer
-          and shirts for our motorcycle
-          riding club.
-        </p>
-
-      </div>
-
-      <div class="journey-card">
-
-        <span class="journey-number">
-          02 / GROWING CREATIVELY
-        </span>
-
-        <h3>New Tools, New Possibilities</h3>
-
-        <p>
-          Sticker printing, sublimation,
-          and laser engraving opened
-          the door to new creative projects.
-        </p>
-
-      </div>
-
-      <div class="journey-card">
-
-        <span class="journey-number">
-          03 / FAMILY FIRST
-        </span>
-
-        <h3>Creating Together</h3>
-
-        <p>
-          Sharing the journey with our
-          daughter and grandchildren
-          makes building the business
-          especially meaningful.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ======================================
-   CONTACT / SHOP SECTION
-====================================== -->
-
-<section
-  class="contact-section"
-  id="contact"
-  aria-labelledby="contact-title">
-
-  <div class="wrap contact-grid">
-
-    <div class="contact-copy">
-
-      <p class="eyebrow">
-        Your Ideas, Our Next Chapter
-      </p>
-
-      <h2 id="contact-title">
-        Have Something You'd Like to Create?
-      </h2>
-
-      <p>
-        Whether you're looking for an
-        original sticker or have a custom
-        project in mind, we'd love
-        to hear your ideas.
-      </p>
-
-      <div class="contact-actions">
-
-        <a class="btn btn-primary"
+        <a class="nav-shop"
            href="stickers.html">
-
-          Explore Stickers ↗
-
+          Sticker Shop
         </a>
 
-        <a class="btn btn-secondary"
-           href="index.html#contact">
+      </nav>
 
-          Contact Us
+    </div>
+  </header>
 
-        </a>
+  <main>
+
+    <!-- =====================================
+         ABOUT US HERO
+    ====================================== -->
+
+    <section class="about-hero"
+             aria-labelledby="hero-title">
+
+      <div class="wrap hero-grid">
+
+        <div class="hero-copy">
+
+          <p class="eyebrow">
+            The Family Behind Pressed &amp; Burned
+          </p>
+
+          <h1 id="hero-title">
+            Built From
+            <span>Creativity.</span>
+          </h1>
+
+          <p class="hero-description">
+            What began with a few T-shirts
+            for a motorcycle riding club
+            grew into a family journey
+            filled with creativity,
+            new ideas, and endless possibilities.
+          </p>
+
+          <div class="hero-actions">
+
+            <a class="btn btn-gold"
+               href="#our-story">
+              Read Our Story
+            </a>
+
+            <a class="btn btn-outline"
+               href="showcase.html">
+              Explore Our Creations
+            </a>
+
+          </div>
+
+          <button
+            id="fire-play-button"
+            class="fire-play-button"
+            type="button"
+            hidden>
+            🔥 Show Background Flames
+          </button>
+
+        </div>
+
+        <!-- PARENT COMPANY LOGO -->
+
+        <div class="hero-art">
+
+          <img
+            src="Pressed%20and%20burned%20logo.png"
+            alt="Pressed and Burned Creations original business logo">
+
+          <div class="art-caption">
+            <span>Established 2019</span>
+            <span>Family • Creativity • Passion</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================
+         STATEMENT STRIP
+    ====================================== -->
+
+    <div class="statement-strip">
+
+      <div class="wrap">
+
+        <span>Family Inspired</span>
+        <span>Creatively Driven</span>
+        <span>Original Creations</span>
 
       </div>
 
     </div>
 
-    <div class="contact-decoration">
+    <!-- =====================================
+         OUR STORY
+         ORIGINAL FIVE PARAGRAPHS
+         PRESERVED WORD FOR WORD
+    ====================================== -->
 
-      <strong>
-        MADE WITH<br>
-        CREATIVITY.
-      </strong>
+    <section
+      class="story-section"
+      id="our-story"
+      aria-labelledby="story-title">
 
-      <strong>
-        BUILT WITH<br>
-        FAMILY.
-      </strong>
+      <div class="wrap story-layout">
 
-      <span>
-        Pressed &amp; Burned Creations
-      </span>
+        <div class="story-side">
+
+          <p class="eyebrow">
+            Where It All Began
+          </p>
+
+          <span class="story-year">
+            2019
+          </span>
+
+          <span class="story-year-caption">
+            The Beginning of Our Journey
+          </span>
+
+        </div>
+
+        <div class="story-content">
+
+          <h2 id="story-title">
+            Our <span>Story</span>
+          </h2>
+
+          <p>
+            Our story began in 2019 when we
+            purchased a direct-to-garment printer
+            to make T-shirts for our motorcycle
+            riding club. What started as shirts
+            for our members soon grew into making
+            them for other customers—and sparked
+            the idea for something bigger.
+          </p>
+
+          <p>
+            With Miles's background in drawing
+            and about twenty years of experience
+            in designing and tattooing, we
+            continued finding new ways to bring
+            artwork to life. We added a sticker
+            printer, followed by sublimation
+            equipment and laser engravers.
+          </p>
+
+          <p>
+            Along the way, we attended apparel
+            and printing shows, learned new
+            software, and developed our skills
+            one project at a time.
+          </p>
+
+          <p>
+            As our business grows, we're proud
+            to share this journey with our
+            daughter and grandchildren.
+            Building something together as a
+            family makes this next chapter
+            especially meaningful to us.
+          </p>
+
+          <p class="closing-paragraph">
+            We're starting with bold, custom
+            stickers, with more printed,
+            pressed, and engraved products
+            to come. From our family to yours,
+            we look forward to helping you
+            bring your ideas to life.
+          </p>
+
+          <div class="story-signature">
+            — Miles &amp; Patty
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================
+         CREATIVE JOURNEY
+    ====================================== -->
+
+    <section
+      class="journey-section"
+      aria-labelledby="journey-title">
+
+      <div class="wrap">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            From an Idea to a Family Business
+          </p>
+
+          <h2 id="journey-title">
+            Creativity Has No Finish Line.
+          </h2>
+
+          <p>
+            Every new skill and piece of equipment
+            has helped us turn more ideas
+            into real creations.
+          </p>
+
+          <div class="gold-rule"></div>
+
+        </div>
+
+        <div class="journey-grid">
+
+          <!-- JOURNEY CARD 1 -->
+
+          <div class="journey-card">
+
+            <span class="journey-number">
+              01 / OUR BEGINNING
+            </span>
+
+            <h3>
+              Motorcycle Club T-Shirts
+            </h3>
+
+            <p>
+              It started in 2019 with a
+              direct-to-garment printer and
+              shirts for our motorcycle riding club.
+            </p>
+
+          </div>
+
+          <!-- JOURNEY CARD 2 -->
+
+          <div class="journey-card">
+
+            <span class="journey-number">
+              02 / GROWING CREATIVELY
+            </span>
+
+            <h3>
+              New Tools, New Possibilities
+            </h3>
+
+            <p>
+              Sticker printing, sublimation,
+              and laser engraving opened the
+              door to new creative projects.
+            </p>
+
+          </div>
+
+          <!-- JOURNEY CARD 3 -->
+
+          <div class="journey-card">
+
+            <span class="journey-number">
+              03 / FAMILY FIRST
+            </span>
+
+            <h3>
+              Creating Together
+            </h3>
+
+            <p>
+              Sharing the journey with our
+              daughter and grandchildren
+              makes building the business
+              especially meaningful.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================
+         PEELRUCKUS BRAND INTRODUCTION
+    ====================================== -->
+
+    <section
+      class="peel-section"
+      aria-labelledby="peel-title">
+
+      <div class="wrap peel-grid">
+
+        <div class="peel-art">
+
+          <img
+            src="Peel%20Ruckus.png"
+            alt="PeelRuckus sticker brand by Pressed and Burned Creations"
+            loading="lazy">
+
+        </div>
+
+        <div class="peel-copy">
+
+          <p class="eyebrow">
+            Introducing Our Sticker Brand
+          </p>
+
+          <h2 id="peel-title">
+            Meet PeelRuckus.
+          </h2>
+
+          <p>
+            PeelRuckus is our original
+            sticker brand, created under
+            Pressed &amp; Burned Creations.
+          </p>
+
+          <p>
+            It's where we bring together
+            original artwork, bold humor,
+            personality, and designs that
+            aren't afraid to stand out.
+          </p>
+
+          <p>
+            While PeelRuckus is all about stickers,
+            Pressed &amp; Burned Creations remains
+            the home of our custom printing,
+            engraving, apparel, and personalized
+            creative projects.
+          </p>
+
+          <p class="peel-slogan">
+            Peel it. Stick it. Stir things up.
+          </p>
+
+          <a
+            class="btn btn-gold"
+            href="stickers.html">
+            Explore PeelRuckus
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================
+         CONTACT AND CUSTOM CREATIONS
+    ====================================== -->
+
+    <section
+      class="contact-section"
+      id="contact"
+      aria-labelledby="contact-title">
+
+      <div class="wrap contact-grid">
+
+        <div class="contact-copy">
+
+          <p class="eyebrow">
+            Your Ideas, Our Next Chapter
+          </p>
+
+          <h2 id="contact-title">
+            Have Something You'd Like to Create?
+          </h2>
+
+          <p>
+            Whether you're looking for an
+            original PeelRuckus sticker
+            or have a custom project in mind,
+            we'd love to help bring your
+            ideas to life.
+          </p>
+
+          <p>
+            Explore our designs or discover
+            what Pressed &amp; Burned Creations
+            can create for you.
+          </p>
+
+          <div class="contact-actions">
+
+            <a
+              class="btn btn-gold"
+              href="custom-orders.html">
+              Explore Custom Orders
+            </a>
+
+            <a
+              class="btn btn-outline"
+              href="index.html#contact">
+              Contact Us
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="contact-decoration">
+
+          <img
+            src="Pressed%20and%20burned%20logo.png"
+            alt="Pressed and Burned Creations logo"
+            loading="lazy">
+
+          <p>
+            Made With Creativity.
+            Built With Family.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- =======================================
+       FOOTER
+  ======================================== -->
+
+  <footer class="site-footer">
+
+    <div class="wrap footer-inner">
+
+      <div>
+
+        <div class="footer-brand">
+          Pressed &amp; Burned Creations
+        </div>
+
+        <p class="footer-slogan">
+          PeelRuckus —
+          Peel it. Stick it. Stir things up.
+        </p>
+
+        <p class="footer-small">
+          &copy; 2026 Pressed and Burned Creations.
+          All Rights Reserved.
+        </p>
+
+      </div>
+
+      <nav
+        class="footer-links"
+        aria-label="Footer navigation">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="showcase.html">
+          Showcase
+        </a>
+
+        <a href="stickers.html">
+          Sticker Shop
+        </a>
+
+        <a href="custom-orders.html">
+          Custom Orders
+        </a>
+
+        <a href="about-us.html">
+          About Us
+        </a>
+
+        <a href="index.html#contact">
+          Contact
+        </a>
+
+      </nav>
 
     </div>
 
-  </div>
+  </footer>
 
-</section>
+  <!-- =======================================
+       ANIMATED FIRE CONTROLS
+  ======================================== -->
 
-</main>
+  <script>
+    (function () {
+      "use strict";
 
-<!-- ======================================
-   FOOTER
-====================================== -->
+      const video =
+        document.getElementById("fire-video");
 
-<footer class="site-footer">
+      const playButton =
+        document.getElementById("fire-play-button");
 
-  <div class="wrap footer-inner">
+      if (!video || !playButton) {
+        return;
+      }
 
-    <div>
+      video.muted = true;
+      video.defaultMuted = true;
 
-      <p class="footer-tagline">
-        Stickers With an Attitude.
-      </p>
+      function showPlayButton() {
+        playButton.hidden = false;
+      }
 
-      <p>
-        &copy; 2026 Pressed and Burned Creations.
-        All Rights Reserved.
-      </p>
+      function startFlames() {
+        video.style.display = "block";
+        video.muted = true;
 
-    </div>
+        const attempt = video.play();
 
-    <div class="footer-links">
+        if (
+          attempt &&
+          typeof attempt.then === "function"
+        ) {
+          attempt.then(function () {
+            playButton.hidden = true;
+          }).catch(function () {
+            showPlayButton();
+          });
+        }
+      }
 
-      <a href="index.html">
-        Home
-      </a>
+      video.addEventListener(
+        "playing",
+        function () {
+          playButton.hidden = true;
+        }
+      );
 
-      <a href="showcase.html">
-        Showcase
-      </a>
+      video.addEventListener(
+        "error",
+        function () {
+          showPlayButton();
+        }
+      );
 
-      <a href="stickers.html">
-        Sticker Shop
-      </a>
+      playButton.addEventListener(
+        "click",
+        startFlames
+      );
 
-      <a href="index.html#contact">
-        Contact
-      </a>
+      const reducedMotion =
+        window.matchMedia &&
+        window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
 
-    </div>
+      if (reducedMotion) {
+        video.pause();
+      } else {
+        startFlames();
+      }
 
-  </div>
-
-</footer>
-
-<!-- ======================================
-   SAMSUNG TABLET VIDEO SUPPORT
-====================================== -->
-
-<script>
-
-(function () {
-  "use strict";
-
-  const video =
-    document.getElementById("fire-video");
-
-  const playButton =
-    document.getElementById("fire-play-button");
-
-  if (!video || !playButton) {
-    return;
-  }
-
-  video.muted = true;
-  video.defaultMuted = true;
-
-  function showPlayButton() {
-    playButton.hidden = false;
-  }
-
-  function startFlames() {
-
-    video.style.display = "block";
-    video.muted = true;
-
-    const attempt = video.play();
-
-    if (
-      attempt &&
-      typeof attempt.then === "function"
-    ) {
-
-      attempt.then(function () {
-        playButton.hidden = true;
-      }).catch(function () {
-        showPlayButton();
-      });
-
-    }
-
-  }
-
-  video.addEventListener(
-    "playing",
-    function () {
-      playButton.hidden = true;
-    }
-  );
-
-  video.addEventListener(
-    "error",
-    showPlayButton
-  );
-
-  playButton.addEventListener(
-    "click",
-    startFlames
-  );
-
-  const reducedMotion =
-    window.matchMedia &&
-    window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-  if (reducedMotion) {
-    video.pause();
-    showPlayButton();
-  } else {
-    startFlames();
-  }
-
-})();
-
-</script>
+    })();
+  </script>
 
 </body>
 </html>
