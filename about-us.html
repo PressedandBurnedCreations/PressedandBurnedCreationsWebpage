@@ -17,11 +17,10 @@
 
     /* ==========================================
        PRESSED & BURNED CREATIONS
-       ABOUT US — PEELRUCKUS REDESIGN
+       ABOUT US — PEELRUCKUS DESIGN
 
-       UPDATED:
-       Softer decorative background logo.
-       Flame brightness remains unchanged.
+       FLAME BRIGHTNESS: 100%
+       BACKGROUND LOGO OPACITY: 50%
     ========================================== */
 
     :root {
@@ -107,7 +106,15 @@
       );
     }
 
-    /* FIRE BRIGHTNESS — UNCHANGED */
+    /* ==========================================
+       UPDATED FLAME VIDEO
+
+       PREVIOUS BRIGHTNESS: 165%
+       NEW BRIGHTNESS: 100%
+
+       This setting applies to all devices.
+       No tablet-specific brightness increase.
+    ========================================== */
 
     .fire-video {
       position: absolute;
@@ -118,19 +125,15 @@
       object-position: center bottom;
 
       filter:
-        brightness(1.65)
+        brightness(1.00)
         saturate(1.35)
         contrast(1.08);
     }
 
     /* ==========================================
-       BACKGROUND LOGO — UPDATED
+       DECORATIVE BACKGROUND LOGO
 
-       Original opacity: 1
-       New opacity:      0.50
-
-       This softens the decorative P&B logo
-       without dimming the animated flames.
+       OPACITY REMAINS AT 50%
     ========================================== */
 
     .background-art {
@@ -142,7 +145,6 @@
         center / contain no-repeat;
 
       opacity: 0.50;
-
       mix-blend-mode: screen;
     }
 
@@ -820,6 +822,12 @@
 
     /* ==========================================
        TABLET
+
+       IMPORTANT:
+       No brightness override here.
+
+       All devices use the same
+       100% flame brightness setting.
     ========================================== */
 
     @media (max-width: 1050px) {
@@ -835,13 +843,6 @@
 
       .main-nav {
         justify-content: center;
-      }
-
-      .fire-video {
-        filter:
-          brightness(2.10)
-          saturate(1.50)
-          contrast(1.08);
       }
 
     }
