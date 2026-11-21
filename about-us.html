@@ -14,9 +14,14 @@
   <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
+
     /* ==========================================
        PRESSED & BURNED CREATIONS
        ABOUT US — PEELRUCKUS REDESIGN
+
+       UPDATED:
+       Softer decorative background logo.
+       Flame brightness remains unchanged.
     ========================================== */
 
     :root {
@@ -102,6 +107,8 @@
       );
     }
 
+    /* FIRE BRIGHTNESS — UNCHANGED */
+
     .fire-video {
       position: absolute;
       inset: 0;
@@ -109,25 +116,40 @@
       height: 100%;
       object-fit: cover;
       object-position: center bottom;
+
       filter:
         brightness(1.65)
         saturate(1.35)
         contrast(1.08);
     }
 
+    /* ==========================================
+       BACKGROUND LOGO — UPDATED
+
+       Original opacity: 1
+       New opacity:      0.50
+
+       This softens the decorative P&B logo
+       without dimming the animated flames.
+    ========================================== */
+
     .background-art {
       position: absolute;
       inset: 0;
+
       background:
         url("Pressed%20and%20burned%20background%20logo.png")
         center / contain no-repeat;
-      opacity: 1;
+
+      opacity: 0.50;
+
       mix-blend-mode: screen;
     }
 
     .scene-shade {
       position: absolute;
       inset: 0;
+
       background:
         linear-gradient(
           90deg,
@@ -164,6 +186,7 @@
       content: "";
       display: block;
       height: 6px;
+
       background: linear-gradient(
         90deg,
         #8d2500,
@@ -177,6 +200,7 @@
     .header-inner {
       min-height: 110px;
       padding: 18px 0;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -191,6 +215,7 @@
 
     .brand img {
       width: 100%;
+
       filter:
         drop-shadow(0 0 8px rgba(255,136,0,.24));
     }
@@ -222,14 +247,17 @@
     .main-nav .nav-shop {
       padding: 11px 16px;
       color: #100c06;
+
       background: linear-gradient(
         180deg,
         #fff36c,
         #ffc029 65%,
         #ff8c00
       );
+
       border: 1px solid #ffe989;
       border-radius: 7px;
+
       box-shadow:
         0 0 13px rgba(255,143,0,.38);
     }
@@ -247,12 +275,15 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+
       min-height: 50px;
       padding: 13px 23px;
+
       border-radius: 9px;
       font-size: 14px;
       font-weight: 900;
       text-align: center;
+
       transition:
         transform .2s,
         box-shadow .2s;
@@ -265,12 +296,14 @@
     .btn-gold {
       color: #140d00;
       border: 2px solid #fff18e;
+
       background: linear-gradient(
         180deg,
         #ffec69,
         #ffbd1c 65%,
         #ff8c00
       );
+
       box-shadow:
         0 0 17px rgba(255,119,0,.38);
     }
@@ -303,25 +336,30 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
+
       gap: clamp(25px,5vw,75px);
     }
 
     .eyebrow {
       margin: 0 0 18px;
       color: var(--yellow);
+
       font-size: 12px;
       font-weight: 900;
       letter-spacing: .17em;
       text-transform: uppercase;
+
       text-shadow: 0 2px 10px black;
     }
 
     .about-hero h1 {
       margin: 0;
+
       font-size: clamp(46px,5.8vw,78px);
       font-weight: 900;
       letter-spacing: -.065em;
       line-height: 1.05;
+
       text-shadow: 0 3px 19px black;
     }
 
@@ -333,8 +371,10 @@
     .hero-description {
       max-width: 560px;
       margin: 26px 0 0;
+
       color: #f0e3d2;
       font-size: clamp(16px,1.8vw,19px);
+
       text-shadow: 0 2px 10px black;
     }
 
@@ -347,9 +387,12 @@
 
     .hero-art {
       padding: 25px;
+
       border: 2px solid var(--gold);
       border-radius: 14px;
+
       background: rgba(5,5,5,.95);
+
       box-shadow:
         0 0 22px rgba(255,115,0,.53),
         0 25px 65px rgba(0,0,0,.65);
@@ -367,7 +410,9 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 10px;
+
       padding: 17px 10px 4px;
+
       color: #efc47c;
       font-size: 10px;
       font-weight: bold;
@@ -378,10 +423,13 @@
     .fire-play-button {
       margin-top: 18px;
       padding: 9px 13px;
+
       border: 1px solid var(--gold);
       border-radius: 6px;
+
       background: rgba(5,5,5,.88);
       color: var(--yellow);
+
       font-size: 12px;
       font-weight: 800;
     }
@@ -401,7 +449,9 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px 32px;
+
       padding: 19px 0;
+
       color: #e9c48e;
       font-size: 11px;
       font-weight: 800;
@@ -434,11 +484,13 @@
     .story-year {
       display: block;
       margin-top: 12px;
+
       color: var(--yellow);
       font-size: clamp(65px,8vw,115px);
       font-weight: 900;
       line-height: 1;
       letter-spacing: -.07em;
+
       text-shadow:
         0 0 20px rgba(255,145,0,.35);
     }
@@ -446,6 +498,7 @@
     .story-year-caption {
       display: block;
       margin-top: 15px;
+
       color: #dfcaa7;
       font-size: 12px;
       font-weight: 800;
@@ -455,19 +508,23 @@
 
     .story-content {
       padding: clamp(24px,4vw,50px);
+
       background: linear-gradient(
         145deg,
         rgba(40,27,13,.96),
         rgba(8,8,8,.97)
       );
+
       border: 2px solid var(--gold);
       border-radius: 14px;
+
       box-shadow:
         0 20px 60px rgba(0,0,0,.55);
     }
 
     .story-content h2 {
       margin: 0 0 30px;
+
       font-family: Georgia, serif;
       font-size: clamp(36px,4.3vw,54px);
       font-style: italic;
@@ -480,6 +537,7 @@
 
     .story-content p {
       margin: 0 0 25px;
+
       color: #f0e7de;
       font-size: 17px;
       line-height: 1.95;
@@ -493,7 +551,9 @@
     .story-signature {
       margin-top: 35px;
       padding-top: 25px;
+
       border-top: 1px solid var(--edge);
+
       color: var(--yellow);
       font-family: Georgia, serif;
       font-size: 25px;
@@ -517,11 +577,13 @@
 
     .section-heading h2 {
       margin: 0;
+
       color: #ffdc58;
       font-family: Georgia, serif;
       font-style: italic;
       font-size: clamp(30px,4vw,49px);
       line-height: 1.2;
+
       text-shadow: 0 3px 12px black;
     }
 
@@ -534,6 +596,7 @@
       width: min(590px,80%);
       height: 3px;
       margin-top: 22px;
+
       background: linear-gradient(
         90deg,
         transparent,
@@ -553,13 +616,16 @@
 
     .journey-card {
       padding: 30px;
+
       border: 2px solid #d28c18;
       border-radius: 14px;
+
       background: linear-gradient(
         145deg,
         rgba(40,26,9,.97),
         rgba(5,5,5,.97)
       );
+
       box-shadow:
         0 9px 28px rgba(0,0,0,.55);
     }
@@ -567,6 +633,7 @@
     .journey-number {
       display: block;
       margin-bottom: 19px;
+
       color: var(--yellow);
       font-size: 11px;
       font-weight: 900;
@@ -575,6 +642,7 @@
 
     .journey-card h3 {
       margin: 0 0 14px;
+
       color: var(--cream);
       font-size: 22px;
       line-height: 1.3;
@@ -582,6 +650,7 @@
 
     .journey-card p {
       margin: 0;
+
       color: #e3d2bb;
       font-size: 15px;
     }
@@ -604,9 +673,12 @@
 
     .peel-art {
       padding: 14px;
+
       border: 2px solid var(--gold);
       border-radius: 14px;
+
       background: rgba(4,4,4,.96);
+
       box-shadow:
         0 0 25px rgba(255,116,0,.28);
     }
@@ -618,6 +690,7 @@
 
     .peel-copy h2 {
       margin: 0 0 20px;
+
       color: var(--yellow);
       font-size: clamp(33px,4.2vw,52px);
       line-height: 1.15;
@@ -630,6 +703,7 @@
 
     .peel-slogan {
       margin: 23px 0;
+
       color: var(--yellow) !important;
       font-size: 20px !important;
       font-weight: 900;
@@ -654,6 +728,7 @@
 
     .contact-copy h2 {
       margin: 0 0 19px;
+
       color: var(--yellow);
       font-size: clamp(29px,4vw,49px);
       line-height: 1.13;
@@ -673,8 +748,10 @@
 
     .contact-decoration {
       padding: 38px 25px;
+
       border: 2px solid var(--gold);
       border-radius: 14px;
+
       background: rgba(6,6,6,.94);
       text-align: center;
     }
@@ -697,6 +774,7 @@
 
     .site-footer {
       padding: 33px 0;
+
       border-top: 3px solid var(--gold);
       background: rgba(3,3,3,.95);
     }
@@ -745,6 +823,7 @@
     ========================================== */
 
     @media (max-width: 1050px) {
+
       .header-inner {
         flex-direction: column;
         gap: 14px;
@@ -764,9 +843,11 @@
           saturate(1.50)
           contrast(1.08);
       }
+
     }
 
     @media (max-width: 850px) {
+
       .hero-grid,
       .story-layout,
       .peel-grid,
@@ -788,6 +869,7 @@
         max-width: 700px;
         margin: auto;
       }
+
     }
 
     /* ==========================================
@@ -795,6 +877,7 @@
     ========================================== */
 
     @media (max-width: 650px) {
+
       .wrap {
         width: min(
           calc(100% - 26px),
@@ -866,6 +949,7 @@
       .footer-links {
         margin-top: 23px;
       }
+
     }
 
     /* ==========================================
@@ -873,6 +957,7 @@
     ========================================== */
 
     @media (prefers-reduced-motion: reduce) {
+
       html {
         scroll-behavior: auto;
       }
@@ -884,7 +969,9 @@
       .btn {
         transition: none;
       }
+
     }
+
   </style>
 </head>
 
@@ -923,11 +1010,13 @@
   ======================================== -->
 
   <header class="site-header">
+
     <div class="wrap header-inner">
 
-      <a class="brand"
-         href="index.html"
-         aria-label="Pressed and Burned Creations homepage">
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Pressed and Burned Creations homepage">
 
         <img
           src="Pressed%20and%20burned%20logo.png"
@@ -935,35 +1024,48 @@
 
       </a>
 
-      <nav class="main-nav"
-           aria-label="Main navigation">
+      <nav
+        class="main-nav"
+        aria-label="Main navigation">
 
-        <a href="index.html">Home</a>
+        <a href="index.html">
+          Home
+        </a>
 
-        <a href="showcase.html">Showcase</a>
+        <a href="showcase.html">
+          Showcase
+        </a>
 
-        <a href="index.html#services">Services</a>
+        <a href="index.html#services">
+          Services
+        </a>
 
-        <a class="nav-custom"
-           href="custom-orders.html">
+        <a
+          class="nav-custom"
+          href="custom-orders.html">
           Custom Orders
         </a>
 
-        <a href="about-us.html"
-           aria-current="page">
+        <a
+          href="about-us.html"
+          aria-current="page">
           About Us
         </a>
 
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html#contact">
+          Contact
+        </a>
 
-        <a class="nav-shop"
-           href="stickers.html">
+        <a
+          class="nav-shop"
+          href="stickers.html">
           Sticker Shop
         </a>
 
       </nav>
 
     </div>
+
   </header>
 
   <main>
@@ -972,8 +1074,9 @@
          ABOUT US HERO
     ====================================== -->
 
-    <section class="about-hero"
-             aria-labelledby="hero-title">
+    <section
+      class="about-hero"
+      aria-labelledby="hero-title">
 
       <div class="wrap hero-grid">
 
@@ -998,13 +1101,15 @@
 
           <div class="hero-actions">
 
-            <a class="btn btn-gold"
-               href="#our-story">
+            <a
+              class="btn btn-gold"
+              href="#our-story">
               Read Our Story
             </a>
 
-            <a class="btn btn-outline"
-               href="showcase.html">
+            <a
+              class="btn btn-outline"
+              href="showcase.html">
               Explore Our Creations
             </a>
 
@@ -1029,8 +1134,15 @@
             alt="Pressed and Burned Creations original business logo">
 
           <div class="art-caption">
-            <span>Established 2019</span>
-            <span>Family • Creativity • Passion</span>
+
+            <span>
+              Established 2019
+            </span>
+
+            <span>
+              Family • Creativity • Passion
+            </span>
+
           </div>
 
         </div>
@@ -1058,7 +1170,6 @@
     <!-- =====================================
          OUR STORY
          ORIGINAL FIVE PARAGRAPHS
-         PRESERVED WORD FOR WORD
     ====================================== -->
 
     <section
