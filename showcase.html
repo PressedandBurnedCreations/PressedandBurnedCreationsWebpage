@@ -4,1714 +4,1179 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#090909">
-
-  <meta
-    name="description"
-    content="Explore the creative showcase of Pressed & Burned Creations, featuring PeelRuckus original stickers, custom artwork, decals, and creative designs.">
-
-  <title>
-    Creative Showcase | PeelRuckus &amp; Pressed &amp; Burned Creations
-  </title>
-
+  <meta name="description" content="Explore the creative showcase of Pressed &amp; Burned Creations, featuring PeelRuckus original stickers, custom artwork, decals, and creative designs.">
+  <title>Creative Showcase | PeelRuckus &amp; Pressed &amp; Burned Creations</title>
   <link rel="icon" type="image/png" href="favicon.png">
 
-<style>
-
-/* ==========================================
-   PRESSED & BURNED CREATIONS
-   PEELRUCKUS SHOWCASE
-========================================== */
-
-:root {
-  --black: #080808;
-  --gold: #f6b326;
-  --yellow: #ffe34b;
-  --orange: #ff7900;
-  --cream: #fff2db;
-  --muted: #d6c9b7;
-  --edge: rgba(255,181,36,.43);
-  --max: 1250px;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  background: var(--black);
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  background: var(--black);
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  isolation: isolate;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  font: inherit;
-  cursor: pointer;
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid var(--yellow);
-  outline-offset: 4px;
-}
-
-[hidden] {
-  display: none !important;
-}
-
-.wrap {
-  width: min(calc(100% - 36px), var(--max));
-  margin-inline: auto;
-}
-
-/* ==========================================
-   ORIGINAL ANIMATED FIRE BACKGROUND
-========================================== */
-
-.background-scene {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-  isolation: isolate;
-
-  background: radial-gradient(
-    ellipse 85% 80% at 50% 100%,
-    rgba(241,100,14,.50),
-    rgba(144,41,7,.27) 35%,
-    rgba(35,10,4,.15) 65%,
-    #050505
-  );
-}
-
-.fire-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center bottom;
-
-  filter:
-    brightness(1.65)
-    saturate(1.35)
-    contrast(1.08);
-}
-
-.background-art {
-  position: absolute;
-  inset: 0;
-
-  background-image:
-    url("Pressed%20and%20burned%20background%20logo.png");
-
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  opacity: 1;
-  mix-blend-mode: screen;
-}
-
-.scene-shade {
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.39),
-      rgba(0,0,0,.13) 50%,
-      rgba(0,0,0,.39)
-    ),
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,.20),
-      transparent 40%,
-      rgba(0,0,0,.38)
-    );
-}
-
-body > header,
-body > main,
-body > footer {
-  position: relative;
-  z-index: 1;
-}
-
-/* ==========================================
-   WEBSITE HEADER AND NAVIGATION
-========================================== */
-
-.site-header {
-  background: rgba(5,5,5,.91);
-  border-bottom: 2px solid var(--gold);
-  box-shadow: 0 5px 24px rgba(255,105,0,.25);
-}
-
-.site-header::before {
-  content: "";
-  display: block;
-  height: 6px;
-
-  background: linear-gradient(
-    90deg,
-    #8d2500,
-    #ff7e00,
-    #ffe74f,
-    #ff7e00,
-    #8d2500
-  );
-}
-
-.header-inner {
-  min-height: 110px;
-  padding: 18px 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-}
-
-.brand {
-  display: block;
-  flex: 0 0 auto;
-  width: min(280px,100%);
-}
-
-.brand img {
-  width: 100%;
-  filter: drop-shadow(
-    0 0 8px rgba(255,136,0,.24)
-  );
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 10px 18px;
-}
-
-.main-nav a {
-  color: #f3eadc;
-  font-size: 13px;
-  font-weight: 800;
-  white-space: nowrap;
-}
-
-.main-nav a:hover,
-.main-nav a[aria-current="page"] {
-  color: var(--yellow);
-}
-
-.main-nav .nav-custom {
-  color: var(--yellow);
-}
-
-.main-nav .nav-shop {
-  padding: 11px 16px;
-  color: #100c06;
-
-  background: linear-gradient(
-    180deg,
-    #fff36c,
-    #ffc029 65%,
-    #ff8c00
-  );
-
-  border: 1px solid #ffe989;
-  border-radius: 7px;
-
-  box-shadow:
-    0 0 13px rgba(255,143,0,.38);
-}
-
-.main-nav .nav-shop:hover {
-  color: black;
-  background: var(--yellow);
-}
-
-/* ==========================================
-   BUTTONS
-========================================== */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 50px;
-  padding: 13px 23px;
-
-  border-radius: 9px;
-  font-size: 14px;
-  font-weight: 900;
-  text-align: center;
-
-  transition:
-    transform .2s,
-    box-shadow .2s;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.btn-gold {
-  color: #140d00;
-  border: 2px solid #fff18e;
-
-  background: linear-gradient(
-    180deg,
-    #ffec69,
-    #ffbd1c 65%,
-    #ff8c00
-  );
-
-  box-shadow:
-    0 0 17px rgba(255,119,0,.38);
-}
-
-.btn-gold:hover {
-  box-shadow:
-    0 0 24px rgba(255,145,0,.65);
-}
-
-.btn-outline {
-  color: #fff2dc;
-  background: rgba(8,8,8,.87);
-  border: 1px solid var(--gold);
-}
-
-.btn-outline:hover {
-  box-shadow:
-    0 0 17px rgba(255,145,0,.35);
-}
-
-/* ==========================================
-   SHOWCASE HERO
-========================================== */
-
-.showcase-hero {
-  padding: 75px 0 82px;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: .92fr 1.08fr;
-  align-items: center;
-  gap: clamp(25px,5vw,75px);
-}
-
-.eyebrow {
-  margin: 0 0 18px;
-  color: var(--yellow);
-
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: .17em;
-  text-transform: uppercase;
-
-  text-shadow:
-    0 2px 10px black;
-}
-
-.showcase-hero h1 {
-  margin: 0;
-
-  font-size: clamp(46px,5.8vw,78px);
-  font-weight: 900;
-  letter-spacing: -.065em;
-  line-height: 1.03;
-
-  text-shadow:
-    0 3px 19px black;
-}
-
-.showcase-hero h1 span {
-  display: block;
-  color: var(--yellow);
-}
-
-.hero-description {
-  max-width: 560px;
-  margin: 26px 0 0;
-
-  color: #f0e3d2;
-  font-size: clamp(16px,1.8vw,19px);
-
-  text-shadow:
-    0 2px 10px black;
-}
-
-.hero-slogan {
-  margin: 22px 0 0;
-  color: var(--yellow);
-
-  font-size: clamp(17px,2.2vw,23px);
-  font-style: italic;
-  font-weight: 900;
-
-  text-shadow:
-    0 2px 9px black;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px;
-  margin-top: 30px;
-}
-
-.hero-art {
-  padding: 9px;
-  border: 2px solid var(--gold);
-  border-radius: 14px;
-
-  background: rgba(5,5,5,.95);
-
-  box-shadow:
-    0 0 22px rgba(255,115,0,.53),
-    0 25px 65px rgba(0,0,0,.65);
-}
-
-.hero-art img {
-  width: 100%;
-  border-radius: 7px;
-}
-
-.art-caption {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-
-  padding: 14px 10px 5px;
-
-  color: #efc47c;
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: .09em;
-  text-transform: uppercase;
-}
-
-.fire-play-button {
-  margin-top: 18px;
-  padding: 9px 13px;
-
-  border: 1px solid var(--gold);
-  border-radius: 6px;
-
-  background: rgba(5,5,5,.88);
-  color: var(--yellow);
-
-  font-size: 12px;
-  font-weight: 800;
-}
-
-/* ==========================================
-   STATEMENT STRIP
-========================================== */
-
-.statement-strip {
-  background: rgba(5,5,5,.91);
-  border-top: 1px solid var(--edge);
-  border-bottom: 1px solid var(--edge);
-}
-
-.statement-strip .wrap {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px 32px;
-
-  padding: 19px 0;
-
-  color: #e9c48e;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: .12em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-/* ==========================================
-   SHARED SECTION STYLING
-========================================== */
-
-.section-pad {
-  padding: 82px 0;
-}
-
-.section-dark {
-  background: rgba(6,6,6,.88);
-}
-
-.section-soft {
-  background: rgba(16,11,7,.88);
-}
-
-.section-heading {
-  margin-bottom: 34px;
-}
-
-.section-heading h2 {
-  margin: 0;
-
-  color: #ffdc58;
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-size: clamp(30px,4vw,49px);
-  line-height: 1.2;
-
-  text-shadow:
-    0 3px 12px black;
-}
-
-.section-heading p:not(.eyebrow) {
-  max-width: 730px;
-  margin-top: 15px;
-  color: #e6d8c6;
-}
-
-.gold-rule {
-  width: min(590px,80%);
-  height: 3px;
-  margin-top: 22px;
-
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #ff8a00,
-    #ffe95b,
-    #ff8a00,
-    transparent
-  );
-}
-
-/* ==========================================
-   FEATURED ARTWORK SECTION
-========================================== */
-
-.featured-layout {
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 38px;
-  align-items: center;
-}
-
-.featured-artwork {
-  margin: 0;
-  padding: 15px;
-
-  border: 2px solid var(--gold);
-  border-radius: 14px;
-  background: rgba(9,9,9,.96);
-
-  box-shadow:
-    0 10px 36px rgba(0,0,0,.66);
-}
-
-.featured-artwork img {
-  display: block;
-  width: 100%;
-  border-radius: 7px;
-}
-
-/* NEW: CLEAR CONCEPT PRICING NOTICE */
-
-.concept-label {
-  display: block;
-  margin: 0 0 15px;
-  padding: 13px 15px;
-
-  border: 1px solid var(--yellow);
-  border-radius: 8px;
-
-  background: #382407;
-  color: var(--yellow);
-
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: .06em;
-  line-height: 1.5;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.concept-note {
-  margin: 15px 0 0;
-  padding: 15px;
-
-  border: 1px solid var(--edge);
-  border-radius: 8px;
-
-  background: #15100a;
-  color: var(--cream);
-
-  font-size: 14px;
-  line-height: 1.65;
-  text-align: center;
-}
-
-.concept-note strong {
-  color: var(--yellow);
-}
-
-.featured-copy h3 {
-  margin: 0 0 17px;
-
-  color: var(--yellow);
-  font-size: clamp(27px,3.4vw,42px);
-  line-height: 1.2;
-}
-
-.featured-copy p:not(.eyebrow) {
-  color: #e9dccb;
-  font-size: 16px;
-}
-
-/* ==========================================
-   PEELRUCKUS STICKER GALLERY
-========================================== */
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3,minmax(0,1fr));
-  gap: 22px;
-}
-
-.gallery-card {
-  display: block;
-  overflow: hidden;
-
-  border: 2px solid #d28c18;
-  border-radius: 14px;
-  background: rgba(5,5,5,.97);
-
-  box-shadow:
-    0 9px 28px rgba(0,0,0,.58);
-
-  transition:
-    transform .2s,
-    border-color .2s;
-}
-
-.gallery-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--yellow);
-}
-
-.gallery-image {
-  display: grid;
-  place-items: center;
-
-  aspect-ratio: 1.15 / 1;
-  padding: 24px;
-
-  background: radial-gradient(
-    circle,
-    rgba(91,43,13,.70),
-    #0c0b0a 75%
-  );
-}
-
-.gallery-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.gallery-caption {
-  padding: 19px 21px;
-  border-top: 1px solid var(--edge);
-}
-
-.gallery-caption h3 {
-  margin: 0 0 8px;
-  color: #fff0d6;
-  font-size: 19px;
-}
-
-.gallery-caption span {
-  color: #ffd05b;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.section-bottom {
-  margin-top: 33px;
-}
-
-/* ==========================================
-   CUSTOM PROJECTS
-========================================== */
-
-.projects-panel {
-  display: grid;
-  grid-template-columns: .75fr 1.25fr;
-  gap: 35px;
-  align-items: center;
-
-  padding: 39px;
-  border: 2px solid var(--gold);
-  border-radius: 14px;
-
-  background: linear-gradient(
-    135deg,
-    rgba(66,30,5,.96),
-    rgba(5,5,5,.97)
-  );
-}
-
-.projects-mark {
-  color: var(--yellow);
-  font-size: clamp(42px,5vw,70px);
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -.055em;
-}
-
-.projects-copy h3 {
-  margin: 0 0 15px;
-  color: #ffdb59;
-  font-size: clamp(25px,3vw,35px);
-}
-
-.projects-copy p {
-  color: #eadccc;
-}
-
-/* ==========================================
-   CONTACT
-========================================== */
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 35px 55px;
-  align-items: center;
-}
-
-.contact-copy h2 {
-  margin: 0 0 19px;
-  color: var(--yellow);
-  font-size: clamp(29px,4vw,49px);
-  line-height: 1.13;
-}
-
-.contact-copy p:not(.eyebrow) {
-  max-width: 540px;
-  color: #eadccc;
-  font-size: 16px;
-}
-
-.contact-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px;
-  margin-top: 25px;
-}
-
-.contact-decoration {
-  padding: 38px 25px;
-
-  border: 2px solid var(--gold);
-  border-radius: 14px;
-
-  background: rgba(6,6,6,.94);
-  text-align: center;
-}
-
-.contact-decoration img {
-  width: 100%;
-  max-width: 430px;
-  margin: auto;
-}
-
-.contact-decoration p {
-  color: #efd29d;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-/* ==========================================
-   FOOTER
-========================================== */
-
-.site-footer {
-  padding: 33px 0;
-  border-top: 3px solid var(--gold);
-  background: rgba(3,3,3,.95);
-}
-
-.footer-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 23px;
-}
-
-.footer-brand {
-  color: var(--yellow);
-  font-size: 17px;
-  font-weight: 900;
-}
-
-.footer-slogan {
-  color: #edc67e;
-  font-style: italic;
-}
-
-.footer-small {
-  color: #bfb1a0;
-  font-size: 12px;
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 22px;
-}
-
-.footer-links a {
-  color: #e2c18e;
-  font-size: 12px;
-}
-
-.footer-links a:hover {
-  color: white;
-}
-
-/* ==========================================
-   TABLET
-========================================== */
-
-@media (max-width: 1050px) {
-
-  .header-inner {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .brand {
-    width: 270px;
-  }
-
-  .main-nav {
-    justify-content: center;
-  }
-
-  .fire-video {
-    filter:
-      brightness(2.10)
-      saturate(1.50)
-      contrast(1.08);
-  }
-
-}
-
-@media (max-width: 850px) {
-
-  .hero-grid,
-  .featured-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-art {
-    width: 100%;
-    max-width: 700px;
-    margin: auto;
-  }
-
-  .gallery-grid {
-    grid-template-columns:
-      repeat(2,minmax(0,1fr));
-  }
-
-}
-
-/* ==========================================
-   MOBILE
-========================================== */
-
-@media (max-width: 650px) {
-
-  .wrap {
-    width: min(
-      calc(100% - 26px),
-      var(--max)
-    );
-  }
-
-  .brand {
-    width: min(265px,90%);
-  }
-
-  .main-nav {
-    gap: 9px 13px;
-  }
-
-  .main-nav a {
-    font-size: 12px;
-  }
-
-  .main-nav .nav-shop {
-    padding: 8px 12px;
-  }
-
-  .showcase-hero {
-    padding: 48px 0 55px;
-  }
-
-  .showcase-hero h1 {
-    font-size: clamp(44px,10vw,64px);
-  }
-
-  .hero-actions,
-  .contact-actions {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  .section-pad {
-    padding: 58px 0;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-image {
-    aspect-ratio: 1.35 / 1;
-  }
-
-  .projects-panel,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .projects-panel {
-    padding: 28px;
-  }
-
-  .footer-inner {
-    display: block;
-  }
-
-  .footer-links {
-    margin-top: 23px;
-  }
-
-  .concept-label {
-    font-size: 12px;
-  }
-
-  .concept-note {
-    font-size: 13px;
-  }
-
-}
-
-/* ==========================================
-   REDUCED MOTION SUPPORT
-========================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-  html {
-    scroll-behavior: auto;
-  }
-
-  .fire-video {
-    display: none;
-  }
-
-  .gallery-card,
-  .btn {
-    transition: none;
-  }
-
-}
-
-</style>
+  <style>
+    :root {
+      --black: #080808;
+      --gold: #f6b326;
+      --yellow: #ffe34b;
+      --orange: #ff7900;
+      --cream: #fff2db;
+      --muted: #d6c9b7;
+      --edge: rgba(255, 181, 36, .43);
+      --max: 1250px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--black);
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--black);
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      isolation: isolate;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--yellow);
+      outline-offset: 4px;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .wrap {
+      width: min(calc(100% - 36px), var(--max));
+      margin-inline: auto;
+    }
+
+    /* Animated fire background */
+
+    .background-scene {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+      isolation: isolate;
+      background: radial-gradient(
+        ellipse 85% 80% at 50% 100%,
+        rgba(241, 100, 14, .50),
+        rgba(144, 41, 7, .27) 35%,
+        rgba(35, 10, 4, .15) 65%,
+        #050505
+      );
+    }
+
+    .fire-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center bottom;
+      filter: brightness(1.65) saturate(1.35) contrast(1.08);
+    }
+
+    .background-art {
+      position: absolute;
+      inset: 0;
+      background-image: url("Pressed%20and%20burned%20background%20logo.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 1;
+      mix-blend-mode: screen;
+    }
+
+    .scene-shade {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, .39),
+          rgba(0, 0, 0, .13) 50%,
+          rgba(0, 0, 0, .39)
+        ),
+        linear-gradient(
+          180deg,
+          rgba(0, 0, 0, .20),
+          transparent 40%,
+          rgba(0, 0, 0, .38)
+        );
+    }
+
+    body > header,
+    body > main,
+    body > footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header and navigation */
+
+    .site-header {
+      background: rgba(5, 5, 5, .91);
+      border-bottom: 2px solid var(--gold);
+      box-shadow: 0 5px 24px rgba(255, 105, 0, .25);
+    }
+
+    .site-header::before {
+      content: "";
+      display: block;
+      height: 6px;
+      background: linear-gradient(90deg, #8d2500, #ff7e00, #ffe74f, #ff7e00, #8d2500);
+    }
+
+    .header-inner {
+      min-height: 110px;
+      padding: 18px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: block;
+      flex: 0 0 auto;
+      width: min(280px, 100%);
+    }
+
+    .brand img {
+      width: 100%;
+      filter: drop-shadow(0 0 8px rgba(255, 136, 0, .24));
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+    }
+
+    .main-nav a {
+      color: #f3eadc;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"],
+    .main-nav .nav-custom {
+      color: var(--yellow);
+    }
+
+    .main-nav .nav-shop {
+      padding: 11px 16px;
+      color: #100c06;
+      background: linear-gradient(180deg, #fff36c, #ffc029 65%, #ff8c00);
+      border: 1px solid #ffe989;
+      border-radius: 7px;
+      box-shadow: 0 0 13px rgba(255, 143, 0, .38);
+    }
+
+    .main-nav .nav-shop:hover {
+      color: black;
+      background: var(--yellow);
+    }
+
+    /* Buttons */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 13px 23px;
+      border-radius: 9px;
+      font-size: 14px;
+      font-weight: 900;
+      text-align: center;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      color: #140d00;
+      border: 2px solid #fff18e;
+      background: linear-gradient(180deg, #ffec69, #ffbd1c 65%, #ff8c00);
+      box-shadow: 0 0 17px rgba(255, 119, 0, .38);
+    }
+
+    .btn-gold:hover {
+      box-shadow: 0 0 24px rgba(255, 145, 0, .65);
+    }
+
+    .btn-outline {
+      color: #fff2dc;
+      background: rgba(8, 8, 8, .87);
+      border: 1px solid var(--gold);
+    }
+
+    .btn-outline:hover {
+      box-shadow: 0 0 17px rgba(255, 145, 0, .35);
+    }
+
+    /* Showcase hero */
+
+    .showcase-hero {
+      padding: 75px 0 82px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      align-items: center;
+      gap: clamp(25px, 5vw, 75px);
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--yellow);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+      text-shadow: 0 2px 10px black;
+    }
+
+    .showcase-hero h1 {
+      margin: 0;
+      font-size: clamp(46px, 5.8vw, 78px);
+      font-weight: 900;
+      letter-spacing: -.065em;
+      line-height: 1.03;
+      text-shadow: 0 3px 19px black;
+    }
+
+    .showcase-hero h1 span {
+      display: block;
+      color: var(--yellow);
+    }
+
+    .hero-description {
+      max-width: 560px;
+      margin: 26px 0 0;
+      color: #f0e3d2;
+      font-size: clamp(16px, 1.8vw, 19px);
+      text-shadow: 0 2px 10px black;
+    }
+
+    .hero-slogan {
+      margin: 22px 0 0;
+      color: var(--yellow);
+      font-size: clamp(17px, 2.2vw, 23px);
+      font-style: italic;
+      font-weight: 900;
+      text-shadow: 0 2px 9px black;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 30px;
+    }
+
+    .hero-art {
+      padding: 9px;
+      border: 2px solid var(--gold);
+      border-radius: 14px;
+      background: rgba(5, 5, 5, .95);
+      box-shadow: 0 0 22px rgba(255, 115, 0, .53), 0 25px 65px rgba(0, 0, 0, .65);
+    }
+
+    .hero-art img {
+      width: 100%;
+      border-radius: 7px;
+    }
+
+    .art-caption {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 14px 10px 5px;
+      color: #efc47c;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .fire-play-button {
+      margin-top: 18px;
+      padding: 9px 13px;
+      border: 1px solid var(--gold);
+      border-radius: 6px;
+      background: rgba(5, 5, 5, .88);
+      color: var(--yellow);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    /* Statement strip and section headings */
+
+    .statement-strip {
+      background: rgba(5, 5, 5, .91);
+      border-top: 1px solid var(--edge);
+      border-bottom: 1px solid var(--edge);
+    }
+
+    .statement-strip .wrap {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 32px;
+      padding: 19px 0;
+      color: #e9c48e;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .section-pad {
+      padding: 82px 0;
+    }
+
+    .section-dark {
+      background: rgba(6, 6, 6, .88);
+    }
+
+    .section-soft {
+      background: rgba(16, 11, 7, .88);
+    }
+
+    .section-heading {
+      margin-bottom: 34px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: #ffdc58;
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: clamp(30px, 4vw, 49px);
+      line-height: 1.2;
+      text-shadow: 0 3px 12px black;
+    }
+
+    .section-heading p:not(.eyebrow) {
+      max-width: 730px;
+      margin-top: 15px;
+      color: #e6d8c6;
+    }
+
+    .gold-rule {
+      width: min(590px, 80%);
+      height: 3px;
+      margin-top: 22px;
+      background: linear-gradient(90deg, transparent, #ff8a00, #ffe95b, #ff8a00, transparent);
+    }
+
+    /* Featured artwork */
+
+    .featured-layout {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 38px;
+      align-items: center;
+    }
+
+    .featured-artwork {
+      margin: 0;
+      padding: 15px;
+      border: 2px solid var(--gold);
+      border-radius: 14px;
+      background: rgba(9, 9, 9, .96);
+      box-shadow: 0 10px 36px rgba(0, 0, 0, .66);
+    }
+
+    .featured-artwork img {
+      display: block;
+      width: 100%;
+      border-radius: 7px;
+    }
+
+    .concept-label {
+      display: block;
+      margin: 0 0 15px;
+      padding: 13px 15px;
+      border: 1px solid var(--yellow);
+      border-radius: 8px;
+      background: #382407;
+      color: var(--yellow);
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      line-height: 1.5;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .concept-note {
+      margin: 15px 0 0;
+      padding: 15px;
+      border: 1px solid var(--edge);
+      border-radius: 8px;
+      background: #15100a;
+      color: var(--cream);
+      font-size: 14px;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .concept-note strong {
+      color: var(--yellow);
+    }
+
+    .featured-copy h3 {
+      margin: 0 0 17px;
+      color: var(--yellow);
+      font-size: clamp(27px, 3.4vw, 42px);
+      line-height: 1.2;
+    }
+
+    .featured-copy p:not(.eyebrow) {
+      color: #e9dccb;
+      font-size: 16px;
+    }
+
+    /* PeelRuckus sticker gallery */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .gallery-card {
+      display: block;
+      overflow: hidden;
+      border: 2px solid #d28c18;
+      border-radius: 14px;
+      background: rgba(5, 5, 5, .97);
+      box-shadow: 0 9px 28px rgba(0, 0, 0, .58);
+      transition: transform .2s, border-color .2s;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--yellow);
+    }
+
+    .gallery-image {
+      display: grid;
+      place-items: center;
+      aspect-ratio: 1.15 / 1;
+      padding: 24px;
+      background: radial-gradient(circle, rgba(91, 43, 13, .70), #0c0b0a 75%);
+    }
+
+    .gallery-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .gallery-caption {
+      padding: 19px 21px;
+      border-top: 1px solid var(--edge);
+    }
+
+    .gallery-caption h3 {
+      margin: 0 0 8px;
+      color: #fff0d6;
+      font-size: 19px;
+    }
+
+    .gallery-caption span {
+      color: #ffd05b;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .section-bottom {
+      margin-top: 33px;
+    }
+
+    /* Custom projects */
+
+    .projects-panel {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 35px;
+      align-items: center;
+      padding: 39px;
+      border: 2px solid var(--gold);
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(66, 30, 5, .96), rgba(5, 5, 5, .97));
+    }
+
+    .projects-mark {
+      color: var(--yellow);
+      font-size: clamp(42px, 5vw, 70px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -.055em;
+    }
+
+    .projects-copy h3 {
+      margin: 0 0 15px;
+      color: #ffdb59;
+      font-size: clamp(25px, 3vw, 35px);
+    }
+
+    .projects-copy p {
+      color: #eadccc;
+    }
+
+    .app-showcase-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 360px));
+      justify-content: center;
+      align-items: start;
+      gap: 1.5rem;
+      width: min(calc(100% - 32px), 1180px);
+      margin: 2rem auto 0;
+    }
+
+    .app-showcase-card {
+      overflow: hidden;
+      border: 1px solid rgba(244, 166, 50, .5);
+      border-radius: 14px;
+      background: #130d09;
+      color: #fff;
+    }
+
+    .app-showcase-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      object-position: center;
+      padding: 1rem;
+      background: #f7f0e5;
+    }
+
+    .app-showcase-card div {
+      padding: 1rem 1.1rem;
+    }
+
+    .app-showcase-card small {
+      color: #f4a632;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .app-showcase-card h3 {
+      margin: .4rem 0;
+      color: #fff;
+    }
+
+    .app-showcase-card p {
+      margin: .4rem 0 0;
+      color: #d9cfc8;
+      line-height: 1.55;
+    }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px 55px;
+      align-items: center;
+    }
+
+    .contact-copy h2 {
+      margin: 0 0 19px;
+      color: var(--yellow);
+      font-size: clamp(29px, 4vw, 49px);
+      line-height: 1.13;
+    }
+
+    .contact-copy p:not(.eyebrow) {
+      max-width: 540px;
+      color: #eadccc;
+      font-size: 16px;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 25px;
+    }
+
+    .contact-decoration {
+      padding: 38px 25px;
+      border: 2px solid var(--gold);
+      border-radius: 14px;
+      background: rgba(6, 6, 6, .94);
+      text-align: center;
+    }
+
+    .contact-decoration img {
+      width: 100%;
+      max-width: 430px;
+      margin: auto;
+    }
+
+    .contact-decoration p {
+      color: #efd29d;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      padding: 33px 0;
+      border-top: 3px solid var(--gold);
+      background: rgba(3, 3, 3, .95);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 23px;
+    }
+
+    .footer-brand {
+      color: var(--yellow);
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .footer-slogan {
+      color: #edc67e;
+      font-style: italic;
+    }
+
+    .footer-small {
+      color: #bfb1a0;
+      font-size: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 22px;
+    }
+
+    .footer-links a {
+      color: #e2c18e;
+      font-size: 12px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    /* Tablet and mobile */
+
+    @media (max-width: 1050px) {
+      .header-inner {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .brand {
+        width: 270px;
+      }
+
+      .main-nav {
+        justify-content: center;
+      }
+
+      .fire-video {
+        filter: brightness(2.10) saturate(1.50) contrast(1.08);
+      }
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid,
+      .featured-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-art {
+        width: 100%;
+        max-width: 700px;
+        margin: auto;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .wrap {
+        width: min(calc(100% - 26px), var(--max));
+      }
+
+      .brand {
+        width: min(265px, 90%);
+      }
+
+      .main-nav {
+        gap: 9px 13px;
+      }
+
+      .main-nav a {
+        font-size: 12px;
+      }
+
+      .main-nav .nav-shop {
+        padding: 8px 12px;
+      }
+
+      .showcase-hero {
+        padding: 48px 0 55px;
+      }
+
+      .showcase-hero h1 {
+        font-size: clamp(44px, 10vw, 64px);
+      }
+
+      .hero-actions,
+      .contact-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .section-pad {
+        padding: 58px 0;
+      }
+
+      .gallery-grid,
+      .projects-panel,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-image {
+        aspect-ratio: 1.35 / 1;
+      }
+
+      .projects-panel {
+        padding: 28px;
+      }
+
+      .footer-inner {
+        display: block;
+      }
+
+      .footer-links {
+        margin-top: 23px;
+      }
+
+      .concept-label {
+        font-size: 12px;
+      }
+
+      .concept-note {
+        font-size: 13px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .fire-video {
+        display: none;
+      }
+
+      .gallery-card,
+      .btn {
+        transition: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-<!-- ==========================================
-     ORIGINAL ANIMATED FIRE BACKGROUND
-========================================== -->
-
-<div
-  class="background-scene"
-  aria-hidden="true">
-
-  <video
-    id="fire-video"
-    class="fire-video"
-    autoplay
-    muted
-    loop
-    playsinline
-    webkit-playsinline
-    preload="auto">
-
-    <source
-      src="pressed-and-burned-fire-loop-5s.mp4"
-      type="video/mp4">
-
-  </video>
-
-  <div class="background-art"></div>
-  <div class="scene-shade"></div>
-
-</div>
-
-<!-- ==========================================
-     HEADER
-========================================== -->
-
-<header class="site-header">
-
-  <div class="wrap header-inner">
-
-    <a
-      class="brand"
-      href="index.html"
-      aria-label="Pressed and Burned Creations homepage">
-
-      <img
-        src="Pressed%20and%20burned%20logo.png"
-        alt="Pressed and Burned Creations">
-
-    </a>
-
-    <nav
-      class="main-nav"
-      aria-label="Main navigation">
-
-      <a href="index.html">
-        Home
-      </a>
-
-      <a
-        href="showcase.html"
-        aria-current="page">
-        Showcase
-      </a>
-
-      <a href="index.html#services">
-        Services
-      </a>
-
-      <a
-        class="nav-custom"
-        href="custom-orders.html">
-        Custom Orders
-      </a>
-
-      <a href="about-us.html">
-        About Us
-      </a>
-
-      <a href="index.html#contact">
-        Contact
-      </a>
-
-      <a
-        class="nav-shop"
-        href="stickers.html">
-        Sticker Shop
-      </a>
-
-    </nav>
-
+  <div class="background-scene" aria-hidden="true">
+    <video id="fire-video" class="fire-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+      <source src="pressed-and-burned-fire-loop-5s.mp4" type="video/mp4">
+    </video>
+    <div class="background-art"></div>
+    <div class="scene-shade"></div>
   </div>
 
-</header>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Pressed and Burned Creations homepage">
+        <img src="Pressed%20and%20burned%20logo.png" alt="Pressed and Burned Creations">
+      </a>
 
-<main>
-
-<!-- ==========================================
-     SHOWCASE HERO
-========================================== -->
-
-<section
-  class="showcase-hero"
-  aria-labelledby="hero-title">
-
-  <div class="wrap hero-grid">
-
-    <div>
-
-      <p class="eyebrow">
-        Pressed &amp; Burned Creations Presents
-      </p>
-
-      <h1 id="hero-title">
-        Our Creative
-        <span>Showcase.</span>
-      </h1>
-
-      <p class="hero-description">
-        From PeelRuckus original stickers
-        to custom artwork and personalized
-        creations, discover the creative
-        side of Pressed &amp; Burned Creations.
-      </p>
-
-      <p class="hero-slogan">
-        Peel it. Stick it. Stir things up.
-      </p>
-
-      <div class="hero-actions">
-
-        <a
-          class="btn btn-gold"
-          href="#featured">
-          Explore Our Work
-        </a>
-
-        <a
-          class="btn btn-outline"
-          href="stickers.html">
-          Shop PeelRuckus
-        </a>
-
-      </div>
-
-      <button
-        id="fire-play-button"
-        class="fire-play-button"
-        type="button"
-        hidden>
-        🔥 Show Background Flames
-      </button>
-
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="showcase.html" aria-current="page">Showcase</a>
+        <a href="index.html#services">Services</a>
+        <a class="nav-custom" href="custom-orders.html">Custom Orders</a>
+        <a href="about-us.html">About Us</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="nav-shop" href="stickers.html">Sticker Shop</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- OFFICIAL PEELRUCKUS LOGO -->
+  <main>
+    <section class="showcase-hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Pressed &amp; Burned Creations Presents</p>
+          <h1 id="hero-title">Our Creative <span>Showcase.</span></h1>
 
-    <div class="hero-art">
+          <p class="hero-description">
+            From PeelRuckus original stickers to custom artwork and personalized creations,
+            discover the creative side of Pressed &amp; Burned Creations.
+          </p>
 
-      <img
-        src="Peel%20Ruckus.png"
-        alt="PeelRuckus by Pressed and Burned Creations. Peel it. Stick it. Stir things up."
-        fetchpriority="high">
+          <p class="hero-slogan">Peel it. Stick it. Stir things up.</p>
 
-      <div class="art-caption">
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#featured">Explore Our Work</a>
+            <a class="btn btn-outline" href="stickers.html">Shop PeelRuckus</a>
+          </div>
 
-        <span>
-          PeelRuckus Originals
-        </span>
-
-        <span>
-          By Pressed &amp; Burned Creations
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ==========================================
-     BRAND STATEMENT
-========================================== -->
-
-<div class="statement-strip">
-
-  <div class="wrap">
-
-    <span>Original Artwork</span>
-    <span>PeelRuckus Stickers</span>
-    <span>Peel it. Stick it. Stir things up.</span>
-
-  </div>
-
-</div>
-
-<!-- ==========================================
-     FEATURED ARTWORK
-     UPDATED WITH WALMART SAFARI
-========================================== -->
-
-<section
-  class="section-pad section-dark"
-  id="featured"
-  aria-labelledby="featured-title">
-
-  <div class="wrap">
-
-    <div class="section-heading">
-
-      <p class="eyebrow">
-        The Creative Collection
-      </p>
-
-      <h2 id="featured-title">
-        Featured Artwork
-      </h2>
-
-      <p>
-        A closer look at the designs,
-        artwork, and creative personality
-        behind Pressed &amp; Burned Creations.
-      </p>
-
-      <div class="gold-rule"></div>
-
-    </div>
-
-    <div class="featured-layout">
-
-      <!-- ==================================
-           NEW PEELRUCKUS WALMART SAFARI IMAGE
-           PRICES ARE EXAMPLES ONLY
-      ================================== -->
-
-      <figure class="featured-artwork">
-
-        <div class="concept-label">
-          Concept Preview — Sample Prices Only
+          <button id="fire-play-button" class="fire-play-button" type="button" hidden>
+            🔥 Show Background Flames
+          </button>
         </div>
 
-        <img
-          src="Peel%20Ruckus%20-%20Walmart%20safari.png"
-          alt="PeelRuckus Walmart Safari sticker concept with example sizes and prices. Not an active product listing."
-          loading="lazy">
-
-        <figcaption class="concept-note">
-
-          <strong>
-            Concept Illustration Only.
-          </strong>
-
-          The prices, sticker sizes, and
-          product options pictured above
-          are examples only.
-
-          They are not confirmed selling prices
-          or an active purchase offer.
-
-          The Add to Cart button shown
-          inside the artwork is part of
-          the illustration and is not clickable.
-
-          Final pricing and availability
-          will be established before
-          online checkout launches.
-
-        </figcaption>
-
-      </figure>
-
-      <!-- FEATURED ARTWORK DESCRIPTION -->
-
-      <div class="featured-copy">
-
-        <p class="eyebrow">
-          PeelRuckus Original Designs
-        </p>
-
-        <h3>
-          Made to Make a Statement.
-        </h3>
-
-        <p>
-          PeelRuckus is the original sticker
-          brand from Pressed &amp; Burned Creations,
-          bringing humor, personality, and
-          expressive artwork together.
-        </p>
-
-        <p>
-          Featured here is Walmart Safari,
-          one of the designs representing
-          the bold creative direction
-          of PeelRuckus.
-        </p>
-
-        <p>
-          Browse the growing collection
-          in the PeelRuckus Sticker Shop.
-        </p>
-
-        <a
-          class="btn btn-gold"
-          href="stickers.html">
-          Explore PeelRuckus Stickers
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ==========================================
-     PEELRUCKUS STICKER GALLERY
-========================================== -->
-
-<section
-  class="section-pad section-soft"
-  id="gallery"
-  aria-labelledby="gallery-title">
-
-  <div class="wrap">
-
-    <div class="section-heading">
-
-      <p class="eyebrow">
-        PeelRuckus Original Stickers
-      </p>
-
-      <h2 id="gallery-title">
-        A Closer Look
-      </h2>
-
-      <p>
-        Explore a few favorites
-        from Miles's growing collection
-        of original PeelRuckus sticker designs.
-      </p>
-
-      <div class="gold-rule"></div>
-
-    </div>
-
-    <div class="gallery-grid">
-
-      <!-- STICKER 1 -->
-
-      <a
-        class="gallery-card"
-        href="stickers.html"
-        aria-label="Explore Oh Great Another Subaru in the PeelRuckus Sticker Shop">
-
-        <div class="gallery-image">
-
+        <div class="hero-art">
           <img
-            src="Oh-great-subaru.png"
-            alt="Oh Great Another Subaru sticker"
-            loading="lazy">
-
+            src="Peel%20Ruckus.png"
+            alt="PeelRuckus by Pressed and Burned Creations. Peel it. Stick it. Stir things up."
+            fetchpriority="high"
+          >
+          <div class="art-caption">
+            <span>PeelRuckus Originals</span>
+            <span>By Pressed &amp; Burned Creations</span>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="gallery-caption">
-
-          <h3>
-            Oh Great... Another Subaru
-          </h3>
-
-          <span>
-            Explore PeelRuckus &#8250;
-          </span>
-
-        </div>
-
-      </a>
-
-      <!-- STICKER 2 -->
-
-      <a
-        class="gallery-card"
-        href="stickers.html"
-        aria-label="Explore Two Cents in the PeelRuckus Sticker Shop">
-
-        <div class="gallery-image">
-
-          <img
-            src="Two_Cents.png"
-            alt="Two Cents sticker"
-            loading="lazy">
-
-        </div>
-
-        <div class="gallery-caption">
-
-          <h3>
-            Two Cents
-          </h3>
-
-          <span>
-            Explore PeelRuckus &#8250;
-          </span>
-
-        </div>
-
-      </a>
-
-      <!-- STICKER 3 -->
-
-      <a
-        class="gallery-card"
-        href="stickers.html"
-        aria-label="Explore In God We Trust in the PeelRuckus Sticker Shop">
-
-        <div class="gallery-image">
-
-          <img
-            src="In_God_We_Trust-sticker.png"
-            alt="In God We Trust sticker"
-            loading="lazy">
-
-        </div>
-
-        <div class="gallery-caption">
-
-          <h3>
-            In God We Trust
-          </h3>
-
-          <span>
-            Explore PeelRuckus &#8250;
-          </span>
-
-        </div>
-
-      </a>
-
+    <div class="statement-strip">
+      <div class="wrap">
+        <span>Original Artwork</span>
+        <span>PeelRuckus Stickers</span>
+        <span>Peel it. Stick it. Stir things up.</span>
+      </div>
     </div>
 
-    <div class="section-bottom">
+    <section class="section-pad section-dark" id="featured" aria-labelledby="featured-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">The Creative Collection</p>
+          <h2 id="featured-title">Featured Artwork</h2>
+          <p>A closer look at the designs, artwork, and creative personality behind Pressed &amp; Burned Creations.</p>
+          <div class="gold-rule"></div>
+        </div>
 
-      <a
-        class="btn btn-gold"
-        href="stickers.html">
-        Browse All PeelRuckus Stickers
-      </a>
+        <div class="featured-layout">
+          <figure class="featured-artwork">
+            <div class="concept-label">Concept Preview — Sample Prices Only</div>
 
-    </div>
+            <img
+              src="Peel%20Ruckus%20-%20Walmart%20safari.png"
+              alt="PeelRuckus Walmart Safari sticker concept with example sizes and prices. Not an active product listing."
+              loading="lazy"
+            >
 
-  </div>
+            <figcaption class="concept-note">
+              <strong>Concept Illustration Only.</strong>
+              The prices, sticker sizes, and product options pictured above are examples only.
+              They are not confirmed selling prices or an active purchase offer.
+              The Add to Cart button shown inside the artwork is part of the illustration and is not clickable.
+              Final pricing and availability will be established before online checkout launches.
+            </figcaption>
+          </figure>
 
-</section>
+          <div class="featured-copy">
+            <p class="eyebrow">PeelRuckus Original Designs</p>
+            <h3>Made to Make a Statement.</h3>
+            <p>
+              PeelRuckus is the original sticker brand from Pressed &amp; Burned Creations,
+              bringing humor, personality, and expressive artwork together.
+            </p>
+            <p>
+              Featured here is Walmart Safari, one of the designs representing the bold creative
+              direction of PeelRuckus.
+            </p>
+            <p>Browse the growing collection in the PeelRuckus Sticker Shop.</p>
+            <a class="btn btn-gold" href="stickers.html">Explore PeelRuckus Stickers</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- ==========================================
-     CUSTOM PROJECTS GALLERY
-========================================== -->
+    <section class="section-pad section-soft" id="gallery" aria-labelledby="gallery-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">PeelRuckus Original Stickers</p>
+          <h2 id="gallery-title">A Closer Look</h2>
+          <p>Explore a few favorites from Miles's growing collection of original PeelRuckus sticker designs.</p>
+          <div class="gold-rule"></div>
+        </div>
 
-<section
-  class="section-pad section-dark"
-  id="custom-projects"
-  aria-labelledby="projects-title">
+        <div class="gallery-grid">
+          <a class="gallery-card" href="stickers.html"
+             aria-label="Explore Oh Great Another Subaru in the PeelRuckus Sticker Shop">
+            <div class="gallery-image">
+              <img src="Oh-great-subaru.png" alt="Oh Great Another Subaru sticker" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <h3>Oh Great... Another Subaru</h3>
+              <span>Explore PeelRuckus &#8250;</span>
+            </div>
+          </a>
 
-  <div class="wrap">
+          <a class="gallery-card" href="stickers.html"
+             aria-label="Explore Two Cents in the PeelRuckus Sticker Shop">
+            <div class="gallery-image">
+              <img src="Two_Cents.png" alt="Two Cents sticker" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <h3>Two Cents</h3>
+              <span>Explore PeelRuckus &#8250;</span>
+            </div>
+          </a>
 
-    <div class="section-heading">
+          <a class="gallery-card" href="stickers.html"
+             aria-label="Explore In God We Trust in the PeelRuckus Sticker Shop">
+            <div class="gallery-image">
+              <img src="In_God_We_Trust-sticker.png" alt="In God We Trust sticker" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <h3>In God We Trust</h3>
+              <span>Explore PeelRuckus &#8250;</span>
+            </div>
+          </a>
+        </div>
 
-      <p class="eyebrow">
-        More Creative Projects Ahead
-      </p>
+        <div class="section-bottom">
+          <a class="btn btn-gold" href="stickers.html">Browse All PeelRuckus Stickers</a>
+        </div>
+      </div>
+    </section>
 
-      <h2 id="projects-title">
-        Custom Projects Gallery
-      </h2>
+    <section class="section-pad section-dark" id="custom-projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">More Creative Projects Ahead</p>
+          <h2 id="projects-title">Custom Projects Gallery</h2>
+          <p>
+            Pressed &amp; Burned Creations is more than a sticker brand.
+            There's room for all kinds of personalized creative work.
+          </p>
+          <div class="gold-rule"></div>
+        </div>
 
-      <p>
-        Pressed &amp; Burned Creations
-        is more than a sticker brand.
-        There's room for all kinds
-        of personalized creative work.
-      </p>
+        <div class="projects-panel">
+          <div class="projects-mark" aria-hidden="true">MORE<br>TO COME.</div>
+          <div class="projects-copy">
+            <h3>We're Just Getting Started.</h3>
+            <p>
+              Our custom projects gallery is growing. We're preparing to feature more original
+              artwork, custom designs, decals, and personalized creative projects.
+            </p>
+            <p>Check back as we continue adding work from Pressed &amp; Burned Creations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <div class="gold-rule"></div>
+    <section class="section-pad section-soft" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow">Have Something in Mind?</p>
+          <h2 id="contact-title">Let's Bring Your Idea to Life.</h2>
 
-    </div>
+          <p>Have an idea for a custom sticker, decal, original artwork, or personalized product?</p>
+          <p>
+            Pressed &amp; Burned Creations can review your project idea, discuss the possibilities,
+            and provide pricing once the details have been established.
+          </p>
 
-    <div class="projects-panel">
+          <div class="contact-actions">
+            <a class="btn btn-gold" href="custom-orders.html">Explore Custom Orders</a>
+            <a class="btn btn-outline" href="stickers.html">Visit PeelRuckus Shop</a>
+          </div>
 
-      <div
-        class="projects-mark"
-        aria-hidden="true">
-        MORE
-        <br>
-        TO COME.
+          <p>
+            <small>Online custom-quote submissions are not active yet. Form delivery is still being configured.</small>
+          </p>
+        </div>
+
+        <div class="contact-decoration">
+          <img src="Pressed%20and%20burned%20logo.png" alt="Pressed and Burned Creations logo" loading="lazy">
+          <p>Your Ideas. Our Creativity.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <div class="footer-brand">Pressed &amp; Burned Creations</div>
+        <p class="footer-slogan">PeelRuckus — Peel it. Stick it. Stir things up.</p>
+        <p class="footer-small">&copy; 2026 Pressed and Burned Creations. All Rights Reserved.</p>
       </div>
 
-      <div class="projects-copy">
-
-        <h3>
-          We're Just Getting Started.
-        </h3>
-
-        <p>
-          Our custom projects gallery
-          is growing.
-
-          We're preparing to feature
-          more original artwork,
-          custom designs, decals,
-          and personalized creative projects.
-        </p>
-
-        <p>
-          Check back as we continue
-          adding work from
-          Pressed &amp; Burned Creations.
-        </p>
-
-      </div>
-
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="showcase.html">Showcase</a>
+        <a href="stickers.html">Sticker Shop</a>
+        <a href="custom-orders.html">Custom Orders</a>
+        <a href="about-us.html">About Us</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
     </div>
+  </footer>
 
-  </div>
+  <script>
+    (function () {
+      "use strict";
 
-</section>
+      const video = document.getElementById("fire-video");
+      const playButton = document.getElementById("fire-play-button");
+      if (!video || !playButton) return;
 
-<!-- ==========================================
-     CONTACT AND CUSTOM ORDERS
-========================================== -->
+      video.muted = true;
+      video.defaultMuted = true;
 
-<section
-  class="section-pad section-soft"
-  id="contact"
-  aria-labelledby="contact-title">
+      function showPlayButton() {
+        playButton.hidden = false;
+      }
 
-  <div class="wrap contact-grid">
+      function startFlames() {
+        video.style.display = "block";
+        video.muted = true;
 
-    <div class="contact-copy">
+        const attempt = video.play();
+        if (attempt && typeof attempt.then === "function") {
+          attempt.then(function () {
+            playButton.hidden = true;
+          }).catch(showPlayButton);
+        }
+      }
 
-      <p class="eyebrow">
-        Have Something in Mind?
-      </p>
-
-      <h2 id="contact-title">
-        Let's Bring Your Idea to Life.
-      </h2>
-
-      <p>
-        Have an idea for a custom sticker,
-        decal, original artwork,
-        or personalized product?
-      </p>
-
-      <p>
-        Pressed &amp; Burned Creations
-        can review your project idea,
-        discuss the possibilities,
-        and provide pricing once
-        the details have been established.
-      </p>
-
-      <div class="contact-actions">
-
-        <a
-          class="btn btn-gold"
-          href="custom-orders.html">
-          Explore Custom Orders
-        </a>
-
-        <a
-          class="btn btn-outline"
-          href="stickers.html">
-          Visit PeelRuckus Shop
-        </a>
-
-      </div>
-
-      <p>
-        <small>
-          Online custom-quote submissions
-          are not active yet.
-          Form delivery is still being configured.
-        </small>
-      </p>
-
-    </div>
-
-    <div class="contact-decoration">
-
-      <img
-        src="Pressed%20and%20burned%20logo.png"
-        alt="Pressed and Burned Creations logo"
-        loading="lazy">
-
-      <p>
-        Your Ideas. Our Creativity.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-</main>
-
-<!-- ==========================================
-     FOOTER
-========================================== -->
-
-<footer class="site-footer">
-
-  <div class="wrap footer-inner">
-
-    <div>
-
-      <div class="footer-brand">
-        Pressed &amp; Burned Creations
-      </div>
-
-      <p class="footer-slogan">
-        PeelRuckus —
-        Peel it. Stick it. Stir things up.
-      </p>
-
-      <p class="footer-small">
-        &copy; 2026
-        Pressed and Burned Creations.
-        All Rights Reserved.
-      </p>
-
-    </div>
-
-    <nav
-      class="footer-links"
-      aria-label="Footer navigation">
-
-      <a href="index.html">
-        Home
-      </a>
-
-      <a href="showcase.html">
-        Showcase
-      </a>
-
-      <a href="stickers.html">
-        Sticker Shop
-      </a>
-
-      <a href="custom-orders.html">
-        Custom Orders
-      </a>
-
-      <a href="about-us.html">
-        About Us
-      </a>
-
-      <a href="index.html#contact">
-        Contact
-      </a>
-
-    </nav>
-
-  </div>
-
-</footer>
-
-<!-- ==========================================
-     ANIMATED FIRE VIDEO CONTROLS
-========================================== -->
-
-<script>
-(function () {
-  "use strict";
-
-  const video =
-    document.getElementById("fire-video");
-
-  const playButton =
-    document.getElementById("fire-play-button");
-
-  if (!video || !playButton) {
-    return;
-  }
-
-  video.muted = true;
-  video.defaultMuted = true;
-
-  function showPlayButton() {
-    playButton.hidden = false;
-  }
-
-  function startFlames() {
-    video.style.display = "block";
-    video.muted = true;
-
-    const attempt = video.play();
-
-    if (
-      attempt &&
-      typeof attempt.then === "function"
-    ) {
-      attempt.then(function () {
+      video.addEventListener("playing", function () {
         playButton.hidden = true;
-      }).catch(function () {
-        showPlayButton();
       });
-    }
-  }
+      video.addEventListener("error", showPlayButton);
+      playButton.addEventListener("click", startFlames);
 
-  video.addEventListener(
-    "playing",
-    function () {
-      playButton.hidden = true;
-    }
-  );
+      const reducedMotion = window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  video.addEventListener(
-    "error",
-    function () {
-      showPlayButton();
-    }
-  );
+      if (reducedMotion) {
+        video.pause();
+      } else {
+        startFlames();
+      }
+    })();
+  </script>
 
-  playButton.addEventListener(
-    "click",
-    startFlames
-  );
+  <script>
+    (async function () {
+      const endpoint = 'https://pressed-and-burned-order-app.pages.dev/api/showcase';
+      const section = document.querySelector('#custom-projects');
+      if (!section) return;
 
-  const reducedMotion =
-    window.matchMedia &&
-    window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
+      try {
+        const response = await fetch(endpoint, { cache: 'no-store' });
+        if (!response.ok) throw new Error(`Showcase returned ${response.status}`);
 
-  if (reducedMotion) {
-    video.pause();
-  } else {
-    startFlames();
-  }
+        const payload = await response.json();
+        const items = Array.isArray(payload.items) ? payload.items : [];
+        if (!items.length) return;
 
-})();
-</script>
+        const gallery = document.createElement('div');
+        gallery.className = 'app-showcase-gallery';
+        gallery.setAttribute('aria-label', 'Recently published projects');
 
-<!-- Adds published images from the Pressed & Burned app without changing this page's existing design. -->
-<script src="showcase-loader.js?v=20261123-1" defer></script>
+        for (const item of items) {
+          const card = document.createElement('article');
+          card.className = 'app-showcase-card';
 
+          if (item.imageUrl) {
+            const image = document.createElement('img');
+            image.src = item.imageUrl;
+            image.alt = item.title || 'Pressed and Burned Creations project';
+            image.loading = 'lazy';
+            card.append(image);
+          }
+
+          const copy = document.createElement('div');
+          const category = document.createElement('small');
+          category.textContent = item.category || 'Pressed & Burned Creations';
+
+          const title = document.createElement('h3');
+          title.textContent = item.title || 'Custom project';
+
+          copy.append(category, title);
+
+          if (item.caption) {
+            const caption = document.createElement('p');
+            caption.textContent = item.caption;
+            copy.append(caption);
+          }
+
+          card.append(copy);
+          gallery.append(card);
+        }
+
+        section.append(gallery);
+      } catch (error) {
+        console.warn('Public Showcase could not be loaded.', error);
+      }
+    })();
+  </script>
 </body>
 </html>
