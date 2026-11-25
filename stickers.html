@@ -1435,7 +1435,7 @@ body > footer {
   <div class="cart-footer">
     <div class="cart-total">
       <span>Subtotal</span>
-      <span>Pricing Coming Soon</span>
+      <span id="cart-subtotal-value">$0.00</span>
     </div>
 
     <p class="cart-note">
@@ -1861,6 +1861,8 @@ body > footer {
 
   function renderCart() {
     cartItems.replaceChildren();
+    const subtotalValue = document.getElementById("cart-subtotal-value");
+    subtotalValue.textContent = dollars.format(0);
     let subtotal = 0;
     let hasPricedItems = false;
     let hasUnpricedItems = false;
@@ -1952,12 +1954,9 @@ body > footer {
       row.append(image, info);
       cartItems.appendChild(row);
     });
-    if (hasPricedItems) {
-      const total = document.createElement("p");
-      total.textContent = (hasUnpricedItems ? "Priced stickers subtotal: " : "Subtotal: ") +
-        dollars.format(subtotal / 100);
-      cartItems.append(total);
-    }
+    subtotalValue.textContent = hasPricedItems
+      ? dollars.format(subtotal / 100) + (hasUnpricedItems ? " (priced items only)" : "")
+      : "Pricing coming soon";
   }
 
   function updateCartItem(id, size, quantity) {
