@@ -1739,7 +1739,7 @@ body > footer {
 
       const sizeLabel = document.createElement("label");
       sizeLabel.htmlFor = "size-" + id;
-      sizeLabel.textContent = "Sample size (longest side)";
+      sizeLabel.textContent = product.prices ? "Size" : "Sample size (longest side)";
 
       const sizeSelect = document.createElement("select");
       sizeSelect.id = "size-" + id;
@@ -1748,10 +1748,19 @@ body > footer {
       product.sizes.forEach(function (size) {
         const option = document.createElement("option");
         option.value = size;
-        option.textContent = size + " inches";
+        option.textContent = product.prices
+          ? size + " · " + dollars.format(product.prices.get(size) / 100)
+          : size + " inches";
         sizeSelect.appendChild(option);
       });
 
+      if (product.prices) {
+        const updatePrice = () => {
+          price.textContent = dollars.format(product.prices.get(sizeSelect.value) / 100);
+        };
+        sizeSelect.addEventListener("change", updatePrice);
+        updatePrice();
+      }
       sizeGroup.append(sizeLabel, sizeSelect);
 
       const qtyGroup = document.createElement("div");
@@ -1852,6 +1861,9 @@ body > footer {
 
   function renderCart() {
     cartItems.replaceChildren();
+    let subtotal = 0;
+    let hasPricedItems = false;
+    let hasUnpricedItems = false;
 
     if (cart.length === 0) {
       const empty = document.createElement("p");
@@ -1882,10 +1894,19 @@ body > footer {
 
       const size = document.createElement("p");
       size.textContent =
-        "Sample size: " + item.size + " inches";
+        product.prices ? "Size: " + item.size : "Sample size: " + item.size + " inches";
 
       const price = document.createElement("p");
-      price.textContent = "Pricing Coming Soon";
+      const cents = product.prices?.get(item.size);
+      if (Number.isSafeInteger(cents)) {
+        hasPricedItems = true;
+        subtotal += cents * item.quantity;
+        price.textContent = dollars.format(cents / 100) + " each · " +
+          dollars.format(cents * item.quantity / 100);
+      } else {
+        hasUnpricedItems = true;
+        price.textContent = "Pricing Coming Soon";
+      }
 
       const controls = document.createElement("div");
       controls.className = "cart-controls";
@@ -1931,6 +1952,12 @@ body > footer {
       row.append(image, info);
       cartItems.appendChild(row);
     });
+    if (hasPricedItems) {
+      const total = document.createElement("p");
+      total.textContent = (hasUnpricedItems ? "Priced stickers subtotal: " : "Subtotal: ") +
+        dollars.format(subtotal / 100);
+      cartItems.append(total);
+    }
   }
 
   function updateCartItem(id, size, quantity) {
@@ -2161,15 +2188,59 @@ body > footer {
     }
   }
 
-  // Start the Sticker Shop.
-  renderProducts();
-  cart = loadCart();
-  updateBadge();
+  const dollars = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
+  const endpoint = new URL("https://pressed-and-burned-order-app.pages.dev/api/sticker-catalog");
+
+  async function startShop() {
+    try {
+      const response = await fetch(endpoint, {
+        cache: "no-store",
+        signal: AbortSignal.timeout(6000)
+      });
+      if (!response.ok) throw new Error("Catalog returned " + response.status);
+      const { items } = await response.json();
+      for (const item of Array.isArray(items) ? items : []) {
+        if (typeof item?.name !== "string" || typeof item.imageUrl !== "string") continue;
+        let image;
+        try { image = new URL(item.imageUrl); } catch { continue; }
+        const key = image.searchParams.get("image");
+        if (image.origin !== endpoint.origin || image.pathname !== endpoint.pathname ||
+            !key || !/^PROD(?:UCT)?-[a-zA-Z0-9._-]+$/.test(key)) continue;
+
+        const prices = new Map();
+        const sizes = Array.isArray(item.sizes) && item.sizes.length
+          ? item.sizes : [{ label: "Standard", price: item.price }];
+        for (const size of sizes) {
+          if (typeof size?.label !== "string" || !size.label.trim() ||
+              typeof size.price !== "number" || size.price < 0) continue;
+          const cents = Math.round(size.price * 100);
+          if (Number.isSafeInteger(cents * 999)) prices.set(size.label.trim(), cents);
+        }
+        if (!prices.size) continue;
+        products["published-" + key] = {
+          name: item.name,
+          description: typeof item.description === "string" ? item.description : "",
+          image: image.href,
+          sizes: [...prices.keys()],
+          prices
+        };
+      }
+    } catch (error) {
+      console.warn("Published stickers could not load.", error);
+      showToast("Published stickers could not load. Refresh to try again.");
+    }
+
+    cart = loadCart();
+    renderProducts();
+    updateBadge();
+    if (!drawer.hidden) renderCart();
+  }
+
   initializeNotice();
   initializeFlames();
+  startShop();
 
 })();
 </script>
-<script src="sticker-catalog-loader.js?v=1" defer></script>
 </body>
 </html>
